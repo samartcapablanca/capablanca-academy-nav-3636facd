@@ -100,7 +100,7 @@ export function MatchReplayPlayer({
         turn: "w" as "w" | "b",
         applied: 0,
       };
-    const game = new Chess();
+    const game = lesson.startFen ? new Chess(lesson.startFen) : new Chess();
     let last: { from: string; to: string } | null = null;
     let count = 0;
     for (let i = 0; i <= moveIndex && i < lesson.moves.length; i++) {
