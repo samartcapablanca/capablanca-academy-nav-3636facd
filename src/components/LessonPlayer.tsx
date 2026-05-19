@@ -88,7 +88,7 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
       <div className="flex flex-1 flex-col overflow-y-auto md:flex-row">
         {/* Board: left 75% */}
         <div className="flex flex-1 items-center justify-center bg-background p-4 md:basis-3/4 md:p-8">
-          <ChessBoardView fen={fen} perspective={perspective} lastMove={lastMove} />
+          <ChessBoardView fen={fen} lastMove={lastMove} />
         </div>
 
         {/* Sidebar: right 25% */}
