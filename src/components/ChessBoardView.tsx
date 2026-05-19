@@ -53,12 +53,11 @@ export function ChessBoardView({ fen, perspective, lastMove }: BoardProps) {
   const isIso = perspective === "2.5d";
 
   return (
-    <div className="relative mx-auto w-full max-w-[640px]" style={{ perspective: "1400px" }}>
+    <div className="relative mx-auto w-full max-w-[560px]" style={{ perspective: "1600px" }}>
       {/* Oak outer frame */}
       <div
         className={cn(
-          "relative rounded-xl p-3 md:p-5 transition-all duration-500",
-          isIso ? "[transform-style:preserve-3d]" : "",
+          "relative rounded-xl p-3 md:p-4 transition-all duration-500",
         )}
         style={{
           background: isIso
@@ -67,17 +66,12 @@ export function ChessBoardView({ fen, perspective, lastMove }: BoardProps) {
           boxShadow: isIso
             ? "0 30px 60px -20px rgba(0,0,0,0.7), inset 0 0 0 2px oklch(0.65 0.09 65)"
             : "0 10px 30px -10px rgba(0,0,0,0.6)",
+          transform: isIso ? "rotateX(22deg)" : "rotateX(0deg)",
+          transformStyle: "preserve-3d",
+          transition: "transform 500ms ease-out, background 500ms ease-out",
         }}
       >
-        <div
-          className="relative origin-center transition-transform duration-500 ease-out"
-          style={{
-            transform: isIso
-              ? "rotateX(45deg) rotateZ(0deg) scale(0.92)"
-              : "rotateX(0deg) rotateZ(0deg) scale(1)",
-            transformStyle: "preserve-3d",
-          }}
-        >
+        <div className="relative">
           <div className="grid grid-cols-8 overflow-hidden rounded-md ring-1 ring-black/40">
             {board.map((row, r) =>
               row.map((piece, c) => {
