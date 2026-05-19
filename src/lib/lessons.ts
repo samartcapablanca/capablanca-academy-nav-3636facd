@@ -415,42 +415,6 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-      {
-        san: "Nc6",
-        commentary:
-          "Black defends the pawn and develops simultaneously — the model of opening " +
-          "economy.",
-      },
-      {
-        san: "d4",
-        commentary:
-          "The decisive central thrust. White challenges Black's e-pawn with a " +
-          "second centre pawn, opening lines for the Queen's Bishop. This is the " +
-          "essence of Capablanca's teaching: contest the centre, and your pieces will " +
-          "find their natural homes.",
-      },
-      {
-        san: "exd4",
-        commentary:
-          "Black removes one of the central pawns — but at the cost of giving White a " +
-          "free hand in development.",
-      },
-      {
-        san: "Nxd4",
-        commentary:
-          "“A Knight in the centre commands eight squares.” White's recapture places " +
-          "a Knight on d4 — the ideal post — and the resulting freedom of action is " +
-          "exactly what Capablanca means by control of the centre.",
-      },
-      {
-        san: "Nf6",
-        commentary:
-          "Black develops and prepares to contest e4. Both armies are now mobilised " +
-          "around the central battlefield — the position from which every middle-game " +
-          "plan will spring.",
-      },
-    ],
-  },
 };
 
 export function getLesson(id: string): LessonContent {
