@@ -221,7 +221,7 @@ export function MatchReplayPlayer({
           <div className="w-full">
             <ChessBoardView
               fen={fen}
-              perspective={perspective}
+              
               lastMove={lastMove}
               interactive={guessMode}
               onSquareDrop={handleSquareDrop}
