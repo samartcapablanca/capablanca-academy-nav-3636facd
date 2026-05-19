@@ -26,6 +26,10 @@ type BoardProps = {
   fen: string;
   perspective: "2.5d" | "2d";
   lastMove?: { from: string; to: string } | null;
+  interactive?: boolean;
+  onSquareDrop?: (from: string, to: string) => void;
+  /** Square to flash. kind 'success' = green pulse, 'error' = red shake */
+  feedback?: { square: string; kind: "success" | "error" } | null;
 };
 
 // Parse FEN placement field into 8x8 grid of piece codes (e.g. "wK") or null.
