@@ -415,6 +415,206 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+
+  // ─────────────────────────────────────────────────────────────────
+  // CHAPTER II — Lesson 1: A Cardinal Principle (King positioning)
+  // ─────────────────────────────────────────────────────────────────
+  "2-1": {
+    title: "A Cardinal Principle — The King as Attacking Piece",
+    intro:
+      "Capablanca: “The King, which in the beginning of the game is a source of " +
+      "anxiety because of its vulnerability, becomes in the end-game a main " +
+      "weapon of offense and defense. Bring out your King as fast as possible " +
+      "to the center of the board.”",
+    startFen: "8/7p/5k2/8/8/8/7P/5K2 w - - 0 1",
+    moves: [
+      {
+        san: "Kf2",
+        commentary:
+          "“Bring out your King.” The very first move of the endgame: the monarch " +
+          "steps forward. No longer a timid bystander behind a wall of pawns, the " +
+          "King becomes a fighting piece.",
+      },
+      {
+        san: "Kf7",
+        commentary:
+          "Black follows the same rule. In pawn endgames, the first King to the " +
+          "centre usually dictates the terms of the battle.",
+      },
+      {
+        san: "Ke3",
+        commentary:
+          "White continues the march. The goal is not a single square but " +
+          "domination of the entire board — a King in the centre commands more " +
+          "squares than from any edge.",
+      },
+      {
+        san: "Kg7",
+        commentary:
+          "Black drifts toward the wing, away from the critical theatre. A small " +
+          "inaccuracy, but in endgames small inaccuracies decide the result.",
+      },
+      {
+        san: "Kd4",
+        commentary:
+          "“The King in the center is worth a piece.” White occupies d4, a central " +
+          "square from which every wing is within reach.",
+      },
+      {
+        san: "Kh6",
+        commentary:
+          "Black is reduced to passive shuffling on the rim. The geometry of the " +
+          "position has already begun to tilt in White's favour.",
+      },
+      {
+        san: "Kc5",
+        commentary:
+          "Capablanca's principle fulfilled: the White King dominates the centre, " +
+          "while Black's monarch wanders the edge. The difference in activity is " +
+          "the entire story of the endgame.",
+      },
+      {
+        san: "Kg5",
+        commentary:
+          "Black attempts to become active, but it is too late. The central King " +
+          "has seized the opposition and the better position. The lesson: in " +
+          "endgames, activate your King immediately — delay is fatal.",
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // CHAPTER II — Lesson 2: Three Pawns vs. Three (The breakthrough)
+  // ─────────────────────────────────────────────────────────────────
+  "2-2": {
+    title: "Three Pawns vs. Three — The Breakthrough",
+    intro:
+      "Capablanca: “Whenever there is a majority of pawns on one side of the " +
+      "board, the general rule is to advance the pawn that has no pawn opposing " +
+      "it.” Here White owns a three-to-three majority on the queenside, but all " +
+      "pawns are blocked. The breakthrough shatters the blockade with a sacrifice.",
+    startFen: "8/ppp5/5k2/PPP5/8/5K2/8/8 w - - 0 1",
+    moves: [
+      {
+        san: "b6",
+        commentary:
+          "“The lever is thrown.” White sacrifices the b-pawn to open lines. " +
+          "Capablanca taught that a blocked majority is worthless until a " +
+          "path is forced open.",
+      },
+      {
+        san: "cxb6",
+        commentary:
+          "Black accepts, thinking he has stopped the threat. He has not — the " +
+          "sacrifice is only the first act.",
+      },
+      {
+        san: "a6",
+        commentary:
+          "The second pawn is offered. White now sacrifices the a-pawn, " +
+          "clearing the way for the true candidate.",
+      },
+      {
+        san: "bxa6",
+        commentary:
+          "Black captures again, but each capture weakens his structure and " +
+          "opens a file for the remaining pawn.",
+      },
+      {
+        san: "c6",
+        commentary:
+          "“The decisive thrust.” The c-pawn is now unstoppable: if Black " +
+          "takes on c6, the a-pawn queens; if he ignores it, c7 and c8=Q " +
+          "follows. Numerical equality has been shattered by timing.",
+      },
+      {
+        san: "b5",
+        commentary:
+          "A desperate attempt to create a passed pawn of his own. Black " +
+          "understands that the breakthrough has already decided the position.",
+      },
+      {
+        san: "c7",
+        commentary:
+          "White's candidate marches on. One more step and the pawn becomes " +
+          "a Queen. The breakthrough has transformed a blocked majority into " +
+          "a winning passed pawn.",
+      },
+      {
+        san: "b4",
+        commentary:
+          "Too late. Black's counterplay is one tempo short. The lesson: a " +
+          "well-timed pawn sacrifice can turn a static majority into an " +
+          "unstoppable passed pawn. Timing, not numbers, decides.",
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // CHAPTER II — Lesson 3: The Power of the Rook on the 7th Rank
+  // ─────────────────────────────────────────────────────────────────
+  "2-3": {
+    title: "The Power of the Rook on the 7th Rank",
+    intro:
+      "Capablanca: “A Rook on the 7th rank is of great value because it keeps " +
+      "the opposing King hemmed in on the last rank and attacks the enemy pawns " +
+      "at their base.” White's Rook already occupies the ideal post on d7, " +
+      "while Black's pawns sit helpless on the 7th rank.",
+    startFen: "6k1/pppR4/8/8/8/8/3r2K1/8 w - - 0 1",
+    moves: [
+      {
+        san: "Rxc7",
+        commentary:
+          "The rook on the 7th rank feasts on the immobile pawns. With one " +
+          "move White harvests the c-pawn — the first of three victims.",
+      },
+      {
+        san: "Kf8",
+        commentary:
+          "Black brings his King toward the centre, but the structural damage " +
+          "is already severe. The rook's position is too powerful to be met by " +
+          "King moves alone.",
+      },
+      {
+        san: "Rxb7",
+        commentary:
+          "The b-pawn falls next. Capablanca's principle in action: a rook on " +
+          "the 7th against pawns on their original squares wins material by force.",
+      },
+      {
+        san: "Ke8",
+        commentary:
+          "Driven to the edge. The Black King finds no shelter; the rook controls " +
+          "the entire 7th rank and the open files behind the pawns.",
+      },
+      {
+        san: "Rxa7",
+        commentary:
+          "The last pawn is taken. All three pawns have fallen to the 7th-rank " +
+          "rook. White has won three pawns without any counterplay from Black.",
+      },
+      {
+        san: "Kd8",
+        commentary:
+          "Black's King remains on the back rank, exactly where Capablanca " +
+          "said it would be trapped. The rook dominates from above.",
+      },
+      {
+        san: "Ra8+",
+        commentary:
+          "The rook invades the 8th rank with check, completing the sentence: " +
+          "“keeps the opposing King hemmed in on the last rank.” The monarch " +
+          "cannot escape the horizontal and vertical prison.",
+      },
+      {
+        san: "Kd7",
+        commentary:
+          "The King finally steps off the last rank, but only after losing " +
+          "three pawns and the initiative. The lesson: place your Rook on the " +
+          "7th, and the opponent's pawns and King become your targets.",
+      },
+    ],
+  },
 };
 
 export function getLesson(id: string): LessonContent {
