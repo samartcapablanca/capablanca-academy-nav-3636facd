@@ -81,7 +81,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                   )}
                 >
                   <Icon className="h-5 w-5" />
-                  <span className="tracking-wide">{short ?? label}</span>
+                  <span className="tracking-wide">{short}</span>
                 </Link>
               </li>
             );
