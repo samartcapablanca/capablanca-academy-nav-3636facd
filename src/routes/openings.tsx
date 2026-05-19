@@ -93,13 +93,24 @@ function Openings() {
             </thead>
             <tbody>
               {rows.map((g) => (
-                <tr key={g.id} className="border-b border-border/60 last:border-0 transition hover:bg-surface-elevated/60">
+                <tr
+                  key={g.id}
+                  onClick={() => setReplay(g)}
+                  className="group cursor-pointer border-b border-border/60 last:border-0 transition hover:bg-gold/5"
+                >
                   <td className="px-5 py-4 font-display text-gold">{g.year}</td>
                   <td className="px-5 py-4 text-cream">{g.white}</td>
                   <td className="px-5 py-4 text-cream">{g.black}</td>
                   <td className="px-5 py-4 text-muted-foreground">{g.opening}</td>
                   <td className="px-5 py-4 text-muted-foreground">{g.event}</td>
-                  <td className="px-5 py-4 text-right font-mono text-cream">{g.result}</td>
+                  <td className="px-5 py-4 text-right">
+                    <div className="flex items-center justify-end gap-3">
+                      <span className="font-mono text-cream">{g.result}</span>
+                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-gold/30 text-gold opacity-60 transition group-hover:bg-gold group-hover:text-primary-foreground group-hover:opacity-100">
+                        <Play className="h-3 w-3 fill-current" />
+                      </span>
+                    </div>
+                  </td>
                 </tr>
               ))}
               {rows.length === 0 && (
@@ -113,6 +124,14 @@ function Openings() {
           </table>
         </div>
       </div>
+
+      <MatchReplayPlayer
+        matchId={replay ? `archive-${replay.id}` : null}
+        eyebrow={replay ? `${replay.event} · ${replay.year}` : undefined}
+        titleOverride={replay ? `${replay.white} vs. ${replay.black}` : undefined}
+        capablancaColor={replay && replay.white.includes("Capablanca") ? "w" : "b"}
+        onClose={() => setReplay(null)}
+      />
     </AppShell>
   );
 }
