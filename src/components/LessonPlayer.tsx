@@ -72,9 +72,9 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
       <div className="flex items-center justify-between border-b border-border bg-sidebar px-4 py-3 md:px-8">
         <div className="min-w-0">
           <div className="text-[10px] uppercase tracking-[0.24em] text-gold/80">
-            Lesson {lessonId}
+            {eyebrow ?? `Lesson ${lessonId}`}
           </div>
-          <h2 className="truncate font-display text-lg text-cream md:text-xl">{lesson.title}</h2>
+          <h2 className="truncate font-display text-lg text-cream md:text-xl">{titleOverride ?? lesson.title}</h2>
         </div>
         <div className="flex items-center gap-2">
           <button
