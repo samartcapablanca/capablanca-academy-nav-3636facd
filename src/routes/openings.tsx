@@ -31,6 +31,7 @@ const RESULTS = ["All", "1-0", "0-1", "½-½"] as const;
 function Openings() {
   const [q, setQ] = useState("");
   const [result, setResult] = useState<(typeof RESULTS)[number]>("All");
+  const [replay, setReplay] = useState<(typeof GAMES)[number] | null>(null);
 
   const rows = useMemo(() => {
     const needle = q.trim().toLowerCase();
