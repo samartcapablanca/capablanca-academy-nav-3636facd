@@ -150,7 +150,19 @@ export function ChessBoardView({
 
                     {piece && (
                       <div
-                        className="absolute inset-0 flex items-center justify-center"
+                        className={cn(
+                          "absolute inset-0 flex items-center justify-center",
+                          interactive && "cursor-grab active:cursor-grabbing",
+                        )}
+                        draggable={interactive}
+                        onDragStart={
+                          interactive
+                            ? (e) => {
+                                e.dataTransfer.setData("text/plain", square);
+                                e.dataTransfer.effectAllowed = "move";
+                              }
+                            : undefined
+                        }
                       >
 
                         {isIso ? (
