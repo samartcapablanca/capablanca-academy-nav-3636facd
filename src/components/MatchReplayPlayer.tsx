@@ -4,8 +4,6 @@ import {
   ChevronLeft,
   ChevronRight,
   Lightbulb,
-  Box,
-  Square,
   X,
   Sparkles,
 } from "lucide-react";
