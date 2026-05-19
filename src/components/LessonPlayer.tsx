@@ -12,7 +12,7 @@ type Props = {
   titleOverride?: string;
 };
 
-export function LessonPlayer({ lessonId, onClose }: Props) {
+export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Props) {
   const lesson = useMemo(() => (lessonId ? getLesson(lessonId) : null), [lessonId]);
   const [moveIndex, setMoveIndex] = useState(-1); // -1 = starting position, 0..n-1 after move k
   const [perspective, setPerspective] = useState<"2.5d" | "2d">("2.5d");
