@@ -63,7 +63,7 @@ export function MatchReplayPlayer({
 }: Props) {
   const lesson = useMemo(() => (matchId ? getLesson(matchId) : null), [matchId]);
   const [moveIndex, setMoveIndex] = useState(-1);
-  const [perspective, setPerspective] = useState<"2.5d" | "2d">("2.5d");
+  
   const [guessMode, setGuessMode] = useState(false);
   const [feedback, setFeedback] =
     useState<{ square: string; kind: "success" | "error" } | null>(null);
