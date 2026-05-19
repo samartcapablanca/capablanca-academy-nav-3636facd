@@ -52,7 +52,14 @@ function parseFen(fen: string): (string | null)[][] {
 
 const FILES = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
-export function ChessBoardView({ fen, perspective, lastMove }: BoardProps) {
+export function ChessBoardView({
+  fen,
+  perspective,
+  lastMove,
+  interactive = false,
+  onSquareDrop,
+  feedback = null,
+}: BoardProps) {
   const board = useMemo(() => parseFen(fen), [fen]);
   const isIso = perspective === "2.5d";
 
@@ -83,6 +90,7 @@ export function ChessBoardView({ fen, perspective, lastMove }: BoardProps) {
                 const square = FILES[c] + (8 - r);
                 const isLastMove =
                   lastMove && (square === lastMove.from || square === lastMove.to);
+                const fbHere = feedback && feedback.square === square ? feedback : null;
 
                 let bg: string;
                 if (isIso) {
@@ -96,7 +104,21 @@ export function ChessBoardView({ fen, perspective, lastMove }: BoardProps) {
                 return (
                   <div
                     key={square}
-                    className="relative aspect-square"
+                    className={cn(
+                      "relative aspect-square",
+                      fbHere?.kind === "success" && "square-flash-success",
+                      fbHere?.kind === "error" && "square-flash-error",
+                    )}
+                    onDragOver={interactive ? (e) => e.preventDefault() : undefined}
+                    onDrop={
+                      interactive
+                        ? (e) => {
+                            e.preventDefault();
+                            const from = e.dataTransfer.getData("text/plain");
+                            if (from && from !== square) onSquareDrop?.(from, square);
+                          }
+                        : undefined
+                    }
                     style={{
                       background: bg,
                       boxShadow: isLastMove
