@@ -100,6 +100,7 @@ const INITIAL_COMPLETED = new Set(["1-1", "1-2", "1-3", "2-1"]);
 
 function Fundamentals() {
   const [completed, setCompleted] = useState<Set<string>>(INITIAL_COMPLETED);
+  const [openLesson, setOpenLesson] = useState<string | null>(null);
   const totalLessons = CHAPTERS.reduce((s, c) => s + c.lessons.length, 0);
 
   const toggle = (id: string) => {
