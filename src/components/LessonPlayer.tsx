@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Chess } from "chess.js";
-import { ChevronLeft, ChevronRight, Lightbulb, Box, Square, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Lightbulb, X } from "lucide-react";
 import { ChessBoardView } from "./ChessBoardView";
 import { getLesson } from "@/lib/lessons";
 import { cn } from "@/lib/utils";
