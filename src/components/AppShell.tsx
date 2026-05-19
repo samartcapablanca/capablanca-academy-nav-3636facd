@@ -69,7 +69,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       {/* Mobile bottom nav */}
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-sidebar/95 backdrop-blur md:hidden">
         <ul className="grid grid-cols-4">
-          {NAV.map(({ to, short, label, icon: Icon }) => {
+          {NAV.map(({ to, short, icon: Icon }) => {
             const active = pathname === to;
             return (
               <li key={to}>
