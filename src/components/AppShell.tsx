@@ -2,12 +2,12 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { LayoutDashboard, GraduationCap, Trophy, BookOpen, Crown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const NAV = [
-  { to: "/", label: "Dashboard", icon: LayoutDashboard },
+const NAV: { to: "/" | "/fundamentals" | "/milestones" | "/openings"; label: string; icon: any; short: string }[] = [
+  { to: "/", label: "Dashboard", icon: LayoutDashboard, short: "Dashboard" },
   { to: "/fundamentals", label: "Level 1: Fundamentals", icon: GraduationCap, short: "Fundamentals" },
   { to: "/milestones", label: "Milestone Archive", icon: Trophy, short: "Milestones" },
   { to: "/openings", label: "Open Archive", icon: BookOpen, short: "Archive" },
-] as const;
+];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
