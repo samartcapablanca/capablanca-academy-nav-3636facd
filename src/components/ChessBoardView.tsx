@@ -17,14 +17,8 @@ const STAUNTON: Record<string, string> = {
   bP: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Chess_pdt45.svg",
 };
 
-const FLAT_GLYPH: Record<string, string> = {
-  wK: "♔", wQ: "♕", wR: "♖", wB: "♗", wN: "♘", wP: "♙",
-  bK: "♚", bQ: "♛", bR: "♜", bB: "♝", bN: "♞", bP: "♟",
-};
-
 type BoardProps = {
   fen: string;
-  perspective: "2.5d" | "2d";
   lastMove?: { from: string; to: string } | null;
   interactive?: boolean;
   onSquareDrop?: (from: string, to: string) => void;
@@ -54,151 +48,115 @@ const FILES = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
 export function ChessBoardView({
   fen,
-  perspective,
   lastMove,
   interactive = false,
   onSquareDrop,
   feedback = null,
 }: BoardProps) {
   const board = useMemo(() => parseFen(fen), [fen]);
-  const isIso = perspective === "2.5d";
 
   return (
-    <div className="relative mx-auto w-full max-w-[560px]" style={{ perspective: "1600px" }}>
-      {/* Oak outer frame */}
+    <div className="relative mx-auto w-full max-w-[560px]">
+      {/* Wooden outer frame */}
       <div
-        className={cn(
-          "relative rounded-xl p-3 md:p-4 transition-all duration-500",
-        )}
+        className="relative rounded-xl p-3 md:p-4"
         style={{
-          background: isIso
-            ? "linear-gradient(135deg, oklch(0.55 0.08 60), oklch(0.42 0.07 55))"
-            : "linear-gradient(135deg, oklch(0.34 0.04 270), oklch(0.28 0.04 270))",
-          boxShadow: isIso
-            ? "0 30px 60px -20px rgba(0,0,0,0.7), inset 0 0 0 2px oklch(0.65 0.09 65)"
-            : "0 10px 30px -10px rgba(0,0,0,0.6)",
-          transform: isIso ? "rotateX(22deg)" : "rotateX(0deg)",
-          transformStyle: "preserve-3d",
-          transition: "transform 500ms ease-out, background 500ms ease-out",
+          background:
+            "linear-gradient(135deg, oklch(0.55 0.08 60), oklch(0.42 0.07 55))",
+          boxShadow:
+            "0 30px 60px -20px rgba(0,0,0,0.7), inset 0 0 0 2px oklch(0.65 0.09 65)",
         }}
       >
-        <div className="relative">
-          <div className="grid grid-cols-8 overflow-hidden rounded-md ring-1 ring-black/40">
-            {board.map((row, r) =>
-              row.map((piece, c) => {
-                const isLight = (r + c) % 2 === 0;
-                const square = FILES[c] + (8 - r);
-                const isLastMove =
-                  lastMove && (square === lastMove.from || square === lastMove.to);
-                const fbHere = feedback && feedback.square === square ? feedback : null;
+        <div className="grid grid-cols-8 overflow-hidden rounded-md ring-1 ring-black/40">
+          {board.map((row, r) =>
+            row.map((piece, c) => {
+              const isLight = (r + c) % 2 === 0;
+              const square = FILES[c] + (8 - r);
+              const isLastMove =
+                lastMove && (square === lastMove.from || square === lastMove.to);
+              const fbHere = feedback && feedback.square === square ? feedback : null;
 
-                let bg: string;
-                if (isIso) {
-                  bg = isLight
-                    ? "linear-gradient(135deg, oklch(0.92 0.04 80), oklch(0.86 0.05 75))"
-                    : "linear-gradient(135deg, oklch(0.42 0.05 50), oklch(0.32 0.05 45))";
-                } else {
-                  bg = isLight ? "oklch(0.88 0.04 85)" : "oklch(0.45 0.06 260)";
-                }
+              const bg = isLight ? "oklch(0.90 0.035 80)" : "oklch(0.46 0.06 55)";
 
-                return (
-                  <div
-                    key={square}
-                    className={cn(
-                      "relative aspect-square",
-                      fbHere?.kind === "success" && "square-flash-success",
-                      fbHere?.kind === "error" && "square-flash-error",
-                    )}
-                    onDragOver={interactive ? (e) => e.preventDefault() : undefined}
-                    onDrop={
-                      interactive
-                        ? (e) => {
-                            e.preventDefault();
-                            const from = e.dataTransfer.getData("text/plain");
-                            if (from && from !== square) onSquareDrop?.(from, square);
-                          }
-                        : undefined
-                    }
-                    style={{
-                      background: bg,
-                      boxShadow: isLastMove
-                        ? "inset 0 0 0 3px oklch(0.82 0.15 85 / 0.85)"
-                        : undefined,
-                    }}
-                  >
-                    {/* coordinate labels */}
-                    {c === 0 && (
-                      <span
-                        className={cn(
-                          "pointer-events-none absolute left-0.5 top-0 text-[8px] font-semibold md:text-[10px]",
-                          isLight ? "text-stone-700/70" : "text-stone-100/70",
-                        )}
-                      >
-                        {8 - r}
-                      </span>
-                    )}
-                    {r === 7 && (
-                      <span
-                        className={cn(
-                          "pointer-events-none absolute bottom-0 right-0.5 text-[8px] font-semibold md:text-[10px]",
-                          isLight ? "text-stone-700/70" : "text-stone-100/70",
-                        )}
-                      >
-                        {FILES[c]}
-                      </span>
-                    )}
-
-                    {piece && (
-                      <div
-                        className={cn(
-                          "absolute inset-0 flex items-center justify-center",
-                          interactive && "cursor-grab active:cursor-grabbing",
-                        )}
-                        draggable={interactive}
-                        onDragStart={
-                          interactive
-                            ? (e) => {
-                                e.dataTransfer.setData("text/plain", square);
-                                e.dataTransfer.effectAllowed = "move";
-                              }
-                            : undefined
+              return (
+                <div
+                  key={square}
+                  className={cn(
+                    "relative aspect-square",
+                    fbHere?.kind === "success" && "square-flash-success",
+                    fbHere?.kind === "error" && "square-flash-error",
+                  )}
+                  onDragOver={interactive ? (e) => e.preventDefault() : undefined}
+                  onDrop={
+                    interactive
+                      ? (e) => {
+                          e.preventDefault();
+                          const from = e.dataTransfer.getData("text/plain");
+                          if (from && from !== square) onSquareDrop?.(from, square);
                         }
-                      >
+                      : undefined
+                  }
+                  style={{
+                    background: bg,
+                    boxShadow: isLastMove
+                      ? "inset 0 0 0 3px oklch(0.82 0.15 85 / 0.85)"
+                      : undefined,
+                  }}
+                >
+                  {/* coordinate labels */}
+                  {c === 0 && (
+                    <span
+                      className={cn(
+                        "pointer-events-none absolute left-0.5 top-0 text-[8px] font-semibold md:text-[10px]",
+                        isLight ? "text-stone-700/70" : "text-stone-100/70",
+                      )}
+                    >
+                      {8 - r}
+                    </span>
+                  )}
+                  {r === 7 && (
+                    <span
+                      className={cn(
+                        "pointer-events-none absolute bottom-0 right-0.5 text-[8px] font-semibold md:text-[10px]",
+                        isLight ? "text-stone-700/70" : "text-stone-100/70",
+                      )}
+                    >
+                      {FILES[c]}
+                    </span>
+                  )}
 
-                        {isIso ? (
-                          <img
-                            src={STAUNTON[piece]}
-                            alt={piece}
-                            draggable={false}
-                            className="h-[78%] w-[78%] select-none"
-                            style={{
-                              filter:
-                                "drop-shadow(2px 6px 4px rgba(0,0,0,0.55)) drop-shadow(0 2px 1px rgba(0,0,0,0.3))",
-                            }}
-                          />
-                        ) : (
-                          <span
-                            className={cn(
-                              "select-none font-chess leading-none",
-                              piece.startsWith("w") ? "text-stone-50" : "text-stone-900",
-                            )}
-                            style={{
-                              fontSize: "min(7vw, 44px)",
-                              textShadow: piece.startsWith("w")
-                                ? "0 1px 0 rgba(0,0,0,0.45)"
-                                : "0 1px 0 rgba(255,255,255,0.15)",
-                            }}
-                          >
-                            {FLAT_GLYPH[piece]}
-                          </span>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                );
-              }),
-            )}
-          </div>
+                  {piece && (
+                    <div
+                      className={cn(
+                        "absolute inset-0 flex items-center justify-center",
+                        interactive && "cursor-grab active:cursor-grabbing",
+                      )}
+                      draggable={interactive}
+                      onDragStart={
+                        interactive
+                          ? (e) => {
+                              e.dataTransfer.setData("text/plain", square);
+                              e.dataTransfer.effectAllowed = "move";
+                            }
+                          : undefined
+                      }
+                    >
+                      <img
+                        src={STAUNTON[piece]}
+                        alt={piece}
+                        draggable={false}
+                        className="h-[82%] w-[82%] select-none"
+                        style={{
+                          filter:
+                            "drop-shadow(0 1px 1px rgba(0,0,0,0.35))",
+                        }}
+                      />
+                    </div>
+                  )}
+                </div>
+              );
+            }),
+          )}
         </div>
       </div>
     </div>
