@@ -125,12 +125,8 @@ export function ChessBoardView({ fen, perspective, lastMove }: BoardProps) {
                     {piece && (
                       <div
                         className="absolute inset-0 flex items-center justify-center"
-                        style={{
-                          transform: isIso ? "rotateX(-45deg) translateY(-8%)" : "none",
-                          transformOrigin: "center bottom",
-                          transition: "transform 500ms ease-out",
-                        }}
                       >
+
                         {isIso ? (
                           <img
                             src={STAUNTON[piece]}
