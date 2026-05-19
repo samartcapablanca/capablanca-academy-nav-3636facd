@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AppShell } from "@/components/AppShell";
-import { Search } from "lucide-react";
+import { MatchReplayPlayer } from "@/components/MatchReplayPlayer";
+import { Search, Play } from "lucide-react";
 import { useMemo, useState } from "react";
 
 export const Route = createFileRoute("/openings")({
