@@ -36,7 +36,7 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
   // and back/forward navigation never desync.
   const { fen, lastMove, applied } = useMemo(() => {
     if (!lesson) return { fen: new Chess().fen(), lastMove: null as null | { from: string; to: string }, applied: 0 };
-    const game = new Chess();
+    const game = lesson.startFen ? new Chess(lesson.startFen) : new Chess();
     let last: { from: string; to: string } | null = null;
     let count = 0;
     for (let i = 0; i <= moveIndex && i < lesson.moves.length; i++) {
