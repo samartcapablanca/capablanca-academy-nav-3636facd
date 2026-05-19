@@ -8,9 +8,11 @@ import { cn } from "@/lib/utils";
 type Props = {
   lessonId: string | null;
   onClose: () => void;
+  eyebrow?: string;
+  titleOverride?: string;
 };
 
-export function LessonPlayer({ lessonId, onClose }: Props) {
+export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Props) {
   const lesson = useMemo(() => (lessonId ? getLesson(lessonId) : null), [lessonId]);
   const [moveIndex, setMoveIndex] = useState(-1); // -1 = starting position, 0..n-1 after move k
   const [perspective, setPerspective] = useState<"2.5d" | "2d">("2.5d");
@@ -70,9 +72,9 @@ export function LessonPlayer({ lessonId, onClose }: Props) {
       <div className="flex items-center justify-between border-b border-border bg-sidebar px-4 py-3 md:px-8">
         <div className="min-w-0">
           <div className="text-[10px] uppercase tracking-[0.24em] text-gold/80">
-            Lesson {lessonId}
+            {eyebrow ?? `Lesson ${lessonId}`}
           </div>
-          <h2 className="truncate font-display text-lg text-cream md:text-xl">{lesson.title}</h2>
+          <h2 className="truncate font-display text-lg text-cream md:text-xl">{titleOverride ?? lesson.title}</h2>
         </div>
         <div className="flex items-center gap-2">
           <button
