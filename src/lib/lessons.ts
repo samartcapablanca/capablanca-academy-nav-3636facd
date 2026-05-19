@@ -615,6 +615,76 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+
+  // ─────────────────────────────────────────────────────────────────
+  // CHAPTER II — Lesson 4: Queen against Rook (Philidor & Zugzwang)
+  // ─────────────────────────────────────────────────────────────────
+  "2-4": {
+    title: "Queen against Rook — The Philidor Position & Zugzwang",
+    intro:
+      "Capablanca: “In this ending, the stronger side wins by pushing the " +
+      "opponent's king to the edge or corner of the board. The winning method " +
+      "is based on 'Zugzwang'—forcing the weaker side to separate their Rook " +
+      "from their King, which immediately allows a deadly double-attack (fork) " +
+      "by the Queen to win the piece.” White: King e6, Queen e5. Black: King e8, " +
+      "Rook f7. A classic Philidor setup where the defender is already on the " +
+      "brink of collapse.",
+    startFen: "4k3/5r2/4K3/4Q3/8/8/8/8 w - - 0 1",
+    moves: [
+      {
+        san: "Qd5",
+        commentary:
+          "“Restrict, then attack.” The Queen descends to d5, cutting off the " +
+          "Rook's escape along the 7th rank and threatening to tighten the net. " +
+          "Every step in this ending is about reducing the defender's options.",
+      },
+      {
+        san: "Re7+",
+        commentary:
+          "Black attempts a desperado check, hoping to force the White King " +
+          "away and gain a tempo. Capablanca noted that in lost positions, " +
+          "checks are often the only resource — but they rarely save the game.",
+      },
+      {
+        san: "Kf6",
+        commentary:
+          "The King approaches. “Bring your King to the centre of the board.” " +
+          "From f6, White's monarch seals off every flight square on the 7th rank " +
+          "and prepares for the final zugzwang.",
+      },
+      {
+        san: "Kf8",
+        commentary:
+          "Black's King retreats to f8, clinging to the centre. But the " +
+          "coordinated White pieces are closing in, and the defender's mobility " +
+          "shrinks with every move.",
+      },
+      {
+        san: "Qd6",
+        commentary:
+          "The decisive zugzwang. The Queen on d6 attacks e7 and paralyses the " +
+          "entire Black position: the Rook cannot move to any safe square, and " +
+          "the King must abandon his protector. Capablanca's method in its purest " +
+          "form — force the opponent to move against his own interest.",
+      },
+      {
+        san: "Ke8",
+        commentary:
+          "Forced. The Rook on e7 is immobilised — every escape square is either " +
+          "attacked by the Queen or the White King. The defender's only legal " +
+          "moves are with the King: to e8 or g8. Both are fatal.",
+      },
+      {
+        san: "Qxe7#",
+        commentary:
+          "Mate. The King stepped away, and the Rook was instantly captured with " +
+          "check. The Black King has no escape: d8 and f8 are controlled by the " +
+          "Queen, d7 and f7 by the White King. This is the power of zugzwang — " +
+          "the defender was compelled to self-destruction. As Capablanca wrote: " +
+          "“The winning method is based on Zugzwang.”",
+      },
+    ],
+  },
 };
 
 export function getLesson(id: string): LessonContent {
