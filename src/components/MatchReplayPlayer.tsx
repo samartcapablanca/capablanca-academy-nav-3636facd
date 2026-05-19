@@ -122,7 +122,7 @@ export function MatchReplayPlayer({
     if (!lesson) return null;
     const ni = moveIndex + 1;
     if (ni >= lesson.moves.length) return null;
-    const g = new Chess();
+    const g = lesson.startFen ? new Chess(lesson.startFen) : new Chess();
     for (let i = 0; i <= moveIndex && i < lesson.moves.length; i++) {
       try {
         g.move(lesson.moves[i].san);
