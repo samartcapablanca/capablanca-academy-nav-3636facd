@@ -8,6 +8,8 @@ import { cn } from "@/lib/utils";
 type Props = {
   lessonId: string | null;
   onClose: () => void;
+  eyebrow?: string;
+  titleOverride?: string;
 };
 
 export function LessonPlayer({ lessonId, onClose }: Props) {
