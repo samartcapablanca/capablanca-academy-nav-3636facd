@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { LessonPlayer } from "@/components/LessonPlayer";
 
 export const Route = createFileRoute("/fundamentals")({
   head: () => ({
