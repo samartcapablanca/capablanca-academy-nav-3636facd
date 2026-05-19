@@ -75,30 +75,13 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
           </div>
           <h2 className="truncate font-display text-lg text-cream md:text-xl">{titleOverride ?? lesson.title}</h2>
         </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setPerspective((p) => (p === "2.5d" ? "2d" : "2.5d"))}
-            className="flex items-center gap-2 rounded-lg border border-border bg-surface px-3 py-2 text-xs font-medium text-cream transition hover:border-gold/50 hover:text-gold cursor-pointer"
-            aria-label="Toggle perspective"
-          >
-            {perspective === "2.5d" ? (
-              <>
-                <Box className="h-4 w-4 text-gold" /> <span className="hidden sm:inline">2.5D</span>
-              </>
-            ) : (
-              <>
-                <Square className="h-4 w-4 text-gold" /> <span className="hidden sm:inline">2D</span>
-              </>
-            )}
-          </button>
-          <button
-            onClick={onClose}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-muted-foreground transition hover:text-cream cursor-pointer"
-            aria-label="Close lesson"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        </div>
+        <button
+          onClick={onClose}
+          className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-muted-foreground transition hover:text-cream cursor-pointer"
+          aria-label="Close lesson"
+        >
+          <X className="h-4 w-4" />
+        </button>
       </div>
 
       {/* Body: 75/25 on desktop, stacked on mobile */}
