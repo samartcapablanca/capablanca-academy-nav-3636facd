@@ -124,13 +124,16 @@ function Milestones() {
         })}
       </ol>
 
-      <LessonPlayer
-        lessonId={replay?.game.id ?? null}
+      <MatchReplayPlayer
+        matchId={replay?.game.id ?? null}
         eyebrow={replay ? `${replay.tournament.name} · ${replay.tournament.year}` : undefined}
         titleOverride={
           replay
             ? `Game ${replay.game.num} — ${replay.game.white} vs. ${replay.game.black}`
             : undefined
+        }
+        capablancaColor={
+          replay && replay.game.white.includes("Capablanca") ? "w" : "b"
         }
         onClose={() => setReplay(null)}
       />
