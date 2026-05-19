@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { LessonPlayer } from "@/components/LessonPlayer";
 
 export const Route = createFileRoute("/fundamentals")({
   head: () => ({
@@ -99,6 +100,7 @@ const INITIAL_COMPLETED = new Set(["1-1", "1-2", "1-3", "2-1"]);
 
 function Fundamentals() {
   const [completed, setCompleted] = useState<Set<string>>(INITIAL_COMPLETED);
+  const [openLesson, setOpenLesson] = useState<string | null>(null);
   const totalLessons = CHAPTERS.reduce((s, c) => s + c.lessons.length, 0);
 
   const toggle = (id: string) => {
@@ -164,24 +166,33 @@ function Fundamentals() {
                     {ch.lessons.map((l, idx) => {
                       const isDone = completed.has(l.id);
                       return (
-                        <li key={l.id}>
+                        <li
+                          key={l.id}
+                          className="group/lesson flex items-center gap-4 rounded-lg px-2 py-2 transition hover:bg-surface-elevated/60"
+                        >
                           <button
                             type="button"
-                            onClick={() => toggle(l.id)}
-                            className="group/lesson flex w-full items-center gap-4 rounded-lg px-2 py-3 text-left transition hover:bg-surface-elevated/60 cursor-pointer"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggle(l.id);
+                            }}
+                            aria-label={isDone ? "Mark incomplete" : "Mark complete"}
+                            className={cn(
+                              "flex h-6 w-6 shrink-0 items-center justify-center rounded-full border transition cursor-pointer",
+                              isDone
+                                ? "border-gold gradient-gold shadow-luxe"
+                                : "border-border bg-surface-elevated hover:border-gold/60",
+                            )}
                           >
-                            <span
-                              className={cn(
-                                "flex h-6 w-6 shrink-0 items-center justify-center rounded-full border transition",
-                                isDone
-                                  ? "border-gold gradient-gold shadow-luxe"
-                                  : "border-border bg-surface-elevated group-hover/lesson:border-gold/50",
-                              )}
-                            >
-                              {isDone && (
-                                <Check className="h-3.5 w-3.5 text-primary-foreground" strokeWidth={3} />
-                              )}
-                            </span>
+                            {isDone && (
+                              <Check className="h-3.5 w-3.5 text-primary-foreground" strokeWidth={3} />
+                            )}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setOpenLesson(l.id)}
+                            className="flex flex-1 items-center gap-3 text-left cursor-pointer"
+                          >
                             <span className="font-mono text-[11px] text-muted-foreground">
                               {String(idx + 1).padStart(2, "0")}
                             </span>
@@ -189,7 +200,7 @@ function Fundamentals() {
                               className={cn(
                                 "flex-1 text-sm transition",
                                 isDone
-                                  ? "text-gold line-through decoration-gold/40"
+                                  ? "text-gold/90"
                                   : "text-cream group-hover/lesson:text-gold",
                               )}
                             >
@@ -206,6 +217,8 @@ function Fundamentals() {
           );
         })}
       </Accordion>
+
+      <LessonPlayer lessonId={openLesson} onClose={() => setOpenLesson(null)} />
     </AppShell>
   );
 }
