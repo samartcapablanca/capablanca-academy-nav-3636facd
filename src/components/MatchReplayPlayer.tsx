@@ -4,8 +4,6 @@ import {
   ChevronLeft,
   ChevronRight,
   Lightbulb,
-  Box,
-  Square,
   X,
   Sparkles,
 } from "lucide-react";
@@ -65,7 +63,7 @@ export function MatchReplayPlayer({
 }: Props) {
   const lesson = useMemo(() => (matchId ? getLesson(matchId) : null), [matchId]);
   const [moveIndex, setMoveIndex] = useState(-1);
-  const [perspective, setPerspective] = useState<"2.5d" | "2d">("2.5d");
+  
   const [guessMode, setGuessMode] = useState(false);
   const [feedback, setFeedback] =
     useState<{ square: string; kind: "success" | "error" } | null>(null);
@@ -207,30 +205,13 @@ export function MatchReplayPlayer({
             {titleOverride ?? lesson.title}
           </h2>
         </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setPerspective((p) => (p === "2.5d" ? "2d" : "2.5d"))}
-            className="flex items-center gap-2 rounded-lg border border-border bg-surface px-3 py-2 text-xs font-medium text-cream transition hover:border-gold/50 hover:text-gold cursor-pointer"
-            aria-label="Toggle perspective"
-          >
-            {perspective === "2.5d" ? (
-              <>
-                <Box className="h-4 w-4 text-gold" /> <span className="hidden sm:inline">2.5D</span>
-              </>
-            ) : (
-              <>
-                <Square className="h-4 w-4 text-gold" /> <span className="hidden sm:inline">2D</span>
-              </>
-            )}
-          </button>
-          <button
-            onClick={onClose}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-muted-foreground transition hover:text-cream cursor-pointer"
-            aria-label="Close match"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        </div>
+        <button
+          onClick={onClose}
+          className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-surface text-muted-foreground transition hover:text-cream cursor-pointer"
+          aria-label="Close match"
+        >
+          <X className="h-4 w-4" />
+        </button>
       </div>
 
       {/* Body */}
@@ -240,7 +221,7 @@ export function MatchReplayPlayer({
           <div className="w-full">
             <ChessBoardView
               fen={fen}
-              perspective={perspective}
+              
               lastMove={lastMove}
               interactive={guessMode}
               onSquareDrop={handleSquareDrop}
