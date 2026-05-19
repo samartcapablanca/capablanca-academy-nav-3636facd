@@ -47,7 +47,7 @@ const CHAPTERS: Chapter[] = [
       { id: "2-1", title: "A Cardinal Principle — The King as Attacking Piece" },
       { id: "2-2", title: "Three Pawns vs. Three — The Breakthrough" },
       { id: "2-3", title: "The Power of the Rook on the 7th Rank" },
-      { id: "2-4", title: "Queen against Rook" },
+      { id: "2-4", title: "Queen against Rook — The Philidor Position & Zugzwang" },
     ],
   },
   {
