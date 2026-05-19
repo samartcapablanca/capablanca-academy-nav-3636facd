@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { ChevronDown, Crown, Play } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
-import { LessonPlayer } from "@/components/LessonPlayer";
+import { MatchReplayPlayer } from "@/components/MatchReplayPlayer";
 import { ARCHIVE, type ArchiveGame, type ArchiveTournament } from "@/lib/milestones";
 import { cn } from "@/lib/utils";
 
