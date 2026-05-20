@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { MatchReplayPlayer } from "@/components/MatchReplayPlayer";
+import { ARCHIVE_GAMES } from "@/lib/archive";
 import { Sparkles, Flame, ArrowUpRight, Target } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -14,33 +15,32 @@ export const Route = createFileRoute("/")({
   component: Dashboard,
 });
 
-// Months with 31 days unlock the special Hastings 1919 featured game.
-function daysInCurrentMonth() {
+// Months with 31 days unlock the special Hastings 1919 featured game (id 31).
+// Other months rotate the daily challenge across the archive deterministically.
+function pickDailyGame() {
   const d = new Date();
-  return new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
+  const daysInMonth = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
+  if (daysInMonth === 31) {
+    return ARCHIVE_GAMES.find((g) => g.id === 31) ?? ARCHIVE_GAMES[0];
+  }
+  // Rotate by day-of-year across the non-Hastings entries.
+  const start = new Date(d.getFullYear(), 0, 0);
+  const dayOfYear = Math.floor((d.getTime() - start.getTime()) / 86400000);
+  const pool = ARCHIVE_GAMES.filter((g) => g.id !== 31);
+  return pool[dayOfYear % pool.length];
 }
-
-const DEFAULT_DAILY = {
-  caption: "Capablanca vs. Tartakower, 1924",
-  prompt: "White to move — find the quiet winning idea.",
-  matchId: null as string | null,
-  eyebrow: undefined as string | undefined,
-  title: undefined as string | undefined,
-  capablancaColor: "w" as "w" | "b",
-};
-
-const HASTINGS_FEATURED = {
-  caption: "W. Winter vs. Capablanca · Hastings, 1919",
-  prompt: "Black to move — Raúl locks the position for life. What is his move?",
-  matchId: "archive-31",
-  eyebrow: "Hastings Victory Congress · 1919",
-  title: "W. Winter vs. J. R. Capablanca",
-  capablancaColor: "b" as "w" | "b",
-};
 
 function Dashboard() {
   const progress = 42;
-  const featured = daysInCurrentMonth() === 31 ? HASTINGS_FEATURED : DEFAULT_DAILY;
+  const game = pickDailyGame();
+  const featured = {
+    caption: `${game.white} vs. ${game.black} · ${game.year}`,
+    prompt: game.hint,
+    matchId: `archive-${game.id}` as string | null,
+    eyebrow: `${game.event} · ${game.year}`,
+    title: `${game.white} vs. ${game.black}`,
+    capablancaColor: (game.white.includes("Capablanca") ? "w" : "b") as "w" | "b",
+  };
   const [replayOpen, setReplayOpen] = useState(false);
 
   return (
