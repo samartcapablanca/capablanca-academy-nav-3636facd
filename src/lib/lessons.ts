@@ -685,6 +685,201 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+
+  "3-1": {
+    title: "Attacking the King from the Flank",
+    intro:
+      "Capablanca: “When planning a flank attack against the enemy King, it is " +
+      "vital to first ensure your own centre is secure. An attack on a flank " +
+      "with an unstable centre will almost always be crushed by a counter-strike " +
+      "in the middle.” Both sides have castled — White short, Black long — and " +
+      "the pawn storm against the enemy King must be timed to a rock-solid centre.",
+    startFen:
+      "2kr1bnr/ppp2ppp/2nqb3/3pp3/3PP3/2NQBN2/PPP2PPP/2KR1B1R w - - 0 1",
+    moves: [
+      {
+        san: "Kb1",
+        commentary:
+          "Before the storm, prophylaxis. White tucks the King into the corner, " +
+          "off the c-file where Black's Rook already eyes the queenside. " +
+          "Capablanca: “Never begin an attack until your own King is safe.”",
+      },
+      {
+        san: "Kb8",
+        commentary:
+          "Black mirrors the same wisdom. Both sides quietly secure their monarchs " +
+          "before the pawns begin to march.",
+      },
+      {
+        san: "h4",
+        commentary:
+          "The flank attack begins. The h-pawn advances to pry open lines toward " +
+          "the Black King — but only because the d4/e4 centre is firmly defended.",
+      },
+      {
+        san: "a6",
+        commentary:
+          "Black prepares his own counter-storm with …b5. The race is on, and " +
+          "the side with the more stable centre will land the decisive blow first.",
+      },
+      {
+        san: "h5",
+        commentary:
+          "White's pawn reaches h5, threatening h6 to crack the shelter around " +
+          "Black's King. Every flank move rests on the granite centre.",
+      },
+      {
+        san: "b5",
+        commentary:
+          "Black launches the counter. Capablanca warned: the side whose centre " +
+          "first cracks will see his flank attack rebound.",
+      },
+      {
+        san: "exd5",
+        commentary:
+          "A central exchange that clarifies — but does not weaken — White's pawns. " +
+          "The d4-pawn remains an anchor while the kingside assault continues.",
+      },
+      {
+        san: "Nxd5",
+        commentary:
+          "Black recaptures. The lesson stands: a flank attack only succeeds when " +
+          "the centre is secure. The player who follows Capablanca's principle " +
+          "most strictly will land the decisive blow.",
+      },
+    ],
+  },
+
+  "3-2": {
+    title: "The Value of the Two Bishops",
+    intro:
+      "Capablanca: “In open positions, the two Bishops are immensely powerful " +
+      "because they can control both color complexes simultaneously, slice across " +
+      "the entire board, and slowly squeeze the opponent's knights into complete " +
+      "passivity.” White holds the Bishop pair in an open middle-game — the " +
+      "perfect laboratory for the famous “minor exchange.”",
+    startFen:
+      "r3k2r/ppp2ppp/2n1b3/3p4/3P4/2N1B3/PPP2PPP/R3KB1R w KQkq - 0 1",
+    moves: [
+      {
+        san: "Bd3",
+        commentary:
+          "The light-squared Bishop takes up its grand diagonal. Capablanca: " +
+          "“Place your Bishops where they command the longest open lines.”",
+      },
+      {
+        san: "O-O",
+        commentary:
+          "Black castles into safety, but his Knight on c6 is already short of " +
+          "good squares. The two Bishops are simply more flexible.",
+      },
+      {
+        san: "O-O",
+        commentary:
+          "White castles. With both Kings secure, the long-term struggle begins: " +
+          "the side with the Bishop pair will steer the game toward open lines.",
+      },
+      {
+        san: "Nb4",
+        commentary:
+          "The Knight seeks an outpost, but Bishops thrive when the position is " +
+          "fluid. “A Bishop is always stronger than a Knight whose outposts can " +
+          "be challenged by a pawn.”",
+      },
+      {
+        san: "Bb1",
+        commentary:
+          "The Bishop steps back to preserve itself — never trade a Bishop for a " +
+          "Knight without concrete reason. The pair must be kept intact.",
+      },
+      {
+        san: "c5",
+        commentary:
+          "Black tries to gain space, but every pawn exchange tends to open the " +
+          "position — and open positions favour the long-range Bishops.",
+      },
+      {
+        san: "dxc5",
+        commentary:
+          "White obliges. The diagonals lengthen, and the two Bishops now rake " +
+          "across the whole board. The Knight has no permanent square.",
+      },
+      {
+        san: "Bxc5",
+        commentary:
+          "The position is fully open. White's Bishop pair controls both colour " +
+          "complexes. This is the “slow squeeze” Capablanca described — the " +
+          "Bishops win by accumulating tiny advantages until the opponent has no " +
+          "useful move left.",
+      },
+    ],
+  },
+
+  "3-3": {
+    title: "Creating a Target — Weakening the Enemy Pawn Structure",
+    intro:
+      "Capablanca: “A plan must have an object. The easiest object is a weak " +
+      "enemy pawn. Force the opponent to move their pawns forward until they " +
+      "create a permanent structural hole or an isolated target that your pieces " +
+      "can collectively siege.” Black has been left with an isolated d-pawn — a " +
+      "textbook target on a half-open file.",
+    startFen:
+      "r2q1rk1/pp3ppp/2n1bn2/3p4/8/2N1BN2/PP3PPP/R2QR1K1 w - - 0 1",
+    moves: [
+      {
+        san: "Nb5",
+        commentary:
+          "The first siege piece arrives. The Knight heads for d4 — the ideal " +
+          "blockading square in front of an isolated pawn. “Blockade first, " +
+          "capture later.”",
+      },
+      {
+        san: "Rc8",
+        commentary:
+          "Black seeks counterplay on the c-file, but the pawn on d5 cannot move " +
+          "without losing itself. The weakness is permanent.",
+      },
+      {
+        san: "Nbd4",
+        commentary:
+          "The Knight settles on d4. Capablanca's method: collect pieces around " +
+          "the target one by one until the defender runs out of guards.",
+      },
+      {
+        san: "Bd7",
+        commentary:
+          "Black scrambles to add a defender. Every piece tied to d5 is a piece " +
+          "that cannot attack — the isolated pawn paralyses the entire army.",
+      },
+      {
+        san: "Nxe6",
+        commentary:
+          "A small combination removes a defender. “Reduce the opponent's pieces " +
+          "around the weakness, then the weakness falls.”",
+      },
+      {
+        san: "fxe6",
+        commentary:
+          "Black recaptures — and now has two weaknesses: the isolated d-pawn and " +
+          "a new doubled e-pawn. The principle of two weaknesses: the defender " +
+          "cannot guard both at once.",
+      },
+      {
+        san: "Rxc8",
+        commentary:
+          "Simplification. Trade pieces, not pawns — every exchange brings White " +
+          "closer to an endgame in which d5 must fall.",
+      },
+      {
+        san: "Qxc8",
+        commentary:
+          "The position is technically winning. White will manoeuvre a Knight to " +
+          "f4, double Rooks on the d-file, and harvest the pawn at leisure. This " +
+          "is the essence of Capablanca's middle-game plan: identify the target, " +
+          "blockade it, surround it, and collect it.",
+      },
+    ],
+  },
 };
 
 export function getLesson(id: string): LessonContent {
