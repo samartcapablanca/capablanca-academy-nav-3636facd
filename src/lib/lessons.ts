@@ -1058,6 +1058,323 @@ export const LESSONS: Record<string, LessonContent> = {
       "Try again! Liquidate the central files to systematically transition into an endgame advantage.",
   },
 
+  // ─────────────────────────────────────────────────────────────────
+  // NODE III — 1927 Alekhine–Capablanca World Championship
+  // ─────────────────────────────────────────────────────────────────
+
+  "alekhine-g1": {
+    title: "Capablanca – Alekhine, Buenos Aires 1927 · Game 1",
+    intro:
+      "The opening game of the marathon 34-game World Championship match. Capablanca, playing White, " +
+      "meets the French Winawer — a bold choice by the challenger. The game sets the tone: Capablanca's " +
+      "positional clarity against Alekhine's fighting resourcefulness.",
+    moves: [
+      { san: "e4", commentary: "Capablanca opens with the King's Pawn — his signature directness." },
+      { san: "e6", commentary: "The French Defence — a solid but somewhat cramped response." },
+      { san: "d4", commentary: "Claiming the centre with both pawns." },
+      { san: "d5", commentary: "The thematic French counter-thrust against e4." },
+      { san: "Nc3", commentary: "Development with pressure on d5." },
+      { san: "Bb4", commentary: "The Winawer — pinning the Knight and adding bite to the defence." },
+      { san: "exd5", commentary: "Exchanging in the centre to clarify the pawn structure." },
+      { san: "exd5", commentary: "Black recaptures, maintaining a symmetrical centre." },
+      { san: "Bd3", commentary: "The Bishop claims the active diagonal toward h7." },
+      { san: "Nc6", commentary: "Black develops the Queen's Knight with a central threat." },
+      { san: "Ne2", commentary: "White reroutes the Knight to support the centre and prepare castling." },
+      { san: "Nge7", commentary: "Black defends d5 and prepares to castle." },
+      {
+        san: "O-O",
+        commentary:
+          "In the French Winawer, securing the King early allows White to calmly coordinate the minor pieces " +
+          "without fearing sudden central check threats.",
+      },
+      { san: "Bf5", commentary: "Black's Bishop finds an active post, eyeing the queenside." },
+    ],
+    guessMoveIndex: 12,
+    guessHint:
+      "Try again! Capablanca chooses to safeguard his King before initiating a central pawn break.",
+  },
+
+  "alekhine-g11": {
+    title: "Capablanca – Alekhine, Buenos Aires 1927 · Game 11",
+    intro:
+      "A Queen's Gambit Declined where Capablanca demonstrates how to suffocate an opponent's counterplay. " +
+      "The c5 advance is a masterclass in prophylaxis — preventing Black from ever breaking free.",
+    moves: [
+      { san: "d4", commentary: "The solid Queen's Pawn opening." },
+      { san: "d5", commentary: "Symmetrical reply — Black mirrors the centre." },
+      { san: "c4", commentary: "The Queen's Gambit — challenging the d5 pawn." },
+      { san: "e6", commentary: "The Declined — Black reinforces d5 from afar." },
+      { san: "Nc3", commentary: "Development with central pressure." },
+      { san: "Nf6", commentary: "Black brings out the King's Knight to guard d5." },
+      { san: "Bg5", commentary: "The pin — a classical QGD motif." },
+      { san: "Nbd7", commentary: "Black defends the Knight and prepares castling." },
+      { san: "e3", commentary: "Solid support for the centre." },
+      { san: "Be7", commentary: "The Bishop unpins and prepares kingside castling." },
+      { san: "Nf3", commentary: "White completes minor-piece development." },
+      { san: "O-O", commentary: "Black castles into safety." },
+      { san: "Rc1", commentary: "The Rook eyes the half-open c-file." },
+      { san: "a6", commentary: "Black prepares queenside expansion with b5." },
+      {
+        san: "c5",
+        commentary:
+          "Playing c5 closes the queenside entirely, robbing Black of their freeing b6/c5 pawn breaks and " +
+          "turning their light-squared bishop into a passive spectator.",
+      },
+    ],
+    guessMoveIndex: 14,
+    guessHint:
+      "Try again! Capablanca aggressively clamps down on Black's intended b5 expansion.",
+  },
+
+  "alekhine-g21": {
+    title: "Capablanca – Alekhine, Buenos Aires 1927 · Game 21",
+    intro:
+      "Another QGD encounter where Capablanca delays castling to prioritize piece activity. The Knight's " +
+      "jump to e4 is a perfect example of his dynamic understanding — restraint before consolidation.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetrical." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Nc3", commentary: "Reinforce." },
+      { san: "Nf6", commentary: "Guard d5." },
+      { san: "Bg5", commentary: "Pin." },
+      { san: "Nbd7", commentary: "Defend the Knight." },
+      { san: "e3", commentary: "Solid centre." },
+      { san: "Be7", commentary: "Unpin and prepare." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "Rc1", commentary: "Half-open file." },
+      { san: "c6", commentary: "Orthodox preparation." },
+      { san: "Bd3", commentary: "Active diagonal." },
+      { san: "dxc4", commentary: "Black releases the tension." },
+      { san: "Bxc4", commentary: "Recapture." },
+      { san: "Nd5", commentary: "The freeing manoeuvre." },
+      { san: "Bxe7", commentary: "Trade." },
+      { san: "Qxe7", commentary: "Recapture." },
+      {
+        san: "Ne4",
+        commentary:
+          "Deploying the Knight to e4 prevents Black from easily playing e5, keeping their position tightly " +
+          "restricted while White prepares a queenside initiative.",
+      },
+    ],
+    guessMoveIndex: 20,
+    guessHint:
+      "Try again! Instead of castling, Capablanca shifts the Knight to eye key dark-square entryways.",
+  },
+
+  "alekhine-g32": {
+    title: "Alekhine – Capablanca, Buenos Aires 1927 · Game 32",
+    intro:
+      "A pivotal moment in the match — Alekhine has ground down the position, but Capablanca finds the " +
+      "liberating e5 break at exactly the right moment. This is how a master escapes a clamp: with a single, " +
+      "perfectly timed central thrust.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Nc3", commentary: "Reinforce." },
+      { san: "Nf6", commentary: "Guard." },
+      { san: "Bg5", commentary: "Pin." },
+      { san: "Nbd7", commentary: "Defend." },
+      { san: "e3", commentary: "Solid." },
+      { san: "Be7", commentary: "Prepare." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "Rc1", commentary: "File." },
+      { san: "c6", commentary: "Orthodox." },
+      { san: "Bd3", commentary: "Diagonal." },
+      { san: "dxc4", commentary: "Release." },
+      { san: "Bxc4", commentary: "Recapture." },
+      { san: "Nd5", commentary: "Freeing." },
+      { san: "Bxe7", commentary: "Trade." },
+      { san: "Qxe7", commentary: "Recapture." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "Nxc3", commentary: "Black trades to relieve pressure." },
+      { san: "Rxc3", commentary: "Rook recapture — the file stays open." },
+      {
+        san: "e5",
+        commentary:
+          "The defining liberating breakthrough for Black in the Queen's Gambit Declined. Advancing the e-pawn " +
+          "liquidates the center and unblocks the c8-Bishop.",
+      },
+    ],
+    guessMoveIndex: 22,
+    guessHint:
+      "Try again! Black must strike the center immediately to break White's positional clamp.",
+  },
+
+  "alekhine-g34": {
+    title: "Alekhine – Capablanca, Buenos Aires 1927 · Game 34",
+    intro:
+      "The final game of the 1927 match. Alekhine needs only a draw to clinch the title. Capablanca, as Black, " +
+      "plays a quiet but deeply principled h6 — forcing the opponent to reveal intentions before committing his " +
+      "own pieces. A masterclass in patient, probing defence.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Nc3", commentary: "Reinforce." },
+      { san: "Nf6", commentary: "Guard." },
+      { san: "Bg5", commentary: "Pin." },
+      { san: "Nbd7", commentary: "Defend." },
+      { san: "e3", commentary: "Solid." },
+      { san: "Be7", commentary: "Unpin." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "Rc1", commentary: "File." },
+      { san: "c6", commentary: "Orthodox." },
+      { san: "Qc2", commentary: "White eyes e4 and prepares central action." },
+      { san: "a6", commentary: "Black prepares queenside counterplay with b5." },
+      {
+        san: "a3",
+        commentary:
+          "Forcing the Bishop to declare its intentions. This subtle pawn push creates a vital escape pocket " +
+          "for the King while preparing an ultimate b5 counter-push.",
+      },
+      { san: "h6", commentary: "The waiting move continues — Black asks the Bishop to commit." },
+    ],
+    guessMoveIndex: 16,
+    guessHint:
+      "Try again! Put the question to White's Bishop before committing your remaining queenside pieces.",
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // NODE III — 1936 Nottingham International Tournament
+  // ─────────────────────────────────────────────────────────────────
+
+  "nottingham-g1": {
+    title: "Capablanca – Botvinnik, Nottingham 1936 · Game 1",
+    intro:
+      "A Nimzo-Indian meeting between the veteran maestro and the rising Soviet star. Capablanca accepts " +
+      "doubled c-pawns for a firm grip on the centre — a positional decision that defines his endgame technique.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "Nf6", commentary: "Nimzo-Indian prelude — controlling e4." },
+      { san: "c4", commentary: "The English support." },
+      { san: "e6", commentary: "Flexible, supporting d5." },
+      { san: "Nc3", commentary: "Development with central ambition." },
+      { san: "Bb4", commentary: "The Nimzo-Indian pin — the signature move." },
+      { san: "e3", commentary: "Solid support, preparing Bd3." },
+      { san: "O-O", commentary: "Black castles early." },
+      { san: "Bd3", commentary: "The Bishop claims the long diagonal." },
+      { san: "d5", commentary: "Central counter-claim." },
+      { san: "Nf3", commentary: "White develops and eyes e5." },
+      { san: "c5", commentary: "Black strikes at the centre immediately." },
+      { san: "O-O", commentary: "White castles into safety." },
+      { san: "Nc6", commentary: "Black reinforces the central tension." },
+      { san: "a3", commentary: "Challenging the Bishop." },
+      { san: "Bxc3", commentary: "Black trades, damaging White's pawn structure." },
+      {
+        san: "bxc3",
+        commentary:
+          "Accepting the doubled c-pawns is fully justified here. It creates an immovable central phalanx that " +
+          "will spearhead a strong, crushing kingside march.",
+      },
+    ],
+    guessMoveIndex: 16,
+    guessHint:
+      "Try again! Recapture with the pawn to fortify your structural grip on the d4 square.",
+  },
+
+  "nottingham-g4": {
+    title: "Capablanca – Alekhine, Nottingham 1936 · Game 4",
+    intro:
+      "Nine years after their World Championship match, the old rivals meet again. Capablanca's Rd1 is a " +
+      "quietly devastating move — prophylaxis at its finest, preventing Alekhine from ever opening the centre.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "Nf6", commentary: "Guard e4." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Nc3", commentary: "Reinforce." },
+      { san: "Nbd7", commentary: "Defend." },
+      { san: "Bg5", commentary: "Pin." },
+      { san: "Be7", commentary: "Unpin." },
+      { san: "e3", commentary: "Solid." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "Qc2", commentary: "White eyes e4 and prepares kingside action." },
+      { san: "c6", commentary: "Orthodox preparation." },
+      {
+        san: "Rd1",
+        commentary:
+          "X-raying the d-file! Prophylactically placing the Rook here deeply discourages Alekhine from trying " +
+          "to open up the center with c5 or e5.",
+      },
+    ],
+    guessMoveIndex: 14,
+    guessHint:
+      "Try again! Bring the Rook to the central file to oppose Black's future breaks.",
+  },
+
+  "nottingham-g9": {
+    title: "Reshevsky – Capablanca, Nottingham 1936 · Game 9",
+    intro:
+      "Capablanca, as Black, demonstrates active piece play even in a cramped Nimzo-Indian. The Queen recapture " +
+      "on f6 is a model of dynamic defence — seizing the initiative while tidying the kingside.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "Nf6", commentary: "Nimzo prelude." },
+      { san: "c4", commentary: "English support." },
+      { san: "e6", commentary: "Flexible." },
+      { san: "Nc3", commentary: "Develop." },
+      { san: "Bb4", commentary: "The Nimzo pin." },
+      { san: "Qc2", commentary: "White prepares e4." },
+      { san: "d5", commentary: "Central counter." },
+      { san: "cxd5", commentary: "Exchange." },
+      { san: "exd5", commentary: "Recapture, opening the e-file." },
+      { san: "Bg5", commentary: "White tries to pin and pressure." },
+      { san: "h6", commentary: "Black asks the Bishop to declare itself." },
+      {
+        san: "Qxf6",
+        commentary:
+          "Recapturing with the Queen avoids messing up our kingside pawn shielding, immediately threatening " +
+          "White's center from a dominant, active post.",
+      },
+    ],
+    guessMoveIndex: 12,
+    guessHint:
+      "Try again! Develop the Queen actively while sweeping up White's aggressive Bishop.",
+  },
+
+  "nottingham-g13": {
+    title: "Capablanca – Flohr, Nottingham 1936 · Game 13",
+    intro:
+      "Capablanca's a3 is the quietest move on the board — and perhaps the most instructive. It forces Black " +
+      "to commit to a setup first, while White preserves every option. Waiting moves are an art, and no one " +
+      "painted them more beautifully.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Nc3", commentary: "Reinforce." },
+      { san: "Nf6", commentary: "Guard." },
+      { san: "Bg5", commentary: "Pin." },
+      { san: "Be7", commentary: "Unpin." },
+      { san: "e3", commentary: "Solid." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "Nbd7", commentary: "Defend." },
+      { san: "Qc2", commentary: "White eyes e4." },
+      { san: "c6", commentary: "Orthodox preparation." },
+      {
+        san: "a3",
+        commentary:
+          "A brilliant waiting move. White preserves flexibility, forcing Black to choose their setup first " +
+          "while preparing a future b4 expansion.",
+      },
+    ],
+    guessMoveIndex: 14,
+    guessHint:
+      "Try again! Wait out Black's development with a quiet, highly useful queenside waiting move.",
+  },
+
 
   "2-1": {
     title: "A Cardinal Principle — The King as Attacking Piece",
