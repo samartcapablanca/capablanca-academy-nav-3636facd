@@ -15,6 +15,14 @@ export type LessonContent = {
   /** Optional starting FEN. Omit for the standard initial position. */
   startFen?: string;
   moves: LessonMove[];
+  /**
+   * Optional index (0-based, into `moves`) of the designated "Guess the Move"
+   * target. When Guess Mode is enabled, the player auto-positions to the move
+   * right before this index and requires the user to drag the correct piece.
+   */
+  guessMoveIndex?: number;
+  /** Custom hint shown when the user guesses incorrectly at the target. */
+  guessHint?: string;
 };
 
 export const LESSONS: Record<string, LessonContent> = {
