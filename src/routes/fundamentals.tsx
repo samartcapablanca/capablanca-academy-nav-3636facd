@@ -85,9 +85,9 @@ const CHAPTERS: Chapter[] = [
     roman: "VI",
     title: "Further Openings and Middle-games",
     lessons: [
-      { id: "6-1", title: "Some Salient Points about Pawns" },
-      { id: "6-2", title: "Some Possible Developments from a Ruy Lopez" },
-      { id: "6-3", title: "The Influence of a 'Hole'" },
+      { id: "6-1", title: "The Ruy Lopez (The Royal Opening)" },
+      { id: "6-2", title: "The Danger of Pawn “Holes”" },
+      { id: "6-3", title: "The Ill-Timed Attack" },
     ],
   },
 ];
