@@ -73,6 +73,7 @@ export function MatchReplayPlayer({
   useEffect(() => {
     if (matchId) {
       setMoveIndex(-1);
+      setGuessMode(false);
       setFeedback(null);
     }
     return () => {
@@ -80,6 +81,17 @@ export function MatchReplayPlayer({
       if (autoTimer.current) clearTimeout(autoTimer.current);
     };
   }, [matchId]);
+
+  // When Guess Mode is toggled ON and this lesson has a designated guess
+  // target, fast-forward to the move *just before* that target so the user
+  // is asked the exact question the lesson is designed around.
+  useEffect(() => {
+    if (!lesson) return;
+    if (guessMode && typeof lesson.guessMoveIndex === "number") {
+      setMoveIndex(lesson.guessMoveIndex - 1);
+      setFeedback(null);
+    }
+  }, [guessMode, lesson]);
 
   useEffect(() => {
     if (!matchId) return;
