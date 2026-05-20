@@ -705,7 +705,360 @@ export const LESSONS: Record<string, LessonContent> = {
       "Try again! Black needs to resolve the development of the light-squared queen's bishop.",
   },
 
-  // ─────────────────────────────────────────────────────────────────
+  // ═════════════════════════════════════════════════════════════════
+  // MILESTONE ARCHIVE — NODE II: WORLD CHAMPIONSHIP ERA (1921 – 1922)
+  // ═════════════════════════════════════════════════════════════════
+
+  // ── 1921 Havana — Lasker vs. Capablanca World Championship ──────
+  "havana-g1": {
+    title: "Lasker – Capablanca, World Championship Game 1 (1921)",
+    intro:
+      "The opening salvo of the match that crowned the Cuban. Lasker steers into the orthodox " +
+      "Queen's Gambit Declined; Capablanca, as Black, immediately telegraphs his plan to solve " +
+      "the QGD's eternal problem — the c8-bishop.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn opening." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "Nf3", commentary: "Develop the king's knight." },
+      { san: "Nf6", commentary: "Mirror." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined — the orthodox solid system." },
+      { san: "Bg5", commentary: "Pin on f6." },
+      { san: "Nbd7", commentary: "Reinforces d5 indirectly — Bxf6 would lose a pawn now." },
+      { san: "e3", commentary: "Quiet pawn move, opens the f1-bishop." },
+      { san: "Be7", commentary: "Breaks the pin's bite." },
+      { san: "Nc3", commentary: "Completes minor-piece development." },
+      { san: "O-O", commentary: "King to safety." },
+      { san: "Rc1", commentary: "Rook to the half-open file — Lasker readies pressure on c-line." },
+      {
+        san: "b6",
+        commentary:
+          "In the Queen's Gambit Declined, activating the c8-Bishop is Black's primary " +
+          "challenge. Preparing the fianchetto via b6 is a structurally patient approach — the " +
+          "bishop will reach b7 and stare down the long diagonal.",
+      },
+    ],
+    guessMoveIndex: 13,
+    guessHint:
+      "Try again! Capablanca prepares to solve his light-squared Bishop development problem early.",
+  },
+
+  "havana-g5": {
+    title: "Lasker – Capablanca, World Championship Game 5 (1921)",
+    intro:
+      "Lasker shifts to the Qc2 system, hoping flexibility on the queenside will yield " +
+      "long-term pressure. Capablanca answers with the most disruptive resource Black possesses " +
+      "— an active queen sortie that pins the c3-knight along the a5–e1 diagonal.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "Nf6", commentary: "Mirror." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Bg5", commentary: "Standard pin." },
+      { san: "Nbd7", commentary: "Defend d5 indirectly." },
+      { san: "e3", commentary: "Open the bishop's diagonal." },
+      { san: "Be7", commentary: "Break the pin." },
+      { san: "Nc3", commentary: "Complete minor development." },
+      { san: "O-O", commentary: "King safe." },
+      { san: "Qc2", commentary: "Lasker's Cambridge-style queen sortie, eyeing both flanks." },
+      { san: "c5", commentary: "Capablanca strikes the centre, refusing a slow squeeze." },
+      { san: "Rd1", commentary: "Lasker reinforces d4 with the rook." },
+      {
+        san: "Qa5",
+        commentary:
+          "Relieving central pressure by pinning White's knight actively disrupts Lasker's " +
+          "planned queenside development alignment. The c3-knight is paralysed and ...cxd4 now " +
+          "comes with venom.",
+      },
+    ],
+    guessMoveIndex: 15,
+    guessHint:
+      "Try again! Pin the c3-knight and bring the Queen into active counter-play.",
+  },
+
+  "havana-g10": {
+    title: "Lasker – Capablanca, World Championship Game 10 (1921)",
+    intro:
+      "The famous 'Capablanca freeing manoeuvre'. In the cramped QGD, Black's pieces tread on " +
+      "each other's toes. Capablanca's elegant solution is a calibrated cascade of exchanges " +
+      "starting with a single, perfectly-timed knight jump.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "Nf6", commentary: "Mirror." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Bg5", commentary: "Pin." },
+      { san: "Nbd7", commentary: "Standard defence of d5." },
+      { san: "e3", commentary: "Solid." },
+      { san: "Be7", commentary: "Break the pin." },
+      { san: "Nc3", commentary: "Develop." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "Rc1", commentary: "Rook to the half-open file." },
+      { san: "c6", commentary: "Reinforces d5 — the orthodox Lasker setup." },
+      { san: "Bd3", commentary: "Bishop on its attacking diagonal." },
+      { san: "dxc4", commentary: "Capablanca releases the tension to gain a tempo on the bishop." },
+      { san: "Bxc4", commentary: "Forced recapture." },
+      {
+        san: "Nd5",
+        commentary:
+          "The Capablanca freeing manoeuvre! Exchanging minor pieces clears valuable room for " +
+          "Black's remaining forces to manoeuvre smoothly — ...Nxc3 and ...Bxg5 trades follow, " +
+          "and Black's pieces breathe again.",
+      },
+    ],
+    guessMoveIndex: 17,
+    guessHint:
+      "Try again! Capablanca seeks to clear a cramped position by forcing piece liquidations.",
+  },
+
+  "havana-g11": {
+    title: "Capablanca – Lasker, World Championship Game 11 (1921)",
+    intro:
+      "Capablanca's first win with White in the match. Against Lasker's solid orthodox QGD, " +
+      "the champion-elect chooses the most patient queen development — a quiet move that " +
+      "concedes nothing while waiting for Lasker to define his own structure.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "Nf6", commentary: "Mirror." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Bg5", commentary: "Pin." },
+      { san: "Be7", commentary: "Break the pin first — a Lasker speciality." },
+      { san: "e3", commentary: "Solid." },
+      { san: "O-O", commentary: "Castles short." },
+      { san: "Nc3", commentary: "Complete development." },
+      { san: "Nbd7", commentary: "Defend d5." },
+      { san: "Rc1", commentary: "Rook to the half-open c-file." },
+      { san: "c6", commentary: "Orthodox solidity." },
+      {
+        san: "Qc2",
+        commentary:
+          "Placing the Queen on c2 keeps flexibility in the centre while waiting for Black to " +
+          "declare their exact defensive layout. The queen eyes h7, supports e4, and lifts off " +
+          "the back rank — three jobs from a single quiet move.",
+      },
+      { san: "Re8", commentary: "Lasker prepares ...Nf8 and a deep regrouping. The middlegame begins." },
+    ],
+    guessMoveIndex: 14,
+    guessHint:
+      "Try again! White patient develops the Queen to apply indirect pressure to the c-file.",
+  },
+
+  "havana-g14": {
+    title: "Capablanca – Lasker, World Championship Game 14 (1921)",
+    intro:
+      "A model technical conversion. The famous Capablanca freeing manoeuvre arrives in " +
+      "Lasker's hands, but Capablanca's pre-prepared rook recapture keeps the c-file open and " +
+      "active — and that single file decides the game.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "Nf6", commentary: "Mirror." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Bg5", commentary: "Pin." },
+      { san: "Be7", commentary: "Break the pin." },
+      { san: "e3", commentary: "Quiet." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "Nc3", commentary: "Develop." },
+      { san: "Nbd7", commentary: "Defend d5." },
+      { san: "Rc1", commentary: "Half-open file." },
+      { san: "c6", commentary: "Orthodox." },
+      { san: "Bd3", commentary: "Bishop on the attacking diagonal." },
+      { san: "dxc4", commentary: "Lasker releases the tension." },
+      { san: "Bxc4", commentary: "Forced recapture." },
+      { san: "Nd5", commentary: "The Capablanca freeing manoeuvre — but here, in Lasker's hands." },
+      { san: "Bxe7", commentary: "Capablanca trades the bishops to clear lines." },
+      { san: "Qxe7", commentary: "Recapture with the queen." },
+      { san: "O-O", commentary: "Castles short, completing development." },
+      { san: "Nxc3", commentary: "Lasker continues the liquidation sequence." },
+      {
+        san: "Rxc3",
+        commentary:
+          "Recapturing with the Rook allows White to maintain a dynamic, flexible pawn skeleton " +
+          "while maintaining pressure down the semi-open file. The bxc3 alternative would have " +
+          "left a static pawn chain; the rook recapture keeps everything alive.",
+      },
+      { san: "e5", commentary: "Lasker breaks in the centre — but the c-file rook is already taking aim." },
+    ],
+    guessMoveIndex: 22,
+    guessHint:
+      "Try again! Recapture with the Rook to keep the c-file open and active.",
+  },
+
+  // ── 1922 London International Tournament ───────────────────────
+  "london-g1": {
+    title: "Capablanca – Alekhine, London 1922",
+    intro:
+      "The opening encounter of the rivalry that would define the rest of Capablanca's career. " +
+      "The Cuban steers into a classical QGD and accepts an isolated d-pawn as the price of " +
+      "open lines and free piece play.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "Nf6", commentary: "Mirror." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Nc3", commentary: "Reinforce the centre." },
+      { san: "Be7", commentary: "Alekhine prepares quick castling." },
+      { san: "Bg5", commentary: "Pin." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "e3", commentary: "Solid." },
+      { san: "Nbd7", commentary: "Defend d5." },
+      { san: "Rc1", commentary: "Half-open file." },
+      { san: "c6", commentary: "Orthodox." },
+      { san: "Bd3", commentary: "Bishop on the attacking diagonal." },
+      { san: "dxc4", commentary: "Alekhine releases the tension." },
+      { san: "Bxc4", commentary: "Recapture." },
+      { san: "Nd5", commentary: "The freeing manoeuvre." },
+      { san: "Bxe7", commentary: "Trade bishops." },
+      { san: "Qxe7", commentary: "Recapture." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "Nxc3", commentary: "Continue exchanges." },
+      { san: "Rxc3", commentary: "Recapture with the rook — keep the c-file alive." },
+      { san: "e5", commentary: "Alekhine strikes back in the centre." },
+      { san: "Qc2", commentary: "Stack the queen behind the rook on c-file pressure." },
+      { san: "exd4", commentary: "Alekhine forces a decision." },
+      {
+        san: "exd4",
+        commentary:
+          "Though the d4 pawn becomes structurally isolated, it grants open paths and dynamic " +
+          "freedom for White's pieces to mount an aggressive midgame offence. The isolani is a " +
+          "weakness in the endgame — but a battering ram in the middlegame.",
+      },
+    ],
+    guessMoveIndex: 26,
+    guessHint:
+      "Try again! Accepting an isolated d-pawn gives White active, open files for an attack.",
+  },
+
+  "london-g5": {
+    title: "Capablanca – Bogoljubov, London 1922",
+    intro:
+      "Against Bogoljubov's Queen's Indian setup, Capablanca demonstrates the power of a single " +
+      "well-placed outpost. The e5-square, prepared move by move with the catalan fianchetto, " +
+      "becomes a permanent home for the white knight.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "Nf6", commentary: "Indian Defence." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "e6", commentary: "Prepares ...b6 and the Queen's Indian." },
+      { san: "c4", commentary: "Standard expansion." },
+      { san: "b6", commentary: "Queen's Indian Defence — the fianchetto plan." },
+      { san: "g3", commentary: "Catalan fianchetto — bishops will face off on the long diagonal." },
+      { san: "Bb7", commentary: "Black's bishop reaches its post first." },
+      { san: "Bg2", commentary: "White's bishop completes the long diagonal." },
+      { san: "Be7", commentary: "Modest development." },
+      { san: "O-O", commentary: "King to safety." },
+      { san: "O-O", commentary: "Symmetrical castling." },
+      { san: "Nc3", commentary: "Final piece into the centre — preparing e4 and Ne5." },
+      { san: "d5", commentary: "Bogoljubov stakes a central claim, but it loosens e5." },
+      {
+        san: "Ne5",
+        commentary:
+          "Planting a Knight firmly on e5 cuts through Black's coordination, forcing their " +
+          "minor pieces into passive, defensive roles. From e5 the knight radiates onto c6, d7, " +
+          "f7 and g6 — the whole kingside answers to it.",
+      },
+    ],
+    guessMoveIndex: 14,
+    guessHint:
+      "Try again! Seize the critical outpost square immediately to restrict Black's setup.",
+  },
+
+  "london-g8": {
+    title: "Rubinstein – Capablanca, London 1922",
+    intro:
+      "Two of the era's greatest positional minds, in their second tournament encounter. " +
+      "Capablanca, with the black pieces, prepares a forceful queenside counter-strike before " +
+      "Rubinstein can complete his trademark slow build-up.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "Nf6", commentary: "Mirror." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Nc3", commentary: "Reinforce d5." },
+      { san: "Nbd7", commentary: "Defend d5 indirectly." },
+      { san: "Bg5", commentary: "Pin." },
+      { san: "Be7", commentary: "Break the pin." },
+      { san: "e3", commentary: "Solid." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "Rc1", commentary: "Half-open file." },
+      { san: "c6", commentary: "Orthodox solidity." },
+      { san: "Qc2", commentary: "Rubinstein lifts the queen — flexible build-up." },
+      {
+        san: "a6",
+        commentary:
+          "Playing a6 accurately prepares a swift b5 expansion, aiming to forcefully challenge " +
+          "White's well-placed light-squared Bishop. Capablanca declares his queenside plan " +
+          "before Rubinstein can launch the kingside build-up he favours.",
+      },
+      { san: "a3", commentary: "Rubinstein preempts ...b5–b4." },
+      { san: "h6", commentary: "Capablanca questions the bishop, gaining further tempi." },
+    ],
+    guessMoveIndex: 15,
+    guessHint:
+      "Try again! Prepare a classic queenside expansion counter-strike using b5.",
+  },
+
+  "london-g13": {
+    title: "Capablanca – Vidmar, London 1922",
+    intro:
+      "A textbook conversion of opening symmetry into endgame technique. When Vidmar finally " +
+      "breaks with ...e5, Capablanca answers with an immediate liquidating sequence that " +
+      "trades down into a structurally favourable endgame.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "Nf3", commentary: "Develop." },
+      { san: "Nf6", commentary: "Mirror." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined." },
+      { san: "Nc3", commentary: "Reinforce." },
+      { san: "Be7", commentary: "Prepare castling." },
+      { san: "Bg5", commentary: "Pin." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "e3", commentary: "Solid." },
+      { san: "Nbd7", commentary: "Defend d5." },
+      { san: "Rc1", commentary: "Half-open file." },
+      { san: "c6", commentary: "Orthodox." },
+      { san: "Bd3", commentary: "Attacking diagonal." },
+      { san: "dxc4", commentary: "Vidmar releases the tension." },
+      { san: "Bxc4", commentary: "Recapture." },
+      { san: "Nd5", commentary: "The freeing manoeuvre." },
+      { san: "Bxe7", commentary: "Trade." },
+      { san: "Qxe7", commentary: "Recapture." },
+      { san: "O-O", commentary: "Castles." },
+      { san: "Nxc3", commentary: "Continue exchanges." },
+      { san: "Rxc3", commentary: "Rook recapture — keep the file live." },
+      { san: "e5", commentary: "Vidmar strikes for freedom. Capablanca is ready." },
+      {
+        san: "Nxe5",
+        commentary:
+          "Forcing targeted, liquidating trades is standard master practice, directly leading " +
+          "us into a highly favourable, highly controllable endgame stage. Every exchange " +
+          "simplifies; every simplification favours the side with the better technique.",
+      },
+      { san: "Nxe5", commentary: "Vidmar recaptures." },
+      { san: "dxe5", commentary: "White's pawn structure remains intact." },
+      { san: "Qxe5", commentary: "The queens are next, and the endgame Capablanca dreams of looms." },
+    ],
+    guessMoveIndex: 24,
+    guessHint:
+      "Try again! Liquidate the central files to systematically transition into an endgame advantage.",
+  },
+
+
   "2-1": {
     title: "A Cardinal Principle — The King as Attacking Piece",
     intro:
