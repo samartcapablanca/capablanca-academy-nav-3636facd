@@ -3,6 +3,7 @@ import { AppShell } from "@/components/AppShell";
 import { MatchReplayPlayer } from "@/components/MatchReplayPlayer";
 import { Search, Play } from "lucide-react";
 import { useMemo, useState } from "react";
+import { ARCHIVE_GAMES } from "@/lib/archive";
 
 export const Route = createFileRoute("/openings")({
   head: () => ({
@@ -14,7 +15,8 @@ export const Route = createFileRoute("/openings")({
   component: Openings,
 });
 
-const GAMES = [
+const GAMES = ARCHIVE_GAMES;
+const _UNUSED = [
   { id: 1, white: "F. J. Marshall", black: "J. R. Capablanca", event: "Marshall Match (Game 23)", year: 1909, opening: "Queen's Gambit Declined", result: "0-1" },
   { id: 2, white: "J. R. Capablanca", black: "O. Bernstein", event: "San Sebastián International", year: 1911, opening: "Ruy Lopez", result: "1-0" },
   { id: 3, white: "D. Janowski", black: "J. R. Capablanca", event: "Havana Tournament", year: 1913, opening: "Four Knights Game", result: "0-1" },
