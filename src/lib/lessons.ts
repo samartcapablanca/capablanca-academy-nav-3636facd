@@ -424,8 +424,297 @@ export const LESSONS: Record<string, LessonContent> = {
     ],
   },
 
-  // ─────────────────────────────────────────────────────────────────
-  // CHAPTER II — Lesson 1: A Cardinal Principle (King positioning)
+  // ═════════════════════════════════════════════════════════════════
+  // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
+  // ═════════════════════════════════════════════════════════════════
+
+  // ── 1909 Marshall — Capablanca Match ────────────────────────────
+  "marshall-g1": {
+    title: "Marshall – Capablanca, Match Game 1 (1909)",
+    intro:
+      "The opening salvo of the match that announced the 20-year-old Cuban to America. " +
+      "Marshall opens with the Queen's Gambit Declined; Capablanca, as Black, finds an " +
+      "early central counter-strike that defines the entire encounter.",
+    moves: [
+      { san: "d4", commentary: "Marshall claims the centre — classical Queen's-Pawn opening." },
+      { san: "d5", commentary: "Symmetry. Capablanca will only break it on his own terms." },
+      { san: "c4", commentary: "The Queen's Gambit. Marshall offers a pawn to deflect Black's centre." },
+      { san: "e6", commentary: "Declined. Capablanca prefers the solid structure to grabbing a pawn." },
+      { san: "Nc3", commentary: "Pressure on d5 mounts." },
+      { san: "Nf6", commentary: "Knight defends d5 and develops — one move, two purposes." },
+      { san: "Bg5", commentary: "Pin on the f6-knight: standard QGD play." },
+      { san: "Be7", commentary: "Breaks the pin's bite and prepares to castle. The pause before the counter-stroke." },
+      { san: "e3", commentary: "Marshall continues quietly. Now it is Black's turn — and Capablanca will not play quietly." },
+      {
+        san: "Ne4",
+        commentary:
+          "Moving the same piece repeatedly in the opening is usually wrong, but here it " +
+          "forces exchanges to bring about an early endgame where our superior technique " +
+          "can win.",
+      },
+    ],
+    guessMoveIndex: 9,
+    guessHint:
+      "Try again! Capablanca chose an aggressive central counter-strike to force immediate liquidations.",
+  },
+
+  "marshall-g7": {
+    title: "Capablanca – Marshall, Match Game 7 (1909)",
+    intro:
+      "Capablanca handles the Ruy López with serene technique. Watch the manoeuvre that " +
+      "preserves the light-squared bishop — the very piece Marshall hoped to harass off the board.",
+    moves: [
+      { san: "e4", commentary: "King's pawn, two squares." },
+      { san: "e5", commentary: "Symmetrical reply." },
+      { san: "Nf3", commentary: "Attacks e5 and develops with tempo." },
+      { san: "Nc6", commentary: "Black defends the pawn and develops in one." },
+      { san: "Bb5", commentary: "The Ruy López — the Royal Opening." },
+      { san: "a6", commentary: "Morphy Defence: question the bishop." },
+      { san: "Ba4", commentary: "Retain the pin along the diagonal." },
+      { san: "Nf6", commentary: "Counter-pressure on e4." },
+      { san: "O-O", commentary: "King to safety." },
+      { san: "Be7", commentary: "Closed Ruy López, Black mirrors development." },
+      { san: "Re1", commentary: "Rook supports the e-pawn, preparing d4." },
+      { san: "b5", commentary: "Black strikes at the bishop again — it must commit." },
+      { san: "Bb3", commentary: "Retreats — but only one square. The threat to expel it remains." },
+      { san: "d6", commentary: "Black solidifies e5 and prepares ...Na5. The bishop's life is in question." },
+      {
+        san: "c3",
+        commentary:
+          "Maintaining the light-squared Bishop is crucial in the Ruy Lopez. The move c3 " +
+          "builds a solid centre and preserves our key attacking piece — c2 is now a permanent " +
+          "retreat square the moment ...Na5 comes.",
+      },
+      { san: "Na5", commentary: "Marshall attacks the bishop, but Capablanca has prepared the answer." },
+      { san: "Bc2", commentary: "Tucked safely behind the c3-pawn. The bishop lives — and still points at h7." },
+      { san: "c5", commentary: "Black grabs queenside space." },
+      { san: "d4", commentary: "Central break, exactly as c3 prepared." },
+      { san: "Qc7", commentary: "Marshall braces the centre. The opening battle is decided in White's favour." },
+    ],
+    guessMoveIndex: 14,
+    guessHint:
+      "Try again! White needs to create a retreat square for the light-squared bishop and prepare the d4 push.",
+  },
+
+  "marshall-g10": {
+    title: "Marshall – Capablanca, Match Game 10 (1909)",
+    intro:
+      "The Petroff Defence in Capablanca's hands becomes a study in symmetry and equilibrium. " +
+      "Black's task is to claim the centre at the exact right moment — neither earlier nor later.",
+    moves: [
+      { san: "e4", commentary: "King-pawn opening." },
+      { san: "e5", commentary: "Symmetrical reply." },
+      { san: "Nf3", commentary: "Attacks e5." },
+      { san: "Nf6", commentary: "The Petroff — counter-attack, do not defend." },
+      { san: "Nxe5", commentary: "Marshall accepts." },
+      { san: "d6", commentary: "Compels the knight to retreat before recapturing." },
+      { san: "Nf3", commentary: "Back home." },
+      { san: "Nxe4", commentary: "Now Black recovers the pawn — and the symmetry is restored." },
+      { san: "d4", commentary: "Marshall strikes the centre, hoping to claim a slight edge in space." },
+      {
+        san: "d5",
+        commentary:
+          "In the Petroff, maintaining a firm foothold in the centre is vital to neutralising " +
+          "White's first-move advantage. The pawn on d5 anchors the e4-knight and contests every " +
+          "central square in a single move.",
+      },
+      { san: "Bd3", commentary: "Develops with attack on the e4-knight." },
+      { san: "Bd6", commentary: "Symmetrical development." },
+      { san: "O-O", commentary: "Castles short." },
+      { san: "O-O", commentary: "Black follows suit. Mirror image positions." },
+      { san: "c4", commentary: "Marshall tries to break the symmetry with a queenside expansion." },
+      { san: "Be6", commentary: "Black calmly develops, daring White to commit further. Equality is preserved." },
+    ],
+    guessMoveIndex: 9,
+    guessHint:
+      "Try again! Black must immediately stake a claim in the centre to maintain structural symmetry.",
+  },
+
+  "marshall-g23": {
+    title: "Capablanca – Marshall, Match Game 23 (1909)",
+    intro:
+      "A quiet Colle-style setup that explodes into the centre at exactly the right tempo. " +
+      "The lesson: e4 is a weapon, and the master strikes the moment the opponent breathes.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn opening." },
+      { san: "d5", commentary: "Symmetry again." },
+      { san: "Nf3", commentary: "Develop the king's knight first." },
+      { san: "Nf6", commentary: "Mirror." },
+      { san: "e3", commentary: "A modest pawn move that frees the king's bishop — the Colle plan." },
+      { san: "c5", commentary: "Marshall claims queenside space." },
+      { san: "c3", commentary: "Supports d4 and prepares Bd3." },
+      { san: "e6", commentary: "Frees the f8-bishop." },
+      { san: "Bd3", commentary: "Bishop on the attacking diagonal." },
+      { san: "Nc6", commentary: "Standard development." },
+      { san: "Nbd2", commentary: "Knight supports the eventual e4 break." },
+      { san: "Bd6", commentary: "Symmetrical development continues." },
+      { san: "O-O", commentary: "King to safety." },
+      { san: "O-O", commentary: "Both monarchs are safe — the middlegame begins." },
+      { san: "dxc5", commentary: "Opens lines in the centre, inviting Black to recapture." },
+      { san: "Bxc5", commentary: "Black brings the bishop to the active square — but his centre is no longer fluid." },
+      {
+        san: "e4",
+        commentary:
+          "An timely central breakthrough completely alters the character of the game, opening " +
+          "lines for our better-coordinated pieces. Suddenly the d2-knight, the d3-bishop and the " +
+          "f1-rook all bear down on the kingside in concert.",
+      },
+    ],
+    guessMoveIndex: 16,
+    guessHint:
+      "Try again! White must strike at the centre before Black organises a kingside expansion.",
+  },
+
+  // ── 1911 San Sebastián Tournament ───────────────────────────────
+  "sansebastian-g1": {
+    title: "Capablanca – Bernstein, San Sebastián 1911",
+    intro:
+      "The young Cuban's debut at an elite European tournament. Against the famous theoretician " +
+      "Bernstein, Capablanca demonstrates that the two-bishop advantage means nothing when the " +
+      "opponent's pawns are permanently crippled in exchange.",
+    moves: [
+      { san: "e4", commentary: "King-pawn opening." },
+      { san: "e5", commentary: "Classical reply." },
+      { san: "Nf3", commentary: "Attacks e5." },
+      { san: "Nc6", commentary: "Defends." },
+      { san: "Bb5", commentary: "Ruy López." },
+      { san: "Nf6", commentary: "Berlin Defence — counter-attack on e4." },
+      { san: "O-O", commentary: "Castles, ignoring the threat." },
+      { san: "Be7", commentary: "Quiet development instead of grabbing the e-pawn." },
+      { san: "Nc3", commentary: "Reinforces e4 with a developing move." },
+      { san: "d6", commentary: "Solidifies e5 — but slightly passive." },
+      {
+        san: "Bxc6+",
+        commentary:
+          "Giving up the pair of Bishops here is fully justified because it inflicts doubled, " +
+          "isolated c-pawns on Black, creating a permanent endgame target. The structural " +
+          "damage is forever; the bishop pair is fleeting.",
+      },
+      { san: "bxc6", commentary: "Forced. Black's queenside pawns are now a chronic weakness." },
+      { san: "d4", commentary: "Open the position — the side with the better structure benefits from open lines." },
+      { san: "exd4", commentary: "Black accepts the exchange." },
+      { san: "Nxd4", commentary: "Centralised knight; the c6-pawn is a fixed target for the rest of the game." },
+      { san: "Bd7", commentary: "Defends c6, but the chronic weakness will outlast every defensive resource." },
+    ],
+    guessMoveIndex: 10,
+    guessHint:
+      "Try again! Capablanca breaks the standard rules here to compromise Black's pawn structure permanently.",
+  },
+
+  "sansebastian-g4": {
+    title: "Burn – Capablanca, San Sebastián 1911",
+    intro:
+      "Amos Burn opens with the French Exchange — a system reputed to lead to early draws. " +
+      "Capablanca refuses the symmetry and uses active piece play to seize the initiative.",
+    moves: [
+      { san: "e4", commentary: "King-pawn." },
+      { san: "e6", commentary: "French Defence." },
+      { san: "d4", commentary: "Builds the centre." },
+      { san: "d5", commentary: "Black strikes at e4." },
+      { san: "exd5", commentary: "The Exchange Variation — symmetrical, drawish in appearance." },
+      { san: "exd5", commentary: "Symmetry restored on the e-file." },
+      { san: "Bd3", commentary: "Develops to the most natural square." },
+      { san: "Nc6", commentary: "Knight to its best post." },
+      { san: "Nf3", commentary: "Standard development." },
+      { san: "Bd6", commentary: "Mirror — bishop opposite bishop." },
+      { san: "O-O", commentary: "King to safety." },
+      { san: "Nge7", commentary: "Knight developed without blocking the f-pawn — eyes the f5 outpost." },
+      { san: "c3", commentary: "Supports d4. Burn plays quietly, hoping for a peaceful game." },
+      {
+        san: "Bg4",
+        commentary:
+          "In the French Exchange variation, development must be active. Pinning the f3 knight " +
+          "minimises White's attacking options down the central files and secures the key e5 " +
+          "square for Black's pieces.",
+      },
+    ],
+    guessMoveIndex: 13,
+    guessHint:
+      "Try again! Pinning the enemy knight is essential to control the key e5 square.",
+  },
+
+  "sansebastian-g9": {
+    title: "Capablanca – Janowski, San Sebastián 1911",
+    intro:
+      "Against the great attacker Janowski, Capablanca opts for the Colle-Zukertort framework. " +
+      "When Janowski lashes out on the queenside, the world's most patient calculator simply " +
+      "retreats — and lets his opponent's own pawns become the targets.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "Nf3", commentary: "Knight first." },
+      { san: "Nf6", commentary: "Mirror." },
+      { san: "e3", commentary: "Colle setup — slow but solid." },
+      { san: "c5", commentary: "Black grabs the centre actively." },
+      { san: "c4", commentary: "Capablanca counters with a Queen's Gambit structure." },
+      { san: "e6", commentary: "Standard." },
+      { san: "Nc3", commentary: "Development." },
+      { san: "Nc6", commentary: "Symmetrical." },
+      { san: "Bd3", commentary: "Bishop on its best diagonal." },
+      { san: "dxc4", commentary: "Janowski releases the central tension." },
+      { san: "Bxc4", commentary: "Recapture with development." },
+      { san: "a6", commentary: "Preparing ...b5 — the queenside expansion." },
+      { san: "O-O", commentary: "King to safety before complications." },
+      { san: "b5", commentary: "Janowski lashes out, attacking the bishop." },
+      {
+        san: "Bd3",
+        commentary:
+          "Allowing Black's queenside pawns to advance is harmless if our central minor pieces " +
+          "remain cleanly coordinated and ready for a counter-strike. The bishop retreats to its " +
+          "best diagonal; the loose b5- and a6-pawns become long-term liabilities.",
+      },
+    ],
+    guessMoveIndex: 16,
+    guessHint:
+      "Try again! Safely retreat the bishop along the main diagonal while letting Black expand prematurely.",
+  },
+
+  "sansebastian-g14": {
+    title: "Rubinstein – Capablanca, San Sebastián 1911",
+    intro:
+      "Two of the era's most positional minds collide in a Queen's Gambit Declined. The defining " +
+      "moment is Black's solution to the eternal problem of the QGD: how to develop the c8-bishop.",
+    moves: [
+      { san: "d4", commentary: "Queen-pawn." },
+      { san: "d5", commentary: "Symmetry." },
+      { san: "Nf3", commentary: "Knight first." },
+      { san: "Nf6", commentary: "Mirror." },
+      { san: "c4", commentary: "Queen's Gambit." },
+      { san: "e6", commentary: "Declined — the orthodox setup." },
+      { san: "Nc3", commentary: "Pressure on d5." },
+      { san: "Nbd7", commentary: "Defends with the knight, keeping options open." },
+      { san: "Bg5", commentary: "The classical pin on f6." },
+      { san: "Be7", commentary: "Breaks the pin's bite." },
+      { san: "e3", commentary: "Solid pawn move, frees the f1-bishop." },
+      { san: "O-O", commentary: "King to safety." },
+      { san: "Qc2", commentary: "Rubinstein lifts the queen to c2, eyeing the long diagonal towards h7." },
+      {
+        san: "b6",
+        commentary:
+          "The 'problem child' bishop on c8 must be activated. Fianchettoing it via b6 and Bb7 " +
+          "is a highly trusted, deeply defensive manoeuvre — the bishop reaches the long diagonal " +
+          "and contests the very square Rubinstein's queen has just claimed.",
+      },
+      { san: "cxd5", commentary: "Rubinstein resolves the central tension." },
+      { san: "exd5", commentary: "Recapture opens the e-file." },
+      { san: "Bd3", commentary: "Bishop on the attacking diagonal." },
+      { san: "Bb7", commentary: "The fianchetto is complete. The c8-bishop, the QGD's eternal headache, lives on the long diagonal." },
+    ],
+    guessMoveIndex: 13,
+    guessHint:
+      "Try again! Black needs to resolve the development of the light-squared queen's bishop.",
+  },
+};
+
+export function getLesson(id: string): LessonContent {
+  return (
+    LESSONS[id] ?? {
+      title: "Lesson",
+      intro:
+        "This lesson is coming soon. Use the navigation arrows below to step through a sample game in the meantime.",
+      moves: [
+        { san: "e4", commentary: "A sample move so you can explore the board." },
+
   // ─────────────────────────────────────────────────────────────────
   "2-1": {
     title: "A Cardinal Principle — The King as Attacking Piece",
