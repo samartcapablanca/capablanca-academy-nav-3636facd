@@ -32,7 +32,15 @@ function pickDailyGame() {
 
 function Dashboard() {
   const progress = 42;
-  const featured = daysInCurrentMonth() === 31 ? HASTINGS_FEATURED : DEFAULT_DAILY;
+  const game = pickDailyGame();
+  const featured = {
+    caption: `${game.white} vs. ${game.black} · ${game.year}`,
+    prompt: game.hint,
+    matchId: `archive-${game.id}` as string | null,
+    eyebrow: `${game.event} · ${game.year}`,
+    title: `${game.white} vs. ${game.black}`,
+    capablancaColor: (game.white.includes("Capablanca") ? "w" : "b") as "w" | "b",
+  };
   const [replayOpen, setReplayOpen] = useState(false);
 
   return (
