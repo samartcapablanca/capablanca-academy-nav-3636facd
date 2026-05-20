@@ -1081,6 +1081,207 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+  "5-1": {
+    title: "Rook and Pawn Endgames",
+    intro:
+      "Capablanca: “Rook and pawn endgames are the most common of all endings. " +
+      "The golden rule here is activity: your Rook must be active, even at the " +
+      "cost of a pawn. A passive Rook is a losing Rook. Keep your Rook behind " +
+      "passed pawns whenever possible to maximise its power.” White: King e4, " +
+      "Rook c7, Pawn e5. Black: King e7, Rook c2 — a textbook study in Rook " +
+      "activity.",
+    startFen: "8/2R1k3/8/4P3/4K3/8/2r5/8 w - - 0 1",
+    moves: [
+      {
+        san: "Rc8",
+        commentary:
+          "The Rook stays maximally active, cutting Black's King off from the " +
+          "queenside and keeping mobility along the 8th rank. “An active Rook is " +
+          "worth a pawn — sometimes two.”",
+      },
+      {
+        san: "Rc4+",
+        commentary:
+          "Black checks to drive the White King back. In Rook endings, every " +
+          "check that gains tempo is precious — but only if the checking Rook " +
+          "remains active afterwards.",
+      },
+      {
+        san: "Kd5",
+        commentary:
+          "The King steps forward, not back. Capablanca: “In all endings, the " +
+          "King is a fighting piece.” White attacks the Black Rook while " +
+          "centralising.",
+      },
+      {
+        san: "Rc1",
+        commentary:
+          "Black retreats — but to a passive square. A Rook on the first rank " +
+          "with nothing to attack is the very definition of the losing Rook.",
+      },
+      {
+        san: "e6",
+        commentary:
+          "The passed pawn advances, supported by the centralised King. Note the " +
+          "ideal placement: White's Rook sits behind the pawn's path on the c-file " +
+          "ready to swing to e8, while the pawn marches forward.",
+      },
+      {
+        san: "Rd1+",
+        commentary:
+          "Another desperado check. Black is reduced to harassment because his " +
+          "Rook has no constructive plan — exactly the fate of every passive Rook.",
+      },
+      {
+        san: "Ke5",
+        commentary:
+          "The King escorts the pawn personally. With the Rook on c8 cutting off " +
+          "the Black King and the White King shepherding the e-pawn, promotion is " +
+          "imminent.",
+      },
+      {
+        san: "Re1+",
+        commentary:
+          "Useless checks. The pawn is one square from queening, and Black has " +
+          "no perpetual. The lesson is etched: an active Rook plus an active King " +
+          "convert the smallest material edge. A passive Rook converts nothing.",
+      },
+    ],
+  },
+
+  "5-2": {
+    title: "Bishop vs. Knight in the Endgame",
+    intro:
+      "Capablanca: “When the remaining pawns are scattered on both sides of the " +
+      "board, the Bishop is vastly superior to the Knight due to its long-range " +
+      "speed. The Bishop can defend one flank and attack the other simultaneously, " +
+      "while the slow Knight gets overworked and outrun.” White holds the Bishop; " +
+      "pawns sit on both wings — the perfect demonstration.",
+    startFen: "8/p4ppk/8/8/8/5B2/P4PPK/5n2 w - - 0 1",
+    moves: [
+      {
+        san: "Bd5",
+        commentary:
+          "The Bishop occupies the long diagonal, eyeing both a8 and the kingside " +
+          "in a single move. “The Bishop is two pieces at once — defender and " +
+          "attacker.”",
+      },
+      {
+        san: "Ne3",
+        commentary:
+          "The Knight tries to centralise, but it takes two moves to reach a " +
+          "useful square. By the time it arrives, the Bishop has already shifted " +
+          "to a new front.",
+      },
+      {
+        san: "Bxa7",
+        commentary:
+          "The Bishop strikes on the queenside, snatching a pawn. A Knight could " +
+          "never have reached a7 from f3 in one move — the difference in speed is " +
+          "decisive.",
+      },
+      {
+        san: "Nc4",
+        commentary:
+          "Black centralises and threatens the Bishop. But the Bishop simply " +
+          "steps away on its long diagonal, while the Knight is stuck without " +
+          "reinforcement.",
+      },
+      {
+        san: "Bd4",
+        commentary:
+          "Bishop retreats to a square that defends a7's escape AND attacks " +
+          "the kingside. Capablanca: “One Bishop, two flanks.”",
+      },
+      {
+        san: "f6",
+        commentary:
+          "Black tries to set up a fortress. But the Knight must defend his own " +
+          "pawns while watching the Bishop — the “overworked Knight” Capablanca " +
+          "warned about.",
+      },
+      {
+        san: "a4",
+        commentary:
+          "The passed a-pawn begins its march, supported by the long-range Bishop. " +
+          "The Knight is too far away and too slow to stop it.",
+      },
+      {
+        san: "Ne5",
+        commentary:
+          "The Knight gallops back, but it is hopelessly behind. The Bishop will " +
+          "queen the a-pawn or pick off the kingside pawns. The lesson is " +
+          "permanent: on a board with pawns on both wings, give me the Bishop.",
+      },
+    ],
+  },
+
+  "5-3": {
+    title: "The Power of a Passed Pawn",
+    intro:
+      "Capablanca: “A passed pawn is a criminal that must be kept under lock and " +
+      "key. It forces the enemy pieces to abandon their attacking plans and rush " +
+      "backward to blockade it, completely paralysing your opponent's army and " +
+      "granting you the freedom to win elsewhere.” White's a-pawn is the " +
+      "criminal; the rest of the board will be decided by its march.",
+    startFen: "8/8/4k3/8/8/2K5/P5pp/8 w - - 0 1",
+    moves: [
+      {
+        san: "a4",
+        commentary:
+          "The criminal takes his first step. Every tempo the pawn advances forces " +
+          "Black's pieces deeper into passivity.",
+      },
+      {
+        san: "Kd5",
+        commentary:
+          "The Black King hurries toward the queenside to blockade. Capablanca: " +
+          "“The passed pawn drags the enemy King to the wrong side of the board.”",
+      },
+      {
+        san: "a5",
+        commentary:
+          "Forward again. The pawn is now too far advanced to be caught by anything " +
+          "but the King — and the King is dragged further from his own pawns on h2 " +
+          "and g2.",
+      },
+      {
+        san: "Kc5",
+        commentary:
+          "Black continues the chase. With every step, his own kingside pawns " +
+          "become orphans. The criminal is doing exactly the job Capablanca " +
+          "described: paralysing the entire enemy army.",
+      },
+      {
+        san: "Kd4",
+        commentary:
+          "Now the truth emerges. While Black's King is glued to the a-pawn, " +
+          "White's King is free to swing to the kingside and harvest the g- and " +
+          "h-pawns at leisure.",
+      },
+      {
+        san: "Kb6",
+        commentary:
+          "Black finally captures the a-pawn — but at what cost. His King is in " +
+          "the corner of the board; White's King is in the centre, with all the " +
+          "remaining pawns within reach.",
+      },
+      {
+        san: "Ke3",
+        commentary:
+          "The freedom granted by the passed pawn is collected. The Black pawns " +
+          "on g2 and h2 — once a winning advantage — are about to be lost.",
+      },
+      {
+        san: "Kxa5",
+        commentary:
+          "Black recovers the pawn, but the game is decided on the other wing. " +
+          "This is the deepest endgame lesson in the book: a single passed pawn, " +
+          "even when lost, can win the game by tying down the enemy King. " +
+          "Capablanca's “criminal under lock and key” has done his work.",
+      },
+    ],
+  },
 };
 
 export function getLesson(id: string): LessonContent {
