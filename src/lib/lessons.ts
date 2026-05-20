@@ -704,16 +704,6 @@ export const LESSONS: Record<string, LessonContent> = {
     guessHint:
       "Try again! Black needs to resolve the development of the light-squared queen's bishop.",
   },
-};
-
-export function getLesson(id: string): LessonContent {
-  return (
-    LESSONS[id] ?? {
-      title: "Lesson",
-      intro:
-        "This lesson is coming soon. Use the navigation arrows below to step through a sample game in the meantime.",
-      moves: [
-        { san: "e4", commentary: "A sample move so you can explore the board." },
 
   // ─────────────────────────────────────────────────────────────────
   "2-1": {
