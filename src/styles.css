@@ -140,3 +140,14 @@
   30%, 50%, 70% { transform: translateX(-5px); }
   40%, 60% { transform: translateX(5px); }
 }
+
+@keyframes rating-float {
+  0%   { opacity: 0; transform: translateY(6px) scale(0.9); }
+  20%  { opacity: 1; transform: translateY(-4px) scale(1.05); }
+  100% { opacity: 0; transform: translateY(-28px) scale(1); }
+}
+.rating-float {
+  animation: rating-float 1.4s ease-out forwards;
+  text-shadow: 0 0 12px oklch(0.82 0.16 85 / 0.6);
+}
+
