@@ -73,6 +73,7 @@ export function MatchReplayPlayer({
   useEffect(() => {
     if (matchId) {
       setMoveIndex(-1);
+      setGuessMode(false);
       setFeedback(null);
     }
     return () => {
@@ -80,6 +81,17 @@ export function MatchReplayPlayer({
       if (autoTimer.current) clearTimeout(autoTimer.current);
     };
   }, [matchId]);
+
+  // When Guess Mode is toggled ON and this lesson has a designated guess
+  // target, fast-forward to the move *just before* that target so the user
+  // is asked the exact question the lesson is designed around.
+  useEffect(() => {
+    if (!lesson) return;
+    if (guessMode && typeof lesson.guessMoveIndex === "number") {
+      setMoveIndex(lesson.guessMoveIndex - 1);
+      setFeedback(null);
+    }
+  }, [guessMode, lesson]);
 
   useEffect(() => {
     if (!matchId) return;
@@ -142,20 +154,33 @@ export function MatchReplayPlayer({
   const canPrev = moveIndex > -1;
   const canNext = moveIndex < total - 1;
 
-  // In Guess Mode, the Next button is locked while it's Capablanca's turn —
-  // the user must play his move via drag-and-drop.
+  // In Guess Mode, the Next button is locked while it's Capablanca's turn
+  // — and, if the lesson designates a specific guess target, only at that
+  // exact move index.
+  const atDesignatedTarget =
+    typeof lesson?.guessMoveIndex === "number"
+      ? moveIndex + 1 === lesson.guessMoveIndex
+      : true;
   const lockedForGuess =
-    !!lesson && guessMode && !!nextExpected && turn === capablancaColor;
+    !!lesson &&
+    guessMode &&
+    !!nextExpected &&
+    turn === capablancaColor &&
+    atDesignatedTarget;
 
   const advance = useCallback(() => setMoveIndex((i) => i + 1), []);
 
   const handleSquareDrop = useCallback(
     (from: string, to: string) => {
       if (!lesson || !nextExpected) return;
-      // Only intercept when it's Capablanca's turn under Guess Mode.
+      // Only intercept when it's Capablanca's turn AND, if a designated
+      // guess target exists, we're sitting on exactly that move.
       const isCapaTurn = turn === capablancaColor;
-      if (!guessMode || !isCapaTurn) {
-        // Outside Guess Mode, dragging is just a non-action.
+      const designated =
+        typeof lesson.guessMoveIndex === "number"
+          ? moveIndex + 1 === lesson.guessMoveIndex
+          : true;
+      if (!guessMode || !isCapaTurn || !designated) {
         return;
       }
       const correct = from === nextExpected.from && to === nextExpected.to;
@@ -163,10 +188,8 @@ export function MatchReplayPlayer({
         if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
         setFeedback({ square: to, kind: "success" });
         playSuccessChime();
-        // Advance to reveal Raúl's strategy commentary for this move.
         advance();
         feedbackTimer.current = setTimeout(() => setFeedback(null), 900);
-        // After 1.5s, auto-play opponent's reply if there is one.
         if (autoTimer.current) clearTimeout(autoTimer.current);
         autoTimer.current = setTimeout(() => {
           setMoveIndex((i) => {
@@ -178,12 +201,13 @@ export function MatchReplayPlayer({
         if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
         setFeedback({ square: from, kind: "error" });
         toast.error("That wasn't Capablanca's choice.", {
-          description: "Scan the board and try again!",
+          description:
+            lesson.guessHint ?? "Scan the board and try again!",
         });
         feedbackTimer.current = setTimeout(() => setFeedback(null), 500);
       }
     },
-    [advance, capablancaColor, guessMode, lesson, nextExpected, turn],
+    [advance, capablancaColor, guessMode, lesson, moveIndex, nextExpected, turn],
   );
 
   if (!matchId || !lesson) return null;
