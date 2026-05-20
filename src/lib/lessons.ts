@@ -1282,6 +1282,220 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+
+  // ─────────────────────────────────────────────────────────────────
+  // CHAPTER VI — Lesson 1: The Ruy Lopez (The Royal Opening)
+  // ─────────────────────────────────────────────────────────────────
+  "6-1": {
+    title: "The Ruy Lopez (The Royal Opening)",
+    intro:
+      "Capablanca: “The Ruy Lopez is one of the oldest and most trusted openings. " +
+      "White's third move attacks the Knight that defends the e5 pawn, immediately " +
+      "creating long-term positional pressure on Black's center. Success relies on " +
+      "rapid development and fighting for the open files that will inevitably follow.”",
+    startFen: "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 0 3",
+    moves: [
+      {
+        san: "a6",
+        commentary:
+          "The Morphy Defense. Black immediately challenges the Bishop, forcing a " +
+          "decision: retreat or trade. Capablanca praised this move for its directness — " +
+          "it asks White to declare his intentions before committing further.",
+      },
+      {
+        san: "Ba4",
+        commentary:
+          "White retreats along the diagonal, preserving the Bishop pair. To capture " +
+          "on c6 would surrender the Bishop for a Knight — only advisable when it wins " +
+          "concrete material or damages Black's pawn structure beyond repair.",
+      },
+      {
+        san: "Nf6",
+        commentary:
+          "Black develops the King's Knight with a central threat, attacking the e-pawn " +
+          "and preparing to castle. Capablanca: “Develop every piece toward the centre.”",
+      },
+      {
+        san: "O-O",
+        commentary:
+          "White castles into safety. In the Ruy Lopez, the King must be secure before " +
+          "any central or queenside action begins — the open files will soon become dangerous.",
+      },
+      {
+        san: "Be7",
+        commentary:
+          "The Bishop retreats to a solid defensive post, clearing the back rank for " +
+          "castling and keeping an eye on the central light squares. Quiet moves often " +
+          "prepare the deepest strategy.",
+      },
+      {
+        san: "Re1",
+        commentary:
+          "The Rook seizes the half-open e-file, adding pressure to e5 before the " +
+          "centre is resolved. “A Rook on an open file is the beginning of an attack.”",
+      },
+      {
+        san: "b5",
+        commentary:
+          "Black gains space on the queenside, challenging the Bishop again and preparing " +
+          "to develop the c8 Bishop to b7. Every pawn advance must have a piece waiting " +
+          "to occupy the territory it claims.",
+      },
+      {
+        san: "Bb3",
+        commentary:
+          "The Bishop finds its permanent home on b3, eyeing the f7 pawn and supporting " +
+          "the central occupation. The Ruy Lopez has been played for centuries because " +
+          "this modest retreat conceals enormous latent pressure.",
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // CHAPTER VI — Lesson 2: The Danger of Pawn "Holes"
+  // ─────────────────────────────────────────────────────────────────
+  "6-2": {
+    title: "The Danger of Pawn “Holes”",
+    intro:
+      "Capablanca: “A 'hole' is a square on the third or fourth rank that can no " +
+      "longer be protected by a pawn. If an enemy piece—especially a Knight—maneuvers " +
+      "into that hole, it becomes a permanent thorn in your side that can paralyze " +
+      "your entire defensive structure. Guard your pawn movements carefully.” Here " +
+      "White has played f4 and h4, leaving e3 and g3 as permanent weaknesses.",
+    startFen: "rnbqkb1r/pppp1ppp/5n2/4p3/3PPpP1/5N2/PPPP2P1/RNBQKB1R b KQkq - 0 4",
+    moves: [
+      {
+        san: "Bc5",
+        commentary:
+          "Black immediately develops the Bishop to an active diagonal, preparing to " +
+          "punish the weakened light squares around White's King. A hole is only " +
+          "dangerous if the opponent can bring pieces to exploit it.",
+      },
+      {
+        san: "d4",
+        commentary:
+          "White gains central space, but every pawn step widens the gap between " +
+          "pawns and creates new holes. The d4 pawn now leaves e3 and c3 permanently " +
+          "beyond the reach of any White pawn.",
+      },
+      {
+        san: "Bb6",
+        commentary:
+          "The Bishop retreats to b6, keeping pressure on d4 and maintaining the " +
+          "diagonal toward the weakened kingside. Capablanca taught that pieces must " +
+          "be placed where they can both attack and defend.",
+      },
+      {
+        san: "Bxf4",
+        commentary:
+          "White finally recaptures the pawn on f4, but the structural damage is done. " +
+          "The pawns on d4 and h4 no longer touch; the squares between them are holes " +
+          "that Black's Knights and Bishops will target for the rest of the game.",
+      },
+      {
+        san: "d6",
+        commentary:
+          "A quiet move that solidifies the centre and prepares to bring the c8 Bishop " +
+          "into play. The player who avoids creating holes can afford such patient " +
+          "development; the one who has created them must scramble to compensate.",
+      },
+      {
+        san: "Nc3",
+        commentary:
+          "White develops the Queen's Knight, hoping to control the centre and block " +
+          "enemy piece entry. But no number of active pieces can erase a structural " +
+          "hole — it is a permanent feature of the position.",
+      },
+      {
+        san: "Bg4",
+        commentary:
+          "The Bishop plants itself on g4, pinning the Knight and proving that the " +
+          "f4 advance has left the entire kingside light complex vulnerable. " +
+          "Capablanca's warning is now a reality: one reckless pawn has weakened a " +
+          "whole wing.",
+      },
+      {
+        san: "Nbd7",
+        commentary:
+          "Black calmly completes development, ready to reroute the Knight to c5 or " +
+          "even e6 — squares that White's own pawns can no longer control. The hole " +
+          "is not merely a square; it is an invitation the opponent will never refuse.",
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // CHAPTER VI — Lesson 3: The Ill-Timed Attack
+  // ─────────────────────────────────────────────────────────────────
+  "6-3": {
+    title: "The Ill-Timed Attack",
+    intro:
+      "Capablanca: “An attack launched before your pieces are fully developed and your " +
+      "King is safe is doomed to fail. A master does not attack out of impatience; " +
+      "an attack must flow naturally from a superior position where the opponent's " +
+      "pieces are already tangled or restricted.” Here Black has launched …f5 without " +
+      "completing development or castling — a classic case of premature aggression.",
+    startFen: "r1bqkbnr/pppp1ppp/2n5/1B3P2/8/5N2/PPPPPPPP/RNBQK2R b KQkq - 0 4",
+    moves: [
+      {
+        san: "e4",
+        commentary:
+          "Black pushes the e-pawn forward, attempting to seize space and complicate. " +
+          "But without castling or the King's Bishop developed, this is a pawn thrust " +
+          "without an army behind it — exactly the impatience Capablanca condemned.",
+      },
+      {
+        san: "d3",
+        commentary:
+          "White calmly protects the centre, refusing to be provoked. The master " +
+          "knows that an ill-timed attack contains the seeds of its own destruction; " +
+          "he need only block the storm and let the clouds dissipate.",
+      },
+      {
+        san: "exd3",
+        commentary:
+          "Black captures on d3, opening lines he cannot exploit because his own King " +
+          "is still in the centre and his Rooks are unconnected. Every exchange now " +
+          "favours the better-developed side.",
+      },
+      {
+        san: "Qxd3",
+        commentary:
+          "The Queen recaptures and immediately eyes the exposed Black King along the " +
+          "d-file. Capablanca: “Develop with every move; if your attack does not flow " +
+          "from development, it is not an attack — it is a gamble.”",
+      },
+      {
+        san: "Nf6",
+        commentary:
+          "Black brings out the Knight, but it is too late. The e-file and d-file are " +
+          "already open toward his uncastled King, and White's lead in development " +
+          "has become decisive.",
+      },
+      {
+        san: "Bg5",
+        commentary:
+          "The Bishop pins the Knight to the Queen, paralysing Black's ability to castle. " +
+          "A single pin can destroy an entire position when that position was built on " +
+          "haste rather than preparation.",
+      },
+      {
+        san: "d5",
+        commentary:
+          "A desperate attempt to break the pin and gain space. But the d-pawn is " +
+          "another pawn moving before its pieces are ready — another ill-timed lunge " +
+          "that weakens c6 and e6 instead of solving anything.",
+      },
+      {
+        san: "Nc3",
+        commentary:
+          "White completes development with gain of time, attacking d5 and preparing " +
+          "to castle. The lesson is complete: the player who attacked before he was " +
+          "ready has no pieces where they are needed, and every square he claims " +
+          "becomes a new weakness.",
+      },
+    ],
+  },
 };
 
 export function getLesson(id: string): LessonContent {
