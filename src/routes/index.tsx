@@ -1,5 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { AppShell } from "@/components/AppShell";
+import { MatchReplayPlayer } from "@/components/MatchReplayPlayer";
 import { Sparkles, Flame, ArrowUpRight, Target } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -12,8 +14,35 @@ export const Route = createFileRoute("/")({
   component: Dashboard,
 });
 
+// Months with 31 days unlock the special Hastings 1919 featured game.
+function daysInCurrentMonth() {
+  const d = new Date();
+  return new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
+}
+
+const DEFAULT_DAILY = {
+  caption: "Capablanca vs. Tartakower, 1924",
+  prompt: "White to move — find the quiet winning idea.",
+  matchId: null as string | null,
+  eyebrow: undefined as string | undefined,
+  title: undefined as string | undefined,
+  capablancaColor: "w" as "w" | "b",
+};
+
+const HASTINGS_FEATURED = {
+  caption: "W. Winter vs. Capablanca · Hastings, 1919",
+  prompt: "Black to move — Raúl locks the position for life. What is his move?",
+  matchId: "archive-31",
+  eyebrow: "Hastings Victory Congress · 1919",
+  title: "W. Winter vs. J. R. Capablanca",
+  capablancaColor: "b" as "w" | "b",
+};
+
 function Dashboard() {
   const progress = 42;
+  const featured = daysInCurrentMonth() === 31 ? HASTINGS_FEATURED : DEFAULT_DAILY;
+  const [replayOpen, setReplayOpen] = useState(false);
+
   return (
     <AppShell>
       <header className="mb-10">
@@ -58,15 +87,25 @@ function Dashboard() {
             <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] text-gold/80">
               <Sparkles className="h-3.5 w-3.5" /> Daily Capablanca Position
             </div>
-            <span className="text-[11px] text-muted-foreground">Capablanca vs. Tartakower, 1924</span>
+            <span className="text-[11px] text-muted-foreground">{featured.caption}</span>
           </div>
-          <h3 className="mt-3 font-display text-2xl text-cream">
-            White to move — find the quiet winning idea.
-          </h3>
+          <h3 className="mt-3 font-display text-2xl text-cream">{featured.prompt}</h3>
           <ChessBoard />
-          <button className="mt-6 inline-flex items-center gap-2 rounded-lg gradient-gold px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:opacity-90">
-            Study the solution <ArrowUpRight className="h-4 w-4" />
-          </button>
+          {featured.matchId ? (
+            <button
+              onClick={() => setReplayOpen(true)}
+              className="mt-6 inline-flex items-center gap-2 rounded-lg gradient-gold px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:opacity-90 cursor-pointer"
+            >
+              Study the solution <ArrowUpRight className="h-4 w-4" />
+            </button>
+          ) : (
+            <Link
+              to="/openings"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg gradient-gold px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+            >
+              Study the solution <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          )}
         </div>
 
         <div className="flex flex-col gap-6">
@@ -79,6 +118,14 @@ function Dashboard() {
           </div>
         </div>
       </section>
+
+      <MatchReplayPlayer
+        matchId={replayOpen ? featured.matchId : null}
+        eyebrow={featured.eyebrow}
+        titleOverride={featured.title}
+        capablancaColor={featured.capablancaColor}
+        onClose={() => setReplayOpen(false)}
+      />
     </AppShell>
   );
 }
@@ -97,7 +144,6 @@ function StatCard({ icon: Icon, label, value, hint }: { icon: any; label: string
 }
 
 function ChessBoard() {
-  // Decorative 8x8 isometric-feel board
   return (
     <div className="mt-5 overflow-hidden rounded-xl border border-border/80 bg-surface-elevated p-3">
       <div className="grid grid-cols-8 gap-0 overflow-hidden rounded-md">
