@@ -45,6 +45,7 @@ const GAMES = [
   { id: 28, white: "M. Botvinnik", black: "J. R. Capablanca", event: "Nottingham Masters", year: 1936, opening: "English Opening", result: "0-1" },
   { id: 29, white: "M. Botvinnik", black: "J. R. Capablanca", event: "AVRO Tournament", year: 1938, opening: "Nimzo-Indian Defense", result: "1-0" },
   { id: 30, white: "J. R. Capablanca", black: "M. Czerniak", event: "Buenos Aires Olympiad", year: 1939, opening: "French Defense", result: "1-0" },
+  { id: 31, white: "W. Winter", black: "J. R. Capablanca", event: "Hastings Victory Congress", year: 1919, opening: "Four Knights Game", result: "0-1" },
 ] as const;
 
 const RESULTS = ["All", "1-0", "0-1", "½-½"] as const;
