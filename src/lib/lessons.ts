@@ -2453,7 +2453,35 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+
+  // ─────────────────────────────────────────────────────────────────
+  // ARCHIVE GAME 31 — Winter vs. Capablanca, Hastings 1919
+  // Position after 17. f4 — Black to play the legendary 17... f5!
+  // ─────────────────────────────────────────────────────────────────
+  "archive-31": {
+    title: "W. Winter vs. J. R. Capablanca — Hastings, 1919",
+    intro:
+      "Hastings Victory Congress, 1919. A Four Knights Game has reached a critical " +
+      "juncture: White has just played 17. f4, hoping to expand on the kingside. " +
+      "Black to move — what is Raúl's reply?",
+    startFen: "6k1/pp2bppp/2p5/n2pP3/3P1P2/2N3B1/PP4PP/6K1 b - - 0 17",
+    guessMoveIndex: 0,
+    guessHint:
+      "Not quite! Look closer at White's kingside structure. How can you lock down " +
+      "the board so White's light-squared bishop stays trapped forever?",
+    moves: [
+      {
+        san: "f5",
+        commentary:
+          "Excellent! By playing 17... f5!, Capablanca completely locks the pawn " +
+          "chain. This permanently shuts White's light-squared bishop out of the " +
+          "game, leaving White functionally a piece down for the entire rest of " +
+          "the match. A positional masterpiece.",
+      },
+    ],
+  },
 };
+
 
 export function getLesson(id: string): LessonContent {
   return (
