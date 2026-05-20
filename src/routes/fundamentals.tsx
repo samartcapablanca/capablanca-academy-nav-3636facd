@@ -65,11 +65,9 @@ const CHAPTERS: Chapter[] = [
     roman: "IV",
     title: "General Theory",
     lessons: [
-      { id: "4-1", title: "The Initiative" },
-      { id: "4-2", title: "Direct Attacks en Masse" },
-      { id: "4-3", title: "The Force of the Threatened Attack" },
-      { id: "4-4", title: "Relinquishing the Initiative" },
-      { id: "4-5", title: "Cutting Off Pieces from the Scene of Action" },
+      { id: "4-1", title: "The Relative Value of the Pieces" },
+      { id: "4-2", title: "General Strategy of the Open Game" },
+      { id: "4-3", title: "Control of the Centre — Advanced Theory" },
     ],
   },
   {

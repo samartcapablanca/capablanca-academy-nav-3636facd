@@ -880,6 +880,207 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+  "4-1": {
+    title: "The Relative Value of the Pieces",
+    intro:
+      "Capablanca: “The relative value of the pieces changes constantly according " +
+      "to the nature of the position. A Bishop is generally better than a Knight " +
+      "in open positions, while a Knight is superior in blocked positions with " +
+      "locked pawn structures. You must learn to judge when to swap standard " +
+      "values for positional advantages.” The board shows a deliberate imbalance: " +
+      "White's Bishop pair against Black's Knight pair, with a Rook facing two " +
+      "connected pawns on the queenside — a living laboratory of dynamic values.",
+    startFen:
+      "4k3/pp3pp1/2n2n1p/8/8/1P3B1P/P4PP1/2R1KB2 w - - 0 1",
+    moves: [
+      {
+        san: "Bd3",
+        commentary:
+          "The Bishop seizes its long diagonal. In open positions like this, the " +
+          "Bishop's reach across the whole board is worth more than its nominal " +
+          "three points — “the value of the piece depends on what it does.”",
+      },
+      {
+        san: "Nd4",
+        commentary:
+          "The Knight grabs a central outpost. A well-posted Knight on d4 — " +
+          "unchallenged by pawns — is often worth a Rook in practical terms.",
+      },
+      {
+        san: "Rc7",
+        commentary:
+          "The Rook invades the 7th rank. Capablanca's table of values is only " +
+          "a starting point: a Rook behind enemy lines can be decisive against " +
+          "two connected pawns that have not yet started rolling.",
+      },
+      {
+        san: "Nfe6",
+        commentary:
+          "Black brings a second Knight to a strong square. Two Knights working " +
+          "together can dominate when the position is closed — but here the lines " +
+          "are open, and the Bishops will get the upper hand.",
+      },
+      {
+        san: "Bxh6",
+        commentary:
+          "A small but telling exchange. Capablanca: “Never give up a Bishop for " +
+          "a Knight without reason — but always do so when it wins material or " +
+          "creates a decisive structural weakness.”",
+      },
+      {
+        san: "gxh6",
+        commentary:
+          "Black's kingside is shattered. The pawns now form a target structure, " +
+          "and the surviving light-squared Bishop will rake the weakened squares.",
+      },
+      {
+        san: "b4",
+        commentary:
+          "The connected pawns advance. Two passed pawns on the sixth rank are " +
+          "stronger than a Rook — another reminder that material values are " +
+          "fluid, governed by position, not by the textbook.",
+      },
+      {
+        san: "Nd8",
+        commentary:
+          "Black's Knight retreats to blockade. The lesson is complete: every " +
+          "piece's value rose or fell with the changing position. The student " +
+          "who memorises only the numbers will lose to the one who sees the squares.",
+      },
+    ],
+  },
+
+  "4-2": {
+    title: "General Strategy of the Open Game",
+    intro:
+      "Capablanca: “In an open game, speed of development is everything. Every " +
+      "move must serve to bring a piece into play or secure control of the " +
+      "centre. Waste no time moving the same piece twice, and castle early to " +
+      "ensure the King's safety before lines are completely opened.” The Italian " +
+      "Game — the archetype of the open game — is our stage.",
+    startFen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    moves: [
+      {
+        san: "e4",
+        commentary:
+          "“Open the game with the centre pawns.” The e-pawn stakes a claim on " +
+          "d5 and f5 and frees both the Bishop and the Queen in a single move.",
+      },
+      {
+        san: "e5",
+        commentary:
+          "Black mirrors. A symmetric centre is the purest battlefield for the " +
+          "principles of open play: the faster developer will win the tempo war.",
+      },
+      {
+        san: "Nf3",
+        commentary:
+          "Develop with a threat. The Knight attacks e5 and reaches its best " +
+          "square in one move. Capablanca: “The King's Knight belongs on f3.”",
+      },
+      {
+        san: "Nc6",
+        commentary:
+          "Black defends and develops at the same time. Every move must do at " +
+          "least one useful job; in the open game, ideally two.",
+      },
+      {
+        san: "Bc4",
+        commentary:
+          "The Italian Bishop. From c4 it eyes f7 — the weakest square in Black's " +
+          "camp — and stays out of the way of future castling.",
+      },
+      {
+        san: "Bc5",
+        commentary:
+          "Black follows the same principle. Knights before Bishops, but once " +
+          "the Knights are out, the Bishops must follow at once.",
+      },
+      {
+        san: "O-O",
+        commentary:
+          "Castle early! With lines about to open, the King's safety is non-" +
+          "negotiable. Capablanca: “Castle before you attack, not after.”",
+      },
+      {
+        san: "Nf6",
+        commentary:
+          "Black completes minor-piece development. Both sides have followed the " +
+          "open-game catechism perfectly: centre pawn, both Knights, both Bishops, " +
+          "castle. The middle-game battle for the centre can now begin.",
+      },
+    ],
+  },
+
+  "4-3": {
+    title: "Control of the Centre — Advanced Theory",
+    intro:
+      "Capablanca: “The control of the centre is the essential foundation for " +
+      "any successful flank attack or endgame advantage. By controlling the " +
+      "central squares, you maximise the mobility of your own pieces while " +
+      "severely cramping your opponent's army, forcing them onto defensive, " +
+      "passive squares.” The fight is for d4, e4, d5, and e5 — and every piece " +
+      "must contribute.",
+    startFen:
+      "r1bqkb1r/pppp1ppp/2n2n2/4p3/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 0 1",
+    moves: [
+      {
+        san: "dxe5",
+        commentary:
+          "White resolves the central tension on his own terms. “He who controls " +
+          "the centre dictates the play on both wings.”",
+      },
+      {
+        san: "Nxe5",
+        commentary:
+          "Black recaptures with the Knight, placing it on a fine central square. " +
+          "But a Knight on e5 can be challenged — true central control requires " +
+          "pawns, not just pieces.",
+      },
+      {
+        san: "Nxe5",
+        commentary:
+          "White trades the central Knight, removing the most active enemy piece " +
+          "and clarifying the structure: White will keep a pawn on e4, Black on " +
+          "nothing. The advanced lesson begins.",
+      },
+      {
+        san: "Nxe4",
+        commentary:
+          "Black grabs the e-pawn — but only temporarily. Capablanca: “Material " +
+          "won at the cost of central control is usually material lost.”",
+      },
+      {
+        san: "Nxe4",
+        commentary:
+          "Recapture. White now has a Knight commanding the centre with no Black " +
+          "pawn able to challenge it — the textbook definition of central " +
+          "dominance.",
+      },
+      {
+        san: "d5",
+        commentary:
+          "Black tries to evict the Knight with a pawn, the only piece that can. " +
+          "But every pawn move creates a new weakness; the central squares Black " +
+          "abandons (e5, c5) become permanent White outposts.",
+      },
+      {
+        san: "Nc3",
+        commentary:
+          "The Knight retreats with purpose, eyeing a re-entry to e4 or d5 and " +
+          "supporting the eventual advance of the c-pawn. Central control is not " +
+          "a single moment — it is a long campaign of squares.",
+      },
+      {
+        san: "Be7",
+        commentary:
+          "Black develops passively. This is the deeper lesson: the side that " +
+          "controls the centre is free to manoeuvre; the side that does not must " +
+          "react. From this foundation, any flank attack or endgame plan becomes " +
+          "possible — exactly as Capablanca taught.",
+      },
+    ],
+  },
 };
 
 export function getLesson(id: string): LessonContent {
