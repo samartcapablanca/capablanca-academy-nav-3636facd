@@ -75,10 +75,9 @@ const CHAPTERS: Chapter[] = [
     roman: "V",
     title: "End-game Strategy",
     lessons: [
-      { id: "5-1", title: "A Difficult Ending: Two Bishops vs. Bishop & Knight" },
-      { id: "5-2", title: "A Pawn Ending" },
-      { id: "5-3", title: "Difficult Endings of One Rook and Pawns" },
-      { id: "5-4", title: "Rook, Bishop, and Pawns vs. Rook, Knight, and Pawns" },
+      { id: "5-1", title: "Rook and Pawn Endgames" },
+      { id: "5-2", title: "Bishop vs. Knight in the Endgame" },
+      { id: "5-3", title: "The Power of a Passed Pawn" },
     ],
   },
   {
