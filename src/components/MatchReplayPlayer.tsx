@@ -82,13 +82,17 @@ export function MatchReplayPlayer({
     };
   }, [matchId]);
 
-  // Guess Mode auto-disables whenever we're not sitting on the designated
-  // guess target (e.g. after a successful guess advances the board, or after
-  // the user navigates away from the target with Prev/Next).
+  // Guess Mode auto-enables when we arrive at the designated guess target
+  // and auto-disables as soon as we move past it (e.g. after a successful
+  // guess advances the board, or after the user navigates away).
   useEffect(() => {
     if (!lesson) return;
     if (typeof lesson.guessMoveIndex !== "number") return;
-    if (moveIndex + 1 !== lesson.guessMoveIndex && guessMode) {
+    const atTarget = moveIndex + 1 === lesson.guessMoveIndex;
+    if (atTarget && !guessMode) {
+      setGuessMode(true);
+      setFeedback(null);
+    } else if (!atTarget && guessMode) {
       setGuessMode(false);
       setFeedback(null);
     }
