@@ -208,6 +208,9 @@ export function MatchReplayPlayer({
         setFeedback({ square: to, kind: "success" });
         playSuccessChime();
         advance();
+        // Guess succeeded — disable Guess the Move so playback resumes
+        // normally and the toggle locks again until the next target.
+        setGuessMode(false);
         feedbackTimer.current = setTimeout(() => setFeedback(null), 900);
         if (autoTimer.current) clearTimeout(autoTimer.current);
         autoTimer.current = setTimeout(() => {
