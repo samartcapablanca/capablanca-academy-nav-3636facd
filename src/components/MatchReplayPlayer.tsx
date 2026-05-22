@@ -158,21 +158,26 @@ export function MatchReplayPlayer({
   const canNext = moveIndex < total - 1;
 
   // System-driven guess mode: active only when we're sitting exactly on the
-  // designated guess target AND it's Capablanca's turn.
+  // designated guess target AND it's Capablanca's turn AND no attempt yet.
   const hasGuessTarget = typeof lesson?.guessMoveIndex === "number";
   const atGuessPoint =
     !!lesson && hasGuessTarget && moveIndex + 1 === lesson.guessMoveIndex;
   const guessActive =
     atGuessPoint && turn === capablancaColor && !attemptResult;
 
-  // Reset the in-panel attempt result whenever we leave the guess square.
-  useEffect(() => {
-    if (!atGuessPoint && attemptResult) setAttemptResult(null);
-  }, [atGuessPoint, attemptResult]);
-
   const advance = useCallback(() => {
     setAttemptResult(null);
     setMoveIndex((i) => i + 1);
+  }, []);
+
+  const goBack = useCallback(() => {
+    setAttemptResult(null);
+    setMoveIndex((i) => i - 1);
+  }, []);
+
+  const jumpTo = useCallback((idx: number) => {
+    setAttemptResult(null);
+    setMoveIndex(idx);
   }, []);
 
   const handleSquareDrop = useCallback(
@@ -180,16 +185,17 @@ export function MatchReplayPlayer({
       if (!lesson || !nextExpected || !guessActive) return;
       const correct = from === nextExpected.from && to === nextExpected.to;
       if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
+      // One try — apply the correct move either way so the board displays it.
+      setMoveIndex((i) => i + 1);
       if (correct) {
         setFeedback({ square: to, kind: "success" });
         playSuccessChime();
         setAttemptResult({ kind: "success", correctSan: nextExpected.san });
-        feedbackTimer.current = setTimeout(() => setFeedback(null), 900);
       } else {
-        setFeedback({ square: from, kind: "error" });
+        setFeedback({ square: nextExpected.to, kind: "success" });
         setAttemptResult({ kind: "error", correctSan: nextExpected.san });
-        feedbackTimer.current = setTimeout(() => setFeedback(null), 500);
       }
+      feedbackTimer.current = setTimeout(() => setFeedback(null), 900);
     },
     [guessActive, lesson, nextExpected],
   );
@@ -245,8 +251,8 @@ export function MatchReplayPlayer({
         {/* Sidebar */}
         <aside className="flex flex-col border-t border-border bg-sidebar md:basis-1/4 md:border-l md:border-t-0">
           <div className="flex-1 overflow-y-auto p-5 md:p-6">
-            {/* Guess the Move card — appears only at the designated target */}
-            {atGuessPoint && (
+            {/* Guess the Move card — visible at the target or after an attempt */}
+            {(atGuessPoint || attemptResult) && (
               <div
                 className={cn(
                   "rounded-2xl border bg-surface-elevated/60 p-4 transition animate-fade-in",
@@ -257,12 +263,7 @@ export function MatchReplayPlayer({
                       : "border-gold/25",
                 )}
               >
-                <div
-                  className={cn(
-                    "flex items-center gap-2 text-[10px] uppercase tracking-[0.24em]",
-                    "text-gold",
-                  )}
-                >
+                <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] text-gold">
                   <Sparkles className="h-3.5 w-3.5" /> Guess the Move
                 </div>
 
@@ -290,15 +291,14 @@ export function MatchReplayPlayer({
                 {attemptResult?.kind === "error" && (
                   <div className="mt-2 animate-fade-in">
                     <div className="flex items-center gap-2 font-display text-base text-rose-300">
-                      <XCircle className="h-4 w-4" /> Nice try.
+                      <XCircle className="h-4 w-4" /> Nice Try!
                     </div>
                     <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
                       Capablanca played{" "}
                       <span className="font-mono text-gold">
                         {attemptResult.correctSan}
                       </span>
-                      .{" "}
-                      {lesson.guessHint ?? "Study the idea, then hit Next."}
+                      . Hit Next to continue.
                     </p>
                   </div>
                 )}
@@ -306,7 +306,7 @@ export function MatchReplayPlayer({
             )}
 
             {/* Raúl's Strategy commentary */}
-            <div className={cn("rounded-2xl border border-border bg-surface p-5 shadow-luxe", atGuessPoint ? "mt-5" : "")}>
+            <div className={cn("rounded-2xl border border-border bg-surface p-5 shadow-luxe", (atGuessPoint || attemptResult) ? "mt-5" : "")}>
               <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] text-gold/80">
                 <Lightbulb className="h-3.5 w-3.5" /> Raúl's Strategy
               </div>
@@ -333,10 +333,7 @@ export function MatchReplayPlayer({
                 return (
                   <button
                     key={i}
-                    onClick={() => {
-                      setAttemptResult(null);
-                      setMoveIndex(idx);
-                    }}
+                    onClick={() => jumpTo(idx)}
                     className={cn(
                       "h-2 rounded-full transition-all cursor-pointer",
                       active ? "w-6 bg-gold" : past ? "w-2 bg-gold/50" : "w-2 bg-muted",
@@ -351,7 +348,7 @@ export function MatchReplayPlayer({
           {/* Nav buttons */}
           <div className="grid grid-cols-2 gap-3 border-t border-border bg-sidebar p-4 md:p-5">
             <button
-              onClick={() => canPrev && (setAttemptResult(null), setMoveIndex((i) => i - 1))}
+              onClick={() => canPrev && goBack()}
               disabled={!canPrev}
               className="flex items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 py-4 text-sm font-medium text-cream transition hover:border-gold/50 hover:text-gold disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
             >
