@@ -500,7 +500,7 @@ export const LESSONS: Record<string, LessonContent> = {
       { san: "Qb4", commentary: "Queen to b4 — coordinating the final assault." },
       { san: "Qe7", commentary: "Queen to e7 — coordinating the final assault." },
       { san: "Qf4+", commentary: "Qf4+ — White delivers check, forcing the enemy King to respond." },
-      { san: "Qf6", commentary: "Queen to f6 — coordinating the final assault." },
+      { san: "Qf6", commentary: "Threefold repetition — draw agreed, ½–½. Marshall cannot break the Qb4/Qf4+ shuffle without losing the b-pawn, and Capablanca is content to split the point in a still-balanced ending." },
     ],
     guessMoveIndex: 27,
     guessHint: "Capablanca won material here. Look for the tactical capture that breaks through.",
