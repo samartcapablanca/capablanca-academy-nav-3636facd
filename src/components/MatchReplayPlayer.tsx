@@ -333,10 +333,7 @@ export function MatchReplayPlayer({
                 return (
                   <button
                     key={i}
-                    onClick={() => {
-                      setAttemptResult(null);
-                      setMoveIndex(idx);
-                    }}
+                    onClick={() => jumpTo(idx)}
                     className={cn(
                       "h-2 rounded-full transition-all cursor-pointer",
                       active ? "w-6 bg-gold" : past ? "w-2 bg-gold/50" : "w-2 bg-muted",
@@ -351,7 +348,7 @@ export function MatchReplayPlayer({
           {/* Nav buttons */}
           <div className="grid grid-cols-2 gap-3 border-t border-border bg-sidebar p-4 md:p-5">
             <button
-              onClick={() => canPrev && (setAttemptResult(null), setMoveIndex((i) => i - 1))}
+              onClick={() => canPrev && goBack()}
               disabled={!canPrev}
               className="flex items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 py-4 text-sm font-medium text-cream transition hover:border-gold/50 hover:text-gold disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
             >
