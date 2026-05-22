@@ -462,16 +462,19 @@ export const LESSONS: Record<string, LessonContent> = {
       { san: "Bb7", commentary: "The bishop takes its ideal post, pressuring e4 and g2." },
       { san: "O-O", commentary: "Both sides will castle short. The middlegame battle now centres on the c-file." },
       { san: "O-O", commentary: "Capablanca completes development. His position is harmonious; White's is structurally inferior." },
-      { san: "c4", commentary: "Marshall tries to open lines for his bishop pair before Black consolidates." },
-      { san: "dxc4", commentary: "Black accepts — the c-pawn weaknesses are now fixed targets." },
-      { san: "Bxc4", commentary: "Recaptures, but Black's plan is already underway." },
-      { san: "c5", commentary: "The classical freeing break: Black secures the d5-square and challenges the centre." },
       {
-        san: "d5",
+        san: "e4",
         commentary:
-          "Marshall lashes out, but the resulting structure favours Black: the doubled c-pawns " +
-          "remain weak and Capablanca's pieces coordinate perfectly. From here Capablanca converted " +
-          "his structural edge into a decisive endgame win — the opening salvo of a one-sided match.",
+          "Marshall opens the centre, hoping to activate his bishop pair before Black consolidates.",
+      },
+      { san: "c5", commentary: "The classical freeing break: Black contests the centre and secures the d5-square." },
+      { san: "Re1", commentary: "White centralises, but Black's plan is already underway." },
+      { san: "cxd4", commentary: "Black accepts the exchange — the doubled c-pawn weaknesses are now fixed targets." },
+      {
+        san: "cxd4",
+        commentary:
+          "Forced recapture leaves White with an isolated d-pawn and a permanently inferior structure. " +
+          "From here Capablanca converted his structural edge into a decisive endgame win — the opening salvo of a one-sided match.",
       },
     ],
     guessMoveIndex: 9,
