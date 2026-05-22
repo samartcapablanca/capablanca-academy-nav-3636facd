@@ -473,9 +473,24 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "cxd4",
         commentary:
-          "Forced recapture leaves White with an isolated d-pawn and a permanently inferior structure. " +
-          "From here Capablanca converted his structural edge into a decisive endgame win — the opening salvo of a one-sided match.",
+          "Forced recapture leaves White with an isolated d-pawn and a permanently inferior structure.",
       },
+      { san: "Rc8", commentary: "Capablanca grabs the open c-file — the natural highway against the doubled, now-isolated pawn." },
+      { san: "Qb3", commentary: "Marshall eyes b6 and d5, hoping activity will compensate for structure." },
+      { san: "Nd7", commentary: "The knight reroutes toward f6 and b6, blunting White's queen and reinforcing d5." },
+      { san: "Rad1", commentary: "White centralises the last rook, but his pieces defend; Black's pieces attack." },
+      { san: "Nf6", commentary: "Back to its best square — eyeing e4 and d5, the very weakness of the position." },
+      { san: "Ng5", commentary: "A nervous lunge. With no real attack, this knight only loses time." },
+      { san: "g6", commentary: "Solid. Capablanca calmly defends and dares the knight to do something." },
+      { san: "f4", commentary: "Marshall stakes everything on a kingside push — but his centre is hollow." },
+      { san: "Rc7", commentary: "Doubling on the c-file. The endgame plan writes itself." },
+      { san: "Qb4", commentary: "Offering queens — desperation in a worse middlegame." },
+      {
+        san: "Qxb4",
+        commentary:
+          "Capablanca accepts. Into the endgame his technique converts the structural edge — the opening salvo of a one-sided match.",
+      },
+
     ],
     guessMoveIndex: 9,
     guessHint:
