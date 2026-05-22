@@ -1369,6 +1369,7 @@ export const LESSONS: Record<string, LessonContent> = {
       { san: "exd5", commentary: "Recapture, opening the e-file." },
       { san: "Bg5", commentary: "White tries to pin and pressure." },
       { san: "h6", commentary: "Black asks the Bishop to declare itself." },
+      { san: "Bxf6", commentary: "White accepts the trade, hoping to damage Black's kingside pawns." },
       {
         san: "Qxf6",
         commentary:
@@ -1376,7 +1377,7 @@ export const LESSONS: Record<string, LessonContent> = {
           "White's center from a dominant, active post.",
       },
     ],
-    guessMoveIndex: 12,
+    guessMoveIndex: 13,
     guessHint:
       "Try again! Develop the Queen actively while sweeping up White's aggressive Bishop.",
   },
