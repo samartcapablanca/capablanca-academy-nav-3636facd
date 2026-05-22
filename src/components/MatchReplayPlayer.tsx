@@ -6,10 +6,10 @@ import {
   Lightbulb,
   X,
   Sparkles,
+  CheckCircle2,
+  XCircle,
 } from "lucide-react";
-import { toast } from "sonner";
 import { ChessBoardView } from "./ChessBoardView";
-import { Switch } from "@/components/ui/switch";
 import { getLesson } from "@/lib/lessons";
 import { cn } from "@/lib/utils";
 
@@ -63,40 +63,24 @@ export function MatchReplayPlayer({
 }: Props) {
   const lesson = useMemo(() => (matchId ? getLesson(matchId) : null), [matchId]);
   const [moveIndex, setMoveIndex] = useState(-1);
-  
-  const [guessMode, setGuessMode] = useState(false);
+
   const [feedback, setFeedback] =
     useState<{ square: string; kind: "success" | "error" } | null>(null);
+  /** In-panel result message after a guess attempt at the target move. */
+  const [attemptResult, setAttemptResult] =
+    useState<{ kind: "success" | "error"; correctSan: string } | null>(null);
   const feedbackTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const autoTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (matchId) {
       setMoveIndex(-1);
-      setGuessMode(false);
       setFeedback(null);
+      setAttemptResult(null);
     }
     return () => {
       if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
-      if (autoTimer.current) clearTimeout(autoTimer.current);
     };
   }, [matchId]);
-
-  // Guess Mode auto-enables when we arrive at the designated guess target
-  // and auto-disables as soon as we move past it (e.g. after a successful
-  // guess advances the board, or after the user navigates away).
-  useEffect(() => {
-    if (!lesson) return;
-    if (typeof lesson.guessMoveIndex !== "number") return;
-    const atTarget = moveIndex + 1 === lesson.guessMoveIndex;
-    if (atTarget && !guessMode) {
-      setGuessMode(true);
-      setFeedback(null);
-    } else if (!atTarget && guessMode) {
-      setGuessMode(false);
-      setFeedback(null);
-    }
-  }, [moveIndex, lesson, guessMode]);
 
   useEffect(() => {
     if (!matchId) return;
@@ -107,8 +91,7 @@ export function MatchReplayPlayer({
     };
   }, [matchId]);
 
-  // Build position from scratch at every moveIndex change — guarantees
-  // perspective switches and back/forward navigation never desync.
+  // Build position from scratch at every moveIndex change.
   const { fen, lastMove, turn, applied } = useMemo(() => {
     if (!lesson)
       return {
@@ -155,9 +138,6 @@ export function MatchReplayPlayer({
     }
   }, [lesson, moveIndex]);
 
-  // Count how many moves in this lesson actually apply cleanly to the start
-  // position. If the SAN list contains a bad move, we clamp the player to the
-  // last legal one so the board, commentary, and progress dots stay in sync.
   const playableTotal = useMemo(() => {
     if (!lesson) return 0;
     const g = lesson.startFen ? new Chess(lesson.startFen) : new Chess();
@@ -177,63 +157,41 @@ export function MatchReplayPlayer({
   const canPrev = moveIndex > -1;
   const canNext = moveIndex < total - 1;
 
-  // In Guess Mode, the Next button is locked while it's Capablanca's turn
-  // — and, if the lesson designates a specific guess target, only at that
-  // exact move index.
-  const atDesignatedTarget =
-    typeof lesson?.guessMoveIndex === "number"
-      ? moveIndex + 1 === lesson.guessMoveIndex
-      : true;
-  const lockedForGuess =
-    !!lesson &&
-    guessMode &&
-    !!nextExpected &&
-    turn === capablancaColor &&
-    atDesignatedTarget;
+  // System-driven guess mode: active only when we're sitting exactly on the
+  // designated guess target AND it's Capablanca's turn.
+  const hasGuessTarget = typeof lesson?.guessMoveIndex === "number";
+  const atGuessPoint =
+    !!lesson && hasGuessTarget && moveIndex + 1 === lesson.guessMoveIndex;
+  const guessActive =
+    atGuessPoint && turn === capablancaColor && !attemptResult;
 
-  const advance = useCallback(() => setMoveIndex((i) => i + 1), []);
+  // Reset the in-panel attempt result whenever we leave the guess square.
+  useEffect(() => {
+    if (!atGuessPoint && attemptResult) setAttemptResult(null);
+  }, [atGuessPoint, attemptResult]);
+
+  const advance = useCallback(() => {
+    setAttemptResult(null);
+    setMoveIndex((i) => i + 1);
+  }, []);
 
   const handleSquareDrop = useCallback(
     (from: string, to: string) => {
-      if (!lesson || !nextExpected) return;
-      // Only intercept when it's Capablanca's turn AND, if a designated
-      // guess target exists, we're sitting on exactly that move.
-      const isCapaTurn = turn === capablancaColor;
-      const designated =
-        typeof lesson.guessMoveIndex === "number"
-          ? moveIndex + 1 === lesson.guessMoveIndex
-          : true;
-      if (!guessMode || !isCapaTurn || !designated) {
-        return;
-      }
+      if (!lesson || !nextExpected || !guessActive) return;
       const correct = from === nextExpected.from && to === nextExpected.to;
+      if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
       if (correct) {
-        if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
         setFeedback({ square: to, kind: "success" });
         playSuccessChime();
-        advance();
-        // Guess succeeded — disable Guess the Move so playback resumes
-        // normally and the toggle locks again until the next target.
-        setGuessMode(false);
+        setAttemptResult({ kind: "success", correctSan: nextExpected.san });
         feedbackTimer.current = setTimeout(() => setFeedback(null), 900);
-        if (autoTimer.current) clearTimeout(autoTimer.current);
-        autoTimer.current = setTimeout(() => {
-          setMoveIndex((i) => {
-            if (!lesson) return i;
-            return i + 1 < lesson.moves.length ? i + 1 : i;
-          });
-        }, 1500);
       } else {
-        if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
         setFeedback({ square: from, kind: "error" });
-        toast.error("That wasn't Capablanca's choice.", {
-          description:
-            lesson.guessHint ?? "Scan the board and try again!",
-        });
+        setAttemptResult({ kind: "error", correctSan: nextExpected.san });
         feedbackTimer.current = setTimeout(() => setFeedback(null), 500);
       }
     },
-    [advance, capablancaColor, guessMode, lesson, moveIndex, nextExpected, turn],
+    [guessActive, lesson, nextExpected],
   );
 
   if (!matchId || !lesson) return null;
@@ -271,13 +229,12 @@ export function MatchReplayPlayer({
           <div className="w-full">
             <ChessBoardView
               fen={fen}
-              
               lastMove={lastMove}
-              interactive={guessMode}
+              interactive={guessActive}
               onSquareDrop={handleSquareDrop}
               feedback={feedback}
             />
-            {lockedForGuess && (
+            {guessActive && (
               <p className="mt-5 text-center text-xs uppercase tracking-[0.28em] text-gold/80 animate-fade-in">
                 Your move — play as Capablanca
               </p>
@@ -288,51 +245,68 @@ export function MatchReplayPlayer({
         {/* Sidebar */}
         <aside className="flex flex-col border-t border-border bg-sidebar md:basis-1/4 md:border-l md:border-t-0">
           <div className="flex-1 overflow-y-auto p-5 md:p-6">
-            {/* Guess the Move toggle */}
-            {(() => {
-              const hasGuessTarget = typeof lesson.guessMoveIndex === "number";
-              const atGuessPoint =
-                hasGuessTarget && moveIndex + 1 === lesson.guessMoveIndex;
-              const switchDisabled = hasGuessTarget && !atGuessPoint;
-              return (
+            {/* Guess the Move card — appears only at the designated target */}
+            {atGuessPoint && (
+              <div
+                className={cn(
+                  "rounded-2xl border bg-surface-elevated/60 p-4 transition animate-fade-in",
+                  attemptResult?.kind === "success"
+                    ? "border-emerald-500/40"
+                    : attemptResult?.kind === "error"
+                      ? "border-rose-500/40"
+                      : "border-gold/25",
+                )}
+              >
                 <div
                   className={cn(
-                    "flex items-start justify-between gap-4 rounded-2xl border bg-surface-elevated/60 p-4 transition",
-                    switchDisabled ? "border-border opacity-60" : "border-gold/25",
+                    "flex items-center gap-2 text-[10px] uppercase tracking-[0.24em]",
+                    "text-gold",
                   )}
                 >
-                  <div className="min-w-0">
-                    <div
-                      className={cn(
-                        "flex items-center gap-2 text-[10px] uppercase tracking-[0.24em]",
-                        switchDisabled ? "text-muted-foreground" : "text-gold",
-                      )}
-                    >
-                      <Sparkles className="h-3.5 w-3.5" /> Guess the Move
+                  <Sparkles className="h-3.5 w-3.5" /> Guess the Move
+                </div>
+
+                {!attemptResult && (
+                  <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                    Capablanca's signature moment — drag his piece to play the move.
+                  </p>
+                )}
+
+                {attemptResult?.kind === "success" && (
+                  <div className="mt-2 animate-fade-in">
+                    <div className="flex items-center gap-2 font-display text-base text-emerald-400">
+                      <CheckCircle2 className="h-4 w-4" /> Great Job!
                     </div>
                     <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
-                      {switchDisabled
-                        ? "Unlocks when Capablanca's signature moment arrives."
-                        : guessMode
-                          ? "Drag Capablanca's piece to play his move."
-                          : "Toggle on to play Capablanca's move yourself."}
+                      Capablanca played{" "}
+                      <span className="font-mono text-gold">
+                        {attemptResult.correctSan}
+                      </span>
+                      . Hit Next to continue.
                     </p>
                   </div>
-                  <Switch
-                    checked={guessMode}
-                    disabled={switchDisabled}
-                    onCheckedChange={(v) => {
-                      setGuessMode(v);
-                      setFeedback(null);
-                    }}
-                    className="mt-1 data-[state=checked]:bg-gold"
-                  />
-                </div>
-              );
-            })()}
+                )}
+
+                {attemptResult?.kind === "error" && (
+                  <div className="mt-2 animate-fade-in">
+                    <div className="flex items-center gap-2 font-display text-base text-rose-300">
+                      <XCircle className="h-4 w-4" /> Nice try.
+                    </div>
+                    <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                      Capablanca played{" "}
+                      <span className="font-mono text-gold">
+                        {attemptResult.correctSan}
+                      </span>
+                      .{" "}
+                      {lesson.guessHint ?? "Study the idea, then hit Next."}
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* Raúl's Strategy commentary */}
-            <div className="mt-5 rounded-2xl border border-border bg-surface p-5 shadow-luxe">
+            <div className={cn("rounded-2xl border border-border bg-surface p-5 shadow-luxe", atGuessPoint ? "mt-5" : "")}>
               <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] text-gold/80">
                 <Lightbulb className="h-3.5 w-3.5" /> Raúl's Strategy
               </div>
@@ -359,11 +333,12 @@ export function MatchReplayPlayer({
                 return (
                   <button
                     key={i}
-                    onClick={() => !lockedForGuess && setMoveIndex(idx)}
-                    disabled={lockedForGuess}
+                    onClick={() => {
+                      setAttemptResult(null);
+                      setMoveIndex(idx);
+                    }}
                     className={cn(
-                      "h-2 rounded-full transition-all",
-                      lockedForGuess ? "cursor-not-allowed opacity-60" : "cursor-pointer",
+                      "h-2 rounded-full transition-all cursor-pointer",
                       active ? "w-6 bg-gold" : past ? "w-2 bg-gold/50" : "w-2 bg-muted",
                     )}
                     aria-label={`Go to move ${idx + 1}`}
@@ -376,25 +351,14 @@ export function MatchReplayPlayer({
           {/* Nav buttons */}
           <div className="grid grid-cols-2 gap-3 border-t border-border bg-sidebar p-4 md:p-5">
             <button
-              onClick={() => canPrev && setMoveIndex((i) => i - 1)}
+              onClick={() => canPrev && (setAttemptResult(null), setMoveIndex((i) => i - 1))}
               disabled={!canPrev}
               className="flex items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 py-4 text-sm font-medium text-cream transition hover:border-gold/50 hover:text-gold disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
             >
               <ChevronLeft className="h-5 w-5" /> Previous
             </button>
             <button
-              onClick={() => {
-                if (!canNext) return;
-                // If the user clicks Next at the designated guess target
-                // without attempting (or after attempting incorrectly),
-                // reveal Capablanca's move as feedback, then advance.
-                if (lockedForGuess && nextExpected) {
-                  toast(`Capablanca played ${nextExpected.san}.`, {
-                    description: lesson.guessHint ?? "Study the idea, then continue.",
-                  });
-                }
-                advance();
-              }}
+              onClick={() => canNext && advance()}
               disabled={!canNext}
               className="flex items-center justify-center gap-2 rounded-xl gradient-gold px-4 py-4 text-sm font-semibold text-primary-foreground shadow-luxe transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
             >
