@@ -452,6 +452,27 @@ export const LESSONS: Record<string, LessonContent> = {
           "forces exchanges to bring about an early endgame where our superior technique " +
           "can win.",
       },
+      { san: "Bxe7", commentary: "Marshall accepts the trade — he cannot retreat without conceding tempo." },
+      { san: "Qxe7", commentary: "Recapture with the queen, eyeing the long diagonal and supporting ...Nxc3." },
+      { san: "Bd3", commentary: "White develops and attacks the e4-knight, hoping to chase it back." },
+      { san: "Nxc3", commentary: "Liquidation continues. Black is happy to swap pieces into a clean structure." },
+      { san: "bxc3", commentary: "White's pawns are doubled on the c-file — a permanent structural weakness." },
+      { san: "b6", commentary: "Preparing ...Bb7 to lock onto the long diagonal toward White's king." },
+      { san: "Nf3", commentary: "Marshall develops the last minor piece and prepares to castle." },
+      { san: "Bb7", commentary: "The bishop takes its ideal post, pressuring e4 and g2." },
+      { san: "O-O", commentary: "Both sides will castle short. The middlegame battle now centres on the c-file." },
+      { san: "O-O", commentary: "Capablanca completes development. His position is harmonious; White's is structurally inferior." },
+      { san: "c4", commentary: "Marshall tries to open lines for his bishop pair before Black consolidates." },
+      { san: "dxc4", commentary: "Black accepts — the c-pawn weaknesses are now fixed targets." },
+      { san: "Bxc4", commentary: "Recaptures, but Black's plan is already underway." },
+      { san: "c5", commentary: "The classical freeing break: Black secures the d5-square and challenges the centre." },
+      {
+        san: "d5",
+        commentary:
+          "Marshall lashes out, but the resulting structure favours Black: the doubled c-pawns " +
+          "remain weak and Capablanca's pieces coordinate perfectly. From here Capablanca converted " +
+          "his structural edge into a decisive endgame win — the opening salvo of a one-sided match.",
+      },
     ],
     guessMoveIndex: 9,
     guessHint:
