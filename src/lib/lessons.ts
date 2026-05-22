@@ -559,7 +559,7 @@ export const LESSONS: Record<string, LessonContent> = {
       { san: "Qf5", commentary: "Capablanca repositions the Queen to f5, probing for weaknesses." },
       { san: "f4", commentary: "Pawn thrust to f4 — claiming space in the centre." },
       { san: "Rb6", commentary: "Rook lifts to b6, joining the heavy-piece battery." },
-      { san: "Qxb6", commentary: "Queen takes the rook on b6, leaving White a clear material edge." },
+      { san: "Qxb6", commentary: "25.Qxb6 and Black resigned, 1–0. The rook is lost outright (24...Rb6?? walked into the queen), and with a piece down against Marshall's coordinated rook, knight and a6-passer there is no defence. One of the only games Capablanca lost in the entire 23-game match." },
     ],
     guessMoveIndex: 35,
     guessHint: "Capablanca won material here. Look for the tactical capture that breaks through.",
