@@ -233,7 +233,7 @@ export function MatchReplayPlayer({
   const commentary =
     moveIndex < 0
       ? lesson.intro
-      : lesson.moves[Math.min(moveIndex, lesson.moves.length - 1)].commentary;
+      : lesson.moves[Math.min(moveIndex, Math.max(total - 1, 0))].commentary;
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-background/95 backdrop-blur-sm animate-fade-in">
