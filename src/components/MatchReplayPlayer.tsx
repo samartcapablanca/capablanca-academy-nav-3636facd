@@ -158,21 +158,26 @@ export function MatchReplayPlayer({
   const canNext = moveIndex < total - 1;
 
   // System-driven guess mode: active only when we're sitting exactly on the
-  // designated guess target AND it's Capablanca's turn.
+  // designated guess target AND it's Capablanca's turn AND no attempt yet.
   const hasGuessTarget = typeof lesson?.guessMoveIndex === "number";
   const atGuessPoint =
     !!lesson && hasGuessTarget && moveIndex + 1 === lesson.guessMoveIndex;
   const guessActive =
     atGuessPoint && turn === capablancaColor && !attemptResult;
 
-  // Reset the in-panel attempt result whenever we leave the guess square.
-  useEffect(() => {
-    if (!atGuessPoint && attemptResult) setAttemptResult(null);
-  }, [atGuessPoint, attemptResult]);
-
   const advance = useCallback(() => {
     setAttemptResult(null);
     setMoveIndex((i) => i + 1);
+  }, []);
+
+  const goBack = useCallback(() => {
+    setAttemptResult(null);
+    setMoveIndex((i) => i - 1);
+  }, []);
+
+  const jumpTo = useCallback((idx: number) => {
+    setAttemptResult(null);
+    setMoveIndex(idx);
   }, []);
 
   const handleSquareDrop = useCallback(
@@ -180,16 +185,17 @@ export function MatchReplayPlayer({
       if (!lesson || !nextExpected || !guessActive) return;
       const correct = from === nextExpected.from && to === nextExpected.to;
       if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
+      // One try — apply the correct move either way so the board displays it.
+      setMoveIndex((i) => i + 1);
       if (correct) {
         setFeedback({ square: to, kind: "success" });
         playSuccessChime();
         setAttemptResult({ kind: "success", correctSan: nextExpected.san });
-        feedbackTimer.current = setTimeout(() => setFeedback(null), 900);
       } else {
-        setFeedback({ square: from, kind: "error" });
+        setFeedback({ square: nextExpected.to, kind: "success" });
         setAttemptResult({ kind: "error", correctSan: nextExpected.san });
-        feedbackTimer.current = setTimeout(() => setFeedback(null), 500);
       }
+      feedbackTimer.current = setTimeout(() => setFeedback(null), 900);
     },
     [guessActive, lesson, nextExpected],
   );
