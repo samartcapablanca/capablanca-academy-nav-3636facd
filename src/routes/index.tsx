@@ -242,13 +242,13 @@ function Dashboard() {
             <p className="mt-2 font-display text-lg text-cream">
               {streakLit ? "Flame burning bright" : "Solve today to keep it"}
             </p>
-            <p className="mt-1 text-xs text-muted-foreground">Daily Capablanca · Day {game.id}</p>
+            <p className="mt-1 text-xs text-muted-foreground">Daily Capablanca · {game.event}</p>
           </div>
         </div>
       </section>
 
       <MatchReplayPlayer
-        matchId={replayOpen ? `archive-${game.id}` : null}
+        matchId={replayOpen ? game.matchId : null}
         eyebrow={`${game.event} · ${game.year}`}
         titleOverride={`${game.white} vs. ${game.black}`}
         capablancaColor={game.white.includes("Capablanca") ? "w" : "b"}
