@@ -285,26 +285,47 @@ export function MatchReplayPlayer({
         <aside className="flex flex-col border-t border-border bg-sidebar md:basis-1/4 md:border-l md:border-t-0">
           <div className="flex-1 overflow-y-auto p-5 md:p-6">
             {/* Guess the Move toggle */}
-            <div className="flex items-start justify-between gap-4 rounded-2xl border border-gold/25 bg-surface-elevated/60 p-4">
-              <div className="min-w-0">
-                <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] text-gold">
-                  <Sparkles className="h-3.5 w-3.5" /> Guess the Move Mode
+            {(() => {
+              const hasGuessTarget = typeof lesson.guessMoveIndex === "number";
+              const atGuessPoint =
+                hasGuessTarget && moveIndex + 1 === lesson.guessMoveIndex;
+              const switchDisabled = hasGuessTarget && !atGuessPoint;
+              return (
+                <div
+                  className={cn(
+                    "flex items-start justify-between gap-4 rounded-2xl border bg-surface-elevated/60 p-4 transition",
+                    switchDisabled ? "border-border opacity-60" : "border-gold/25",
+                  )}
+                >
+                  <div className="min-w-0">
+                    <div
+                      className={cn(
+                        "flex items-center gap-2 text-[10px] uppercase tracking-[0.24em]",
+                        switchDisabled ? "text-muted-foreground" : "text-gold",
+                      )}
+                    >
+                      <Sparkles className="h-3.5 w-3.5" /> Guess the Move
+                    </div>
+                    <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                      {switchDisabled
+                        ? "Unlocks when Capablanca's signature moment arrives."
+                        : guessMode
+                          ? "Drag Capablanca's piece to play his move."
+                          : "Toggle on to play Capablanca's move yourself."}
+                    </p>
+                  </div>
+                  <Switch
+                    checked={guessMode}
+                    disabled={switchDisabled}
+                    onCheckedChange={(v) => {
+                      setGuessMode(v);
+                      setFeedback(null);
+                    }}
+                    className="mt-1 data-[state=checked]:bg-gold"
+                  />
                 </div>
-                <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
-                  {guessMode
-                    ? "Drag Capablanca's piece to play his move."
-                    : "Toggle on to play Capablanca's moves yourself."}
-                </p>
-              </div>
-              <Switch
-                checked={guessMode}
-                onCheckedChange={(v) => {
-                  setGuessMode(v);
-                  setFeedback(null);
-                }}
-                className="mt-1 data-[state=checked]:bg-gold"
-              />
-            </div>
+              );
+            })()}
 
             {/* Raúl's Strategy commentary */}
             <div className="mt-5 rounded-2xl border border-border bg-surface p-5 shadow-luxe">
