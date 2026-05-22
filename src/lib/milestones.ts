@@ -8,6 +8,13 @@ export type ArchiveGame = {
   black: string;
   opening: string;
   result: "1-0" | "0-1" | "½-½";
+  // Optional puzzle data — mirrors the Open Archive shape. When present, the
+  // game joins the shared PUZZLE_POOL and can surface as the Daily Capablanca
+  // Position on the dashboard.
+  puzzleFen?: string;
+  winningMove?: string;
+  hint?: string;
+  successText?: string;
 };
 
 export type ArchiveTournament = {
