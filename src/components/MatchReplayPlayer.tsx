@@ -251,8 +251,8 @@ export function MatchReplayPlayer({
         {/* Sidebar */}
         <aside className="flex flex-col border-t border-border bg-sidebar md:basis-1/4 md:border-l md:border-t-0">
           <div className="flex-1 overflow-y-auto p-5 md:p-6">
-            {/* Guess the Move card — appears only at the designated target */}
-            {atGuessPoint && (
+            {/* Guess the Move card — visible at the target or after an attempt */}
+            {(atGuessPoint || attemptResult) && (
               <div
                 className={cn(
                   "rounded-2xl border bg-surface-elevated/60 p-4 transition animate-fade-in",
@@ -263,12 +263,7 @@ export function MatchReplayPlayer({
                       : "border-gold/25",
                 )}
               >
-                <div
-                  className={cn(
-                    "flex items-center gap-2 text-[10px] uppercase tracking-[0.24em]",
-                    "text-gold",
-                  )}
-                >
+                <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] text-gold">
                   <Sparkles className="h-3.5 w-3.5" /> Guess the Move
                 </div>
 
@@ -296,15 +291,14 @@ export function MatchReplayPlayer({
                 {attemptResult?.kind === "error" && (
                   <div className="mt-2 animate-fade-in">
                     <div className="flex items-center gap-2 font-display text-base text-rose-300">
-                      <XCircle className="h-4 w-4" /> Nice try.
+                      <XCircle className="h-4 w-4" /> Nice Try!
                     </div>
                     <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
                       Capablanca played{" "}
                       <span className="font-mono text-gold">
                         {attemptResult.correctSan}
                       </span>
-                      .{" "}
-                      {lesson.guessHint ?? "Study the idea, then hit Next."}
+                      . Hit Next to continue.
                     </p>
                   </div>
                 )}
@@ -312,7 +306,7 @@ export function MatchReplayPlayer({
             )}
 
             {/* Raúl's Strategy commentary */}
-            <div className={cn("rounded-2xl border border-border bg-surface p-5 shadow-luxe", atGuessPoint ? "mt-5" : "")}>
+            <div className={cn("rounded-2xl border border-border bg-surface p-5 shadow-luxe", (atGuessPoint || attemptResult) ? "mt-5" : "")}>
               <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] text-gold/80">
                 <Lightbulb className="h-3.5 w-3.5" /> Raúl's Strategy
               </div>
