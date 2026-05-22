@@ -442,7 +442,7 @@ export const LESSONS: Record<string, LessonContent> = {
       { san: "e6", commentary: "Declined. Capablanca prefers the solid structure to grabbing a pawn." },
       { san: "Nc3", commentary: "Pressure on d5 mounts." },
       { san: "Nf6", commentary: "Knight defends d5 and develops — one move, two purposes." },
-      { san: "Bg5", commentary: "Pin on the f6-knight: standard QGD play." },
+      { san: "Bg5", commentary: "Pin on the f6-knight: standard Queen's Gambit Declined (QGD) play." },
       { san: "Be7", commentary: "Breaks the pin's bite and prepares to castle. The pause before the counter-stroke." },
       { san: "e3", commentary: "Marshall continues quietly. Now it is Black's turn — and Capablanca will not play quietly." },
       {
