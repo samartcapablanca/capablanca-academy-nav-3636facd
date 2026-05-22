@@ -4,7 +4,7 @@ import { Chess } from "chess.js";
 import { AppShell } from "@/components/AppShell";
 import { ChessBoardView } from "@/components/ChessBoardView";
 import { MatchReplayPlayer } from "@/components/MatchReplayPlayer";
-import { ARCHIVE_GAMES, type ArchiveEntry } from "@/lib/archive";
+import { pickRandomPuzzle, type PuzzleEntry } from "@/lib/puzzle-pool";
 import { Sparkles, Flame, ArrowUpRight, Target, CheckCircle2, Lightbulb } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -17,11 +17,9 @@ export const Route = createFileRoute("/")({
   component: Dashboard,
 });
 
-// System-clock hook: pick the archive entry whose id matches today's day-of-month
-// (1..31). Falls back to id 1 if the day is somehow out of range.
-function pickDailyGame(): ArchiveEntry {
-  const day = new Date().getDate();
-  return ARCHIVE_GAMES.find((g) => g.id === day) ?? ARCHIVE_GAMES[0];
+// Pick a random puzzle from the unified pool (Open Archive + enriched Milestones).
+function pickDailyGame(): PuzzleEntry {
+  return pickRandomPuzzle();
 }
 
 function stripSan(san: string) {
