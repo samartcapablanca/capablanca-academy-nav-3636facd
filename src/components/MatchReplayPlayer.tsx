@@ -383,9 +383,19 @@ export function MatchReplayPlayer({
               <ChevronLeft className="h-5 w-5" /> Previous
             </button>
             <button
-              onClick={() => canNext && !lockedForGuess && advance()}
-              disabled={!canNext || lockedForGuess}
-              title={lockedForGuess ? "Play Capablanca's move to continue" : undefined}
+              onClick={() => {
+                if (!canNext) return;
+                // If the user clicks Next at the designated guess target
+                // without attempting (or after attempting incorrectly),
+                // reveal Capablanca's move as feedback, then advance.
+                if (lockedForGuess && nextExpected) {
+                  toast(`Capablanca played ${nextExpected.san}.`, {
+                    description: lesson.guessHint ?? "Study the idea, then continue.",
+                  });
+                }
+                advance();
+              }}
+              disabled={!canNext}
               className="flex items-center justify-center gap-2 rounded-xl gradient-gold px-4 py-4 text-sm font-semibold text-primary-foreground shadow-luxe transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
             >
               Next <ChevronRight className="h-5 w-5" />
