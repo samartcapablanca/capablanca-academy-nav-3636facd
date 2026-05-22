@@ -150,7 +150,25 @@ export function MatchReplayPlayer({
     }
   }, [lesson, moveIndex]);
 
-  const total = lesson?.moves.length ?? 0;
+  // Count how many moves in this lesson actually apply cleanly to the start
+  // position. If the SAN list contains a bad move, we clamp the player to the
+  // last legal one so the board, commentary, and progress dots stay in sync.
+  const playableTotal = useMemo(() => {
+    if (!lesson) return 0;
+    const g = lesson.startFen ? new Chess(lesson.startFen) : new Chess();
+    let n = 0;
+    for (const mv of lesson.moves) {
+      try {
+        if (!g.move(mv.san)) break;
+        n++;
+      } catch {
+        break;
+      }
+    }
+    return n;
+  }, [lesson]);
+
+  const total = playableTotal;
   const canPrev = moveIndex > -1;
   const canNext = moveIndex < total - 1;
 
@@ -215,7 +233,7 @@ export function MatchReplayPlayer({
   const commentary =
     moveIndex < 0
       ? lesson.intro
-      : lesson.moves[Math.min(moveIndex, lesson.moves.length - 1)].commentary;
+      : lesson.moves[Math.min(moveIndex, Math.max(total - 1, 0))].commentary;
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-background/95 backdrop-blur-sm animate-fade-in">
