@@ -82,16 +82,17 @@ export function MatchReplayPlayer({
     };
   }, [matchId]);
 
-  // When Guess Mode is toggled ON and this lesson has a designated guess
-  // target, fast-forward to the move *just before* that target so the user
-  // is asked the exact question the lesson is designed around.
+  // Guess Mode auto-disables whenever we're not sitting on the designated
+  // guess target (e.g. after a successful guess advances the board, or after
+  // the user navigates away from the target with Prev/Next).
   useEffect(() => {
     if (!lesson) return;
-    if (guessMode && typeof lesson.guessMoveIndex === "number") {
-      setMoveIndex(lesson.guessMoveIndex - 1);
+    if (typeof lesson.guessMoveIndex !== "number") return;
+    if (moveIndex + 1 !== lesson.guessMoveIndex && guessMode) {
+      setGuessMode(false);
       setFeedback(null);
     }
-  }, [guessMode, lesson]);
+  }, [moveIndex, lesson, guessMode]);
 
   useEffect(() => {
     if (!matchId) return;
