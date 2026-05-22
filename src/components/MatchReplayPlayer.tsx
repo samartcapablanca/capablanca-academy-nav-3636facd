@@ -82,13 +82,17 @@ export function MatchReplayPlayer({
     };
   }, [matchId]);
 
-  // Guess Mode auto-disables whenever we're not sitting on the designated
-  // guess target (e.g. after a successful guess advances the board, or after
-  // the user navigates away from the target with Prev/Next).
+  // Guess Mode auto-enables when we arrive at the designated guess target
+  // and auto-disables as soon as we move past it (e.g. after a successful
+  // guess advances the board, or after the user navigates away).
   useEffect(() => {
     if (!lesson) return;
     if (typeof lesson.guessMoveIndex !== "number") return;
-    if (moveIndex + 1 !== lesson.guessMoveIndex && guessMode) {
+    const atTarget = moveIndex + 1 === lesson.guessMoveIndex;
+    if (atTarget && !guessMode) {
+      setGuessMode(true);
+      setFeedback(null);
+    } else if (!atTarget && guessMode) {
       setGuessMode(false);
       setFeedback(null);
     }
@@ -379,9 +383,19 @@ export function MatchReplayPlayer({
               <ChevronLeft className="h-5 w-5" /> Previous
             </button>
             <button
-              onClick={() => canNext && !lockedForGuess && advance()}
-              disabled={!canNext || lockedForGuess}
-              title={lockedForGuess ? "Play Capablanca's move to continue" : undefined}
+              onClick={() => {
+                if (!canNext) return;
+                // If the user clicks Next at the designated guess target
+                // without attempting (or after attempting incorrectly),
+                // reveal Capablanca's move as feedback, then advance.
+                if (lockedForGuess && nextExpected) {
+                  toast(`Capablanca played ${nextExpected.san}.`, {
+                    description: lesson.guessHint ?? "Study the idea, then continue.",
+                  });
+                }
+                advance();
+              }}
+              disabled={!canNext}
               className="flex items-center justify-center gap-2 rounded-xl gradient-gold px-4 py-4 text-sm font-semibold text-primary-foreground shadow-luxe transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
             >
               Next <ChevronRight className="h-5 w-5" />
