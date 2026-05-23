@@ -32,65 +32,48 @@ export const LESSONS: Record<string, LessonContent> = {
   "1-1": {
     title: "Some Simple Mates — Rook & King vs. King",
     intro:
-      "Capablanca's first example. White: King c6, Rook a7. Black: King a8, to move. " +
+      "Capablanca's first example. White: King b6, Rook a7. Black: King b8, to move. " +
       "“The principle is to drive the opposing King to the last line on any side of the " +
       "board… keep your King, as much as possible, on the same rank — or, as in this " +
-      "case, file — as the opposing King.”",
-    // Black to move. The White King already occupies the 6th rank, holding
-    // the opposition; the Rook seals the 7th. Black has but one square.
-    startFen: "k7/R7/2K5/8/8/8/8/8 b - - 0 1",
+      "case, file — as the opposing King.” Notice the Rook on a7 is defended by the King " +
+      "on b6 — the two pieces work as one.",
+    // Black to move. White King b6 holds the opposition and defends the Rook;
+    // the Rook seals the 7th rank. Black has only two squares (a8, c8) and the
+    // textbook line goes ...Ka8, after which a waiting move forces mate.
+    startFen: "1k6/R7/1K6/8/8/8/8/8 b - - 0 1",
     moves: [
       {
-        san: "Kb8",
+        san: "Ka8",
         commentary:
-          "Black has no choice: a7 is held by the Rook and b7 by the King. " +
-          "The defender is already confined to two squares — the Rook does the " +
-          "fencing, the King does the driving.",
-      },
-      {
-        san: "Kb6",
-        commentary:
-          "“Advance the King.” With the Rook restraining the back rank, White brings " +
-          "his own monarch shoulder-to-shoulder with the enemy. Notice we do not yet " +
-          "move the Rook — it is doing perfect work where it stands.",
-      },
-      {
-        san: "Kc8",
-        commentary:
-          "Forced. The Black King is herded toward the corner: a8 is covered by the " +
-          "Rook, b7 and c7 by White's King.",
-      },
-      {
-        san: "Rc7+",
-        commentary:
-          "The Rook slides across to cut off another file with check. Capablanca's " +
-          "method: King and Rook work as one — neither piece moves without a purpose.",
-      },
-      {
-        san: "Kb8",
-        commentary:
-          "Driven back to the corner. The mating net is nearly complete.",
+          "Black is squeezed: a7 is held by the Rook (defended by the King), b7 is " +
+          "covered by White's King, so the Black King shuffles between a8 and c8. " +
+          "Capablanca's defender chooses ...Ka8 — the corner — and walks into the trap.",
       },
       {
         san: "Rh7",
         commentary:
-          "“A waiting move.” The Rook leaves the c-file but retains the 7th rank, " +
-          "passing the obligation to move back to Black — the heart of the technique.",
+          "“A waiting move.” The Rook leaves the a-file but stays on the 7th rank, " +
+          "passing the obligation to move back to Black. The Rook still keeps the King " +
+          "imprisoned on the 8th rank — this is the heart of the technique.",
       },
       {
-        san: "Ka8",
+        san: "Kb8",
         commentary:
-          "The only square. Now the picture is set: White King on b6, Black King " +
-          "cornered on a8, Rook poised on the 7th.",
+          "Forced. a7 is still covered by White's King, b7 is still covered by White's " +
+          "King — the only legal square is b8. Black has been manoeuvred into the " +
+          "exact position White wanted.",
       },
       {
         san: "Rh8#",
         commentary:
-          "Mate. “The opposing King has been driven to the last line.” A textbook " +
-          "demonstration of Capablanca's first principle: restrict, advance, deliver.",
+          "Mate. The Rook delivers check along the 8th rank; a7, b7 and c7 are all " +
+          "covered by the King on b6, and c8 is covered by the Rook. “The opposing " +
+          "King has been driven to the last line.” A textbook demonstration of " +
+          "Capablanca's first principle: restrict, advance, deliver.",
       },
     ],
   },
+
 
   // ─────────────────────────────────────────────────────────────────
   // CHAPTER I — Example 5: King and Pawn vs. King (Pawn Promotion)
