@@ -315,12 +315,12 @@ export const LESSONS: Record<string, LessonContent> = {
     title: "Winning a Pawn — How to Use the Advantage",
     intro:
       "White: King g1, Rook d1, Knight f3, pawns a2 b2 c2 e4 f2 g2 h2. " +
-      "Black: King g8, Rook d8, Knight f6, pawns a7 b7 c7 f7 g7 h7. " +
+      "Black: King g8, Rook d8, Knight c6, pawns a7 b7 c7 f7 g7 h6 h7. " +
       "White is a clean central pawn up. Capablanca: “The winning of a pawn " +
       "among master-players is often sufficient to win the game.” The method " +
       "is simplification — exchange pieces, never pawns, and steer toward a " +
       "won King-and-pawn ending.",
-    startFen: "3r2k1/pppp1pp1/5n1p/8/4P3/5N2/PPP2PPP/3R2K1 w - - 0 1",
+    startFen: "3r2k1/ppp2pp1/2n4p/8/4P3/5N2/PPP2PPP/3R2K1 w - - 0 1",
     moves: [
       {
         san: "Rxd8+",
