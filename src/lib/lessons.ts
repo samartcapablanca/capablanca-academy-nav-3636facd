@@ -37,42 +37,43 @@ export const LESSONS: Record<string, LessonContent> = {
       "board… keep your King, as much as possible, on the same rank — or, as in this " +
       "case, file — as the opposing King.” Notice the Rook on a7 is defended by the King " +
       "on b6 — the two pieces work as one.",
-    // Black to move. White King b6 holds the opposition and defends the Rook;
-    // the Rook seals the 7th rank. Black has only two squares (a8, c8) and the
-    // textbook line goes ...Ka8, after which a waiting move forces mate.
+    // Black to move. White King b6 defends the Rook on a7 and covers a7, b7, c7;
+    // the Rook seals the a-file and 7th rank. Black's only legal move is ...Kc8.
+    // A waiting Rh7 then forces Kb8 and Rh8 is mate.
     startFen: "1k6/R7/1K6/8/8/8/8/8 b - - 0 1",
     moves: [
       {
-        san: "Ka8",
+        san: "Kc8",
         commentary:
-          "Black is squeezed: a7 is held by the Rook (defended by the King), b7 is " +
-          "covered by White's King, so the Black King shuffles between a8 and c8. " +
-          "Capablanca's defender chooses ...Ka8 — the corner — and walks into the trap.",
+          "Forced. a8 is held by the Rook on a7 (the whole a-file is covered); " +
+          "b7 and c7 are covered by White's King on b6; and Kxa7 is illegal because " +
+          "the Rook is defended by that same King. The only legal square is c8.",
       },
       {
         san: "Rh7",
         commentary:
-          "“A waiting move.” The Rook leaves the a-file but stays on the 7th rank, " +
-          "passing the obligation to move back to Black. The Rook still keeps the King " +
-          "imprisoned on the 8th rank — this is the heart of the technique.",
+          "“A waiting move.” The Rook abandons the a-file but stays on the 7th rank, " +
+          "passing the obligation to move back to Black. King and Rook still hold every " +
+          "square on the 7th — this is the heart of the technique.",
       },
       {
         san: "Kb8",
         commentary:
-          "Forced. a7 is still covered by White's King, b7 is still covered by White's " +
-          "King — the only legal square is b8. Black has been manoeuvred into the " +
-          "exact position White wanted.",
+          "Forced again. From c8, Black cannot step to the 7th rank (King b6 covers " +
+          "b7, c7 and d7) and d8 would only delay things; the textbook defender walks " +
+          "into b8, exactly where White wants him.",
       },
       {
         san: "Rh8#",
         commentary:
           "Mate. The Rook delivers check along the 8th rank; a7, b7 and c7 are all " +
-          "covered by the King on b6, and c8 is covered by the Rook. “The opposing " +
-          "King has been driven to the last line.” A textbook demonstration of " +
-          "Capablanca's first principle: restrict, advance, deliver.",
+          "covered by the King on b6, while a8 and c8 are covered by the Rook. " +
+          "“The opposing King has been driven to the last line.” Capablanca's first " +
+          "principle in four moves: restrict, wait, drive, deliver.",
       },
     ],
   },
+
 
 
   // ─────────────────────────────────────────────────────────────────
