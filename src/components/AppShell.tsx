@@ -27,8 +27,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </Link>
 
         <nav className="flex flex-col gap-1">
-          <div className="mb-3 px-3 text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
-            Academy
+          <div className="mb-3 text-[10px] uppercase tracking-[0.24em] text-muted-foreground px-[11px]">
+            SamArt Academy™
           </div>
           {NAV.map(({ to, label, icon: Icon }) => {
             const active = pathname === to;
