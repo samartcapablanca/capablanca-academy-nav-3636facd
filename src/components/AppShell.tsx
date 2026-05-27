@@ -15,7 +15,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Desktop sidebar */}
-      <aside className="fixed inset-y-0 left-0 z-30 hidden w-72 flex-col border-r border-border bg-sidebar px-6 py-8 md:flex">
+      <aside className="fixed inset-y-0 left-0 z-30 hidden w-72 flex-col border-r border-border bg-sidebar px-6 md:flex py-[30px]">
         <Link to="/" className="mb-12 flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-lg gradient-gold shadow-luxe">
             <Crown className="h-6 w-6 text-primary-foreground" strokeWidth={2.25} />
