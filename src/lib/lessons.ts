@@ -285,7 +285,7 @@ export const LESSONS: Record<string, LessonContent> = {
     startFen: "8/7p/5k2/8/6PP/5K2/8/8 w - - 0 1",
     moves: [
       {
-        san: "f4",
+        san: "g5+",
         commentary:
           "The unopposed pawn advances first — the candidate, the future passed " +
           "pawn. Pushing the h-pawn instead would let Black blockade with …Kg6 " +
