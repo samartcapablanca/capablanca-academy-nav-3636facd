@@ -30,7 +30,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Example 1: Rook and King vs. King
   // ─────────────────────────────────────────────────────────────────
   "1-1": {
-    title: "Simple Mates — Rook & King vs. King (Example 1)",
+    title: "Rook & King vs King",
     intro:
       "Capablanca's first textbook example. White: King h1, Rook a1. Black: King h8. " +
       "“The principle is to drive the opposing King to the last line on any side of the " +
