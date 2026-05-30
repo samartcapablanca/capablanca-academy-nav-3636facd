@@ -30,7 +30,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Example 1: Rook and King 1
   // ─────────────────────────────────────────────────────────────────
   "1-1": {
-    title: "Rook & King 1",
+    title: "Simple Mates - Rook & King 1",
     intro:
       "“The principle is to drive the opposing King to the last line on any side of the " +
       "board.” Watch how White systematically restricts the Black King using the Rook, " +
