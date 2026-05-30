@@ -232,64 +232,134 @@ export const LESSONS: Record<string, LessonContent> = {
   },
 
   // ─────────────────────────────────────────────────────────────────
-  // CHAPTER I — Example 18 (paraphrased): Control of the Centre
+  // CHAPTER I — Simple Mates: Two Bishops
   // ─────────────────────────────────────────────────────────────────
   "1-3": {
-    title: "Control of the Centre",
+    title: "Simple Mates - Two Bishops",
     intro:
-      "Capablanca: “The first thing a student should do is to familiarise himself " +
-      "with the power of the pieces. This can best be done by learning how quickly " +
-      "they can be brought into action.” And the quickest route is through the four " +
-      "central squares — e4, d4, e5, d5 — from which every piece radiates the " +
-      "greatest force.",
+      "Capablanca's third example introduces the Two Bishops mate. Because the Black King " +
+      "starts in the corner on h8, White can immediately use the Bishops to build a diagonal " +
+      "wall, confining him tightly before marching the White King forward.",
+    startFen: "7k/8/8/8/8/8/8/2B1KB1R w K - 0 1",
     moves: [
       {
-        san: "e4",
+        san: "Bd3",
         commentary:
-          "“The best square at which to aim is one of the four central squares.” " +
-          "With one move the pawn occupies a centre square and opens lines for both " +
-          "the King's Bishop and the Queen.",
+          "“Since the Black King is in the corner, White can play as follows.” " +
+          "The light-squared Bishop takes control of the b1-h7 diagonal.",
       },
       {
-        san: "e5",
-        commentary:
-          "Black answers in kind. Neither side will yield the centre without a fight — " +
-          "for, as Capablanca insists, “a piece in the centre commands the greatest " +
-          "number of squares.”",
+        san: "Kg7",
+        commentary: "Black moves down out of the ultimate corner square.",
       },
       {
-        san: "Nf3",
-        commentary:
-          "Develop, and develop with purpose: the Knight attacks the central pawn and " +
-          "eyes the squares d4 and e5. “Every move must aim either to develop a piece, " +
-          "or to gain control of an important square.”",
+        san: "Bg5",
+        commentary: "The dark-squared Bishop steps up, building an impassable diagonal wall next to its partner.",
       },
       {
-        san: "Nc6",
-        commentary: "Black defends the pawn and develops simultaneously — the model of opening " + "economy.",
+        san: "Kf7",
+        commentary: "Black runs along the open squares on the 7th rank.",
       },
       {
-        san: "d4",
+        san: "Bf5",
         commentary:
-          "The decisive central thrust. White challenges Black's e-pawn with a " +
-          "second centre pawn, opening lines for the Queen's Bishop.",
+          "“Already the Black King is confined to a few squares.” Notice how the two Bishops " +
+          "completely cut off the King's access to the center from afar.",
       },
       {
-        san: "exd4",
-        commentary:
-          "Black removes one of the central pawns — but at the cost of giving White a " + "free hand in development.",
+        san: "Kg7",
+        commentary: "Forced backward into the restricted corner quadrant.",
       },
       {
-        san: "Nxd4",
+        san: "Kf2",
         commentary:
-          "“A Knight in the centre commands eight squares.” White's recapture places " +
-          "a Knight on d4 — the ideal post.",
+          "“Before a mate can be given, the White King must be brought to the sixth rank and, at the " +
+          "same time, in one of the last two files; in this case either h6, g6, f7, or f8; and as h6 and g6 " +
+          "are the nearest squares, it is to either of these squares that the King ought to go.”",
       },
       {
-        san: "Nf6",
+        san: "Kf7",
+        commentary: "Black paces back and forth, waiting for White's plan to unfold.",
+      },
+      {
+        san: "Kg3",
+        commentary: "The White King begins his deliberate march toward the g6/h6 objective squares.",
+      },
+      {
+        san: "Kg7",
+        commentary: "Black shuffles back, completely unable to pass the Bishops' barrier.",
+      },
+      {
+        san: "Kh4",
+        commentary: "The White King steps onto the h-file, continuing up the board.",
+      },
+      {
+        san: "Kf7",
+        commentary: "Black steps out, clinging to the edge of his cage.",
+      },
+      {
+        san: "Kh5",
+        commentary: "White's King reaches the 5th rank, getting closer to the enemy.",
+      },
+      {
+        san: "Kg7",
+        commentary: "Black returns to g7.",
+      },
+      {
+        san: "Bg6",
+        commentary: "The Bishop constricts Black even further, sealing off f7 and leaving Black with almost nothing.",
+      },
+      {
+        san: "Kg8",
+        commentary: "Black is driven onto the back row.",
+      },
+      {
+        san: "Kh6",
+        commentary: "The White King arrives securely on the 6th rank, anchoring the net.",
+      },
+      {
+        san: "Kf8",
+        commentary: "Black runs toward the f8 square.",
+      },
+      {
+        san: "Bh5",
         commentary:
-          "Black develops and prepares to contest e4. Both armies are now mobilised " +
-          "around the central battlefield.",
+          "“White must now mark time and move one of the Bishops, so as to force the Black King to go back.” " +
+          "A beautiful waiting move that passes the turn to Black.",
+      },
+      {
+        san: "Kg8",
+        commentary: "Forced. Black must step back toward the corner.",
+      },
+      {
+        san: "Be7",
+        commentary: "The Bishop locks off f8. The Black King is trapped on just two squares: g8 and h8.",
+      },
+      {
+        san: "Kh8",
+        commentary: "Forced into the corner pocket.",
+      },
+      {
+        san: "Bg4",
+        commentary:
+          "“Now the White Bishop must take up a position from which it can give check next move along " +
+          "the White diagonal, when the Black King moves back to g8.”",
+      },
+      {
+        san: "Kg8",
+        commentary: "Black's only legal option.",
+      },
+      {
+        san: "Be6+",
+        commentary: "Check! The light-squared Bishop attacks, forcing the King directly into the corner.",
+      },
+      {
+        san: "Kh8",
+        commentary: "Forced back into the absolute corner square.",
+      },
+      {
+        san: "Bf6#",
+        commentary: "Checkmate! The dark-squared Bishop fires down the final long diagonal, ending the game.",
       },
     ],
   },
