@@ -1,12 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { AppShell } from "@/components/AppShell";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LessonPlayer } from "@/components/LessonPlayer";
@@ -31,7 +26,7 @@ const CHAPTERS: Chapter[] = [
     title: "First Principles",
     subtitle: "Endings, Middle-game, and Openings",
     lessons: [
-      { id: "1-1", title: "Simple Mates" },
+      { id: "1-1", title: "Simple Mates - Rook & King 1" },
       { id: "1-2", title: "Pawn Promotion" },
       { id: "1-3", title: "Control of the Centre" },
       { id: "1-4", title: "Opening Development" },
@@ -116,8 +111,8 @@ function Fundamentals() {
           Chess <span className="text-gradient-gold">Fundamentals</span>
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-          A complete curriculum following José Raúl Capablanca's 1921 treatise. Expand each
-          chapter to begin its lessons. {completed.size} of {totalLessons} complete.
+          A complete curriculum following José Raúl Capablanca's 1921 treatise. Expand each chapter to begin its
+          lessons. {completed.size} of {totalLessons} complete.
         </p>
       </header>
 
@@ -136,23 +131,15 @@ function Fundamentals() {
                     {ch.roman}
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="text-[10px] uppercase tracking-[0.22em] text-gold/80">
-                      Chapter {ch.roman}
-                    </div>
-                    <h3 className="mt-0.5 font-display text-lg leading-tight text-cream md:text-xl">
-                      {ch.title}
-                    </h3>
-                    {ch.subtitle && (
-                      <p className="mt-0.5 text-xs italic text-muted-foreground">{ch.subtitle}</p>
-                    )}
+                    <div className="text-[10px] uppercase tracking-[0.22em] text-gold/80">Chapter {ch.roman}</div>
+                    <h3 className="mt-0.5 font-display text-lg leading-tight text-cream md:text-xl">{ch.title}</h3>
+                    {ch.subtitle && <p className="mt-0.5 text-xs italic text-muted-foreground">{ch.subtitle}</p>}
                   </div>
                   <div className="hidden shrink-0 text-right sm:block">
                     <div className="font-display text-sm text-gold">
                       {done}/{ch.lessons.length}
                     </div>
-                    <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                      complete
-                    </div>
+                    <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">complete</div>
                   </div>
                 </div>
               </AccordionTrigger>
@@ -181,9 +168,7 @@ function Fundamentals() {
                                 : "border-border bg-surface-elevated hover:border-gold/60",
                             )}
                           >
-                            {isDone && (
-                              <Check className="h-3.5 w-3.5 text-primary-foreground" strokeWidth={3} />
-                            )}
+                            {isDone && <Check className="h-3.5 w-3.5 text-primary-foreground" strokeWidth={3} />}
                           </button>
                           <button
                             type="button"
@@ -196,9 +181,7 @@ function Fundamentals() {
                             <span
                               className={cn(
                                 "flex-1 text-sm transition",
-                                isDone
-                                  ? "text-gold/90"
-                                  : "text-cream group-hover/lesson:text-gold",
+                                isDone ? "text-gold/90" : "text-cream group-hover/lesson:text-gold",
                               )}
                             >
                               {l.title}
