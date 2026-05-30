@@ -27,7 +27,7 @@ export type LessonContent = {
 
 export const LESSONS: Record<string, LessonContent> = {
   // ─────────────────────────────────────────────────────────────────
-  // CHAPTER I — Example 1: Rook and King 1
+  // CHAPTER I — Simple Mates - Rook and King 1
   // ─────────────────────────────────────────────────────────────────
   "1-1": {
     title: "Simple Mates - Rook & King 1",
@@ -125,58 +125,108 @@ export const LESSONS: Record<string, LessonContent> = {
   },
 
   // ─────────────────────────────────────────────────────────────────
-  // CHAPTER I — Example 5: King and Pawn vs. King (Pawn Promotion)
+  // CHAPTER I — Simple Mates: Rook & King 2
   // ─────────────────────────────────────────────────────────────────
   "1-2": {
-    title: "Pawn Promotion — King & Pawn vs. King",
+    title: "Simple Mates - Rook & King 2",
     intro:
-      "White: King e6, Pawn e5. Black: King e8, to move. The White King already " +
-      "stands in front of his pawn with an intervening square — Capablanca's winning " +
-      "configuration. The rule: “Advance the King as far as is compatible with the " +
-      "safety of the pawn, and never advance the pawn until it is essential to its " +
-      "own safety.”",
-    startFen: "4k3/8/4K3/4P3/8/8/8/8 b - - 0 1",
+      "Capablanca's second example. This time, the Black King is sitting safely in the center " +
+      "of the board, and the White Rook starts far away on h1. White must use the King " +
+      "immediately to start boxing the enemy in.",
+    startFen: "8/8/8/4k3/8/8/8/4K2R w - - 0 1",
     moves: [
       {
-        san: "Kd8",
+        san: "Ke2",
         commentary:
-          "Black is in the awkward position of having to move — he loses the " +
-          "opposition. He sidesteps, hoping to slip around the pawn.",
-      },
-      {
-        san: "Kf7",
-        commentary:
-          "The King first — not the pawn. White seizes f7, clearing the way for the " +
-          "pawn while keeping it perfectly safe. This is Capablanca's exact rule in " +
-          "motion.",
-      },
-      {
-        san: "Kd7",
-        commentary:
-          "Black tries to harass the pawn from the side, but it is shepherded by " + "the White King at every step.",
-      },
-      {
-        san: "e6+",
-        commentary:
-          "Only now does the pawn advance — “essential to its own safety,” for it " +
-          "moves with check and under the King's protection.",
-      },
-      {
-        san: "Kd6",
-        commentary: "Black's King is shouldered aside; he cannot stop the pawn alone.",
-      },
-      {
-        san: "e7",
-        commentary: "One step from coronation. Black cannot reach e8 — the White King guards it.",
+          "“Since the Black King is in the center of the board, the best way to proceed is to advance your own King.”",
       },
       {
         san: "Kd5",
-        commentary: "A despairing move; no Black square controls the queening square.",
+        commentary: "Black moves up and slightly sideways to try and keep central space.",
       },
       {
-        san: "e8=Q",
+        san: "Ke3",
         commentary:
-          "Promotion. “The pawn must be carried, not pushed.” The King did the work; " + "the pawn merely walked home.",
+          "“As the Rook has not yet come into play, it is better to advance the King straight into " +
+          "the center of the board, not in front, but to one side of the other King.”",
+      },
+      {
+        san: "Kc4",
+        commentary: "Black shifts towards the queenside, attempting to evade the White King.",
+      },
+      {
+        san: "Rh5",
+        commentary:
+          "White activates the Rook, creating a vertical barrier along the h-file and restricting the Black King's lateral freedom.",
+      },
+      {
+        san: "Kc3",
+        commentary: "Black presses forward, stepping deeper into White's territory to pressure the squares.",
+      },
+      {
+        san: "Rh4",
+        commentary:
+          "“Keeping the King confined to as few squares as possible. Now the ending may continue as follows.” " +
+          "White cuts off the 4th rank entirely.",
+      },
+      {
+        san: "Kc2",
+        commentary: "Black is forced down towards the back ranks.",
+      },
+      {
+        san: "Rc4+",
+        commentary: "Check! The Rook drives the Black King further towards the edge of the board.",
+      },
+      {
+        san: "Kb3",
+        commentary: "Black steps sideways, trying to stay off the final line as long as possible.",
+      },
+      {
+        san: "Kd3",
+        commentary: "The White King steps up, tightly guarding the Rook and cutting off escape routes.",
+      },
+      {
+        san: "Kb2",
+        commentary: "Black continues to shuffle along the edge.",
+      },
+      {
+        san: "Rb4+",
+        commentary: "Check again! Forcing the Black King onto the a-file.",
+      },
+      {
+        san: "Ka3",
+        commentary: "Black steps onto the edge of the board.",
+      },
+      {
+        san: "Kc3",
+        commentary:
+          "“It should be noticed how often the White King has moved next to the Rook, not only to defend it, " +
+          "but also to reduce the mobility of the opposing King. Now White mates in three moves.”",
+      },
+      {
+        san: "Ka2",
+        commentary: "Black is nearly entirely out of spaces.",
+      },
+      {
+        san: "Ra4+",
+        commentary: "Driving the King into the corner corridor.",
+      },
+      {
+        san: "Kb1",
+        commentary: "Black's only logical square.",
+      },
+      {
+        san: "Ra5",
+        commentary:
+          "“Or any square on the a-file, forcing the Black King in front of the White.” A brilliant waiting move.",
+      },
+      {
+        san: "Kc1",
+        commentary: "Forced. The Black King must walk directly into the face of the opposition.",
+      },
+      {
+        san: "Ra1#",
+        commentary: "Checkmate! Delivered exactly on move 11, precisely following Capablanca's text.",
       },
     ],
   },
@@ -461,109 +511,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-  "1-7": {
-    title: "Simple Mates - Rook & King 2",
-    intro:
-      "Capablanca's second example. This time, the Black King is sitting safely in the center " +
-      "of the board, and the White Rook starts far away on h1. White must use the King " +
-      "immediately to start boxing the enemy in.",
-    startFen: "8/8/8/4k3/8/8/8/4K2R w - - 0 1",
-    moves: [
-      {
-        san: "Ke2",
-        commentary:
-          "“Since the Black King is in the center of the board, the best way to proceed is to advance your own King.”",
-      },
-      {
-        san: "Kd5",
-        commentary: "Black moves up and slightly sideways to try and keep central space.",
-      },
-      {
-        san: "Ke3",
-        commentary:
-          "“As the Rook has not yet come into play, it is better to advance the King straight into " +
-          "the center of the board, not in front, but to one side of the other King.”",
-      },
-      {
-        san: "Kc4",
-        commentary: "Black shifts towards the queenside, attempting to evade the White King.",
-      },
-      {
-        san: "Rh5",
-        commentary:
-          "White activates the Rook, creating a vertical barrier along the h-file and restricting the Black King's lateral freedom.",
-      },
-      {
-        san: "Kc3",
-        commentary: "Black presses forward, stepping deeper into White's territory to pressure the squares.",
-      },
-      {
-        san: "Rh4",
-        commentary:
-          "“Keeping the King confined to as few squares as possible. Now the ending may continue as follows.” " +
-          "White cuts off the 4th rank entirely.",
-      },
-      {
-        san: "Kc2",
-        commentary: "Black is forced down towards the back ranks.",
-      },
-      {
-        san: "Rc4+",
-        commentary: "Check! The Rook drives the Black King further towards the edge of the board.",
-      },
-      {
-        san: "Kb3",
-        commentary: "Black steps sideways, trying to stay off the final line as long as possible.",
-      },
-      {
-        san: "Kd3",
-        commentary: "The White King steps up, tightly guarding the Rook and cutting off escape routes.",
-      },
-      {
-        san: "Kb2",
-        commentary: "Black continues to shuffle along the edge.",
-      },
-      {
-        san: "Rb4+",
-        commentary: "Check again! Forcing the Black King onto the a-file.",
-      },
-      {
-        san: "Ka3",
-        commentary: "Black steps onto the edge of the board.",
-      },
-      {
-        san: "Kc3",
-        commentary:
-          "“It should be noticed how often the White King has moved next to the Rook, not only to defend it, " +
-          "but also to reduce the mobility of the opposing King. Now White mates in three moves.”",
-      },
-      {
-        san: "Ka2",
-        commentary: "Black is nearly entirely out of spaces.",
-      },
-      {
-        san: "Ra4+",
-        commentary: "Driving the King into the corner corridor.",
-      },
-      {
-        san: "Kb1",
-        commentary: "Black's only logical square.",
-      },
-      {
-        san: "Ra5",
-        commentary:
-          "“Or any square on the a-file, forcing the Black King in front of the White.” A brilliant waiting move.",
-      },
-      {
-        san: "Kc1",
-        commentary: "Forced. The Black King must walk directly into the face of the opposition.",
-      },
-      {
-        san: "Ra1#",
-        commentary: "Checkmate! Delivered exactly on move 11, precisely following Capablanca's text.",
-      },
-    ],
-  },
+
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
   // ═════════════════════════════════════════════════════════════════
