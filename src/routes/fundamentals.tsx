@@ -27,12 +27,12 @@ const CHAPTERS: Chapter[] = [
     subtitle: "Endings, Middle-game, and Openings",
     lessons: [
       { id: "1-1", title: "Simple Mates - Rook & King 1" },
-      { id: "1-2", title: "Pawn Promotion" },
-      { id: "1-3", title: "Control of the Centre" },
-      { id: "1-4", title: "Opening Development" },
-      { id: "1-5", title: "Pawn Endings" },
-      { id: "1-6", title: "Winning a Pawn — How to Use the Advantage" },
-      { id: "1-7", title: "Simple Mates - Rook & King 2" },
+      { id: "1-2", title: "Simple Mates - Rook & King 2" },
+      { id: "1-3", title: "Pawn Promotion" },
+      { id: "1-4", title: "Control of the Centre" },
+      { id: "1-5", title: "Opening Development" },
+      { id: "1-6", title: "Pawn Endings" },
+      { id: "1-7", title: "Winning a Pawn — How to Use the Advantage" },
     ],
   },
   {
