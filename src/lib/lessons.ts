@@ -368,7 +368,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Simple Mates: Queen and King
   // ─────────────────────────────────────────────────────────────────
   "1-4": {
-    title: "Queen & King",
+    title: "Simple Mates - Queen & King",
     intro:
       "“We now come to Queen and King against King. As the Queen combines the power of the Rook " +
       "and the Bishop, it is the easiest mate of all and should always be accomplished in under ten moves.”",
