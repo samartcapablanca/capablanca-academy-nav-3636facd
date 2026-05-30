@@ -32,9 +32,8 @@ export const LESSONS: Record<string, LessonContent> = {
   "1-1": {
     title: "Rook & King vs King",
     intro:
-      "Capablanca's first textbook example. White: King h1, Rook a1. Black: King h8. " +
       "“The principle is to drive the opposing King to the last line on any side of the " +
-      "board.” In this 10-move sequence, watch how White systematically restricts the Black " +
+      "board.” Watch how White systematically restricts the Black " +
       "King using the Rook, then brings the White King up to deliver the final blow.",
     startFen: "7k/8/8/8/8/8/8/R6K w - - 0 1",
     moves: [
