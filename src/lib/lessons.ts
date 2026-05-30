@@ -51,7 +51,7 @@ export const LESSONS: Record<string, LessonContent> = {
         san: "Kg2",
         commentary:
           "“The general principle for a beginner to follow is to keep his King as much " +
-          "as possible on the same rank—or, as in this case, file—as the opposing King.”",
+          "as possible on the same rank as the opposing King.”",
       },
       {
         san: "Kf8",
