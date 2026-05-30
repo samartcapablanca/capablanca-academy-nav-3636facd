@@ -34,7 +34,7 @@ export const LESSONS: Record<string, LessonContent> = {
     intro:
       "“The principle is to drive the opposing King to the last line on any side of the " +
       "board.” White rook could restrict Black King on a7 or g1. However g1 will also  " +
-      "break the confinement when White King needs to move out of column h.",
+      "break the confinement when White King needs to move out of file h.",
     startFen: "7k/8/8/8/8/8/8/R6K w - - 0 1",
     moves: [
       {
