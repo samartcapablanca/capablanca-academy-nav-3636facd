@@ -32,6 +32,7 @@ const CHAPTERS: Chapter[] = [
       { id: "1-4", title: "Opening Development" },
       { id: "1-5", title: "Pawn Endings" },
       { id: "1-6", title: "Winning a Pawn — How to Use the Advantage" },
+      { id: "1-7", title: "Simple Mates - Rook & King 2" },
     ],
   },
   {
