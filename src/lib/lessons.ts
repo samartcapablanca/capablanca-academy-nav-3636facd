@@ -30,51 +30,100 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Example 1: Rook and King vs. King
   // ─────────────────────────────────────────────────────────────────
   "1-1": {
-    title: "Some Simple Mates — Rook & King vs. King",
+    title: "Simple Mates — Rook & King vs. King (Example 1)",
     intro:
-      "Capablanca's first example. White: King b6, Rook a7. Black: King b8, to move. " +
+      "Capablanca's first textbook example. White: King h1, Rook a1. Black: King h8. " +
       "“The principle is to drive the opposing King to the last line on any side of the " +
-      "board… keep your King, as much as possible, on the same rank — or, as in this " +
-      "case, file — as the opposing King.” Notice the Rook on a7 is defended by the King " +
-      "on b6 — the two pieces work as one.",
-    // Black to move. White King b6 defends the Rook on a7 and covers a7, b7, c7;
-    // the Rook seals the a-file and 7th rank. Black's only legal move is ...Kc8.
-    // A waiting Rh7 then forces Kb8 and Rh8 is mate.
-    startFen: "1k6/R7/1K6/8/8/8/8/8 b - - 0 1",
+      "board.” In this 10-move sequence, watch how White systematically restricts the Black " +
+      "King using the Rook, then brings the White King up to deliver the final blow.",
+    startFen: "7k/8/8/8/8/8/8/R6K w - - 0 1",
     moves: [
       {
-        san: "Kc8",
+        san: "Ra7",
         commentary:
-          "Forced. a8 is held by the Rook on a7 (the whole a-file is covered); " +
-          "b7 and c7 are covered by White's King on b6; and Kxa7 is illegal because " +
-          "the Rook is defended by that same King. The only legal square is c8.",
+          "“The power of the Rook is demonstrated by this first move, which immediately " +
+          "confines the Black King to the last rank.” Black is now trapped on the 8th rank.",
       },
       {
-        san: "Rh7",
+        san: "Kg8",
+        commentary: "Forced. The Black King shuffles along the only rank left available.",
+      },
+      {
+        san: "Kg2",
         commentary:
-          "“A waiting move.” The Rook abandons the a-file but stays on the 7th rank, " +
-          "passing the obligation to move back to Black. King and Rook still hold every " +
-          "square on the 7th — this is the heart of the technique.",
+          "“The general principle for a beginner to follow is to keep his King as much " +
+          "as possible on the same rank—or, as in this case, file—as the opposing King.”",
+      },
+      {
+        san: "Kf8",
+        commentary: "Black continues to move away, trying to delay the approaching White King.",
+      },
+      {
+        san: "Kf3",
+        commentary: "White's King marches up, maintaining opposition on the adjacent file.",
+      },
+      {
+        san: "Ke8",
+        commentary: "Black is running out of space on the kingside and heads toward the center.",
+      },
+      {
+        san: "Ke4",
+        commentary: "White follows systematically. The King and Rook work together to choke the board.",
+      },
+      {
+        san: "Kd8",
+        commentary: "Black continues his flight towards the queenside.",
+      },
+      {
+        san: "Kd5",
+        commentary:
+          "“When the King has been brought to the sixth rank, it is better to place it, " +
+          "not on the same file, but on the one next to it towards the center.”",
+      },
+      {
+        san: "Kc8",
+        commentary: "Black is nearly cornered now.",
+      },
+      {
+        san: "Kd6",
+        commentary: "White cuts off the escape squares.",
       },
       {
         san: "Kb8",
-        commentary:
-          "Forced again. From c8, Black cannot step to the 7th rank (King b6 covers " +
-          "b7, c7 and d7) and d8 would only delay things; the textbook defender walks " +
-          "into b8, exactly where White wants him.",
+        commentary: "Black attacks the Rook, attempting a last-ditch defense.",
       },
       {
-        san: "Rh8#",
+        san: "Rc7",
+        commentary: "The Rook simply steps out of harm's way while keeping Black completely locked down.",
+      },
+      {
+        san: "Ka8",
+        commentary: "Forced. The Black King is trapped in the corner shadow.",
+      },
+      {
+        san: "Kc6",
+        commentary: "White prepares the final net.",
+      },
+      {
+        san: "Kb8",
+        commentary: "Black's only legal move.",
+      },
+      {
+        san: "Kb6",
+        commentary: "White seals the escape squares on a7, b7, and c7. The trap is sprung.",
+      },
+      {
+        san: "Ka8",
+        commentary: "Forced back into the corner for the final turn.",
+      },
+      {
+        san: "Rc8#",
         commentary:
-          "Mate. The Rook delivers check along the 8th rank; a7, b7 and c7 are all " +
-          "covered by the King on b6, while a8 and c8 are covered by the Rook. " +
-          "“The opposing King has been driven to the last line.” Capablanca's first " +
-          "principle in four moves: restrict, wait, drive, deliver.",
+          "Checkmate! “It has taken exactly ten moves to force the mate from the original position.” " +
+          "The opposing King has been driven to the edge and executed perfectly.",
       },
     ],
   },
-
-
 
   // ─────────────────────────────────────────────────────────────────
   // CHAPTER I — Example 5: King and Pawn vs. King (Pawn Promotion)
@@ -105,8 +154,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kd7",
         commentary:
-          "Black tries to harass the pawn from the side, but it is shepherded by " +
-          "the White King at every step.",
+          "Black tries to harass the pawn from the side, but it is shepherded by " + "the White King at every step.",
       },
       {
         san: "e6+",
@@ -116,24 +164,20 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Kd6",
-        commentary:
-          "Black's King is shouldered aside; he cannot stop the pawn alone.",
+        commentary: "Black's King is shouldered aside; he cannot stop the pawn alone.",
       },
       {
         san: "e7",
-        commentary:
-          "One step from coronation. Black cannot reach e8 — the White King guards it.",
+        commentary: "One step from coronation. Black cannot reach e8 — the White King guards it.",
       },
       {
         san: "Kd5",
-        commentary:
-          "A despairing move; no Black square controls the queening square.",
+        commentary: "A despairing move; no Black square controls the queening square.",
       },
       {
         san: "e8=Q",
         commentary:
-          "Promotion. “The pawn must be carried, not pushed.” The King did the work; " +
-          "the pawn merely walked home.",
+          "Promotion. “The pawn must be carried, not pushed.” The King did the work; " + "the pawn merely walked home.",
       },
     ],
   },
@@ -173,9 +217,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Nc6",
-        commentary:
-          "Black defends the pawn and develops simultaneously — the model of opening " +
-          "economy.",
+        commentary: "Black defends the pawn and develops simultaneously — the model of opening " + "economy.",
       },
       {
         san: "d4",
@@ -186,8 +228,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "exd4",
         commentary:
-          "Black removes one of the central pawns — but at the cost of giving White a " +
-          "free hand in development.",
+          "Black removes one of the central pawns — but at the cost of giving White a " + "free hand in development.",
       },
       {
         san: "Nxd4",
@@ -203,7 +244,6 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-
 
   // ─────────────────────────────────────────────────────────────────
   // CHAPTER I — Lesson 4: Opening Development
@@ -225,8 +265,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "e5",
-        commentary:
-          "Black follows the same rule and contests the centre at once.",
+        commentary: "Black follows the same rule and contests the centre at once.",
       },
       {
         san: "Nf3",
@@ -249,8 +288,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Bc5",
         commentary:
-          "Black mirrors. Both sides have developed three minor pieces; both " +
-          "Kings are one move from safety.",
+          "Black mirrors. Both sides have developed three minor pieces; both " + "Kings are one move from safety.",
       },
       {
         san: "d3",
@@ -292,19 +330,64 @@ export const LESSONS: Record<string, LessonContent> = {
           "and the majority would be sterile.",
       },
       { san: "Kf7", commentary: "Black sidesteps the check and hurries to stop the pawns before they promote." },
-      { san: "Kg4", commentary: "“The King is a fighting piece.” White brings his monarch up to escort the pawns — the majority cannot be converted without him." },
-      { san: "Kg6", commentary: "Black places his King on the natural blockading square, trying to halt the advance with his body." },
-      { san: "h5+", commentary: "The supporting pawn follows. The two pawns now move in lock-step — neither can be captured without losing the other's protection." },
-      { san: "Kg7", commentary: "Forced away from the blockade. The pawns and King now coordinate perfectly; Black's position is already lost." },
-      { san: "Kf5", commentary: "White seizes the opposition, the King one square behind the g-pawn — the textbook escort position for a passed-pawn advance." },
-      { san: "Kf7", commentary: "Black takes the opposition in turn, but with the break …g6 coming the opposition cannot save the defender." },
-      { san: "g6+", commentary: "The breakthrough. The pawn cannot be left alone — if Black declines, gxh7 promotes by force." },
-      { san: "hxg6+", commentary: "Forced. The lone Black pawn must capture, opening the file for White's h-pawn to take its place." },
-      { san: "hxg6+", commentary: "The h-pawn transforms into a supported, passed g-pawn on the sixth rank — shoulder-to-shoulder with the White King." },
-      { san: "Ke7", commentary: "The Black King is driven away. He cannot reach the queening square in time; the path to promotion is now arithmetic." },
-      { san: "g7", commentary: "One step from coronation. Capablanca: “In the end-game, the player who first arrives with his pawn at the seventh rank wins the game.”" },
+      {
+        san: "Kg4",
+        commentary:
+          "“The King is a fighting piece.” White brings his monarch up to escort the pawns — the majority cannot be converted without him.",
+      },
+      {
+        san: "Kg6",
+        commentary: "Black places his King on the natural blockading square, trying to halt the advance with his body.",
+      },
+      {
+        san: "h5+",
+        commentary:
+          "The supporting pawn follows. The two pawns now move in lock-step — neither can be captured without losing the other's protection.",
+      },
+      {
+        san: "Kg7",
+        commentary:
+          "Forced away from the blockade. The pawns and King now coordinate perfectly; Black's position is already lost.",
+      },
+      {
+        san: "Kf5",
+        commentary:
+          "White seizes the opposition, the King one square behind the g-pawn — the textbook escort position for a passed-pawn advance.",
+      },
+      {
+        san: "Kf7",
+        commentary:
+          "Black takes the opposition in turn, but with the break …g6 coming the opposition cannot save the defender.",
+      },
+      {
+        san: "g6+",
+        commentary: "The breakthrough. The pawn cannot be left alone — if Black declines, gxh7 promotes by force.",
+      },
+      {
+        san: "hxg6+",
+        commentary: "Forced. The lone Black pawn must capture, opening the file for White's h-pawn to take its place.",
+      },
+      {
+        san: "hxg6+",
+        commentary:
+          "The h-pawn transforms into a supported, passed g-pawn on the sixth rank — shoulder-to-shoulder with the White King.",
+      },
+      {
+        san: "Ke7",
+        commentary:
+          "The Black King is driven away. He cannot reach the queening square in time; the path to promotion is now arithmetic.",
+      },
+      {
+        san: "g7",
+        commentary:
+          "One step from coronation. Capablanca: “In the end-game, the player who first arrives with his pawn at the seventh rank wins the game.”",
+      },
       { san: "Kf7", commentary: "A last attempt to attack the pawn — but the White King defends it." },
-      { san: "g8=Q+", commentary: "The conversion is complete. Two pawns and a King, played with precision, have produced a new Queen — Capablanca's textbook transformation of a majority into a winning piece." },
+      {
+        san: "g8=Q+",
+        commentary:
+          "The conversion is complete. Two pawns and a King, played with precision, have produced a new Queen — Capablanca's textbook transformation of a majority into a winning piece.",
+      },
     ],
   },
 
@@ -389,13 +472,11 @@ export const LESSONS: Record<string, LessonContent> = {
   // MILESTONE ARCHIVE — full historical games (auto-generated from PGN)
   // ═════════════════════════════════════════════════════════════════
 
-
   // ── 1909 Marshall — Capablanca Match ────────────────────────────
 
   "marshall-g1": {
     title: "F. Marshall – Capablanca, USA m (1909)",
-    intro:
-      "F. Marshall vs. J. Capablanca. USA m (1909). Queen's Gambit Declined. Replay the full historical game.",
+    intro: "F. Marshall vs. J. Capablanca. USA m (1909). Queen's Gambit Declined. Replay the full historical game.",
     moves: [
       { san: "d4", commentary: "White opens with d4. The game heads into a Queen's Gambit Declined." },
       { san: "d5", commentary: "d5 — Black steers the contest toward a Queen's Gambit Declined structure." },
@@ -456,7 +537,11 @@ export const LESSONS: Record<string, LessonContent> = {
       { san: "Qb4", commentary: "Queen to b4 — coordinating the final assault." },
       { san: "Qe7", commentary: "Queen to e7 — coordinating the final assault." },
       { san: "Qf4+", commentary: "Qf4+ — White delivers check, forcing the enemy King to respond." },
-      { san: "Qf6", commentary: "Threefold repetition — draw agreed, ½–½. Marshall cannot break the Qb4/Qf4+ shuffle without losing the b-pawn, and Capablanca is content to split the point in a still-balanced ending." },
+      {
+        san: "Qf6",
+        commentary:
+          "Threefold repetition — draw agreed, ½–½. Marshall cannot break the Qb4/Qf4+ shuffle without losing the b-pawn, and Capablanca is content to split the point in a still-balanced ending.",
+      },
     ],
     guessMoveIndex: 27,
     guessHint: "Capablanca won material here. Look for the tactical capture that breaks through.",
@@ -464,8 +549,7 @@ export const LESSONS: Record<string, LessonContent> = {
 
   "marshall-g7": {
     title: "F. Marshall – Capablanca, USA m (1909)",
-    intro:
-      "F. Marshall vs. J. Capablanca. USA m (1909). Queen's Gambit Declined. Replay the full historical game.",
+    intro: "F. Marshall vs. J. Capablanca. USA m (1909). Queen's Gambit Declined. Replay the full historical game.",
     moves: [
       { san: "d4", commentary: "White opens with d4. The game heads into a Queen's Gambit Declined." },
       { san: "d5", commentary: "d5 — Black steers the contest toward a Queen's Gambit Declined structure." },
@@ -515,7 +599,11 @@ export const LESSONS: Record<string, LessonContent> = {
       { san: "Qf5", commentary: "Capablanca repositions the Queen to f5, probing for weaknesses." },
       { san: "f4", commentary: "Pawn thrust to f4 — claiming space in the centre." },
       { san: "Rb6", commentary: "Rook lifts to b6, joining the heavy-piece battery." },
-      { san: "Qxb6", commentary: "25.Qxb6 and Black resigned, 1–0. The rook is lost outright (24...Rb6?? walked into the queen), and with a piece down against Marshall's coordinated rook, knight and a6-passer there is no defence. One of the only games Capablanca lost in the entire 23-game match." },
+      {
+        san: "Qxb6",
+        commentary:
+          "25.Qxb6 and Black resigned, 1–0. The rook is lost outright (24...Rb6?? walked into the queen), and with a piece down against Marshall's coordinated rook, knight and a6-passer there is no defence. One of the only games Capablanca lost in the entire 23-game match.",
+      },
     ],
     guessMoveIndex: 35,
     guessHint: "Capablanca won material here. Look for the tactical capture that breaks through.",
@@ -1741,8 +1829,7 @@ export const LESSONS: Record<string, LessonContent> = {
 
   "london-g1": {
     title: "A. Alekhine – Capablanca, London (1922)",
-    intro:
-      "A. Alekhine vs. J. Capablanca. London (1922). Queen's Gambit Declined. Replay the full historical game.",
+    intro: "A. Alekhine vs. J. Capablanca. London (1922). Queen's Gambit Declined. Replay the full historical game.",
     moves: [
       { san: "d4", commentary: "Capablanca opens with d4, claiming central territory at once." },
       { san: "d5", commentary: "Black answers d5, declining to surrender the centre." },
@@ -1897,8 +1984,7 @@ export const LESSONS: Record<string, LessonContent> = {
 
   "london-g8": {
     title: "A. Rubinstein – Capablanca, London (1922)",
-    intro:
-      "A. Rubinstein vs. J. Capablanca. London (1922). Queen's Gambit Declined. Replay the full historical game.",
+    intro: "A. Rubinstein vs. J. Capablanca. London (1922). Queen's Gambit Declined. Replay the full historical game.",
     moves: [
       { san: "d4", commentary: "Capablanca opens with d4, claiming central territory at once." },
       { san: "Nf6", commentary: "Black answers Nf6, declining to surrender the centre." },
@@ -2649,8 +2735,7 @@ export const LESSONS: Record<string, LessonContent> = {
 
   "nottingham-g1": {
     title: "Capablanca – M. Botvinnik, Nottingham (1936)",
-    intro:
-      "J. Capablanca vs. M. Botvinnik. Nottingham (1936). Flank Opening. Replay the full historical game.",
+    intro: "J. Capablanca vs. M. Botvinnik. Nottingham (1936). Flank Opening. Replay the full historical game.",
     moves: [
       { san: "Nf3", commentary: "Capablanca opens with Nf3. The game heads into a Réti / Flank Opening." },
       { san: "Nf6", commentary: "Nf6 — Black steers the contest toward a Réti / Flank Opening structure." },
@@ -3061,8 +3146,6 @@ export const LESSONS: Record<string, LessonContent> = {
     guessHint: "Capablanca won material here. Look for the tactical capture that breaks through.",
   },
 
-
-
   "2-1": {
     title: "A Cardinal Principle — The King as Attacking Piece",
     intro:
@@ -3149,20 +3232,17 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "cxb6",
         commentary:
-          "Black accepts, thinking he has stopped the threat. He has not — the " +
-          "sacrifice is only the first act.",
+          "Black accepts, thinking he has stopped the threat. He has not — the " + "sacrifice is only the first act.",
       },
       {
         san: "a6",
         commentary:
-          "The second pawn is offered. White now sacrifices the a-pawn, " +
-          "clearing the way for the true candidate.",
+          "The second pawn is offered. White now sacrifices the a-pawn, " + "clearing the way for the true candidate.",
       },
       {
         san: "bxa6",
         commentary:
-          "Black captures again, but each capture weakens his structure and " +
-          "opens a file for the remaining pawn.",
+          "Black captures again, but each capture weakens his structure and " + "opens a file for the remaining pawn.",
       },
       {
         san: "c6",
@@ -3338,8 +3418,7 @@ export const LESSONS: Record<string, LessonContent> = {
       "with an unstable centre will almost always be crushed by a counter-strike " +
       "in the middle.” Both sides have castled — White short, Black long — and " +
       "the pawn storm against the enemy King must be timed to a rock-solid centre.",
-    startFen:
-      "2kr1bnr/ppp2ppp/2nqb3/3pp3/3PP3/2NQBN2/PPP2PPP/2KR1B1R w - - 0 1",
+    startFen: "2kr1bnr/ppp2ppp/2nqb3/3pp3/3PP3/2NQBN2/PPP2PPP/2KR1B1R w - - 0 1",
     moves: [
       {
         san: "Kb1",
@@ -3402,8 +3481,7 @@ export const LESSONS: Record<string, LessonContent> = {
       "the entire board, and slowly squeeze the opponent's knights into complete " +
       "passivity.” White holds the Bishop pair in an open middle-game — the " +
       "perfect laboratory for the famous “minor exchange.”",
-    startFen:
-      "r3k2r/ppp2ppp/2n1b3/3p4/3P4/2N1B3/PPP2PPP/R3KB1R w KQkq - 0 1",
+    startFen: "r3k2r/ppp2ppp/2n1b3/3p4/3P4/2N1B3/PPP2PPP/R3KB1R w KQkq - 0 1",
     moves: [
       {
         san: "Bd3",
@@ -3467,8 +3545,7 @@ export const LESSONS: Record<string, LessonContent> = {
       "create a permanent structural hole or an isolated target that your pieces " +
       "can collectively siege.” Black has been left with an isolated d-pawn — a " +
       "textbook target on a half-open file.",
-    startFen:
-      "r2q1rk1/pp3ppp/2n1bn2/3p4/8/2N1BN2/PP3PPP/R2QR1K1 w - - 0 1",
+    startFen: "r2q1rk1/pp3ppp/2n1bn2/3p4/8/2N1BN2/PP3PPP/R2QR1K1 w - - 0 1",
     moves: [
       {
         san: "Nb5",
@@ -3534,8 +3611,7 @@ export const LESSONS: Record<string, LessonContent> = {
       "values for positional advantages.” The board shows a deliberate imbalance: " +
       "White's Bishop pair against Black's Knight pair, with a Rook facing two " +
       "connected pawns on the queenside — a living laboratory of dynamic values.",
-    startFen:
-      "4k3/pp3pp1/2n2n1p/8/8/1P3B1P/P4PP1/2R1KB2 w - - 0 1",
+    startFen: "4k3/pp3pp1/2n2n1p/8/8/1P3B1P/P4PP1/2R1KB2 w - - 0 1",
     moves: [
       {
         san: "Bd3",
@@ -3665,8 +3741,7 @@ export const LESSONS: Record<string, LessonContent> = {
       "severely cramping your opponent's army, forcing them onto defensive, " +
       "passive squares.” The fight is for d4, e4, d5, and e5 — and every piece " +
       "must contribute.",
-    startFen:
-      "r1bqkb1r/pppp1ppp/2n2n2/4p3/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 0 1",
+    startFen: "r1bqkb1r/pppp1ppp/2n2n2/4p3/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 0 1",
     moves: [
       {
         san: "dxe5",
@@ -4168,7 +4243,6 @@ export const LESSONS: Record<string, LessonContent> = {
     ],
   },
 };
-
 
 export function getLesson(id: string): LessonContent {
   return (
