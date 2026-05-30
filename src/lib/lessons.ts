@@ -365,65 +365,80 @@ export const LESSONS: Record<string, LessonContent> = {
   },
 
   // ─────────────────────────────────────────────────────────────────
-  // CHAPTER I — Lesson 4: Opening Development
+  // CHAPTER I — Simple Mates: Queen and King
   // ─────────────────────────────────────────────────────────────────
   "1-4": {
-    title: "Opening Development",
+    title: "Queen & King vs. King",
     intro:
-      "Capablanca: “In the opening, development must be sought, and the pieces " +
-      "placed in a natural position where they will maintain the maximum of " +
-      "usefulness.” The rule that follows from this is iron: do not move the same " +
-      "piece twice before the rest of the army is in play.",
+      "“We now come to Queen and King against King. As the Queen combines the power of the Rook " +
+      "and the Bishop, it is the easiest mate of all and should always be accomplished in under ten moves.”",
+    startFen: "8/8/8/4k3/8/8/8/4K2Q w - - 0 1",
     moves: [
       {
-        san: "e4",
+        san: "Qc6",
         commentary:
-          "A central pawn first — it opens diagonals for the Queen and King's " +
-          "Bishop in a single stroke. “The classical openings have stood the test " +
-          "of time precisely because they obey this principle.”",
+          "“A good way to begin is to make the first move with the Queen, trying to limit the Black King's " +
+          "mobility as much as possible.” The Queen cuts off the c-file and 6th rank completely.",
       },
       {
-        san: "e5",
-        commentary: "Black follows the same rule and contests the centre at once.",
+        san: "Kd4",
+        commentary: "“Already the Black King has only one available square.”",
       },
       {
-        san: "Nf3",
-        commentary:
-          "“Knights before Bishops.” The King's Knight reaches its best square — " +
-          "f3 — with a single move, attacking the centre and preparing to castle.",
+        san: "Kd2",
+        commentary: "White brings the King into play immediately, marching up to support the Queen.",
       },
       {
-        san: "Nc6",
-        commentary:
-          "Black does precisely the same. The Knight defends e5 and develops " +
-          "toward the centre — one move, two purposes.",
+        san: "Ke5",
+        commentary: "Black moves back towards the center lines, trying to find room to breathe.",
       },
       {
-        san: "Bc4",
-        commentary:
-          "Only now the Bishop. It takes an active diagonal aimed at the weakest " +
-          "square in Black's camp (f7). Notice: no piece has yet been moved twice.",
+        san: "Ke3",
+        commentary: "White's King marches up further, securing the center squares.",
       },
       {
-        san: "Bc5",
-        commentary:
-          "Black mirrors. Both sides have developed three minor pieces; both " + "Kings are one move from safety.",
+        san: "Kf5",
+        commentary: "Black drifts right, escaping toward the kingside.",
       },
       {
-        san: "d3",
-        commentary:
-          "A small pawn move that supports e4 and frees the Queen's Bishop. " +
-          "Capablanca warned the beginner against speculative attacks like Ng5 — " +
-          "“to move a piece a second time before development is complete is a " +
-          "loss of time, and time, in the opening, is everything.”",
+        san: "Qd6",
+        commentary: "The Queen steps forward, closing the cage tighter by squeezing Black onto the f, g, and h files.",
       },
       {
-        san: "Nf6",
+        san: "Kg5",
+        commentary: "Black continues to flee laterally.",
+      },
+      {
+        san: "Qe6",
         commentary:
-          "Black brings the last minor piece into play, contesting e4 and " +
-          "preparing to castle. The opening has been conducted exactly as " +
-          "Capablanca prescribes: every move developed a new piece, the centre " +
-          "was contested, and no piece moved twice.",
+          "The Queen marches side-by-side with her target, acting like a knight's distance away to restrict him.",
+      },
+      {
+        san: "Kh4",
+        commentary: "Black is forced toward the edge of the board.",
+      },
+      {
+        san: "Qg6",
+        commentary: "The Queen seals off the g-file and 6th rank, pinning the Black King to the h-file.",
+      },
+      {
+        san: "Kh3",
+        commentary: "Black moves down his single remaining track.",
+      },
+      {
+        san: "Kf3",
+        commentary:
+          "“However the King moves the Queen mates, e.g.” White's King closes in to guard the mating squares.",
+      },
+      {
+        san: "Kh4",
+        commentary: "Black shuffles to his last safe square.",
+      },
+      {
+        san: "Qg4#",
+        commentary:
+          "Checkmate! “In order to force a mate without the aid of the King, at least two Rooks are required.” " +
+          "But with the Queen, White wraps the game up effortlessly in just 8 moves.",
       },
     ],
   },
