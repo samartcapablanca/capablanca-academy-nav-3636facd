@@ -33,8 +33,8 @@ export const LESSONS: Record<string, LessonContent> = {
     title: "Rook & King vs King",
     intro:
       "“The principle is to drive the opposing King to the last line on any side of the " +
-      "board.” Watch how White systematically restricts the Black " +
-      "King using the Rook, then brings the White King up to deliver the final blow.",
+      "board.” White rook could restrict Black King on a7 or g1. However g1 will also  " +
+      "break the confinement when White King needs to move out of column h.",
     startFen: "7k/8/8/8/8/8/8/R6K w - - 0 1",
     moves: [
       {
