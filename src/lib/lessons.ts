@@ -641,7 +641,7 @@ export const LESSONS: Record<string, LessonContent> = {
         commentary: "7.Qg6#"
       }
     ]
-  }  
+  },
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
   // ═════════════════════════════════════════════════════════════════
