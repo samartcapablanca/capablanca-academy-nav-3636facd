@@ -30,7 +30,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Simple Mates - Rook and King 1
   // ─────────────────────────────────────────────────────────────────
   "1-1": {
-    title: "Simple Mates - Rook & King 1",
+    title: "The Power of the Rook",
     intro:
       "“The principle is to drive the opposing King to the last line on any side of the " +
       "board.” White will systematically restrict the Black King using the Rook, " +
@@ -128,7 +128,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Simple Mates: Rook & King 2
   // ─────────────────────────────────────────────────────────────────
   "1-2": {
-    title: "Simple Mates - Rook & King 2",
+    title: "The Power of the King",
     intro:
       "In this position the Black King is sitting safely in the center " +
       "of the board, and the White Rook starts far away on h1. White must use the King " +
