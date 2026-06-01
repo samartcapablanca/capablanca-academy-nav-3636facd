@@ -444,83 +444,71 @@ export const LESSONS: Record<string, LessonContent> = {
   },
 
   // ─────────────────────────────────────────────────────────────────
-  // CHAPTER I — Lesson 5: Pawn Endings — the Majority
+  // CHAPTER I — Pawn Promotion - King & Pawn
   // ─────────────────────────────────────────────────────────────────
-  "1-5": {
-    title: "Pawn Endings — Creating a Passed Pawn",
+  "2-1": {
+    title: "King & Pawn",
     intro:
-      "White: King f3, pawns g4 and h4. Black: King f6, pawn h7. White owns a " +
-      "two-to-one majority on the King's side, and the g-pawn has no Black pawn " +
-      "opposing it. Capablanca's rule: “Whenever there is no good reason against " +
-      "it, follow the general rule of advancing the pawn that has no pawn " +
-      "opposing it.” The White King stands ready to escort the pawns forward.",
-    startFen: "8/7p/5k2/8/6PP/5K2/8/8 w - - 0 1",
+      "“The gain of a pawn is the smallest material advantage that can be obtained in a game; " +
+      "and it often is sufficient to win, even when the pawn is the only remaining unit, apart " +
+      "from the Kings. It is essential, speaking generally, that the King should be in front " +
+      "of his pawn, with at least one intervening square. If the opposing King is directly in " +
+      "front of the pawn, then the game cannot be won.”",
+    startFen: "8/8/8/4k3/8/3K4/4P3/8 w - - 0 1",
     moves: [
       {
-        san: "g5+",
+        san: "e3",
         commentary:
-          "The unopposed pawn advances first — the candidate, the future passed " +
-          "pawn. Pushing the h-pawn instead would let Black blockade with …Kg6 " +
-          "and the majority would be sterile.",
+          "“The position is drawn, and the way to proceed is for Black to keep the King always " +
+          "directly in front of the pawn, and when it cannot be done, as for instance in this position " +
+          "because of the White King, then the Black King must be kept in front of the White King.”",
       },
-      { san: "Kf7", commentary: "Black sidesteps the check and hurries to stop the pawns before they promote." },
+      { san: "Ke5" },
       {
-        san: "Kg4",
+        san: "Kd3",
         commentary:
-          "“The King is a fighting piece.” White brings his monarch up to escort the pawns — the majority cannot be converted without him.",
+          "“This is a very important move. Any other move would lose, as will be shown later. " +
+          "As the Black King cannot be kept close up to the pawn, it must be brought as far " +
+          "forward as possible and, at the same time, in front of the White King.”",
       },
+      { san: "Kd5" },
+      { san: "e4+" },
+      { san: "Ke5" },
+      { san: "Ke3" },
+      { san: "Ke6" },
+      { san: "Kf4" },
       {
-        san: "Kg6",
-        commentary: "Black places his King on the natural blockading square, trying to halt the advance with his body.",
-      },
-      {
-        san: "h5+",
+        san: "Kf6",
         commentary:
-          "The supporting pawn follows. The two pawns now move in lock-step — neither can be captured without losing the other's protection.",
+          "“Again the same case. As the White King comes up, the Black King must be kept " +
+          "in front of it, since it cannot be brought up to the pawn.”",
       },
-      {
-        san: "Kg7",
-        commentary:
-          "Forced away from the blockade. The pawns and King now coordinate perfectly; Black's position is already lost.",
-      },
-      {
-        san: "Kf5",
-        commentary:
-          "White seizes the opposition, the King one square behind the g-pawn — the textbook escort position for a passed-pawn advance.",
-      },
-      {
-        san: "Kf7",
-        commentary:
-          "Black takes the opposition in turn, but with the break …g6 coming the opposition cannot save the defender.",
-      },
-      {
-        san: "g6+",
-        commentary: "The breakthrough. The pawn cannot be left alone — if Black declines, gxh7 promotes by force.",
-      },
-      {
-        san: "hxg6+",
-        commentary: "Forced. The lone Black pawn must capture, opening the file for White's h-pawn to take its place.",
-      },
-      {
-        san: "hxg6+",
-        commentary:
-          "The h-pawn transforms into a supported, passed g-pawn on the sixth rank — shoulder-to-shoulder with the White King.",
-      },
+      { san: "e5+" },
+      { san: "Ke6" },
+      { san: "Ke4" },
+      { san: "Ke7" },
+      { san: "Kd5" },
+      { san: "Kd7" },
+      { san: "e6+" },
       {
         san: "Ke7",
-        commentary:
-          "The Black King is driven away. He cannot reach the queening square in time; the path to promotion is now arithmetic.",
+        commentary: "“If now White advances the pawn, the Black King gets in front of it.”",
       },
+      { san: "Ke5" },
       {
-        san: "g7",
+        san: "Ke8",
         commentary:
-          "One step from coronation. Capablanca: “In the end-game, the player who first arrives with his pawn at the seventh rank wins the game.”",
+          "“If instead of advancing the pawn White withdraws his King, Black brings his King up to the pawn and, when " +
+          "forced to go back, he moves to e8 in front of the pawn ready to come up again or to move in front of the " +
+          "White King, should the latter advance.”",
       },
-      { san: "Kf7", commentary: "A last attempt to attack the pawn — but the White King defends it." },
+      { san: "Kd6" },
+      { san: "Kd8" },
+      { san: "e7+" },
+      { san: "Ke8" },
       {
-        san: "g8=Q+",
-        commentary:
-          "The conversion is complete. Two pawns and a King, played with precision, have produced a new Queen — Capablanca's textbook transformation of a majority into a winning piece.",
+        san: "Ke6",
+        commentary: "“White must either give up the pawn or play this move, and a stalemate results.”",
       },
     ],
   },
