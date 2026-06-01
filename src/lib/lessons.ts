@@ -587,7 +587,7 @@ export const LESSONS: Record<string, LessonContent> = {
     title: "Pawn Endings - Two Pawns 1",
     intro:
       "White wins by using his King to push the Black King away from file g into file h, clearing his " +
-      "path to promotion. White only needs to crown one pawn to deliver checkmate.",
+      "path to promotion and avoiding a stalemate. White only needs to crown one pawn to deliver checkmate.",
     startFen: "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
     moves: [
       {
