@@ -237,7 +237,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "1-3": {
     title: "Simple Mates - Two Bishops",
     intro:
-      "Capablanca's third example introduces the Two Bishops mate. Because the Black King " +
+      "Because the Black King " +
       "starts in the corner on h8, White can immediately use the Bishops to build a diagonal " +
       "wall, confining him tightly before marching the White King forward.",
     startFen: "7k/8/8/8/8/8/8/2B1KB1R w K - 0 1",
