@@ -449,26 +449,23 @@ export const LESSONS: Record<string, LessonContent> = {
   "1-5": {
     title: "King & Pawn Stalemate",
     intro:
-      "“The gain of a pawn is the smallest material advantage that can be obtained in a game; " +
-      "and it often is sufficient to win. It is essential the King is in front " +
-      "of his pawn, with at least one intervening square. If the opposing King is directly in " +
-      "front of the pawn, then the game cannot be won.”",
+      "The position is drawn, and the way to proceed is for Black to keep the King always " +
+      "directly in front of the opposing pawn to force a stalemate in the eight rank. ",
     startFen: "8/8/8/8/4k3/8/3KP3/8 w - - 0 1",
     moves: [
       {
         san: "e3",
         commentary:
-          "“The position is drawn, and the way to proceed is for Black to keep the King always " +
-          "directly in front of the pawn, and when it cannot be done, as for instance in this position " +
-          "because of the White King, then the Black King must be kept in front of the White King.”",
+          "The Black King might need to be in front of the White King temporarily as it waits for " +
+          "his chance to return back in front of the opposing pawn as his next or last move.",
       },
       { san: "Ke5" },
       {
         san: "Kd3",
         commentary:
-          "“This is a very important move. Any other move would lose, as will be shown later. " +
+          "This is a very important move. Any other move would lose, as will be shown later. " +
           "As the Black King cannot be kept close up to the pawn, it must be brought as far " +
-          "forward as possible and, at the same time, in front of the White King.”",
+          "forward as possible and, at the same time, in front of the White King.",
       },
       { san: "Kd5" },
       { san: "e4+" },
