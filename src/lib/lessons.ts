@@ -33,8 +33,8 @@ export const LESSONS: Record<string, LessonContent> = {
     title: "Simple Mates - Rook & King 1",
     intro:
       "“The principle is to drive the opposing King to the last line on any side of the " +
-      "board.” Watch how White systematically restricts the Black King using the Rook, " +
-      "then brings the White King up to deliver the final blow.  ",
+      "board.” White will systematically restrict the Black King using the Rook, " +
+      "then bring the White King up to deliver the final blow.  ",
     startFen: "7k/8/8/8/8/8/8/R6K w - - 0 1",
     moves: [
       {
@@ -525,52 +525,59 @@ export const LESSONS: Record<string, LessonContent> = {
     moves: [
       {
         san: "Ke4",
-        commentary: "“Thus: 1.Ke4”"
+        commentary: "“Thus: 1.Ke4”",
       },
       {
         san: "Ke6",
-        commentary: "“Black does not allow the White King to advance, therefore White is now compelled to advance his Pawn so as to force Black to move away. He is then able to advance his own King.”"
+        commentary:
+          "“Black does not allow the White King to advance, therefore White is now compelled to advance his Pawn so as to force Black to move away. He is then able to advance his own King.”",
       },
       {
         san: "e3",
-        commentary: "“2.e3”"
+        commentary: "“2.e3”",
       },
       { san: "Kf6" },
       {
         san: "Kd5",
-        commentary: "“3.Kd5... Since Black has not done 3...Kf5 it is better for White not to advance his Pawn yet, since its own safety does not require it, but to try to bring the King still further forward.”"
+        commentary:
+          "“3.Kd5... Since Black has not done 3...Kf5 it is better for White not to advance his Pawn yet, since its own safety does not require it, but to try to bring the King still further forward.”",
       },
       { san: "Ke7" },
       {
         san: "Ke5",
-        commentary: "“4.Ke5”"
+        commentary: "“4.Ke5”",
       },
       { san: "Kd7" },
       {
         san: "Kf6",
-        commentary: "“5.Kf6... Now the White Pawn is too far back and it may be brought up within protection of the King.”"
+        commentary:
+          "“5.Kf6... Now the White Pawn is too far back and it may be brought up within protection of the King.”",
       },
       { san: "Ke8" },
       {
         san: "e4",
-        commentary: "“6.e4”"
+        commentary: "“6.e4”",
       },
       { san: "Kd7" },
       {
         san: "e5",
-        commentary: "“7.e5... Now it would not do to play 7.Kf7 because Black would play 7...Kd6 and White would have to bring back his King 8.Kf6 to protect the Pawn. Therefore he must continue:”"
+        commentary:
+          "“7.e5... Now it would not do to play 7.Kf7 because Black would play 7...Kd6 and White would have to bring back his King 8.Kf6 to protect the Pawn. Therefore he must continue:”",
       },
       {
         san: "Ke8",
-        commentary: "“7...Ke8 Had he moved anywhere else then e8, e.g. 7...Kd8 White could have played 8.Kf7 followed by the advance of the Pawn to e6, e7 and e8 as all these squares are being protected by the King.”"
+        commentary:
+          "“7...Ke8 Had he moved anywhere else then e8, e.g. 7...Kd8 White could have played 8.Kf7 followed by the advance of the Pawn to e6, e7 and e8 as all these squares are being protected by the King.”",
       },
       {
         san: "Ke6",
-        commentary: "“As Black tries to prevent the advance of the pawn, White must now force him to move away, at the same time always keeping the King in front of the Pawn. 8.Ke6”"
+        commentary:
+          "“As Black tries to prevent the advance of the pawn, White must now force him to move away, at the same time always keeping the King in front of the Pawn. 8.Ke6”",
       },
       {
         san: "Kf8",
-        commentary: "“8...Kf8... If White plays 8.e6 would make it a draw, as Black would then play 8...Kf8 and we would have a position similar to the one explained in connection with Example 5.”"
+        commentary:
+          "“8...Kf8... If White plays 8.e6 would make it a draw, as Black would then play 8...Kf8 and we would have a position similar to the one explained in connection with Example 5.”",
       },
       {
         san: "Kd7",
@@ -578,11 +585,12 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-// CHAPTER I — Pawn Endings - Two Pawn 1
-"1-7": {
+  // CHAPTER I — Pawn Endings - Two Pawn 1
+  "1-7": {
     title: "Pawn Endings - Two Pawns 1",
-    intro: "White wins by using his King to push the Black King away from his crowning pawn. " +
-    "White only needs to crown one pawn to deliver check mate.",
+    intro:
+      "White wins by using his King to push the Black King away from his crowning pawn. " +
+      "White only needs to crown one pawn to deliver check mate.",
     startFen: "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
     moves: [
       {
@@ -592,55 +600,55 @@ export const LESSONS: Record<string, LessonContent> = {
           "cannot win by playing 1.f6 because Black plays, not 1...gxf6, which would lose, but Kg8 and if then " +
           "2.fxg7 (If 2.f7+ Kf8 and White will never be able to Queen his pawn without losing it ; if 2.Ke7 gxf6 " +
           "3.Kxf6 Kf8 and draws. ) 2...Kxg7 and draws, as shown in a previous case. White, however, can win " +
-          "in the original position by playing 1.Kd7. ]"
+          "in the original position by playing 1.Kd7. ]",
       },
       {
         san: "Kg8",
-        commentary: "Black is forced into the corner with 1...Kg8, as the square f7 is cut off by the White King."
+        commentary: "Black is forced into the corner with 1...Kg8, as the square f7 is cut off by the White King.",
       },
       {
         san: "Ke7",
-        commentary: "White traps the Black King further along the back rank by playing 2.Ke7."
+        commentary: "White traps the Black King further along the back rank by playing 2.Ke7.",
       },
       {
         san: "Kh8",
-        commentary: "Black steps into the final corner square with 2...Kh8, having no other legal options available."
+        commentary: "Black steps into the final corner square with 2...Kh8, having no other legal options available.",
       },
       {
         san: "f6",
-        commentary: "White strikes with the breakthrough move 3.f6. [If 3...Kg8 4.f7+ Kh8 5.f8Q# ]"
+        commentary: "White strikes with the breakthrough move 3.f6. [If 3...Kg8 4.f7+ Kh8 5.f8Q# ]",
       },
       {
         san: "gxf6",
-        commentary: "Black captures the advancing pawn with 3...gxf6, opening up the g-file."
+        commentary: "Black captures the advancing pawn with 3...gxf6, opening up the g-file.",
       },
       {
         san: "Kf7",
-        commentary: "White advances with 4.Kf7, stepping out of the way of his own pawn to clear a path for promotion."
+        commentary: "White advances with 4.Kf7, stepping out of the way of his own pawn to clear a path for promotion.",
       },
       {
         san: "f5",
-        commentary: "Black pushes forward with 4...f5, but this pawn is too far away to stop White's plans."
+        commentary: "Black pushes forward with 4...f5, but this pawn is too far away to stop White's plans.",
       },
       {
         san: "g7+",
-        commentary: "White pushes the pawn with check using 5.g7+, forcing the Black King back into the open."
+        commentary: "White pushes the pawn with check using 5.g7+, forcing the Black King back into the open.",
       },
       {
         san: "Kh7",
-        commentary: "Black steps aside out of check with 5...Kh7, moving onto the edge of the board."
+        commentary: "Black steps aside out of check with 5...Kh7, moving onto the edge of the board.",
       },
       {
         san: "g8=Q+",
-        commentary: "White promotes the pawn to a brand new Queen with check on 6.g8=Q+."
+        commentary: "White promotes the pawn to a brand new Queen with check on 6.g8=Q+.",
       },
       {
         san: "Kh6",
-        commentary: "The Black King makes its final desperate escape attempt with 6...Kh6."
+        commentary: "The Black King makes its final desperate escape attempt with 6...Kh6.",
       },
       {
         san: "Qg6#",
-        commentary: "White delivers the final blow with 7.Qg6#, successfully executing a textbook checkmate."
+        commentary: "White delivers the final blow with 7.Qg6#, successfully executing a textbook checkmate.",
       },
     ],
   },
@@ -659,151 +667,153 @@ export const LESSONS: Record<string, LessonContent> = {
           "White stakes a claim in the center with 1.Ke4. [White can also win by 1.f5! Black’s best answer would be " +
           "1...g6 and the student should work this out to see how (EN). White can not win by 1.g5? as 1...g6 draws " +
           "because of the principle of the opposition which governs this ending as well as all the Pawn endings " +
-          "already given, and which will be explained more fully later on.]"
+          "already given, and which will be explained more fully later on.]",
       },
       {
         san: "Ke6",
         commentary:
           "Black opposes the White King with 1...Ke6. [If Black advances the Pawn instead of moving the King " +
-          "1...g6 White wins anyway 2.Kd4 Ke6 3.Kc5 Kf6 4.Kd6 Kf7 5.g5 Kg7 6.Ke7 Kg8 7.Kf6 Kh7 8.Kf7 and White wins the Pawn.]"
+          "1...g6 White wins anyway 2.Kd4 Ke6 3.Kc5 Kf6 4.Kd6 Kf7 5.g5 Kg7 6.Ke7 Kg8 7.Kf6 Kh7 8.Kf7 and White wins the Pawn.]",
       },
       {
         san: "f5+",
-        commentary: "White forces the issue with a check, 2.f5+."
+        commentary: "White forces the issue with a check, 2.f5+.",
       },
       {
         san: "Kf6",
-        commentary: "Black steps aside with 2...Kf6."
+        commentary: "Black steps aside with 2...Kf6.",
       },
       {
         san: "Kf4",
-        commentary: "White defends his advanced pawn structure by playing 3.Kf4."
+        commentary: "White defends his advanced pawn structure by playing 3.Kf4.",
       },
       {
         san: "g6",
-        commentary: "Black challenges the pawn chain with 3...g6. [If this Pawn is kept back we arrive at the ending shown in Example 7]"
+        commentary:
+          "Black challenges the pawn chain with 3...g6. [If this Pawn is kept back we arrive at the ending shown in Example 7]",
       },
       {
         san: "g5+",
-        commentary: "White pushes forward with check, 4.g5+."
+        commentary: "White pushes forward with check, 4.g5+.",
       },
       {
         san: "Kf7",
-        commentary: "Black's King drops back with 4...Kf7."
+        commentary: "Black's King drops back with 4...Kf7.",
       },
       {
         san: "f6",
-        commentary: "White advances his f-pawn deeper, 5.f6."
+        commentary: "White advances his f-pawn deeper, 5.f6.",
       },
       {
         san: "Ke6",
-        commentary: "Black targets the base of White's pawns with 5...Ke6."
+        commentary: "Black targets the base of White's pawns with 5...Ke6.",
       },
       {
         san: "Ke4",
-        commentary: "White brings his king back to defend with 6.Ke4."
+        commentary: "White brings his king back to defend with 6.Ke4.",
       },
       {
         san: "Kf7",
-        commentary: "Black waits with 6...Kf7."
+        commentary: "Black waits with 6...Kf7.",
       },
       {
         san: "Ke5",
-        commentary: "White marches closer, 7.Ke5."
+        commentary: "White marches closer, 7.Ke5.",
       },
       {
         san: "Kf8",
         commentary:
           "Black steps to 7...Kf8. [White cannot force his f-Pawn through to Queen (the student should find out why), " +
-          "but by giving his Pawn up White can win the other Pawn and the game. Thus:]"
+          "but by giving his Pawn up White can win the other Pawn and the game. Thus:]",
       },
       {
         san: "f7",
-        commentary: "White sacrifices the forward pawn to clear a path, 8.f7."
+        commentary: "White sacrifices the forward pawn to clear a path, 8.f7.",
       },
       {
         san: "Kxf7",
-        commentary: "Black accepts the sacrifice with 8...Kxf7."
+        commentary: "Black accepts the sacrifice with 8...Kxf7.",
       },
       {
         san: "Kd6",
-        commentary: "White takes advantage of the distraction to invade with 9.Kd6."
+        commentary: "White takes advantage of the distraction to invade with 9.Kd6.",
       },
       {
         san: "Kf8",
-        commentary: "Black retreats with 10...Kf8."
+        commentary: "Black retreats with 10...Kf8.",
       },
       {
         san: "Ke6",
-        commentary: "White positions his king aggressively with 10.Ke6."
+        commentary: "White positions his king aggressively with 10.Ke6.",
       },
       {
         san: "Kg7",
-        commentary: "Black holds the defense with 10...Kg7."
+        commentary: "Black holds the defense with 10...Kg7.",
       },
       {
         san: "Ke7",
-        commentary: "White claims control of the key square via 11.Ke7."
+        commentary: "White claims control of the key square via 11.Ke7.",
       },
       {
         san: "Kg8",
-        commentary: "Black is squeezed out with 11...Kg8."
+        commentary: "Black is squeezed out with 11...Kg8.",
       },
       {
         san: "Kf6",
-        commentary: "White attacks the lone black pawn with 12.Kf6."
+        commentary: "White attacks the lone black pawn with 12.Kf6.",
       },
       {
         san: "Kh7",
-        commentary: "Black guards his pawn with 12...Kh7."
+        commentary: "Black guards his pawn with 12...Kh7.",
       },
       {
         san: "Kf7",
-        commentary: "White forces Black into zugzwang with 13.Kf7."
+        commentary: "White forces Black into zugzwang with 13.Kf7.",
       },
       {
         san: "Kh8",
-        commentary: "Black is totally forced into the corner with 13...Kh8."
+        commentary: "Black is totally forced into the corner with 13...Kh8.",
       },
       {
         san: "Kxg6",
         commentary:
           "White clears the board with 14.Kxg6. [There is still some resistance in Black’s position. In fact, " +
-          "the only way to win is the one given here, as will easily be seen by experiment.]"
+          "the only way to win is the one given here, as will easily be seen by experiment.]",
       },
       {
         san: "Kg8",
-        commentary: "Black steps back out with 14...Kg8."
+        commentary: "Black steps back out with 14...Kg8.",
       },
       {
         san: "Kh6",
-        commentary: "White takes the opposition safely with 15.Kh6. [If 15.Kf6 Kh7 and in order to win White must get back to the actual position, as against 16.g6+? Kh8 draws.]"
+        commentary:
+          "White takes the opposition safely with 15.Kh6. [If 15.Kf6 Kh7 and in order to win White must get back to the actual position, as against 16.g6+? Kh8 draws.]",
       },
       {
         san: "Kh8",
-        commentary: "Black drops to the corner one last time with 15...Kh8."
+        commentary: "Black drops to the corner one last time with 15...Kh8.",
       },
       {
         san: "g6",
-        commentary: "White drives the g-pawn forward, 16.g6."
+        commentary: "White drives the g-pawn forward, 16.g6.",
       },
       {
         san: "Kg8",
-        commentary: "Black attempts to block with 16...Kg8."
+        commentary: "Black attempts to block with 16...Kg8.",
       },
       {
         san: "g7",
-        commentary: "White secures the promotion row with 17.g7."
+        commentary: "White secures the promotion row with 17.g7.",
       },
       {
         san: "Kf7",
-        commentary: "Black's king is squeezed out with 17...Kf7."
+        commentary: "Black's king is squeezed out with 17...Kf7.",
       },
       {
         san: "Kh7",
-        commentary: "White steps to 18.Kh7. And White queens the Pawn and wins."
-      }
-    ]
+        commentary: "White steps to 18.Kh7. And White queens the Pawn and wins.",
+      },
+    ],
   },
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
