@@ -613,7 +613,8 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "f6",
-        commentary: "White strikes with the breakthrough move 3.f6. [If 3...Kg8 4.f7+ Kh8 5.f8Q# ]",
+        commentary:
+          "White strikes with breakthrough move f6. If Black moved Kg8, White would check with f7 and them crown on f8Q and deliver checkmate.",
       },
       {
         san: "gxf6",
