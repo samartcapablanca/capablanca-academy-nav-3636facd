@@ -643,7 +643,7 @@ export const LESSONS: Record<string, LessonContent> = {
         commentary: "White delivers the final blow with 7.Qg6#, successfully executing a textbook checkmate."
       }
     ]
-  }  
+  },
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
   // ═════════════════════════════════════════════════════════════════
