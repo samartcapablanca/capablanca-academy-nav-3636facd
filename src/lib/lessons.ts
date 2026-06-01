@@ -593,11 +593,9 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kd7",
         commentary:
-          "White begins the winning maneuver with 1.Kd7. [White cannot win by playing In this position White " +
-          "cannot win by playing 1.f6 because Black plays, not 1...gxf6, which would lose, but Kg8 and if then " +
-          "2.fxg7 (If 2.f7+ Kf8 and White will never be able to Queen his pawn without losing it ; if 2.Ke7 gxf6 " +
-          "3.Kxf6 Kf8 and draws. ) 2...Kxg7 and draws, as shown in a previous case. White, however, can win " +
-          "in the original position by playing 1.Kd7. ]",
+          "White begins the winning maneuver with Kd7 which is the only way to force Black King " +
+          "to retreat to g8. Any other move would allow the Black King to block the White King " +
+          "and result in a draw or stalemate. So it's critical to use the power of the King from the start.",
       },
       {
         san: "Kg8",
@@ -654,9 +652,8 @@ export const LESSONS: Record<string, LessonContent> = {
   "1-8": {
     title: "Pawn Endings: Two Pawns 2",
     intro:
-      "“In this position, White secures a win first, by using his King " +
-      "to shoulder the opposing King away and seize the Black pawn, and second, by driving the Black " +
-      "King off the h file and eighth rank to crown his pawn and avoid a stalemate.”",
+      "White wins by using his King to push the Black King away from file g into file h, clearing his " +
+      "path to promotion. White only needs to crown one pawn to deliver checkmate.",
     startFen: "8/6p1/3k4/8/3K1PP1/8/8/8 w - - 0 1",
     moves: [
       {
