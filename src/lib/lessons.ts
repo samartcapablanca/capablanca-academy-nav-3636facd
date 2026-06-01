@@ -454,7 +454,7 @@ export const LESSONS: Record<string, LessonContent> = {
       "from the Kings. It is essential, speaking generally, that the King should be in front " +
       "of his pawn, with at least one intervening square. If the opposing King is directly in " +
       "front of the pawn, then the game cannot be won.”",
-    startFen: "8/8/8/8/4k3/8/3K1P2/8 w - - 0 1",
+    startFen: "8/8/8/8/4k3/8/3KP3/8 w - - 0 1",
     moves: [
       {
         san: "e3",
