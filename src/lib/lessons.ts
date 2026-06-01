@@ -513,7 +513,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Pawn Promotion - King & Pawn 2
   // ─────────────────────────────────────────────────────────────────
   "1-6": {
-    title: "Pawn Promotion: King & Pawn 2",
+    title: "King & Pawn Win",
     intro:
       "In this position White wins, as the King is ahead of his Pawn by one intervening square. " +
       "The method to follow is to advance the King as far as possible while protecting his Pawn. ",
