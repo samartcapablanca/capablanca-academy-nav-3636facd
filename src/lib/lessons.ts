@@ -577,7 +577,7 @@ export const LESSONS: Record<string, LessonContent> = {
         commentary: "“9.Kd7 Black King moves and the White Pawn advances to e8, becoming a Queen, and it is all over.”"
       }
     ]
-  }
+  },
 
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
