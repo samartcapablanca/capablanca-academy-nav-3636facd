@@ -804,7 +804,7 @@ export const LESSONS: Record<string, LessonContent> = {
         commentary: "White steps to 18.Kh7. And White queens the Pawn and wins."
       }
     ]
-  }
+  },
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
   // ═════════════════════════════════════════════════════════════════
