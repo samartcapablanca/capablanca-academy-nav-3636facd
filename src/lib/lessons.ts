@@ -446,7 +446,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // ─────────────────────────────────────────────────────────────────
   // CHAPTER I — Pawn Promotion - King & Pawn
   // ─────────────────────────────────────────────────────────────────
-  "2-1": {
+  "1-5": {
     title: "King & Pawn",
     intro:
       "“The gain of a pawn is the smallest material advantage that can be obtained in a game; " +
