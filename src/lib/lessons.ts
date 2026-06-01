@@ -581,7 +581,7 @@ export const LESSONS: Record<string, LessonContent> = {
 // CHAPTER I — Pawn Endings - Two Pawn 1
 "1-7": {
     title: "Pawn Endings: Two Pawn 1",
-    intro: "In this position, White wins by using his King to push away the Black King. White only needs to crown one pawn to deliver check mate.",
+    intro: "In this position, White wins by using his King to push away the Black King from his crowning pawn. White only needs to crown one pawn to deliver check mate.",
     startFen: "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
     moves: [
       {
@@ -641,7 +641,7 @@ export const LESSONS: Record<string, LessonContent> = {
         commentary: "7.Qg6#"
       }
     ]
-  },
+  }  
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
   // ═════════════════════════════════════════════════════════════════
