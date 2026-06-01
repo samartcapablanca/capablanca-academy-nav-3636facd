@@ -641,9 +641,170 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Qg6#",
         commentary: "White delivers the final blow with 7.Qg6#, successfully executing a textbook checkmate."
+      },
+    ],
+  },
+  // CHAPTER I — Pawn Endings - Two Pawn 2
+  "1-8": {
+    title: "Pawn Endings: Two Pawns 2",
+    intro:
+      "“In this position, White secures a win first, by using his King " +
+      "to shoulder the opposing King away and seize the Black pawn, and second, by driving the Black " +
+      "King off the h file and eighth rank to crown his pawn and avoid a stalemate.”",
+    startFen: "8/6p1/3k4/8/3K1PP1/8/8/8 w - - 0 1",
+    moves: [
+      {
+        san: "Ke4",
+        commentary:
+          "White stakes a claim in the center with 1.Ke4. [White can also win by 1.f5! Black’s best answer would be " +
+          "1...g6 and the student should work this out to see how (EN). White can not win by 1.g5? as 1...g6 draws " +
+          "because of the principle of the opposition which governs this ending as well as all the Pawn endings " +
+          "already given, and which will be explained more fully later on.]"
+      },
+      {
+        san: "Ke6",
+        commentary:
+          "Black opposes the White King with 1...Ke6. [If Black advances the Pawn instead of moving the King " +
+          "1...g6 White wins anyway 2.Kd4 Ke6 3.Kc5 Kf6 4.Kd6 Kf7 5.g5 Kg7 6.Ke7 Kg8 7.Kf6 Kh7 8.Kf7 and White wins the Pawn.]"
+      },
+      {
+        san: "f5+",
+        commentary: "White forces the issue with a check, 2.f5+."
+      },
+      {
+        san: "Kf6",
+        commentary: "Black steps aside with 2...Kf6."
+      },
+      {
+        san: "Kf4",
+        commentary: "White defends his advanced pawn structure by playing 3.Kf4."
+      },
+      {
+        san: "g6",
+        commentary: "Black challenges the pawn chain with 3...g6. [If this Pawn is kept back we arrive at the ending shown in Example 7]"
+      },
+      {
+        san: "g5+",
+        commentary: "White pushes forward with check, 4.g5+."
+      },
+      {
+        san: "Kf7",
+        commentary: "Black's King drops back with 4...Kf7."
+      },
+      {
+        san: "f6",
+        commentary: "White advances his f-pawn deeper, 5.f6."
+      },
+      {
+        san: "Ke6",
+        commentary: "Black targets the base of White's pawns with 5...Ke6."
+      },
+      {
+        san: "Ke4",
+        commentary: "White brings his king back to defend with 6.Ke4."
+      },
+      {
+        san: "Kf7",
+        commentary: "Black waits with 6...Kf7."
+      },
+      {
+        san: "Ke5",
+        commentary: "White marches closer, 7.Ke5."
+      },
+      {
+        san: "Kf8",
+        commentary:
+          "Black steps to 7...Kf8. [White cannot force his f-Pawn through to Queen (the student should find out why), " +
+          "but by giving his Pawn up White can win the other Pawn and the game. Thus:]"
+      },
+      {
+        san: "f7",
+        commentary: "White sacrifices the forward pawn to clear a path, 8.f7."
+      },
+      {
+        san: "Kxf7",
+        commentary: "Black accepts the sacrifice with 8...Kxf7."
+      },
+      {
+        san: "Kd6",
+        commentary: "White takes advantage of the distraction to invade with 9.Kd6."
+      },
+      {
+        san: "Kf8",
+        commentary: "Black retreats with 10...Kf8."
+      },
+      {
+        san: "Ke6",
+        commentary: "White positions his king aggressively with 10.Ke6."
+      },
+      {
+        san: "Kg7",
+        commentary: "Black holds the defense with 10...Kg7."
+      },
+      {
+        san: "Ke7",
+        commentary: "White claims control of the key square via 11.Ke7."
+      },
+      {
+        san: "Kg8",
+        commentary: "Black is squeezed out with 11...Kg8."
+      },
+      {
+        san: "Kf6",
+        commentary: "White attacks the lone black pawn with 12.Kf6."
+      },
+      {
+        san: "Kh7",
+        commentary: "Black guards his pawn with 12...Kh7."
+      },
+      {
+        san: "Kf7",
+        commentary: "White forces Black into zugzwang with 13.Kf7."
+      },
+      {
+        san: "Kh8",
+        commentary: "Black is totally forced into the corner with 13...Kh8."
+      },
+      {
+        san: "Kxg6",
+        commentary:
+          "White clears the board with 14.Kxg6. [There is still some resistance in Black’s position. In fact, " +
+          "the only way to win is the one given here, as will easily be seen by experiment.]"
+      },
+      {
+        san: "Kg8",
+        commentary: "Black steps back out with 14...Kg8."
+      },
+      {
+        san: "Kh6",
+        commentary: "White takes the opposition safely with 15.Kh6. [If 15.Kf6 Kh7 and in order to win White must get back to the actual position, as against 16.g6+? Kh8 draws.]"
+      },
+      {
+        san: "Kh8",
+        commentary: "Black drops to the corner one last time with 15...Kh8."
+      },
+      {
+        san: "g6",
+        commentary: "White drives the g-pawn forward, 16.g6."
+      },
+      {
+        san: "Kg8",
+        commentary: "Black attempts to block with 16...Kg8."
+      },
+      {
+        san: "g7",
+        commentary: "White secures the promotion row with 17.g7."
+      },
+      {
+        san: "Kf7",
+        commentary: "Black's king is squeezed out with 17...Kf7."
+      },
+      {
+        san: "Kh7",
+        commentary: "White steps to 18.Kh7. And White queens the Pawn and wins."
       }
     ]
-  },
+  }
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
   // ═════════════════════════════════════════════════════════════════
