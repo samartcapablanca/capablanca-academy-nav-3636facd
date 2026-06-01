@@ -450,8 +450,7 @@ export const LESSONS: Record<string, LessonContent> = {
     title: "Pawn Promotion: King & Pawn",
     intro:
       "“The gain of a pawn is the smallest material advantage that can be obtained in a game; " +
-      "and it often is sufficient to win, even when the pawn is the only remaining unit, apart " +
-      "from the Kings. It is essential, speaking generally, that the King should be in front " +
+      "and it often is sufficient to win. It is essential the King is in front " +
       "of his pawn, with at least one intervening square. If the opposing King is directly in " +
       "front of the pawn, then the game cannot be won.”",
     startFen: "8/8/8/8/4k3/8/3KP3/8 w - - 0 1",
