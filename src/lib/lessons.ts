@@ -579,69 +579,71 @@ export const LESSONS: Record<string, LessonContent> = {
     ],
   },
 // CHAPTER I — Pawn Endings - Two Pawn 1
-"1-7": {
-    title: "Pawn Endings: Two Pawn 1",
-    intro: "In this position, White wins by using his King to push away the Black King from his crowning pawn. White only needs to crown one pawn to deliver check mate.",
+"2-3": {
+    title: "Pawn Endings - Two Pawns 1",
+    intro: "White wins by using his King to push the Black King away from his crowning pawn. " +
+    "White only needs to crown one pawn to deliver check mate.",
     startFen: "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
     moves: [
       {
         san: "Kd7",
         commentary:
-          "[White cannot win by playing In this position White cannot win by playing 1.f6 because Black plays, " +
-          "not 1...gxf6, which would lose, but Kg8 and if then 2.fxg7 (If 2.f7+ Kf8 and White will never be able " +
-          "to Queen his pawn without losing it ; if 2.Ke7 gxf6 3.Kxf6 Kf8 and draws. ) 2...Kxg7 and draws, as " +
-          "shown in a previous case. White, however, can win in the original position by playing 1.Kd7. ]"
+          "White begins the winning maneuver with 1.Kd7. [White cannot win by playing In this position White " +
+          "cannot win by playing 1.f6 because Black plays, not 1...gxf6, which would lose, but Kg8 and if then " +
+          "2.fxg7 (If 2.f7+ Kf8 and White will never be able to Queen his pawn without losing it ; if 2.Ke7 gxf6 " +
+          "3.Kxf6 Kf8 and draws. ) 2...Kxg7 and draws, as shown in a previous case. White, however, can win " +
+          "in the original position by playing 1.Kd7. ]"
       },
       {
         san: "Kg8",
-        commentary: "1...Kg8"
+        commentary: "Black is forced into the corner with 1...Kg8, as the square f7 is cut off by the White King."
       },
       {
         san: "Ke7",
-        commentary: "2.Ke7"
+        commentary: "White traps the Black King further along the back rank by playing 2.Ke7."
       },
       {
         san: "Kh8",
-        commentary: "Kh8"
+        commentary: "Black steps into the final corner square with 2...Kh8, having no other legal options available."
       },
       {
         san: "f6",
-        commentary: "3.f6 [If 3...Kg8 4.f7+ Kh8 5.f8Q# ]"
+        commentary: "White strikes with the breakthrough move 3.f6. [If 3...Kg8 4.f7+ Kh8 5.f8Q# ]"
       },
       {
         san: "gxf6",
-        commentary: "gxf6"
+        commentary: "Black captures the advancing pawn with 3...gxf6, opening up the g-file."
       },
       {
         san: "Kf7",
-        commentary: "4.Kf7"
+        commentary: "White advances with 4.Kf7, stepping out of the way of his own pawn to clear a path for promotion."
       },
       {
         san: "f5",
-        commentary: "f5"
+        commentary: "Black pushes forward with 4...f5, but this pawn is too far away to stop White's plans."
       },
       {
         san: "g7+",
-        commentary: "5.g7+"
+        commentary: "White pushes the pawn with check using 5.g7+, forcing the Black King back into the open."
       },
       {
         san: "Kh7",
-        commentary: "Kh7"
+        commentary: "Black steps aside out of check with 5...Kh7, moving onto the edge of the board."
       },
       {
         san: "g8=Q+",
-        commentary: "6.g8Q+"
+        commentary: "White promotes the pawn to a brand new Queen with check on 6.g8=Q+."
       },
       {
         san: "Kh6",
-        commentary: "Kh6"
+        commentary: "The Black King makes its final desperate escape attempt with 6...Kh6."
       },
       {
         san: "Qg6#",
-        commentary: "7.Qg6#"
+        commentary: "White delivers the final blow with 7.Qg6#, successfully executing a textbook checkmate."
       }
     ]
-  },
+  }  
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
   // ═════════════════════════════════════════════════════════════════
