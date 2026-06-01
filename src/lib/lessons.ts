@@ -447,7 +447,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Pawn Promotion - King & Pawn
   // ─────────────────────────────────────────────────────────────────
   "1-5": {
-    title: "Pawn Promotion: King & Pawn",
+    title: "King & Pawn Stalemate",
     intro:
       "“The gain of a pawn is the smallest material advantage that can be obtained in a game; " +
       "and it often is sufficient to win. It is essential the King is in front " +
@@ -518,9 +518,9 @@ export const LESSONS: Record<string, LessonContent> = {
   "1-6": {
     title: "Pawn Promotion: King & Pawn 2",
     intro:
-      "“In this position White wins, as the King is in front of his Pawn and there is one intervening square. " +
-      "The method to follow is to advance the King as far as is compatible with the safety of the Pawn, " +
-      "and never to advance the Pawn until it is essential to its own safety.”",
+      "In this position White wins, as the King is ahead of his Pawn by one intervening square. " +
+      "The method to follow is to advance the King as far as possible while protecting his Pawn. ",
+
     startFen: "8/8/5k2/8/5K2/8/4P3/8 w - - 0 1",
     moves: [
       {
