@@ -579,7 +579,7 @@ export const LESSONS: Record<string, LessonContent> = {
     ],
   },
 // CHAPTER I — Pawn Endings - Two Pawn 1
-"2-3": {
+"1-7": {
     title: "Pawn Endings - Two Pawns 1",
     intro: "White wins by using his King to push the Black King away from his crowning pawn. " +
     "White only needs to crown one pawn to deliver check mate.",
