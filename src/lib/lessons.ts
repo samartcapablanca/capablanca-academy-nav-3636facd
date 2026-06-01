@@ -513,76 +513,71 @@ export const LESSONS: Record<string, LessonContent> = {
   },
 
   // ─────────────────────────────────────────────────────────────────
-  // CHAPTER I — Lesson 6: Winning a Pawn — How to Use the Advantage
+  // CHAPTER I — Pawn Promotion - King & Pawn 2
   // ─────────────────────────────────────────────────────────────────
   "1-6": {
-    title: "Winning a Pawn — How to Use the Advantage",
+    title: "Pawn Promotion: King & Pawn 2",
     intro:
-      "White: King g1, Rook d1, Knight f3, pawns a2 b2 c2 e4 f2 g2 h2. " +
-      "Black: King g8, Rook d8, Knight c6, pawns a7 b7 c7 f7 g7 h6 h7. " +
-      "White is a clean central pawn up. Capablanca: “The winning of a pawn " +
-      "among master-players is often sufficient to win the game.” The method " +
-      "is simplification — exchange pieces, never pawns, and steer toward a " +
-      "won King-and-pawn ending.",
-    startFen: "3r2k1/ppp2pp1/2n4p/8/4P3/5N2/PPP2PPP/3R2K1 w - - 0 1",
+      "“In this position White wins, as the King is in front of his Pawn and there is one intervening square. " +
+      "The method to follow is to advance the King as far as is compatible with the safety of the Pawn, " +
+      "and never to advance the Pawn until it is essential to its own safety.”",
+    startFen: "8/8/5k2/8/5K2/8/4P3/8 w - - 0 1",
     moves: [
       {
-        san: "Rxd8+",
-        commentary:
-          "“The first principle in exploiting a material advantage is the " +
-          "exchange of pieces.” Every trade brings the won pawn ending closer " +
-          "and removes the opponent's chances of complications.",
+        san: "Ke4",
+        commentary: "“Thus: 1.Ke4”"
       },
       {
-        san: "Nxd8",
-        commentary:
-          "Black recaptures with the Knight — the only piece left to do the " +
-          "work. The Rooks are off the board; the simplification has begun.",
+        san: "Ke6",
+        commentary: "“Black does not allow the White King to advance, therefore White is now compelled to advance his Pawn so as to force Black to move away. He is then able to advance his own King.”"
       },
       {
-        san: "Nd4",
-        commentary:
-          "Centralise. Capablanca: “A Knight in the centre commands eight " +
-          "squares.” White's Knight occupies the strongest post on the board " +
-          "and prepares to be exchanged on its own terms.",
+        san: "e3",
+        commentary: "“2.e3”"
+      },
+      { san: "Kf6" },
+      {
+        san: "Kd5",
+        commentary: "“3.Kd5... Since Black has not done 3...Kf5 it is better for White not to advance his Pawn yet, since its own safety does not require it, but to try to bring the King still further forward.”"
+      },
+      { san: "Ke7" },
+      {
+        san: "Ke5",
+        commentary: "“4.Ke5”"
+      },
+      { san: "Kd7" },
+      {
+        san: "Kf6",
+        commentary: "“5.Kf6... Now the White Pawn is too far back and it may be brought up within protection of the King.”"
+      },
+      { san: "Ke8" },
+      {
+        san: "e4",
+        commentary: "“6.e4”"
+      },
+      { san: "Kd7" },
+      {
+        san: "e5",
+        commentary: "“7.e5... Now it would not do to play 7.Kf7 because Black would play 7...Kd6 and White would have to bring back his King 8.Kf6 to protect the Pawn. Therefore he must continue:”"
       },
       {
-        san: "Ne6",
-        commentary:
-          "Black offers the trade himself, hoping that a Knight ending will " +
-          "be drawable. It will not be — the extra central pawn is decisive.",
+        san: "Ke8",
+        commentary: "“7...Ke8 Had he moved anywhere else then e8, e.g. 7...Kd8 White could have played 8.Kf7 followed by the advance of the Pawn to e6, e7 and e8 as all these squares are being protected by the King.”"
       },
       {
-        san: "Nxe6",
-        commentary:
-          "“Trade pieces, not pawns.” With the minor pieces gone, only Kings " +
-          "and pawns remain — and White's e-pawn is a permanent extra unit on " +
-          "the most important file.",
+        san: "Ke6",
+        commentary: "“As Black tries to prevent the advance of the pawn, White must now force him to move away, at the same time always keeping the King in front of the Pawn. 8.Ke6”"
       },
       {
-        san: "fxe6",
-        commentary:
-          "Black recaptures. The position is now a pure pawn ending: White is " +
-          "still a pawn up, and Black's pawn structure has been further " +
-          "damaged by the doubled e-pawns.",
+        san: "Kf8",
+        commentary: "“8...Kf8... If White plays 8.e6 would make it a draw, as Black would then play 8...Kf8 and we would have a position similar to the one explained in connection with Example 5.”"
       },
       {
-        san: "Kf1",
-        commentary:
-          "“In King-and-pawn endings, the King is a fighting piece — bring " +
-          "him out at once.” White begins the march to the centre, the " +
-          "indispensable second step after simplification.",
-      },
-      {
-        san: "Kf7",
-        commentary:
-          "Black does the same, but the extra pawn gives White a free tempo " +
-          "to seize the opposition. The path from here — centralise the King, " +
-          "advance the majority, promote — is exactly the technique of " +
-          "Lessons 2 and 5. The single pawn, properly exploited, wins the game.",
-      },
-    ],
-  },
+        san: "Kd7",
+        commentary: "“9.Kd7 Black King moves and the White Pawn advances to e8, becoming a Queen, and it is all over.”"
+      }
+    ]
+  }
 
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
