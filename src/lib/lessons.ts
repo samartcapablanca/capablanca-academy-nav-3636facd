@@ -574,11 +574,74 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Kd7",
-        commentary: "“9.Kd7 Black King moves and the White Pawn advances to e8, becoming a Queen, and it is all over.”"
+        commentary: "“9.Kd7 Black King moves and the White Pawn advances to e8, becoming a Queen, and it is all over.”",
+      },
+    ],
+  },
+// CHAPTER I — Pawn Endings - Two Pawn 1
+"1-7": {
+    title: "Pawn Endings: Two Pawn 1",
+    intro: "In this position, White wins by using his King to push away the Black King. White only needs to crown one pawn to deliver check mate.",
+    startFen: "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
+    moves: [
+      {
+        san: "Kd7",
+        commentary:
+          "[White cannot win by playing In this position White cannot win by playing 1.f6 because Black plays, " +
+          "not 1...gxf6, which would lose, but Kg8 and if then 2.fxg7 (If 2.f7+ Kf8 and White will never be able " +
+          "to Queen his pawn without losing it ; if 2.Ke7 gxf6 3.Kxf6 Kf8 and draws. ) 2...Kxg7 and draws, as " +
+          "shown in a previous case. White, however, can win in the original position by playing 1.Kd7. ]"
+      },
+      {
+        san: "Kg8",
+        commentary: "1...Kg8"
+      },
+      {
+        san: "Ke7",
+        commentary: "2.Ke7"
+      },
+      {
+        san: "Kh8",
+        commentary: "Kh8"
+      },
+      {
+        san: "f6",
+        commentary: "3.f6 [If 3...Kg8 4.f7+ Kh8 5.f8Q# ]"
+      },
+      {
+        san: "gxf6",
+        commentary: "gxf6"
+      },
+      {
+        san: "Kf7",
+        commentary: "4.Kf7"
+      },
+      {
+        san: "f5",
+        commentary: "f5"
+      },
+      {
+        san: "g7+",
+        commentary: "5.g7+"
+      },
+      {
+        san: "Kh7",
+        commentary: "Kh7"
+      },
+      {
+        san: "g8=Q+",
+        commentary: "6.g8Q+"
+      },
+      {
+        san: "Kh6",
+        commentary: "Kh6"
+      },
+      {
+        san: "Qg6#",
+        commentary: "7.Qg6#"
       }
     ]
-  },
-
+  }  
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
   // ═════════════════════════════════════════════════════════════════
