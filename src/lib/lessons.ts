@@ -235,7 +235,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Simple Mates: Two Bishops
   // ─────────────────────────────────────────────────────────────────
   "1-3": {
-    title: "Simple Mates - Two Bishops",
+    title: "Two Bishops Mate",
     intro:
       "Because the Black King " +
       "starts in the corner on h8, White can immediately use the Bishops to build a diagonal " +
@@ -368,7 +368,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Simple Mates: Queen and King
   // ─────────────────────────────────────────────────────────────────
   "1-4": {
-    title: "Simple Mates - Queen & King",
+    title: "The Power of the Queen",
     intro:
       "“We now come to Queen and King against King. As the Queen combines the power of the Rook " +
       "and the Bishop, it is the easiest mate of all and should always be accomplished in under ten moves.”",
