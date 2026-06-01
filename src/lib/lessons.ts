@@ -6,7 +6,7 @@
 
 export type LessonMove = {
   san: string;
-  commentary: string;
+  commentary?: string;
 };
 
 export type LessonContent = {
