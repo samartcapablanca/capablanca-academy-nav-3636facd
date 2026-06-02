@@ -459,7 +459,10 @@ export const LESSONS: Record<string, LessonContent> = {
           "The Black King might need to be in front of the White King temporarily as it waits for " +
           "his chance to return back in front of the opposing pawn as his next or last move.",
       },
-      { san: "Ke5" },
+      {
+        san: "Ke5",
+        commentary: "Black reacts to the pawn push by stepping the king to e5.",
+      },
       {
         san: "Kd3",
         commentary:
@@ -467,30 +470,72 @@ export const LESSONS: Record<string, LessonContent> = {
           "As the Black King cannot be kept close up to the pawn, it must be brought as far " +
           "forward as possible and, at the same time, in front of the White King.",
       },
-      { san: "Kd5" },
-      { san: "e4+" },
-      { san: "Ke5" },
-      { san: "Ke3" },
-      { san: "Ke6" },
-      { san: "Kf4" },
+      {
+        san: "Kd5",
+        commentary: "Black claims the direct opposition on the d-file with Kd5.",
+      },
+      {
+        san: "e4+",
+        commentary: "White advances the e-pawn with a check on e4+.",
+      },
+      {
+        san: "Ke5",
+        commentary: "Black retreats safely onto the e-pawn's file with Ke5.",
+      },
+      {
+        san: "Ke3",
+        commentary: "White steps up to support the advanced pawn structure with Ke3.",
+      },
+      {
+        san: "Ke6",
+        commentary: "Black maintains a defensive wall by retreating his king to e6.",
+      },
+      {
+        san: "Kf4",
+        commentary: "White shifts flanks to pressure the kingside with Kf4.",
+      },
       {
         san: "Kf6",
         commentary:
           "“Again the same case. As the White King comes up, the Black King must be kept " +
           "in front of it, since it cannot be brought up to the pawn.”",
       },
-      { san: "e5+" },
-      { san: "Ke6" },
-      { san: "Ke4" },
-      { san: "Ke7" },
-      { san: "Kd5" },
-      { san: "Kd7" },
-      { san: "e6+" },
+      {
+        san: "e5+",
+        commentary: "White pushes forward once more, delivering a check on e5+.",
+      },
+      {
+        san: "Ke6",
+        commentary: "Black slides back into the path of the pawn on e6.",
+      },
+      {
+        san: "Ke4",
+        commentary: "The White King edges forward to provide protection on e4.",
+      },
+      {
+        san: "Ke7",
+        commentary: "Black stays patient and disciplined, moving back to e7.",
+      },
+      {
+        san: "Kd5",
+        commentary: "White tests Black's defensive resolve by angling over to Kd5.",
+      },
+      {
+        san: "Kd7",
+        commentary: "Black shuts down the king's invasion by taking the opposition with Kd7.",
+      },
+      {
+        san: "e6+",
+        commentary: "White presses further into the position with the check e6+.",
+      },
       {
         san: "Ke7",
         commentary: "“If now White advances the pawn, the Black King gets in front of it.”",
       },
-      { san: "Ke5" },
+      {
+        san: "Ke5",
+        commentary: "White places his king directly behind his pawn on e5.",
+      },
       {
         san: "Ke8",
         commentary:
@@ -498,10 +543,22 @@ export const LESSONS: Record<string, LessonContent> = {
           "forced to go back, he moves to e8 in front of the pawn ready to come up again or to move in front of the " +
           "White King, should the latter advance.”",
       },
-      { san: "Kd6" },
-      { san: "Kd8" },
-      { san: "e7+" },
-      { san: "Ke8" },
+      {
+        san: "Kd6",
+        commentary: "White moves to the final critical rank by playing Kd6.",
+      },
+      {
+        san: "Kd8",
+        commentary: "Black avoids stepping out of line and secures Kd8.",
+      },
+      {
+        san: "e7+",
+        commentary: "White forces his last pawn move forward onto e7+.",
+      },
+      {
+        san: "Ke8",
+        commentary: "Black occupies the critical promotion square with Ke8.",
+      },
       {
         san: "Ke6",
         commentary: "“White must either give up the pawn or play this move, and a stalemate results.”",
