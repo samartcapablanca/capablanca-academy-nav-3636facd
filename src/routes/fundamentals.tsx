@@ -31,7 +31,7 @@ const CHAPTERS: Chapter[] = [
       { id: "1-3", title: "Two Bishops Mate" },
       { id: "1-4", title: "The Power of the Queen" },
       { id: "1-5", title: "King & Pawn Stalemate" },
-      { id: "1-6", title: "King & Pawn Win" },
+      { id: "1-6", title: "King & Pawn Mate" },
       { id: "1-7", title: "Pawn Endings - Two Pawns 1" },
       { id: "1-8", title: "Pawn Endings - Two Pawns 2" },
     ],
