@@ -584,7 +584,7 @@ export const LESSONS: Record<string, LessonContent> = {
   },
   // CHAPTER I — Two Pawns Endings 1
   "1-7": {
-    title: "Pawn Promotion 1",
+    title: "Two Pawns Ending 1",
     intro:
       "White wins by using his King to push the Black King away from file g into file h, clearing his " +
       "path to promotion and avoiding a stalemate. White only needs to crown one pawn to deliver checkmate.",
@@ -648,9 +648,11 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+
   // CHAPTER I — Two Pawns Ending 2
+
   "1-8": {
-    title: "Pawn Promotion 2",
+    title: "Two Pawns Ending 2",
     intro:
       "White wins by using his King to push the Black King away from file g into file h, clearing his " +
       "path to promotion. White only needs to crown one pawn to deliver checkmate.",
