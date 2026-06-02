@@ -468,9 +468,8 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kd5",
         commentary:
-          "This is a very important move. Any other move would lose, as will be shown later. " +
-          "As the Black King cannot be kept close up to the pawn, it must be brought as far " +
-          "forward as possible and, at the same time, in front of the White King.",
+        "This is a very important move. When the Black King cannot oppose the White pawn, ",+
+      "it must oppose the White King to prevent control of the next rank. Any other move would lose. "
       },
       {
         san: "e4+",
