@@ -240,7 +240,7 @@ export const LESSONS: Record<string, LessonContent> = {
       "Because the Black King " +
       "starts in the corner on h8, White can immediately use the Bishops to build a diagonal " +
       "wall, confining him tightly before marching the White King forward.",
-    startFen: "8/6p1/3k4/8/3K1PP1/8/8/8 w - - 0 1",
+    startFen: "7k/8/8/8/8/8/8/2B1KB2 w - - 0 1",
     moves: [
       {
         san: "Bd3",
