@@ -465,14 +465,14 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Kd3",
+        commentary: "White comes forward next to his pawn on his way to promotion.",
+      },
+      {
+        san: "Kd5",
         commentary:
           "This is a very important move. Any other move would lose, as will be shown later. " +
           "As the Black King cannot be kept close up to the pawn, it must be brought as far " +
           "forward as possible and, at the same time, in front of the White King.",
-      },
-      {
-        san: "Kd5",
-        commentary: "Black claims the direct opposition on the d-file with Kd5.",
       },
       {
         san: "e4+",
