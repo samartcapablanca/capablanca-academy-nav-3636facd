@@ -455,9 +455,7 @@ export const LESSONS: Record<string, LessonContent> = {
     moves: [
       {
         san: "e3",
-        commentary:
-          "The Black King might need to be in front of the White King temporarily as it waits for " +
-          "his chance to return back in front of the opposing pawn as his next or last move.",
+        commentary: "White advances his pawn forcing the Black King to retreat.",
       },
       {
         san: "Ke5",
@@ -465,7 +463,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Kd3",
-        commentary: "White comes forward next to his pawn on his way to promotion.",
+        commentary: "White King comes forward next to his pawn.",
       },
       {
         san: "Kd5",
