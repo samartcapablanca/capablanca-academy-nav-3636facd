@@ -593,9 +593,9 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kd7",
         commentary:
-          "White begins the winning maneuver with Kd7 which is the only way to force Black King " +
-          "to retreat to g8. Any other move would allow the Black King to block the White King " +
-          "and result in a draw or stalemate. So it's critical to use the power of the King from the start.",
+          "White begins the winning maneuver with Kd7, which is the only way to force Black King " +
+          "to retreat to g8. Any other move allows the Black King to block the White King " +
+          "and result in a draw or stalemate. It is critical to use the power of the King from the start.",
       },
       {
         san: "Kg8",
