@@ -124,7 +124,7 @@ function Dashboard() {
             <div className="text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
               Mastery Progress
             </div>
-            <h2 className="mt-1 font-display text-2xl text-cream">Level 1: Fundamentals</h2>
+            <h2 className="mt-1 font-display text-2xl text-cream">Fundamentals</h2>
           </div>
           <div className="font-display text-3xl text-gradient-gold">{progress}%</div>
         </div>
