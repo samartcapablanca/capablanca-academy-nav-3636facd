@@ -24,7 +24,7 @@ const CHAPTERS: Chapter[] = [
     id: "ch1",
     roman: "I",
     title: "First Principles",
-    subtitle: "Endings, Middle-game, and Openings",
+    //subtitle: "Endings, Middle-game, and Openings",
     lessons: [
       { id: "1-1", title: "Rook and King Mate 1" },
       { id: "1-2", title: "Rook and King Mate 2" },
