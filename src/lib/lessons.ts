@@ -368,7 +368,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Simple Mates: Queen and King
   // ─────────────────────────────────────────────────────────────────
   "1-4": {
-    title: "The Power of the Queen",
+    title: "Queen and King Mate",
     intro:
       "“We now come to Queen and King against King. As the Queen combines the power of the Rook " +
       "and the Bishop, it is the easiest mate of all and should always be accomplished in under ten moves.”",
@@ -447,7 +447,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Pawn Promotion - King & Pawn
   // ─────────────────────────────────────────────────────────────────
   "1-5": {
-    title: "King & Pawn Stalemate",
+    title: "Pawn and King Stalemate",
     intro:
       "The position is drawn, and the way to proceed is for Black to keep the King always " +
       "directly in front of the opposing pawn to force a stalemate in the eight rank. ",
@@ -513,7 +513,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Pawn Promotion - King & Pawn 2
   // ─────────────────────────────────────────────────────────────────
   "1-6": {
-    title: "King & Pawn Mate",
+    title: "Pawn and King Mate",
     intro:
       "In this position White wins, as the King is ahead of his Pawn by one intervening square. " +
       "The method to follow is to advance the King as far as possible while protecting his Pawn. ",
