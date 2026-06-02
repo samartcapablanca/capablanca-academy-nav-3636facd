@@ -108,7 +108,7 @@ function Fundamentals() {
   return (
     <AppShell>
       <header className="mb-10">
-        <div className="text-[11px] uppercase tracking-[0.28em] text-gold/80">Level 1</div>
+        <div className="text-[11px] uppercase tracking-[0.28em] text-gold/80">Fundamentals</div>
         <h1 className="mt-2 font-display text-4xl text-cream md:text-5xl">
           Chess <span className="text-gradient-gold">Fundamentals</span>
         </h1>
