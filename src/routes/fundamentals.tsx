@@ -9,7 +9,7 @@ import { LessonPlayer } from "@/components/LessonPlayer";
 export const Route = createFileRoute("/fundamentals")({
   head: () => ({
     meta: [
-      { title: "Level 1: Fundamentals — Capablanca Masterclass" },
+      { title: "Fundamentals — Capablanca Masterclass" },
       { name: "description", content: "An expandable curriculum based on Capablanca's 'Chess Fundamentals'." },
     ],
   }),
