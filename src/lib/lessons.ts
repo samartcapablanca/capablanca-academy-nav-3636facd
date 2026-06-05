@@ -592,7 +592,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kd5",
         commentary:
-          "White King now controls the next square on file e. This maneuver to push the Black King from his current position and control the next square in file is the principle that wins the match. ",
+          "White King now controls the next square e6. This maneuver to push back the Black King from his current position and control the next square in file e is the principle that wins the match ",
       },
       { san: "Ke7", commentary: "Black King tries to block file e." },
       {
