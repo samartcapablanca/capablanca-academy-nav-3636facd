@@ -576,63 +576,59 @@ export const LESSONS: Record<string, LessonContent> = {
     moves: [
       {
         san: "Ke4",
-        commentary: "“Thus: 1.Ke4”",
+        commentary: "The power of the King is manifested by moving forward to pave the way to promotion",
       },
       {
         san: "Ke6",
         commentary:
-          "“Black does not allow the White King to advance, therefore White is now compelled to advance his Pawn so as to force Black to move away. He is then able to advance his own King.”",
+          "Black does not allow the White King to advance, therefore White is now compelled to advance his Pawn.",
       },
       {
         san: "e3",
-        commentary: "“2.e3”",
+        commentary:
+          "This move will force the Black King to inevitably move away from his standing position on the next move.",
       },
-      { san: "Kf6" },
+      { san: "Kf6", commentary: "Black King is now forced to retreat." },
       {
         san: "Kd5",
         commentary:
-          "“3.Kd5... Since Black has not done 3...Kf5 it is better for White not to advance his Pawn yet, since its own safety does not require it, but to try to bring the King still further forward.”",
+          "White King now controls the next square on file e. This maneuver to push the Black King from his current position and control the next square in file is the principle that wins the match. ",
       },
-      { san: "Ke7" },
+      { san: "Ke7", commentary: "Black King tries to block file e." },
       {
         san: "Ke5",
-        commentary: "“4.Ke5”",
+        commentary: "White King faces Black King again.",
       },
-      { san: "Kd7" },
+      { san: "Kd7", commentary: "Black King forced to leave his current position" },
       {
         san: "Kf6",
-        commentary:
-          "“5.Kf6... Now the White Pawn is too far back and it may be brought up within protection of the King.”",
+        commentary: "Now White King controls e7.",
       },
-      { san: "Ke8" },
+      { san: "Ke8", commentary: "Forced. Black retreats." },
       {
         san: "e4",
-        commentary: "“6.e4”",
+        commentary: "Time to bring forward the pawn.",
       },
-      { san: "Kd7" },
+      { san: "Kd7", commentary: "Black King cannot reach the pawn." },
       {
         san: "e5",
-        commentary:
-          "“7.e5... Now it would not do to play 7.Kf7 because Black would play 7...Kd6 and White would have to bring back his King 8.Kf6 to protect the Pawn. Therefore he must continue:”",
+        commentary: "Now White Pawn is back to safety and White King still controls e7",
       },
       {
         san: "Ke8",
-        commentary:
-          "“7...Ke8 Had he moved anywhere else then e8, e.g. 7...Kd8 White could have played 8.Kf7 followed by the advance of the Pawn to e6, e7 and e8 as all these squares are being protected by the King.”",
+        commentary: "Black King tries to block file e again.",
       },
       {
         san: "Ke6",
-        commentary:
-          "“As Black tries to prevent the advance of the pawn, White must now force him to move away, at the same time always keeping the King in front of the Pawn. 8.Ke6”",
+        commentary: "By facing the Black King, White forces him to move away on the next move",
       },
       {
         san: "Kf8",
-        commentary:
-          "“8...Kf8... If White plays 8.e6 would make it a draw, as Black would then play 8...Kf8 and we would have a position similar to the one explained in connection with Example 5.”",
+        commentary: "Forced. Black retreats.",
       },
       {
         san: "Kd7",
-        commentary: "“9.Kd7 Black King moves and the White Pawn advances to e8, becoming a Queen, and it is all over.”",
+        commentary: "Now White King controls e8 and the way to promotion. ",
       },
     ],
   },
