@@ -607,9 +607,9 @@ export const LESSONS: Record<string, LessonContent> = {
       { san: "Ke8", commentary: "Forced. Black retreats." },
       {
         san: "e4",
-        commentary: "Time to bring forward the pawn.",
+        commentary: "Time to bring forward the Pawn.",
       },
-      { san: "Kd7", commentary: "Black King cannot reach the pawn." },
+      { san: "Kd7", commentary: "Black King cannot reach the White Pawn." },
       {
         san: "e5",
         commentary: "Now White Pawn is back to safety and White King still controls e7",
@@ -620,7 +620,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Ke6",
-        commentary: "By facing the Black King, White forces him to move away on the next move",
+        commentary: "By facing the Black King, the White King forces him to move away on the next move",
       },
       {
         san: "Kf8",
@@ -628,7 +628,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Kd7",
-        commentary: "Now White King controls e8 and the way to promotion. ",
+        commentary: "Now White King controls e8 and the way to promotion is secured. White wins!.",
       },
     ],
   },
