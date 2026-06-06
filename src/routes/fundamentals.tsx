@@ -26,8 +26,8 @@ const CHAPTERS: Chapter[] = [
     title: "First Principles",
     //subtitle: "Endings, Middle-game, and Openings",
     lessons: [
-      { id: "1-1", title: "Rook and King Mate 1" },
-      { id: "1-2", title: "Rook and King Mate 2" },
+      { id: "1-1", title: "Activate The Rook" },
+      { id: "1-2", title: "Activate The King" },
       { id: "1-3", title: "Two Bishops Mate" },
       { id: "1-4", title: "Queen and King Mate" },
       { id: "1-5", title: "Pawn and King Stalemate" },
