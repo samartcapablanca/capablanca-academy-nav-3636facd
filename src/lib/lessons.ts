@@ -581,25 +581,25 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Ke6",
         commentary:
-          "Black does not allow the White King to advance, therefore White is now compelled to advance his Pawn.",
+          "Black King uses opposition to block the White King from advancing forward. White is now compelled to advance his Pawn.",
       },
       {
         san: "e3",
         commentary:
-          "This move will force the Black King to inevitably move away from his standing position on the next move.",
+          "White gains a tempo, forcing the Black King to move away from his standing position on the next move.",
       },
       { san: "Kf6", commentary: "Black King is now forced to retreat." },
       {
         san: "Kd5",
         commentary:
-          "White King now controls the next square e6. This maneuver to push back the Black King from his current position and control the next square in file e is the principle that wins the match ",
+          "White King now controls the next square e6. This maneuver to push back the Black King from his current position and control rank 6th is the principle that wins the match ",
       },
       { san: "Ke7", commentary: "Black King tries to block file e." },
       {
         san: "Ke5",
-        commentary: "White King faces Black King again.",
+        commentary: "White King uses opposition against Black King.",
       },
-      { san: "Kd7", commentary: "Black King forced to leave his current position" },
+      { san: "Kd7", commentary: "Black King comes back to defend." },
       {
         san: "Kf6",
         commentary: "Now White King controls e7.",
@@ -612,7 +612,7 @@ export const LESSONS: Record<string, LessonContent> = {
       { san: "Kd7", commentary: "Black King cannot reach the White Pawn." },
       {
         san: "e5",
-        commentary: "Now White Pawn is back to safety and White King still controls e7",
+        commentary: "White Pawn is back to safety and White King still controls e7",
       },
       {
         san: "Ke8",
@@ -620,7 +620,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Ke6",
-        commentary: "By facing the Black King, the White King forces him to move away on the next move",
+        commentary: "White uses opposition to force Black King to move away.",
       },
       {
         san: "Kf8",
