@@ -585,21 +585,20 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "e3",
-        commentary:
-          "White gains a tempo, forcing the Black King to move away from his standing position on the next move.",
+        commentary: "White gains a tempo, forcing the Black King to move away on the next move.",
       },
       { san: "Kf6", commentary: "Black King is now forced to retreat." },
       {
         san: "Kd5",
         commentary:
-          "White King now controls the next square e6. This maneuver to push back the Black King from his current position and control rank 6th is the principle that wins the match ",
+          "White King now controls the next square e6. This maneuver to push back the Black King and control rank 6th is the principle that wins the match ",
       },
       { san: "Ke7", commentary: "Black King tries to block file e." },
       {
         san: "Ke5",
         commentary: "White King uses opposition against Black King.",
       },
-      { san: "Kd7", commentary: "Black King comes back to defend." },
+      { san: "Kd7", commentary: "Black King tries to stay on the way." },
       {
         san: "Kf6",
         commentary: "Now White King controls e7.",
