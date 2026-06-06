@@ -459,7 +459,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Ke5",
-        commentary: "Black reacts to the pawn push by stepping the king to e5.",
+        commentary: "Black retreats one square back to e5, still in front of the opposing pawn.",
       },
       {
         san: "Kd3",
@@ -477,7 +477,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Ke5",
-        commentary: "Black retreats safely onto the e-pawn's file with Ke5.",
+        commentary: "Black retreats safely to Ke5, still in front of the opposing pawn.",
       },
       {
         san: "Ke3",
@@ -527,7 +527,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Ke7",
-        commentary: "“If now White advances the pawn, the Black King gets in front of it.”",
+        commentary: "“Black King gets in front of it.”",
       },
       {
         san: "Ke5",
@@ -536,9 +536,8 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Ke8",
         commentary:
-          "“If instead of advancing the pawn White withdraws his King, Black brings his King up to the pawn and, when " +
-          "forced to go back, he moves to e8 in front of the pawn ready to come up again or to move in front of the " +
-          "White King, should the latter advance.”",
+          "Black retreats to Ke8, still in front of the opposing pawn. If Black moves Kd8 instead, White next move Kd6 will forced him to go back to Ke8 too late, " +
+          "then the White Pawn would outflank him with e7 forcing him to leave to f file and lose the game.",
       },
       {
         san: "Kd6",
@@ -546,7 +545,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Kd8",
-        commentary: "Black avoids stepping out of line and secures Kd8.",
+        commentary: "Black avoids stepping out of line and secures Kd8, while still controlling e8.",
       },
       {
         san: "e7+",
