@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Chess } from "chess.js";
-import { ChevronLeft, ChevronRight, Lightbulb, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Lightbulb, X, ArrowLeft } from "lucide-react";
 import { ChessBoardView } from "./ChessBoardView";
 import { getLesson } from "@/lib/lessons";
 import { cn } from "@/lib/utils";
@@ -14,11 +14,17 @@ type Props = {
 
 export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Props) {
   const lesson = useMemo(() => (lessonId ? getLesson(lessonId) : null), [lessonId]);
-  const [moveIndex, setMoveIndex] = useState(-1); // -1 = starting position, 0..n-1 after move k
+  const hasVariants = !!lesson?.variants?.length;
+
+  const [variantIndex, setVariantIndex] = useState<number | null>(null);
+  const [moveIndex, setMoveIndex] = useState(-1); // -1 = starting position
 
   // Reset state when opening a new lesson
   useEffect(() => {
-    if (lessonId) setMoveIndex(-1);
+    if (lessonId) {
+      setVariantIndex(null);
+      setMoveIndex(-1);
+    }
   }, [lessonId]);
 
   // Lock body scroll while open
@@ -31,39 +37,56 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
     };
   }, [lessonId]);
 
-  // Compute board state for current moveIndex. chess.js is stateful;
-  // we rebuild from scratch each time to guarantee perspective switches
-  // and back/forward navigation never desync.
+  // Determine the active move list (linear lesson or selected variant)
+  const currentMoves = useMemo(() => {
+    if (!lesson) return [];
+    if (lesson.variants && variantIndex !== null) {
+      return lesson.variants[variantIndex]?.line ?? [];
+    }
+    return lesson.moves ?? [];
+  }, [lesson, variantIndex]);
+
+  const isChoosing = hasVariants && variantIndex === null;
+
+  // Compute board state for current moveIndex
   const { fen, lastMove, applied } = useMemo(() => {
     if (!lesson) return { fen: new Chess().fen(), lastMove: null as null | { from: string; to: string }, applied: 0 };
     const game = lesson.startFen ? new Chess(lesson.startFen) : new Chess();
     let last: { from: string; to: string } | null = null;
     let count = 0;
-    for (let i = 0; i <= moveIndex && i < lesson.moves.length; i++) {
-      try {
-        const m = game.move(lesson.moves[i].san);
-        if (m) {
-          last = { from: m.from, to: m.to };
-          count++;
+    if (!isChoosing) {
+      for (let i = 0; i <= moveIndex && i < currentMoves.length; i++) {
+        try {
+          const m = game.move(currentMoves[i].san);
+          if (m) {
+            last = { from: m.from, to: m.to };
+            count++;
+          }
+        } catch {
+          break;
         }
-      } catch {
-        // Invalid SAN in lesson data — stop applying further moves.
-        break;
       }
     }
     return { fen: game.fen(), lastMove: last, applied: count };
-  }, [lesson, moveIndex]);
+  }, [lesson, moveIndex, currentMoves, isChoosing]);
 
   if (!lessonId || !lesson) return null;
 
-  const commentary =
-    moveIndex < 0
+  const total = currentMoves.length;
+  const commentary = isChoosing
+    ? lesson.intro
+    : moveIndex < 0
       ? lesson.intro
-      : lesson.moves[Math.min(moveIndex, lesson.moves.length - 1)].commentary;
+      : currentMoves[Math.min(moveIndex, total - 1)]?.commentary;
 
-  const total = lesson.moves.length;
-  const canPrev = moveIndex > -1;
-  const canNext = moveIndex < total - 1;
+  const canPrev = !isChoosing && moveIndex > -1;
+  const canNext = !isChoosing && moveIndex < total - 1;
+  const atEnd = !isChoosing && total > 0 && moveIndex === total - 1;
+
+  const goBackToVariants = () => {
+    setVariantIndex(null);
+    setMoveIndex(-1);
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-background/95 backdrop-blur-sm animate-fade-in">
@@ -84,14 +107,14 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
         </button>
       </div>
 
-      {/* Body: 75/25 on desktop, stacked on mobile */}
+      {/* Body */}
       <div className="flex flex-1 flex-col overflow-y-auto md:flex-row">
-        {/* Board: left 75% */}
+        {/* Board */}
         <div className="flex flex-1 items-center justify-center bg-background p-4 md:basis-3/4 md:p-8">
           <ChessBoardView fen={fen} lastMove={lastMove} />
         </div>
 
-        {/* Sidebar: right 25% */}
+        {/* Sidebar */}
         <aside className="flex flex-col border-t border-border bg-sidebar md:basis-1/4 md:border-l md:border-t-0">
           <div className="flex-1 overflow-y-auto p-5 md:p-6">
             <div className="rounded-2xl border border-border bg-surface p-5 shadow-luxe">
@@ -99,57 +122,98 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
                 <Lightbulb className="h-3.5 w-3.5" /> Master's Commentary
               </div>
               <p
-                key={moveIndex}
+                key={`${variantIndex ?? "v"}-${moveIndex}`}
                 className="mt-3 font-display text-base leading-relaxed text-cream animate-fade-in md:text-lg"
               >
                 {commentary}
               </p>
-              {moveIndex >= 0 && applied > 0 && (
+
+              {!isChoosing && moveIndex >= 0 && applied > 0 && (
                 <div className="mt-4 inline-flex items-center gap-2 rounded-md border border-border bg-surface-elevated px-3 py-1.5 font-mono text-xs text-gold">
                   {Math.floor(moveIndex / 2) + 1}
-                  {moveIndex % 2 === 0 ? "." : "..."} {lesson.moves[moveIndex].san}
+                  {moveIndex % 2 === 0 ? "." : "..."} {currentMoves[moveIndex].san}
                 </div>
+              )}
+
+              {/* Variant picker */}
+              {isChoosing && (
+                <div className="mt-5">
+                  {lesson.prompt && (
+                    <p className="mb-3 text-sm text-muted-foreground">{lesson.prompt}</p>
+                  )}
+                  <ul className="flex flex-col gap-2">
+                    {lesson.variants!.map((v, i) => (
+                      <li key={i}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setVariantIndex(i);
+                            setMoveIndex(-1);
+                          }}
+                          className="text-left font-bold text-blue-600 hover:underline cursor-pointer"
+                        >
+                          {v.label}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Back-to-variants link at end of a variant */}
+              {hasVariants && atEnd && (
+                <button
+                  type="button"
+                  onClick={goBackToVariants}
+                  className="mt-5 inline-flex items-center gap-1.5 font-bold text-blue-600 hover:underline cursor-pointer"
+                >
+                  <ArrowLeft className="h-4 w-4" /> Go back to Variants
+                </button>
               )}
             </div>
 
-            {/* Progress dots */}
-            <div className="mt-5 flex flex-wrap items-center gap-1.5">
-              {Array.from({ length: total + 1 }).map((_, i) => {
-                const idx = i - 1;
-                const active = idx === moveIndex;
-                const past = idx < moveIndex;
-                return (
-                  <button
-                    key={i}
-                    onClick={() => setMoveIndex(idx)}
-                    className={cn(
-                      "h-2 rounded-full transition-all cursor-pointer",
-                      active ? "w-6 bg-gold" : past ? "w-2 bg-gold/50" : "w-2 bg-muted",
-                    )}
-                    aria-label={`Go to move ${idx + 1}`}
-                  />
-                );
-              })}
-            </div>
+            {/* Progress dots (hidden during variant picker) */}
+            {!isChoosing && total > 0 && (
+              <div className="mt-5 flex flex-wrap items-center gap-1.5">
+                {Array.from({ length: total + 1 }).map((_, i) => {
+                  const idx = i - 1;
+                  const active = idx === moveIndex;
+                  const past = idx < moveIndex;
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => setMoveIndex(idx)}
+                      className={cn(
+                        "h-2 rounded-full transition-all cursor-pointer",
+                        active ? "w-6 bg-gold" : past ? "w-2 bg-gold/50" : "w-2 bg-muted",
+                      )}
+                      aria-label={`Go to move ${idx + 1}`}
+                    />
+                  );
+                })}
+              </div>
+            )}
           </div>
 
-          {/* Nav buttons */}
-          <div className="grid grid-cols-2 gap-3 border-t border-border bg-sidebar p-4 md:p-5">
-            <button
-              onClick={() => canPrev && setMoveIndex((i) => i - 1)}
-              disabled={!canPrev}
-              className="flex items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 py-4 text-sm font-medium text-cream transition hover:border-gold/50 hover:text-gold disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
-            >
-              <ChevronLeft className="h-5 w-5" /> Previous
-            </button>
-            <button
-              onClick={() => canNext && setMoveIndex((i) => i + 1)}
-              disabled={!canNext}
-              className="flex items-center justify-center gap-2 rounded-xl gradient-gold px-4 py-4 text-sm font-semibold text-primary-foreground shadow-luxe transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
-            >
-              Next <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
+          {/* Nav buttons (hidden during variant picker) */}
+          {!isChoosing && (
+            <div className="grid grid-cols-2 gap-3 border-t border-border bg-sidebar p-4 md:p-5">
+              <button
+                onClick={() => canPrev && setMoveIndex((i) => i - 1)}
+                disabled={!canPrev}
+                className="flex items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 py-4 text-sm font-medium text-cream transition hover:border-gold/50 hover:text-gold disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
+              >
+                <ChevronLeft className="h-5 w-5" /> Previous
+              </button>
+              <button
+                onClick={() => canNext && setMoveIndex((i) => i + 1)}
+                disabled={!canNext}
+                className="flex items-center justify-center gap-2 rounded-xl gradient-gold px-4 py-4 text-sm font-semibold text-primary-foreground shadow-luxe transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
+              >
+                Next <ChevronRight className="h-5 w-5" />
+              </button>
+            </div>
+          )}
         </aside>
       </div>
     </div>

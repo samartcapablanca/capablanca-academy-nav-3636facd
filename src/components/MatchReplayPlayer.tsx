@@ -103,9 +103,9 @@ export function MatchReplayPlayer({
     const game = lesson.startFen ? new Chess(lesson.startFen) : new Chess();
     let last: { from: string; to: string } | null = null;
     let count = 0;
-    for (let i = 0; i <= moveIndex && i < lesson.moves.length; i++) {
+    for (let i = 0; i <= moveIndex && i < (lesson.moves ?? []).length; i++) {
       try {
-        const m = game.move(lesson.moves[i].san);
+        const m = game.move((lesson.moves ?? [])[i].san);
         if (m) {
           last = { from: m.from, to: m.to };
           count++;
@@ -121,18 +121,18 @@ export function MatchReplayPlayer({
   const nextExpected = useMemo(() => {
     if (!lesson) return null;
     const ni = moveIndex + 1;
-    if (ni >= lesson.moves.length) return null;
+    if (ni >= (lesson.moves ?? []).length) return null;
     const g = lesson.startFen ? new Chess(lesson.startFen) : new Chess();
-    for (let i = 0; i <= moveIndex && i < lesson.moves.length; i++) {
+    for (let i = 0; i <= moveIndex && i < (lesson.moves ?? []).length; i++) {
       try {
-        g.move(lesson.moves[i].san);
+        g.move((lesson.moves ?? [])[i].san);
       } catch {
         return null;
       }
     }
     try {
-      const m = g.move(lesson.moves[ni].san);
-      return m ? { from: m.from, to: m.to, san: lesson.moves[ni].san } : null;
+      const m = g.move((lesson.moves ?? [])[ni].san);
+      return m ? { from: m.from, to: m.to, san: (lesson.moves ?? [])[ni].san } : null;
     } catch {
       return null;
     }
@@ -142,7 +142,7 @@ export function MatchReplayPlayer({
     if (!lesson) return 0;
     const g = lesson.startFen ? new Chess(lesson.startFen) : new Chess();
     let n = 0;
-    for (const mv of lesson.moves) {
+    for (const mv of (lesson.moves ?? [])) {
       try {
         if (!g.move(mv.san)) break;
         n++;
@@ -205,7 +205,7 @@ export function MatchReplayPlayer({
   const commentary =
     moveIndex < 0
       ? lesson.intro
-      : lesson.moves[Math.min(moveIndex, Math.max(total - 1, 0))].commentary;
+      : (lesson.moves ?? [])[Math.min(moveIndex, Math.max(total - 1, 0))].commentary;
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-background/95 backdrop-blur-sm animate-fade-in">
@@ -319,7 +319,7 @@ export function MatchReplayPlayer({
               {moveIndex >= 0 && applied > 0 && (
                 <div className="mt-4 inline-flex items-center gap-2 rounded-md border border-border bg-surface-elevated px-3 py-1.5 font-mono text-xs text-gold">
                   {Math.floor(moveIndex / 2) + 1}
-                  {moveIndex % 2 === 0 ? "." : "..."} {lesson.moves[moveIndex].san}
+                  {moveIndex % 2 === 0 ? "." : "..."} {(lesson.moves ?? [])[moveIndex].san}
                 </div>
               )}
             </div>

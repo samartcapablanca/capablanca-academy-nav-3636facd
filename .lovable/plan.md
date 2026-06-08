@@ -1,52 +1,58 @@
-# Extend All Milestone Games to Full Historical Scores
+# Branching Lesson Variants
 
-## Goal
+Add a generic optional `variants` shape to lessons. When a lesson has variants, the user first picks one as a blue chess-book-style link, then replays it with the existing Previous/Next controls and progress dots — identical to how a linear lesson plays today. Any lesson that defines `variants` automatically gets this behavior.
 
-Replace the truncated 15–25 ply excerpts in `src/lib/lessons.ts` with the complete historical games for all 26 milestone entries, and make sure "Guess the Move" still triggers correctly in each replay.
+## 1. Data model — `src/lib/lessons.ts`
 
-## Scope
+Make `moves` optional and add `variants` / `prompt`:
 
-All 26 games across the three eras:
+```ts
+export type LessonVariant = {
+  label: string;
+  line: LessonMove[];
+};
 
-- **Marshall Match 1909** — g1, g7, g10, g23
-- **San Sebastián 1911** — g1, g4, g9, g14
-- **Havana WCC 1921** — g1, g5, g10, g11, g14
-- **London 1922** — g1, g5, g8, g13
-- **Alekhine WCC 1927** — g1, g11, g21, g32, g34
-- **Nottingham 1936** — g1, g4, g9, g13
+export type LessonContent = {
+  title: string;
+  intro: string;
+  startFen?: string;
+  moves?: LessonMove[];          // optional now
+  variants?: LessonVariant[];    // new
+  prompt?: string;               // shown above variant list
+  guessMoveIndex?: number;
+  guessHint?: string;
+};
+```
 
-## Approach
+Replace lesson `"1-7"` with the branching JSON provided (title, intro, startFen, prompt, two variants). All other lessons keep their `moves` arrays and behavior unchanged.
 
-1. **One game at a time, validated.** For each game I'll write the full SAN move list from the historical record, then run it through chess.js. If any move fails, I fix it before moving on — the app never ships an illegal sequence.
-2. **Preserve teaching commentary.** Existing commentary on early moves stays. New moves get shorter notes — only key turning points get detailed commentary so the sidebar doesn't become a wall of text.
-3. **Guess the Move stays intact.** Every game keeps its `guessMoveIndex` and `guessHint`. Where the existing index pointed to a move near the old (truncated) end, I'll re-anchor it to the actual famous moment in the full game (e.g. Capablanca's winning combination, not a generic developing move).
-4. **End-of-game marker.** The final move's commentary will state the result clearly — "Marshall resigned" / "and mate follows" / "draw agreed" — so users know the replay is complete.
+## 2. Player — `src/components/LessonPlayer.tsx`
 
-## Technical details
+Add a small state machine alongside the existing replay logic:
 
-- All validation runs through a one-off script (`/tmp/validate-games.ts`) that loads each `moves[].san` array into a fresh `Chess()` and walks ply-by-ply. Any rejected move is reported with the FEN at that point so I can correct it.
-- `MatchReplayPlayer.tsx` already clamps to the last legal move, but with this pass every game should reach its real end with no clamping.
-- No schema changes. No UI changes. Only data edits to `src/lib/lessons.ts`.
+- `mode`: `"choosing"` | `"playing"`
+- `variantIndex`: `number | null`
+- `currentMoves = lesson.variants?.[variantIndex]?.line ?? lesson.moves ?? []`
+- On lesson open: `mode = "choosing"` if `lesson.variants` is present, else `"playing"`. Reset `variantIndex = null`, `moveIndex = -1`.
 
-## Execution order
+### Choosing mode (variant lessons only)
+- Board renders `startFen` with no moves applied.
+- Sidebar shows `intro`, then `prompt`, then each variant as a stacked button styled `font-bold text-blue-600 hover:underline cursor-pointer`.
+- Prev/Next nav and progress dots hidden — user must pick a variant first.
+- Clicking a variant sets `variantIndex`, switches `mode = "playing"`, `moveIndex = -1`.
 
-Because this is large, I'll work in 6 batches (one per tournament) and verify each batch before moving on:
+### Playing mode
+- Drives off `currentMoves`. Board, commentary, Previous/Next, and progress dots work exactly as today, for both linear lessons and the chosen variant (dots count `currentMoves.length + 1`).
+- When `lesson.variants` is set AND `moveIndex === currentMoves.length - 1`, render a `← Go back to Variants` link below the commentary in the same blue link style. Click → `mode = "choosing"`, `variantIndex = null`, `moveIndex = -1`.
 
-1. Marshall 1909 (4 games)
-2. San Sebastián 1911 (4 games)
-3. Havana 1921 (5 games)
-4. London 1922 (4 games)
-5. Alekhine 1927 (5 games)
-6. Nottingham 1936 (4 games)
+Linear lessons (no `variants`) keep their current UI exactly.
 
-After each batch I run the validator. After batch 6 I run it across all 26 games and report results.
+## 3. No other files change
 
-## Honest caveat
-
-A handful of the lesser-documented games (some Marshall match games, San Sebastián side games) have multiple sources with minor disagreements on late endgame moves. Where my recall is uncertain I will truncate to the last move I can confirm legal and note "game continued; full score uncertain in source" rather than fabricate moves. This will be rare — the championship games and tournament headliners are well documented.
+`fundamentals.tsx` and `MatchReplayPlayer.tsx` are untouched. `text-blue-600` is stock Tailwind so no token additions needed.
 
 ## Out of scope
 
-- Open Archive puzzles (already complete, single-position puzzles, no full game replay).
-- Fundamentals lessons (instructional, not historical games).
-- Any UI changes.
+- Converting other lessons to branching format (authors can add `variants` later and it just works).
+- Lesson-completion persistence (deferred).
+- Guess-the-Move integration with variants.
