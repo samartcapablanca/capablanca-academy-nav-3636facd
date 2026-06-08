@@ -9,12 +9,22 @@ export type LessonMove = {
   commentary?: string;
 };
 
+export type LessonVariant = {
+  label: string;
+  line: LessonMove[];
+};
+
 export type LessonContent = {
   title: string;
   intro: string;
   /** Optional starting FEN. Omit for the standard initial position. */
   startFen?: string;
-  moves: LessonMove[];
+  /** Linear move sequence. Omit when using `variants`. */
+  moves?: LessonMove[];
+  /** Branching variants. When present, the player shows a picker first. */
+  variants?: LessonVariant[];
+  /** Prompt shown above the variant list (variant lessons only). */
+  prompt?: string;
   /**
    * Optional index (0-based, into `moves`) of the designated "Guess the Move"
    * target. When Guess Mode is enabled, the player auto-positions to the move
@@ -24,6 +34,7 @@ export type LessonContent = {
   /** Custom hint shown when the user guesses incorrectly at the target. */
   guessHint?: string;
 };
+
 
 export const LESSONS: Record<string, LessonContent> = {
   // ─────────────────────────────────────────────────────────────────
