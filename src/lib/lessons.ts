@@ -647,41 +647,74 @@ export const LESSONS: Record<string, LessonContent> = {
     intro:
       "In this position White wins only if he moves Kc6 or Kd6. If he moves c6, it leads to an immediate draw by stalemate or blockade. You must use your King to seize control before advancing the pawn.",
     startFen: "2k5/8/8/2PK4/8/8/8/8 w - - 0 1",
-    moves: [
+    prompt: "Choose a path to explore:",
+    variants: [
       {
-        san: "Kc6",
-        commentary:
-          "The winning move! White's king steps onto the 6th rank directly in front of the pawn, seizing 'The Opposition' and forcing Black's king to step aside.",
+        label: "1. Kc6 (Move the King — Winning Path)",
+        line: [
+          {
+            san: "Kc6",
+            commentary:
+              "The winning move! White's king steps onto the 6th rank directly in front of the pawn, seizing 'The Opposition' and forcing Black's king to step aside.",
+          },
+          { san: "Kd8", commentary: "Black's king is forced to yield ground, stepping to the side." },
+          {
+            san: "Kb7",
+            commentary:
+              "White's king steps forward to outflank the defender, seizing absolute control of the critical c7 and c8 squares.",
+          },
+          { san: "Kd7", commentary: "Black tries to scramble back to block the path." },
+          {
+            san: "c6+",
+            commentary:
+              "Now, and only now, the pawn safely marches. Because the White king secures the promotion path, the pawn will successfully crown a Queen.",
+          },
+          {
+            san: "Kd8",
+            commentary: "Forced, Black retreats and has no access to the pawn promotion square c8.",
+          },
+          {
+            san: "c7+",
+            commentary:
+              "Check! It's all over. Never rush your pawns to the 6th rank if your king hasn't taken the space ahead of them first. By playing 1.Kc6, White mastered the opposition and forced a clean entry path.",
+          },
+        ],
       },
       {
-        san: "Kd8",
-        commentary: "Black's king is forced to yield ground, stepping to the side.",
-      },
-      {
-        san: "Kb7",
-        commentary:
-          "White's king steps forward to outflank the defender, seizing absolute control of the critical c7 and c8 squares.",
-      },
-      {
-        san: "Kd7",
-        commentary: "Black tries to scramble back to block the path.",
-      },
-      {
-        san: "c6+",
-        commentary:
-          "Now, and only now, the pawn safely marches. Because the White king secures the promotion path, the pawn will successfully crown a Queen.",
-      },
-      {
-        san: "Kd8",
-        commentary: "Forced, Black retreats and has no access to the pawn promotion square c8.",
-      },
-      {
-        san: "c7+",
-        commentary:
-          "Check! It's all over. Never rush your pawns to the 6th rank if your king hasn't taken the space ahead of them first. By playing 1.Kc6, White mastered the opposition and forced a clean entry path.",
+        label: "1. c6 (Push the Pawn — Stalemate Path)",
+        line: [
+          {
+            san: "c6",
+            commentary:
+              "Blunder! Rushing the pawn before the king takes the 6th rank throws away the win. Black's king easily steps backwards to maintain a blockading square.",
+          },
+          { san: "Kc8", commentary: "Black safely steps back into the pocket, directly in the path of your pawn." },
+          {
+            san: "Kd6",
+            commentary:
+              "White moves the king up to guard the advanced pawn, but has completely forfeited the opposition.",
+          },
+          {
+            san: "Kd8",
+            commentary:
+              "Black takes the opposition back! White's king is stuck beside the pawn and cannot outflank the defender.",
+          },
+          { san: "c7+", commentary: "The final push of desperation." },
+          {
+            san: "Kc8",
+            commentary:
+              "Black blocks the promotion square perfectly. White has only one way to guard the pawn.",
+          },
+          {
+            san: "Kc6",
+            commentary:
+              "Stalemate! The black king is completely trapped but not in check. The game ends in a tragic 1/2-1/2 draw.",
+          },
+        ],
       },
     ],
   },
+
   // CHAPTER I — Two Pawns Endings 1
   "1-8": {
     title: "Two Pawns Ending 1",
