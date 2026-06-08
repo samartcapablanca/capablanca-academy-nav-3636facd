@@ -630,8 +630,44 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-  // CHAPTER I — Two Pawns Endings 1
+  //CHAPTER I: King on the 6th Rank
   "1-7": {
+  title: "King on the 6th Rank",
+  intro: "In this position White wins only if he moves Kc6 or Kd6. If he moves c6, it leads to an immediate draw by stalemate or blockade. You must use your King to seize control before advancing the pawn.",
+  startFen: "2k5/8/8/2PK4/8/8/8/8 w - - 0 1",
+  moves: [
+    { 
+      san: "Kc6", 
+      commentary: "The winning move! White's king steps onto the 6th rank directly in front of the pawn, seizing 'The Opposition' and forcing Black's king to step aside.",
+    },
+    { 
+      san: "Kd8", 
+      commentary: "Black's king is forced to yield ground, stepping to the side.", 
+    },
+    { 
+      san: "Kb7", 
+      commentary: "White's king steps forward to outflank the defender, seizing absolute control of the critical c7 and c8 squares.", 
+    },
+    { 
+      san: "Kd7", 
+      commentary: "Black tries to scramble back to block the path.", 
+    },
+    { 
+      san: "c6+", 
+      commentary: "Now, and only now, the pawn safely marches. Because the White king secures the promotion path, the pawn will successfully crown a Queen." ,
+    },
+    {
+      san: "Kd8",
+      commentary: "Forced, Black retreats without control of pawn promotion square c8.",
+    },
+    {
+      san: "c7+",
+     commentary: "Check! It's all over. Never rush your pawns to the 6th rank if your king hasn't taken the space ahead of them first. By playing 1.Kc6, White mastered the opposition and forced a clean entry path.",
+    }
+  ],  
+};
+  // CHAPTER I — Two Pawns Endings 1
+  "1-8": {
     title: "Two Pawns Ending 1",
     intro:
       "White wins by using his King to push the Black King away from file g into file h, clearing his " +
@@ -699,7 +735,7 @@ export const LESSONS: Record<string, LessonContent> = {
 
   // CHAPTER I — Two Pawns Ending 2
 
-  "1-8": {
+  "1-9": {
     title: "Two Pawns Ending 2",
     intro:
       "White wins by using his King to push the Black King away from file g into file h, clearing his " +
