@@ -658,14 +658,14 @@ export const LESSONS: Record<string, LessonContent> = {
     },
     {
       san: "Kd8",
-      commentary: "Forced, Black retreats without control of pawn promotion square c8.",
+      commentary: "Forced, Black retreats and has no access to the pawn promotion square c8.",
     },
     {
       san: "c7+",
      commentary: "Check! It's all over. Never rush your pawns to the 6th rank if your king hasn't taken the space ahead of them first. By playing 1.Kc6, White mastered the opposition and forced a clean entry path.",
     }
   ],  
-  },
+};
   // CHAPTER I — Two Pawns Endings 1
   "1-8": {
     title: "Two Pawns Ending 1",
