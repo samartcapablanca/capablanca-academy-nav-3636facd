@@ -664,8 +664,8 @@ export const LESSONS: Record<string, LessonContent> = {
       san: "c7+",
      commentary: "Check! It's all over. Never rush your pawns to the 6th rank if your king hasn't taken the space ahead of them first. By playing 1.Kc6, White mastered the opposition and forced a clean entry path.",
     }
-  ],  
-};
+  ],
+  },
   // CHAPTER I — Two Pawns Endings 1
   "1-8": {
     title: "Two Pawns Ending 1",
