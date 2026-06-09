@@ -649,7 +649,7 @@ export const LESSONS: Record<string, LessonContent> = {
     prompt: "Choose a path to explore:",
     variants: [
       {
-        label: "1. Kc6 (Winning Path)",
+        label: "1. Kc6 (White Wins)",
         line: [
           {
             san: "Kc6",
