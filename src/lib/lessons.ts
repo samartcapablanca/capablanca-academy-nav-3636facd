@@ -802,8 +802,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Ke6",
         commentary:
-          "Black opposes the White King with 1...Ke6. [If Black advances the Pawn instead of moving the King " +
-          "1...g6 White wins anyway 2.Kd4 Ke6 3.Kc5 Kf6 4.Kd6 Kf7 5.g5 Kg7 6.Ke7 Kg8 7.Kf6 Kh7 8.Kf7 and White wins the Pawn.]",
+          "Black opposes the White King with 1...Ke6. If Black advances the Pawn instead of moving the King White wins anyway 2.Kd4 Ke6 3.Kc5 Kf6 4.Kd6 Kf7 5.g5 Kg7 6.Ke7 Kg8 7.Kf6 Kh7 8.Kf7 and White wins the Pawn.]",
       },
       {
         san: "f5+",
