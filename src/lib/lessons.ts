@@ -905,8 +905,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kxg6",
         commentary:
-          "White clears the board with 14.Kxg6. [There is still some resistance in Black’s position. In fact, " +
-          "the only way to win is the one given here, as will easily be seen by experiment.]",
+          "White clears the board with 14.Kxg6. There is still some resistance in Black’s position. In fact, the only way to win is the one given here, as will easily be seen by experiment.]",
       },
       {
         san: "Kg8",
