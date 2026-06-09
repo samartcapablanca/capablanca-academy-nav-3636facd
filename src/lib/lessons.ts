@@ -852,8 +852,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kf8",
         commentary:
-          "Black steps to 7...Kf8. [White cannot force his f-Pawn through to Queen (the student should find out why), " +
-          "but by giving his Pawn up White can win the other Pawn and the game. Thus:]",
+          "Black steps to 7...Kf8. White cannot force his f-Pawn through to Queen, but by giving his Pawn up White can win the other Pawn and the game.",
       },
       {
         san: "f7",
