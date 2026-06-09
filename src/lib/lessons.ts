@@ -670,7 +670,7 @@ export const LESSONS: Record<string, LessonContent> = {
           },
           {
             san: "Kd8",
-            commentary: "Forced, Black retreats and has no access to the pawn promotion square c8.",
+            commentary: "Forced, Black retreats with no access to c8.",
           },
           {
             san: "c7+",
