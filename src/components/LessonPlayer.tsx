@@ -150,7 +150,7 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
                             setVariantIndex(i);
                             setMoveIndex(0);
                           }}
-                          className="text-left font-bold text-gold hover:underline cursor-pointer"
+                          className="text-left text-gold hover:underline cursor-pointer font-normal"
                         >
                           {v.label}
                         </button>
