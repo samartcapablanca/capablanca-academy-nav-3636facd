@@ -666,7 +666,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "c6+",
             commentary:
-              "Now, and only now, the pawn safely marches. Because the White king secures the promotion path, the pawn will successfully crown a Queen.",
+              "Now, and only now, the pawn safely marches. Because the White king secures the promotion path.",
           },
           {
             san: "Kd8",
