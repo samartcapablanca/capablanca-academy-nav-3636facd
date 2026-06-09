@@ -806,7 +806,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "f5+",
-        commentary: "White forces the issue with a check, 2.f5+.",
+        commentary: "White forces the issue with a check.",
       },
       {
         san: "Kf6",
