@@ -797,7 +797,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Ke4",
         commentary:
-          "White joins his pawns to claim control of center. White can not win by g5 as 1...g6 draws because of the principle of the opposition which governs Pawn endings.",
+          "White joins his pawns to claim control of the center. White can not win by g5 as 1...g6 draws because of the principle of the opposition which governs Pawn endings.",
       },
       {
         san: "Ke6",
