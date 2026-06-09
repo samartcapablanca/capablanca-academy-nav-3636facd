@@ -35,7 +35,6 @@ export type LessonContent = {
   guessHint?: string;
 };
 
-
 export const LESSONS: Record<string, LessonContent> = {
   // ─────────────────────────────────────────────────────────────────
   // CHAPTER I — Simple Mates - Rook and King 1
@@ -650,7 +649,7 @@ export const LESSONS: Record<string, LessonContent> = {
     prompt: "Choose a path to explore:",
     variants: [
       {
-        label: "1. Kc6 (Move the King — Winning Path)",
+        label: "1. Kc6 (Winning Path)",
         line: [
           {
             san: "Kc6",
@@ -681,7 +680,7 @@ export const LESSONS: Record<string, LessonContent> = {
         ],
       },
       {
-        label: "1. c6 (Push the Pawn — Stalemate Path)",
+        label: "1. c6 (Stalemate Path)",
         line: [
           {
             san: "c6",
@@ -702,8 +701,7 @@ export const LESSONS: Record<string, LessonContent> = {
           { san: "c7+", commentary: "The final push of desperation." },
           {
             san: "Kc8",
-            commentary:
-              "Black blocks the promotion square perfectly. White has only one way to guard the pawn.",
+            commentary: "Black blocks the promotion square perfectly. White has only one way to guard the pawn.",
           },
           {
             san: "Kc6",
