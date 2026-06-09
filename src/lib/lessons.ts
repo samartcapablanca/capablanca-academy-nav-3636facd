@@ -697,7 +697,7 @@ export const LESSONS: Record<string, LessonContent> = {
             commentary:
               "Black takes the opposition back! White's king is stuck beside the pawn and cannot outflank the defender.",
           },
-          { san: "kb6", commentary: "The final push of desperation." },
+          { san: "Kb6", commentary: "The final push of desperation." },
           {
             san: "Kb8",
             commentary: "Black King faces the White while still covering the promotion square c8.",
