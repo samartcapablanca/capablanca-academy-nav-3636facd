@@ -674,8 +674,7 @@ export const LESSONS: Record<string, LessonContent> = {
           },
           {
             san: "c7+",
-            commentary:
-              "Check! It's all over for Black. White will promote their pawn and win the game. ",
+            commentary: "Check! It's all over for Black. White will promote their pawn and win the game. ",
           },
         ],
       },
@@ -687,24 +686,32 @@ export const LESSONS: Record<string, LessonContent> = {
             commentary:
               "Blunder! Rushing the pawn before the King throws away the win. Remember the King must control the 6th Rank before advancing his Pawn.",
           },
-          { san: "Kc8", commentary: "Black safely steps back into the pocket, directly in the path of your pawn." },
+          { san: "Kc7", commentary: "Black safely steps back into the pocket, directly in the path of your pawn." },
           {
-            san: "Kd6",
+            san: "Kc5",
             commentary:
               "White moves the king up to guard the advanced pawn, but has completely forfeited the opposition.",
           },
           {
-            san: "Kd8",
+            san: "Kc8",
             commentary:
               "Black takes the opposition back! White's king is stuck beside the pawn and cannot outflank the defender.",
           },
-          { san: "c7+", commentary: "The final push of desperation." },
+          { san: "kb6", commentary: "The final push of desperation." },
           {
-            san: "Kc8",
-            commentary: "Black blocks the promotion square perfectly. White has only one way to guard the pawn.",
+            san: "Kb8",
+            commentary: "Black King faces the White while still covering the promotion square c8.",
           },
           {
-            san: "Kc6",
+            san: "c7+",
+            commentary: "Check! White is unable to push back the Black King.",
+          },
+          {
+            san: "kc8",
+            commentary: "Black King goes back to c8 denying promotion.",
+          },
+          {
+            san: "kc6",
             commentary:
               "Stalemate! The black king is completely trapped but not in check. The game ends in a tragic 1/2-1/2 draw.",
           },
