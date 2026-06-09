@@ -797,10 +797,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Ke4",
         commentary:
-          "White stakes a claim in the center with 1.Ke4. [White can also win by 1.f5! Black’s best answer would be " +
-          "1...g6 and the student should work this out to see how (EN). White can not win by 1.g5? as 1...g6 draws " +
-          "because of the principle of the opposition which governs this ending as well as all the Pawn endings " +
-          "already given, and which will be explained more fully later on.]",
+          "White joins his pawns to claim control of center. White can not win by g5 as 1...g6 draws because of the principle of the opposition which governs Pawn endings.",
       },
       {
         san: "Ke6",
