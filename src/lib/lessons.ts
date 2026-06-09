@@ -644,7 +644,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "1-7": {
     title: "King on the 6th Rank",
     intro:
-      "In this position White wins only if he moves Kc6 or Kd6. If he moves c6, it leads to an immediate draw by stalemate or blockade. ",
+      "In this position White wins only if they move Kc6 or Kd6. If they move c6, it is a draw. ",
     startFen: "2k5/8/8/2PK4/8/8/8/8 w - - 0 1",
     prompt: "Choose a path to explore:",
     variants: [
