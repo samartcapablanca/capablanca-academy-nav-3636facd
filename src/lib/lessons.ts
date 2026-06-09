@@ -685,7 +685,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "c6",
             commentary:
-              "Blunder! Rushing the pawn before the king takes the 6th rank throws away the win. Black's king easily steps backwards to maintain a blockading square.",
+              "Blunder! Rushing the pawn before the King throws away the win. Remember the King must control the 6th Rank before advancing his Pawn.",
           },
           { san: "Kc8", commentary: "Black safely steps back into the pocket, directly in the path of your pawn." },
           {
