@@ -711,7 +711,7 @@ export const LESSONS: Record<string, LessonContent> = {
             commentary: "Black King goes back to c8 denying promotion.",
           },
           {
-            san: "kc6",
+            san: "Kc6",
             commentary:
               "Stalemate! The black king is completely trapped but not in check. The game ends in a tragic 1/2-1/2 draw.",
           },
