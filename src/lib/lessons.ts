@@ -922,7 +922,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "g6",
-        commentary: "White drives the g-pawn forward, 16.g6.",
+        commentary: "White drives the g-pawn forward, 16.g6. Now Black has only one square to go.",
       },
       {
         san: "Kg8",
