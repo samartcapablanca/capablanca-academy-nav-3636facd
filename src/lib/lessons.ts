@@ -914,7 +914,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kh6",
         commentary:
-          "White takes the opposition safely with 15.Kh6. [If 15.Kf6 Kh7 and in order to win White must get back to the actual position, as against 16.g6+? Kh8 draws.]",
+          "White takes the opposition safely with 15.Kh6. This is the critical move to win as White reaches the 6th rank first and blocks the Black King from h7.",
       },
       {
         san: "Kh8",
