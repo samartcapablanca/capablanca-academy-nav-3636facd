@@ -690,7 +690,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "Kc5",
             commentary:
-              "White moves the king up to guard the advanced pawn, but has completely forfeited the opposition.",
+              "White moves the King up to guard the advanced pawn, but has completely forfeited the opposition.",
           },
           {
             san: "Kc8",
