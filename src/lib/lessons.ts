@@ -819,7 +819,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "g6",
         commentary:
-          "Black challenges the pawn chain with 3...g6. [If this Pawn is kept back we arrive at the ending shown in Example 7]",
+          "Black challenges the pawn chain with 3...g6.",
       },
       {
         san: "g5+",
