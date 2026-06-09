@@ -148,7 +148,7 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
                           type="button"
                           onClick={() => {
                             setVariantIndex(i);
-                            setMoveIndex(-1);
+                            setMoveIndex(0);
                           }}
                           className="text-left font-bold text-gold hover:underline cursor-pointer"
                         >
@@ -182,7 +182,13 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
                   return (
                     <button
                       key={i}
-                      onClick={() => setMoveIndex(idx)}
+                      onClick={() => {
+                        if (idx === -1 && hasVariants) {
+                          goBackToVariants();
+                        } else {
+                          setMoveIndex(idx);
+                        }
+                      }}
                       className={cn(
                         "h-2 rounded-full transition-all cursor-pointer",
                         active ? "w-6 bg-gold" : past ? "w-2 bg-gold/50" : "w-2 bg-muted",
