@@ -707,7 +707,7 @@ export const LESSONS: Record<string, LessonContent> = {
             commentary: "Check! White is unable to push back the Black King.",
           },
           {
-            san: "kc8",
+            san: "Kc8",
             commentary: "Black King goes back to c8 denying promotion.",
           },
           {
