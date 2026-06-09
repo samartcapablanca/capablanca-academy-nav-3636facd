@@ -660,7 +660,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "Kb7",
             commentary:
-              "White's king steps forward to outflank the defender, seizing absolute control of the critical c7 and c8 squares.",
+              "White's king steps forward to outflank the defender, seizing absolute control of c8, promotion square.",
           },
           { san: "Kd7", commentary: "Black tries to scramble back to block the path." },
           {
