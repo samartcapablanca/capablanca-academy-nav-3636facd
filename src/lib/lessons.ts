@@ -675,7 +675,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "c7+",
             commentary:
-              "Check! It's all over. ",
+              "Check! It's all over for Black. White will promote their pawn and win the game. ",
           },
         ],
       },
