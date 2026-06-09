@@ -205,7 +205,14 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
           {!isChoosing && (
             <div className="grid grid-cols-2 gap-3 border-t border-border bg-sidebar p-4 md:p-5">
               <button
-                onClick={() => canPrev && setMoveIndex((i) => i - 1)}
+                onClick={() => {
+                  if (!canPrev) return;
+                  if (hasVariants && variantIndex !== null && moveIndex === 0) {
+                    goBackToVariants();
+                  } else {
+                    setMoveIndex((i) => i - 1);
+                  }
+                }}
                 disabled={!canPrev}
                 className="flex items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 py-4 text-sm font-medium text-cream transition hover:border-gold/50 hover:text-gold disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer"
               >
