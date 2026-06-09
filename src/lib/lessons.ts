@@ -680,7 +680,7 @@ export const LESSONS: Record<string, LessonContent> = {
         ],
       },
       {
-        label: "1. c6 (Stalemate Path)",
+        label: "1. c6 (Stalemate)",
         line: [
           {
             san: "c6",
