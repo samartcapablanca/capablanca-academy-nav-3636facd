@@ -675,7 +675,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "c7+",
             commentary:
-              "Check! It's all over. Never rush your pawns to the 6th rank if your king hasn't taken the space ahead of them first. ",
+              "Check! It's all over. ",
           },
         ],
       },
