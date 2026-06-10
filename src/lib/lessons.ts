@@ -218,7 +218,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Ra4+",
-        commentary: "Driving the King into the corner corridor.",
+        commentary: "Check! Driving the King into the corner corridor.",
       },
       {
         san: "Kb1",
