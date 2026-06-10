@@ -140,7 +140,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "1-2": {
     title: "Rook and King Mate 2",
     intro:
-      "In this position the Black King is sitting safely in the center " +
+      "In this position, the Black King is sitting safely in the center " +
       "of the board, and the White Rook starts far away on h1. White must use the King " +
       "immediately to start boxing the enemy in.",
     startFen: "8/8/8/4k3/8/8/8/4K2R w - - 0 1",
