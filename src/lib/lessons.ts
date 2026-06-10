@@ -167,7 +167,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Rh5",
         commentary:
-          "White activates the Rook, creating a barrier on the 5th rank, restricting the Black King's lateral freedom.",
+          "White activates the Rook, creating a barrier on the 5th rank, restricting the Black King's movement.",
       },
       {
         san: "Kc3",
