@@ -176,8 +176,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Rh4",
         commentary:
-          "“Keeping the King confined to as few squares as possible. Now the ending may continue as follows.” " +
-          "White cuts off the 4th rank entirely.",
+          "White cuts off the 4th rank entirely, keeping the King confined to as few squares as possible.",
       },
       {
         san: "Kc2",
