@@ -771,7 +771,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "g8=Q+",
-        commentary: "White promotes the pawn to a brand new Queen with check on 6.g8=Q+.",
+        commentary: "White promotes the Pawn to a brand new Queen with check on 6.g8=Q+.",
       },
       {
         san: "Kh6",
