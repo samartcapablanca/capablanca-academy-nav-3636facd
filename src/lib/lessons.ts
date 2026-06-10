@@ -759,7 +759,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "f5",
-        commentary: "Black pushes forward with 4...f5, but this pawn is too far away to stop White's plans.",
+        commentary: "Black pushes forward with 4...f5, which is the only move available for Black.",
       },
       {
         san: "g7+",
