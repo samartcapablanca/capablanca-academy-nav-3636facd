@@ -724,7 +724,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "1-8": {
     title: "Two Pawns Ending 1",
     intro:
-      "In this position, White can win with Ke4, to build a concerted attack to push back the Black King, or with f5, moving the pawn without opposition has the advantage.",
+      "In this position, White wins by using his King to push back the Black King and capture his pawn. Then by coming from file h and squeeze out the Black King from file g, the path to promotion.",
     startFen: "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
     moves: [
       {
@@ -791,7 +791,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "1-9": {
     title: "Two Pawns Ending 2",
     intro:
-      "In this position, White can win with Ke4, to build a concerted attack to push back the Black King, or with f5, moving the pawn without opposition has the advantage.",
+      "In this position, White wins by using his King to push back the Black King and capture his pawn. Then by coming from file h and squeeze out the Black King from file g, the path to promotion.",
     startFen: "8/6p1/3k4/8/3K1PP1/8/8/8 w - - 0 1",
     moves: [
       {
