@@ -720,7 +720,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Two Pawns Endings 1
   //-----------------------------------
   "1-8": {
-    title: "Two Pawns Ending 1",
+    title: "Two Pawns Ending - Outflank from the Left",
     intro:
       "In this position, White wins by using the King to push back the Black King into file h. White gives the pawn to clear the path to promotion.",
     startFen: "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
@@ -787,7 +787,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Two Pawns Ending 2
   //-------------------------------
   "1-9": {
-    title: "Two Pawns Ending 2",
+    title: "Two Pawns Ending - Outflank from the Right",
     intro:
       "In this position, White wins by using the White King to push back the Black King and capture his pawn. Then by outflanking the Black King from file h into file f.",
     startFen: "8/6p1/3k4/8/3K1PP1/8/8/8 w - - 0 1",
