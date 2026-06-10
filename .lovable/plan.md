@@ -1,13 +1,12 @@
 ## Problem
-In `LessonPlayer`, when a user has selected a Variant and is on the first move (moveIndex 0), clicking **Previous** decrements moveIndex to -1, which shows the variant's intro but does not return to the Variants picker. The progress dots already handle this correctly (the first dot calls `goBackToVariants()` when `hasVariants` is true).
+Lessons 1-8 and 1-9 originally had identical intro text. A previous text edit replaced both occurrences, but the user only wanted lesson 1-8 updated.
 
-## Solution
-Update the Previous button behavior in `src/components/LessonPlayer.tsx` so that when a variant is active and the user is at `moveIndex === 0`, clicking Previous calls `goBackToVariants()` instead of just decrementing to -1. This mirrors the progress-dot behavior.
+## Fix
+In `src/lib/lessons.ts`, revert lesson 1-9's intro (line 793) back to the original:
 
-### Details
-- Change the Previous `onClick` to: if `hasVariants && variantIndex !== null && moveIndex === 0`, call `goBackToVariants()`; otherwise decrement as today.
-- Keep `canPrev` logic so the button remains enabled at moveIndex 0 in a variant (it already is, since `moveIndex > -1`).
-- No changes to the Next button, commentary, or board logic.
+> "In this position, White wins by using his King to push back the Black King and capture his pawn. Then by coming from file h and squeeze out the Black King from file g, clearing the path to promotion."
+
+Leave lesson 1-8's intro (line 726) as-is with the new shorter wording.
 
 ## File changed
-- `src/components/LessonPlayer.tsx` — Previous button handler
+- `src/lib/lessons.ts` — restore lesson 1-9 intro only
