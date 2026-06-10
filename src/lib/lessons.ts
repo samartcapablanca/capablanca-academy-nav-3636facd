@@ -763,7 +763,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "g7+",
-        commentary: "White pushes the pawn with check using 5.g7+, forcing the Black King back into the open.",
+        commentary: "White pushes the Pawn with check using 5.g7+, forcing the Black King back into the open.",
       },
       {
         san: "Kh7",
