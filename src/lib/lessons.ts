@@ -734,7 +734,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Kg8",
-        commentary: "Black is forced into the corner with 1...Kg8, as the square f7 is cut off by the white pawn.",
+        commentary: "Black is forced into the corner with 1...Kg8, as the square f7 is cut off by the White Pawn.",
       },
       {
         san: "Ke7",
