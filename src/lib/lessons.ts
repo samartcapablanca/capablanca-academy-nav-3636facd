@@ -935,7 +935,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Kh7",
-        commentary: "White steps to 18.Kh7. And White queens the Pawn and wins.",
+        commentary: "White steps to 18.Kh7 and it's over. White will queen the Pawn and win the game.",
       },
     ],
   },
