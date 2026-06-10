@@ -235,7 +235,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Ra1#",
-        commentary: "Checkmate! Delivered exactly on move 11, precisely following Capablanca's text.",
+        commentary: "Checkmate! Delivered exactly on move 11.",
       },
     ],
   },
