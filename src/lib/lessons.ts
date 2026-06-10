@@ -69,7 +69,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Kf3",
-        commentary: "White's King marches up, maintaining opposition on the adjacent file.",
+        commentary: "White's King marches up, maintaining opposition on the same file.",
       },
       {
         san: "Ke8",
