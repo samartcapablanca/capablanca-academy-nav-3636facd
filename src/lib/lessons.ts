@@ -86,7 +86,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kd5",
         commentary:
-          "“When the King has been brought to the sixth rank, it is better to place it, " +
+          "“When the King has been brought to the 6th rank, it is better to place it, " +
           "not on the same file, but on the one next to it towards the center.”",
       },
       {
