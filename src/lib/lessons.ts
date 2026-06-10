@@ -722,7 +722,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "1-8": {
     title: "Two Pawns Ending - Outflank to the h-file",
     intro:
-      "In this position, White wins by using the king to push the black king into file h. White gives the pawn to clear out the path to promotion.",
+      "In this position, White wins by using the King to push the Black King into file h. White gives the Pawn to clear out the path to promotion.",
     startFen: "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
     moves: [
       {
