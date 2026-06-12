@@ -455,7 +455,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER I — Pawn Promotion - King & Pawn
   // ─────────────────────────────────────────────────────────────────
   "1-5": {
-    title: "Pawn and King Stalemate",
+    title: "King Opposition - Stalemate",
     intro:
       "The position is drawn, and the way to proceed is for Black to keep the King always " +
       "directly in front of the opposing pawn to force a stalemate in the eight rank. ",
