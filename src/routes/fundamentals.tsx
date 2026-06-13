@@ -33,8 +33,8 @@ const CHAPTERS: Chapter[] = [
       { id: "1-5", title: "King Opposition - Stalemate" },
       { id: "1-6", title: "King Ahead of Pawn" },
       { id: "1-7", title: "King on the 6th Rank" },
-      { id: "1-8", title: "Two Pawns Ending - Outflank to the h-file" },
-      { id: "1-9", title: "Two Pawns Ending - Outflank to the f-file" },
+      { id: "1-8", title: "Two Pawns - Outflank to the h-file" },
+      { id: "1-9", title: "Two Pawns - Outflank to the f-file" },
     ],
   },
   {
