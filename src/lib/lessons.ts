@@ -3759,7 +3759,7 @@ export const LESSONS: Record<string, LessonContent> = {
         "Black steps in to secure the win! White's king is blocked out, and Black will promote to a new queen on the very next turn.",
     },
   ],
-}
+  },
 
   // ─────────────────────────────────────────────────────────────────
   // CHAPTER II — Lesson 2: Three Pawns vs. Three (The breakthrough)
