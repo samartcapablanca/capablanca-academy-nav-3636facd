@@ -3848,7 +3848,7 @@ export const LESSONS: Record<string, LessonContent> = {
     {
       san: "Kxe4",
       commentary:
-        "Black recaptures. This brings the game to a position that is won by Black, and which constitutes one of the clasic endings of King and Pawns.",
+        "\u00a0This brings the game to a position that is won by Black, and which constitutes one of the classic endings of King and Pawns.",
     },
   ],
 },
