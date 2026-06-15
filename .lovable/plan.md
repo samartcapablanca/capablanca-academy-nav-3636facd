@@ -1,12 +1,10 @@
-## Problem
-Lessons 1-8 and 1-9 originally had identical intro text. A previous text edit replaced both occurrences, but the user only wanted lesson 1-8 updated.
+Lesson 2-3 fails to load because its `startFen` has an invalid last rank.
 
-## Fix
-In `src/lib/lessons.ts`, revert lesson 1-9's intro (line 793) back to the original:
+Current: `8/ppp4k/8/PPP5/8/8/8/6K w - - 0 1`
+The last rank `6K` only specifies 7 squares; chess.js rejects the FEN and the LessonPlayer throws.
 
-> "In this position, White wins by using his King to push back the Black King and capture his pawn. Then by coming from file h and squeeze out the Black King from file g, clearing the path to promotion."
+Fix: change the last rank to `6K1` so it totals 8 squares.
 
-Leave lesson 1-8's intro (line 726) as-is with the new shorter wording.
+New FEN: `8/ppp4k/8/PPP5/8/8/8/6K1 w - - 0 1`
 
-## File changed
-- `src/lib/lessons.ts` — restore lesson 1-9 intro only
+Single edit to `src/lib/lessons.ts` line 3843.
