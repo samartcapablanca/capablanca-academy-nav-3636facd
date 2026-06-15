@@ -3631,7 +3631,7 @@ export const LESSONS: Record<string, LessonContent> = {
     {
       san: "Kg3",
       commentary:
-        "White chooses the best defensive strategy by keeping the pawn at h2. If White tries 1.h4 instead, it becomes significantly easier for Black to force a win.",
+        "White chooses the best defensive strategy by keeping the pawn at h2. If White tries Kh4 instead, it becomes significantly easier for Black to force a win.",
     },
     {
       san: "Ke3",
