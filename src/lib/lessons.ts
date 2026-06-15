@@ -3625,7 +3625,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "2-1": {
   title: "A Classical Ending",
   intro:
-    "In this position, White's best line of defense is to keep his pawn at h2. Black's winning plan is to get the King to h3, and time the advance of the g-pawn perfectly.",
+    "In this position, White's best line of defense is to keep the pawn at h2. Black's winning plan is to get the King to h3, and time the advance of the g-pawn perfectly.",
   startFen: "8/6p1/7p/8/4k3/8/6KP/8 w - - 0 1",
   moves: [
     {
