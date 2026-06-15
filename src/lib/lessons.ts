@@ -3621,70 +3621,145 @@ export const LESSONS: Record<string, LessonContent> = {
     guessMoveIndex: 77,
     guessHint: "Capablanca won material here. Look for the tactical capture that breaks through.",
   },
-
+/////////////Chapter II-Lesson 1
   "2-1": {
-    title: "A Cardinal Principle — The King as Attacking Piece",
-    intro:
-      "Capablanca: “The King, which in the beginning of the game is a source of " +
-      "anxiety because of its vulnerability, becomes in the end-game a main " +
-      "weapon of offense and defense. Bring out your King as fast as possible " +
-      "to the center of the board.”",
-    startFen: "8/7p/5k2/8/8/8/7P/5K2 w - - 0 1",
-    moves: [
-      {
-        san: "Kf2",
-        commentary:
-          "“Bring out your King.” The very first move of the endgame: the monarch " +
-          "steps forward. No longer a timid bystander behind a wall of pawns, the " +
-          "King becomes a fighting piece.",
-      },
-      {
-        san: "Kf7",
-        commentary:
-          "Black follows the same rule. In pawn endgames, the first King to the " +
-          "centre usually dictates the terms of the battle.",
-      },
-      {
-        san: "Ke3",
-        commentary:
-          "White continues the march. The goal is not a single square but " +
-          "domination of the entire board — a King in the centre commands more " +
-          "squares than from any edge.",
-      },
-      {
-        san: "Kg7",
-        commentary:
-          "Black drifts toward the wing, away from the critical theatre. A small " +
-          "inaccuracy, but in endgames small inaccuracies decide the result.",
-      },
-      {
-        san: "Kd4",
-        commentary:
-          "“The King in the center is worth a piece.” White occupies d4, a central " +
-          "square from which every wing is within reach.",
-      },
-      {
-        san: "Kh6",
-        commentary:
-          "Black is reduced to passive shuffling on the rim. The geometry of the " +
-          "position has already begun to tilt in White's favour.",
-      },
-      {
-        san: "Kc5",
-        commentary:
-          "Capablanca's principle fulfilled: the White King dominates the centre, " +
-          "while Black's monarch wanders the edge. The difference in activity is " +
-          "the entire story of the endgame.",
-      },
-      {
-        san: "Kg5",
-        commentary:
-          "Black attempts to become active, but it is too late. The central King " +
-          "has seized the opposition and the better position. The lesson: in " +
-          "endgames, activate your King immediately — delay is fatal.",
-      },
-    ],
-  },
+  title: "A Classical Ending",
+  intro:
+    "In this position, White's best line of defense consists in keeping his pawn where it stands at h2. Black's winning plan is divided into three distinct parts: first, get the King to h3; second, advance the h-pawn to the King; third, time the advance of the g-pawn perfectly.",
+  startFen: "8/6p1/7p/8/4k3/8/6KP/8 w - - 0 1",
+  moves: [
+    {
+      san: "Kg3",
+      commentary:
+        "White chooses the best defensive strategy by keeping the pawn at h2. If White tries 1.h4 instead, it becomes significantly easier for Black to force a win.",
+    },
+    {
+      san: "Ke3",
+      commentary:
+        "Black begins Part 1 of the grand plan: marching the King toward the h3-square while leaving the pawns untouched for now.",
+    },
+    {
+      san: "Kg2",
+      commentary:
+        "White is reduced to shuffling the King back and forth. If White tries to break out with 2.Kg4, Black replies with 2...Kf2 3.h4 g6 and wins smoothly.",
+    },
+    {
+      san: "Kf4",
+      commentary:
+        "Black takes active opposition, cutting off the White king and gaining valuable ground toward the kingside.",
+    },
+    {
+      san: "Kf2",
+      commentary:
+        "White acts defensively, holding the key squares in front of the pawns as long as possible.",
+    },
+    {
+      san: "Kg4",
+      commentary:
+        "Black steps onto the g-file, forcing White's king further into a passive corner box.",
+    },
+    {
+      san: "Kg2",
+      commentary:
+        "White has no choice but to retreat and wait.",
+    },
+    {
+      san: "Kh4",
+      commentary:
+        "Black's king continues its precise geometric march toward the edge of the board.",
+    },
+    {
+      san: "Kg1",
+      commentary:
+        "White's king is forced onto the first rank.",
+    },
+    {
+      san: "Kh3",
+      commentary:
+        "The first part of Capablanca's plan has been completed. The second part will be short and will consist in advancing the h-pawn up to the King.",
+    },
+    {
+      san: "Kh1",
+      commentary:
+        "White is locked in place. White's king cannot leave the corner without instantly collapsing.",
+    },
+    {
+      san: "h5",
+      commentary:
+        "Black begins Part 2, pushing the rear h-pawn forward while White's king is completely immobilized.",
+    },
+    {
+      san: "Kg1",
+      commentary:
+        "White paces back to g1, completely helpless to stop the upcoming pawn storm.",
+    },
+    {
+      san: "h4",
+      commentary:
+        "This ends the second part. The third part consists in timing the advance of the g-pawn so as to play ...g4-g3 precisely when the White King is at h1.",
+    },
+    {
+      san: "Kh1",
+      commentary:
+        "White steps back into the corner, waiting for the final breakthrough.",
+    },
+    {
+      san: "g5",
+      commentary:
+        "It now becomes evident how necessary it is to be able to move the g-pawn either one or two squares. Because it is White's turn next, advancing two squares ensures the perfect geometric timing.",
+    },
+    {
+      san: "Kg1",
+      commentary:
+        "White steps back out, trying to delay the inevitable.",
+    },
+    {
+      san: "g4",
+      commentary:
+        "Black advances the g-pawn, carefully calculating the king coordinates so the final breakthrough lands on target.",
+    },
+    {
+      san: "Kh1",
+      commentary:
+        "White returns to h1. The trap is sprung.",
+    },
+    {
+      san: "g3",
+      commentary:
+        "The critical breakthrough! Black strikes at the h2 pawn at the exact moment White's king lands on the corner square.",
+    },
+    {
+      san: "hxg3",
+      commentary:
+        "White is forced to capture. If White tries 11.Kg1 instead, Black plays 11...g2 and wins instantly.",
+    },
+    {
+      san: "hxg3",
+      commentary:
+        "Black recaptures, creating a single, unstoppable passed g-pawn backed directly by the king.",
+    },
+    {
+      san: "Kg1",
+      commentary:
+        "White plays the only legal move left.",
+    },
+    {
+      san: "g2",
+      commentary:
+        "The g-pawn steps to the 7th rank. White's king is completely squeezed out of the defensive corner box.",
+    },
+    {
+      san: "Kf2",
+      commentary:
+        "White is forced to step away from the promotion square.",
+    },
+    {
+      san: "Kh2",
+      commentary:
+        "Black steps in to secure the win! White's king is blocked out, and Black will promote to a new queen on the very next turn.",
+    },
+  ],
+}
 
   // ─────────────────────────────────────────────────────────────────
   // CHAPTER II — Lesson 2: Three Pawns vs. Three (The breakthrough)
