@@ -40,10 +40,10 @@ const CHAPTERS: Chapter[] = [
   {
     id: "ch2",
     roman: "II",
-    title: "Further Principles in End-game Play",
+    title: "End-game Principles",
     lessons: [
-      { id: "2-1", title: "A Cardinal Principle — The King as Attacking Piece" },
-      { id: "2-2", title: "Three Pawns vs. Three — The Breakthrough" },
+      { id: "2-1", title: "A Classical Ending" },
+      { id: "2-2", title: "A Cardinal Principle" },
       { id: "2-3", title: "The Power of the Rook on the 7th Rank" },
       { id: "2-4", title: "Queen against Rook — The Philidor Position & Zugzwang" },
     ],
