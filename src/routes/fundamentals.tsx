@@ -44,6 +44,7 @@ const CHAPTERS: Chapter[] = [
     lessons: [
       { id: "2-1", title: "A Classical Ending" },
       { id: "2-2", title: "A Cardinal Principle" },
+      { id: "2-3", title: "Obtaining a Passed Pawn" },
       { id: "2-3", title: "The Power of the Rook on the 7th Rank" },
       { id: "2-4", title: "Queen against Rook — The Philidor Position & Zugzwang" },
     ],
