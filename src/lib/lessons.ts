@@ -3836,7 +3836,7 @@ export const LESSONS: Record<string, LessonContent> = {
     ],
   },
   //
-  "2-1": {
+  "2-3": {
     title: "A Classical Ending",
     intro:
       "In this position, White's best line of defense consists in keeping his pawn where it stands at h2. Black's winning plan is todivided into three distinct parts: first, get the King to h3; second, advance the h-pawn to the King; third, time the advance of the g-pawn perfectly.",
