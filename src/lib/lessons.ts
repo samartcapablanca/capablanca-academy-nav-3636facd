@@ -3839,32 +3839,72 @@ export const LESSONS: Record<string, LessonContent> = {
   "2-3": {
     title: "Obtaining a Passed Pawn",
     intro:
-      "When three or more pawns are opposed to each other in some such position as this, there is always a chance for one side or the other of obtaining a passed pawn. In this position, the way of obtaining a passed pawn is to advance the centre pawn.",
-    startFen: "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
-    moves: [
+      "When three or more pawns are opposed to each other in some such position as this, there is always a chance for one side or the other of obtaining a passed pawn. In this position, the correct way to win is to instantly advance the centre pawn.",
+    startFen: "8/ppp4k/8/PPP5/8/8/8/6K w - - 0 1",
+    prompt: "Choose a path to explore:",
+    variants: [
       {
-        san: "b6",
-        commentary:
-          "White triggers the breakthrough by advancing the centre pawn, threatening both the a7 and c7 pawns simultaneously.",
+        label: "1. b6 (White Wins)",
+        line: [
+          {
+            san: "b6",
+            commentary:
+              "The winning breakthrough! White advances the centre pawn, threatening both the a7 and c7 pawns simultaneously.",
+          },
+          {
+            san: "axb6",
+            commentary:
+              "Black captures with the a-pawn. If Black tries 1...cxb6 instead, White wins immediately with 2.a6!, blocking the b-pawns and creating a runaway passer on the a-file.",
+          },
+          {
+            san: "c6",
+            commentary:
+              "White sacrifices the opposite side pawn! This distracts Black's defensive structure and clears a structural path for White's remaining asset.",
+          },
+          {
+            san: "bxc6",
+            commentary:
+              "Black has no tactical choice but to capture the distracting c-pawn, clearing the way entirely for White's breakthrough.",
+          },
+          {
+            san: "a6",
+            commentary:
+              "As in this case the White pawn is nearer to Queen than any of the Black pawns, White will win.",
+          },
+        ],
       },
       {
-        san: "axb6",
-        commentary:
-          "Black captures with the a-pawn. If Black tries 1...cxb6 instead, White wins immediately with 2.a6!, blocking the b-pawns and creating a runaway passer on the a-file.",
-      },
-      {
-        san: "c6",
-        commentary:
-          "White sacrifices the opposite side pawn! This distracts Black's defensive structure and clears a structural path for White's remaining asset.",
-      },
-      {
-        san: "bxc6",
-        commentary:
-          "Black has no tactical choice but to capture the distracting c-pawn, clearing the way entirely for White's breakthrough.",
-      },
-      {
-        san: "a6",
-        commentary: "As in this case the White pawn is nearer to Queen than any of the Black pawns, White will win.",
+        label: "1. Kg2 (White Draws)",
+        line: [
+          {
+            san: "Kg2",
+            commentary:
+              "White misses the immediate tactical breakthrough. By moving the King instead, White allows Black the time to lock down the queenside structure.",
+          },
+          {
+            san: "b6",
+            commentary:
+              "Black instantly takes the opportunity to play the defensive stopper move, neutralizing the threat just like in Example 24b.",
+          },
+          {
+            san: "cxb6",
+            commentary:
+              "White tries to open a line, but because the White king is too far away, a winning breakthrough is no longer mathematically possible.",
+          },
+          {
+            san: "cxb6",
+            commentary: "Black recaptures towards the center, maintaining a unified wall against White's pawns.",
+          },
+          {
+            san: "axb6",
+            commentary: "White liquidates the outer pawns, heading into a completely balanced king-and-pawn race.",
+          },
+          {
+            san: "axb6",
+            commentary:
+              "The game properly played from here is a dead draw, as both kings will arrive in time to stop any advanced pawns from promoting.",
+          },
+        ],
       },
     ],
   },
