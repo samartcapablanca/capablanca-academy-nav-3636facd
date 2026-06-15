@@ -3767,7 +3767,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "2-2": {
   title: "A Cardinal Principle",
   intro:
-    "In this position, White draws by playing 1.b4, by the general rule to advance the pawn that is free from opposition. If White blunders with 1.a4, Black will freeze White's queenside assets using a strategic masterclass: A unit that holds two.",
+    "White draws by playing 1.b4, by the general rule to advance the pawn that is free from opposition. If White blunders with 1.a4, Black will freeze White's queenside assets using a strategic masterclass: A unit that holds two.",
   startFen: "8/p5p1/7p/5k2/8/7K/PP5P/8 w - - 0 1",
   moves: [
     {
