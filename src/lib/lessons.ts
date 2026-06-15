@@ -3625,13 +3625,13 @@ export const LESSONS: Record<string, LessonContent> = {
   "2-1": {
   title: "A Classical Ending",
   intro:
-    "In this position, White's best line of defense is to keep the pawn at h2. Black's winning plan is to get the King to h3, and time the advance of the g-pawn perfectly.",
+    "In this position, White's best line of defense consists in keeping his pawn where it stands at h2. Black's winning plan is divided into three distinct parts: first, get the King to h3; second, advance the h-pawn to the King; third, time the advance of the g-pawn perfectly.",
   startFen: "8/6p1/7p/8/4k3/8/6KP/8 w - - 0 1",
   moves: [
     {
       san: "Kg3",
       commentary:
-        "White chooses the best defensive strategy by keeping the pawn at h2. If White tries Kh3 instead, it becomes significantly easier for Black to force a win.",
+        "White chooses the best defensive strategy by keeping the pawn at h2. If White tries 1.h4 instead, it becomes significantly easier for Black to force a win.",
     },
     {
       san: "Ke3",
@@ -3759,73 +3759,99 @@ export const LESSONS: Record<string, LessonContent> = {
         "Black steps in to secure the win! White's king is blocked out, and Black will promote to a new queen on the very next turn.",
     },
   ],
-  },
-
-
+}
 
   // ─────────────────────────────────────────────────────────────────
   // CHAPTER II — Lesson 2: Three Pawns vs. Three (The breakthrough)
   // ─────────────────────────────────────────────────────────────────
   "2-2": {
-    title: "Three Pawns vs. Three — The Breakthrough",
-    intro:
-      "Capablanca: “Whenever there is a majority of pawns on one side of the " +
-      "board, the general rule is to advance the pawn that has no pawn opposing " +
-      "it.” Here White owns a three-to-three majority on the queenside, but all " +
-      "pawns are blocked. The breakthrough shatters the blockade with a sacrifice.",
-    startFen: "8/ppp5/5k2/PPP5/8/5K2/8/8 w - - 0 1",
-    moves: [
-      {
-        san: "b6",
-        commentary:
-          "“The lever is thrown.” White sacrifices the b-pawn to open lines. " +
-          "Capablanca taught that a blocked majority is worthless until a " +
-          "path is forced open.",
-      },
-      {
-        san: "cxb6",
-        commentary:
-          "Black accepts, thinking he has stopped the threat. He has not — the " + "sacrifice is only the first act.",
-      },
-      {
-        san: "a6",
-        commentary:
-          "The second pawn is offered. White now sacrifices the a-pawn, " + "clearing the way for the true candidate.",
-      },
-      {
-        san: "bxa6",
-        commentary:
-          "Black captures again, but each capture weakens his structure and " + "opens a file for the remaining pawn.",
-      },
-      {
-        san: "c6",
-        commentary:
-          "“The decisive thrust.” The c-pawn is now unstoppable: if Black " +
-          "takes on c6, the a-pawn queens; if he ignores it, c7 and c8=Q " +
-          "follows. Numerical equality has been shattered by timing.",
-      },
-      {
-        san: "b5",
-        commentary:
-          "A desperate attempt to create a passed pawn of his own. Black " +
-          "understands that the breakthrough has already decided the position.",
-      },
-      {
-        san: "c7",
-        commentary:
-          "White's candidate marches on. One more step and the pawn becomes " +
-          "a Queen. The breakthrough has transformed a blocked majority into " +
-          "a winning passed pawn.",
-      },
-      {
-        san: "b4",
-        commentary:
-          "Too late. Black's counterplay is one tempo short. The lesson: a " +
-          "well-timed pawn sacrifice can turn a static majority into an " +
-          "unstoppable passed pawn. Timing, not numbers, decides.",
-      },
-    ],
-  },
+  title: "A Cardinal Principle",
+  intro:
+    "In this position, White can comfortably draw by playing 1.b4, adhering to the general rule to advance the pawn that is free from opposition. However, if White blunders with 1.a4, Black punishes the mistake by freezing White's queenside assets entirely using a strategic masterclass: A unit that holds two.",
+  startFen: "8/p5p1/7p/5k2/8/7K/PP5P/8 w - - 0 1",
+  moves: [
+    {
+      san: "a4",
+      commentary:
+        "White blunders by pushing the a-pawn, critically violating the fundamental endgame rule of advancing the pawn free from opposition.",
+    },
+    {
+      san: "a5",
+      commentary:
+        "The refutation! Black applies the cardinal principle: 'A unit that holds two.' This single pawn completely paralyzes both of White's queenside pawns.",
+    },
+    {
+      san: "Kg2",
+      commentary:
+        "White quickly realizes the tactical danger on the queenside and attempts to bring the king back to assist the center.",
+    },
+    {
+      san: "Kf4",
+      commentary:
+        "Black plays actively. By bringing the king forward, Black takes opposition and cuts off White's king from joining the action.",
+    },
+    {
+      san: "b4",
+      commentary:
+        "Desperation. White recognizes that doing nothing leads to a slow loss, so they try a tactical pawn sacrifice to break the queenside freeze.",
+    },
+    {
+      san: "axb4",
+      commentary:
+        "Black accepts the sacrifice. This triggers an explosive, symmetrical race to see which side can promote their pawn first.",
+    },
+    {
+      san: "a5",
+      commentary:
+        "White pushes forward. The b4-pawn cannot be caught by White's king, so White must rely entirely on the a-pawn's speed.",
+    },
+    {
+      san: "b3",
+      commentary:
+        "Black keeps marching. Because Black's pawn started further down the track, Black remains one crucial tempo ahead.",
+    },
+    {
+      san: "a6",
+      commentary:
+        "White pushes to the 6th rank, but it is a step too slow.",
+    },
+    {
+      san: "b2",
+      commentary:
+        "Black reaches the 7th rank. The threat of promotion is now absolute.",
+    },
+    {
+      san: "a7",
+      commentary:
+        "White matches Black's depth, placing their own pawn on the 7th rank.",
+    },
+    {
+      san: "b1=Q",
+      commentary:
+        "Black promotes first! Black successfully crowns a new Queen on b1, instantly establishing a massive tactical threat.",
+    },
+    {
+      san: "a8=Q",
+      commentary:
+        "White promotes immediately after. Both players now have active Queens on the board, but Black holds a decisive initiative.",
+    },
+    {
+      san: "Qe4+",
+      commentary:
+        "The killing blow. Black uses the newly promoted queen to force a check, completely dominating the long diagonal and forcing an exchange.",
+    },
+    {
+      san: "Qxe4+",
+      commentary:
+        "White has no tactical alternatives; they must capture the checking queen and accept the trade.",
+    },
+    {
+      san: "Kxe4",
+      commentary:
+        "Black recaptures. This brings the game to a position that is won by Black, and which constitutes one of the clasic endings of King and Pawns.",
+    },
+  ],
+},
 
   // ─────────────────────────────────────────────────────────────────
   // CHAPTER II — Lesson 3: The Power of the Rook on the 7th Rank
