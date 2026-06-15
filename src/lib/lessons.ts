@@ -3837,7 +3837,7 @@ export const LESSONS: Record<string, LessonContent> = {
   },
   //--------------------------------------------------
   "2-3": {
-    title: "Obtaining a Passed Pawn (White to Move)",
+    title: "Obtaining a Passed Pawn",
     intro:
       "When three or more pawns are opposed to each other in some such position as this, there is always a chance for one side or the other of obtaining a passed pawn. In this position, the way of obtaining a passed pawn is to advance the centre pawn.",
     startFen: "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
