@@ -3854,7 +3854,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "axb6",
             commentary:
-              "Black captures with the a-pawn. If Black tries 1...cxb6 instead, White wins immediately with 2.a6!, blocking the b-pawns and creating a runaway passer on the a-file.",
+              "Black captures with the a-pawn. If Black captures with the c-pawn, White wins immediately with a6, creating two runaway passers b-pawns cannot stop at once.",
           },
           {
             san: "c6",
