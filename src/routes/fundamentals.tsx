@@ -120,7 +120,7 @@ function Fundamentals() {
         </p>
       </header>
 
-      <Accordion type="multiple" defaultValue={["ch1"]} className="flex flex-col gap-4">
+      <Accordion type="multiple" defaultValue={[""]} className="flex flex-col gap-4">
         {CHAPTERS.map((ch) => {
           const done = ch.lessons.filter((l) => completed.has(l.id)).length;
           return (
