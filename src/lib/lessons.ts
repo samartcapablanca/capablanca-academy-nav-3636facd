@@ -3910,71 +3910,66 @@ export const LESSONS: Record<string, LessonContent> = {
     ],
   },
   // ─────────────────────────────────────────────────────────────────
-  // CHAPTER II — Lesson 3: The Power of the Rook on the 7th Rank
+  // CHAPTER II — Lesson 4
   // ─────────────────────────────────────────────────────────────────
   "2-4": {
-    title: "The Power of the Rook on the 7th Rank",
+    title: "Whch Pawn Queens First?",
     intro:
-      "Capablanca: “A Rook on the 7th rank is of great value because it keeps " +
-      "the opposing King hemmed in on the last rank and attacks the enemy pawns " +
-      "at their base.” White's Rook already occupies the ideal post on d7, " +
-      "while Black's pawns sit helpless on the 7th rank.",
-    startFen: "6k1/pppR4/8/8/8/8/3r2K1/8 w - - 0 1",
+      "When two pawns are free, or will be free, to advance to Queen, you can find out, by counting, which pawn will be the first to succeed. In this position, whoever moves first wins!",
+    startFen: "8/p5kp/8/1P6/8/2K5/P7/8 w - - 0 1",
     moves: [
       {
-        san: "Rxc7",
-        commentary:
-          "The rook on the 7th rank feasts on the immobile pawns. With one " +
-          "move White harvests the c-pawn — the first of three victims.",
+        san: "a4",
+        commentary: "White starts the engine! By advancing the a-pawn, White prepares a massive queenside pawn race.",
       },
       {
-        san: "Kf8",
+        san: "h5",
         commentary:
-          "Black brings his King toward the centre, but the structural damage " +
-          "is already severe. The rook's position is too powerful to be met by " +
-          "King moves alone.",
+          "Black launches their own counter-attack on the opposite side of the board. The race is officially on!",
       },
       {
-        san: "Rxb7",
+        san: "a5",
         commentary:
-          "The b-pawn falls next. Capablanca's principle in action: a rook on " +
-          "the 7th against pawns on their original squares wins material by force.",
+          "White's pawn marches forward. The first step in winning a pawn race is keeping your momentum without wasting a single turn.",
       },
       {
-        san: "Ke8",
-        commentary:
-          "Driven to the edge. The Black King finds no shelter; the rook controls " +
-          "the entire 7th rank and the open files behind the pawns.",
+        san: "h4",
+        commentary: "Black's h-pawn rushes down the board. Both sides are sprinting toward the finish line.",
       },
       {
-        san: "Rxa7",
+        san: "b6",
         commentary:
-          "The last pawn is taken. All three pawns have fallen to the 7th-rank " +
-          "rook. White has won three pawns without any counterplay from Black.",
+          "White pushes the b-pawn to clear a path. Now comes a little calculation. White can capture the pawn, but if he does so, he will not, when Queening, command the square where Black will also Queen his pawn. Therefore, instead of taking, he pushes.",
       },
       {
-        san: "Kd8",
+        san: "axb6",
         commentary:
-          "Black's King remains on the back rank, exactly where Capablanca " +
-          "said it would be trapped. The rook dominates from above.",
+          "Black accepts the trade, clearing the way for White's remaining a-pawn to become an unstoppable passed pawn.",
       },
       {
-        san: "Ra8+",
-        commentary:
-          "The rook invades the 8th rank with check, completing the sentence: " +
-          "“keeps the opposing King hemmed in on the last rank.” The monarch " +
-          "cannot escape the horizontal and vertical prison.",
+        san: "a6",
+        commentary: "White bypasses the blocker! The a-pawn is now completely free and running down the track.",
       },
       {
-        san: "Kd7",
+        san: "h3",
+        commentary: "Black keeps pushing! Notice how neither king can step in to stop these runaway pawns now.",
+      },
+      {
+        san: "a7",
+        commentary: "White lands on the 7th rank, just one single square away from a brand new Queen.",
+      },
+      {
+        san: "h2",
         commentary:
-          "The King finally steps off the last rank, but only after losing " +
-          "three pawns and the initiative. The lesson: place your Rook on the " +
-          "7th, and the opponent's pawns and King become your targets.",
+          "Black answers right back, also reaching the 7th rank. It looks like a tie, but order matters immensely in chess!",
+      },
+      {
+        san: "a8=Q",
+        commentary:
+          "White queens first! Because White started the race one step ahead, they promote on a8 with a decisive tactical twist. Capablanca explains: 'The time is the same, but the pawn that reaches the last square first and becomes a Queen is in a position to capture the adversary's Queen when he makes one.' White now guards the h1-promotion square perfectly!",
       },
     ],
   },
-
   // ─────────────────────────────────────────────────────────────────
   // CHAPTER II — Lesson 4: Queen against Rook (Philidor & Zugzwang)
   // ─────────────────────────────────────────────────────────────────
