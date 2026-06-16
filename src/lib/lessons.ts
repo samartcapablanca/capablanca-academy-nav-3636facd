@@ -3874,7 +3874,7 @@ export const LESSONS: Record<string, LessonContent> = {
         ],
       },
       {
-        label: "1. Kg2 (White Draws)",
+        label: "1. Kg1 (White Draws)",
         line: [
           {
             san: "Kg2",
