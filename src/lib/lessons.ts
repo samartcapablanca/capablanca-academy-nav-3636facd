@@ -3864,7 +3864,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "bxc6",
             commentary:
-              "Black has no tactical choice but to capture the distracting c-pawn, clearing the way entirely for White's breakthrough.",
+              "Black decides to capture the White c-pawn, clearing the way entirely for the White a-pawn.",
           },
           {
             san: "a6",
