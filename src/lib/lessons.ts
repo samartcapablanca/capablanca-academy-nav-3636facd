@@ -3839,7 +3839,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "2-3": {
     title: "Obtaining a Passed Pawn",
     intro:
-      "When three or more pawns are opposed to each other, the correct way to obtain a passed pawn is to advance the center pawn. In this position, White wins with b6 but draws with Kg2.",
+      "When three or more pawns are opposed to each other, the correct way to obtain a passed pawn is to advance the center pawn. White wins with b6 but draws with Kg2.",
     startFen: "8/ppp4k/8/PPP5/8/8/8/6K1 w - - 0 1",
     prompt: "Choose a path to explore:",
     variants: [
