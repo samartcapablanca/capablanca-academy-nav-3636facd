@@ -3877,7 +3877,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "Kg2",
             commentary:
-              "White misses the advantage of a passed pawn (b6) but is now closer to center (Kg2) and can reach the Black Pawn first and win. ",
+              "White misses the advantage of a passed pawn but the White King is now closer to the Black Pawns' formation. ",
           },
           {
             san: "b6",
@@ -3886,7 +3886,7 @@ export const LESSONS: Record<string, LessonContent> = {
           },
           {
             san: "cxb6",
-            commentary: "White tries to open a line, but Black formation is solid. ",
+            commentary: "White tries to open a line, but the Black Pawns's formation is solid. ",
           },
           {
             san: "cxb6",
@@ -3894,7 +3894,7 @@ export const LESSONS: Record<string, LessonContent> = {
           },
           {
             san: "axb6",
-            commentary: "White liquidates the outer pawns, heading into a completely balanced king-and-pawn race.",
+            commentary: "White liquidates the outer pawns, heading into a king-and-pawn race.",
           },
           {
             san: "axb6",
@@ -3903,7 +3903,7 @@ export const LESSONS: Record<string, LessonContent> = {
           },
           {
             san: "Kf3",
-            commentary: "White will reach the Black Pawn and the 6th rank first and win the game.",
+            commentary: "White will reach the Black Pawn and 6th rank in three moves and win the game.",
           },
         ],
       },
