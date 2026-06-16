@@ -3869,7 +3869,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "a6",
             commentary:
-              "As in this case the White pawn is nearer to Queen than any of the Black pawns, White will win.",
+              "Since the White pawn is nearer to Queen than any of the Black pawns, White will win.",
           },
         ],
       },
