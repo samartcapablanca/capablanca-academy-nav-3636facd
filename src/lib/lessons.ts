@@ -3839,7 +3839,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "2-3": {
     title: "Obtaining a Passed Pawn",
     intro:
-      "When three or more pawns are opposed to each other, there is a chance for either side to obtain a passed pawn. In this position, White wins by getting a passed pawn or reaching the Black Pawn first.",
+      "When three or more pawns are opposed to each other, there is a chance for either side to obtain a passed pawn. In this position, White wins by getting a passed pawn or reaching the last Black Pawn first.",
     startFen: "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
     prompt: "Choose a path to explore:",
     variants: [
