@@ -3879,7 +3879,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "Kg2",
             commentary:
-              "White misses the immediate tactical breakthrough. By moving the King instead, White allows Black the time to lock down the queenside structure.",
+              "White misses the advantage of a passed pawn. By moving the King instead, White allows Black the time to lock down the queenside structure.",
           },
           {
             san: "b6",
