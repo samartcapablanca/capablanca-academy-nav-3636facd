@@ -3877,9 +3877,9 @@ export const LESSONS: Record<string, LessonContent> = {
         label: "1. Kg1 (White Draws)",
         line: [
           {
-            san: "Kg2",
+            san: "Kg1",
             commentary:
-              "White misses the advantage of a passed pawn. By moving the King instead, White allows Black the time to lock down the queenside structure.",
+              "White misses the advantage of a passed pawn (b6). By moving the King away from the center (Kg1), White also misses the chance to reach the Black Pawn first and win (Kg2). ",
           },
           {
             san: "b6",
