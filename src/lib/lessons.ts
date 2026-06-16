@@ -3859,7 +3859,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "c6",
             commentary:
-              "White sacrifices the opposite side pawn! This distracts Black's defensive structure and clears a structural path for White's remaining asset.",
+              "White sacrifices the a-pawn and turns c-pawn into another runaway passer. Black b-pawns cannot stop both White pawns at once.",
           },
           {
             san: "bxc6",
