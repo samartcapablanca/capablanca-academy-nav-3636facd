@@ -3839,7 +3839,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "2-3": {
     title: "Obtaining a Passed Pawn",
     intro:
-      "When three or more pawns are opposed to each other, there is a chance for either side to obtain a passed pawn. In this position, White wins by advancing the center pawn.",
+      "When three or more pawns are opposed to each other, there is a chance for either side to obtain a passed pawn. In this position, White wins by getting a passed pawn or reaching the Black Pawn first.",
     startFen: "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
     prompt: "Choose a path to explore:",
     variants: [
@@ -3863,23 +3863,21 @@ export const LESSONS: Record<string, LessonContent> = {
           },
           {
             san: "bxc6",
-            commentary:
-              "Black decides to capture the White c-pawn, clearing the way entirely for the White a-pawn.",
+            commentary: "Black decides to capture the White c-pawn, clearing the way entirely for the White a-pawn.",
           },
           {
             san: "a6",
-            commentary:
-              "Since the White pawn is nearer to Queen than any of the Black pawns, White will win.",
+            commentary: "Since the White pawn is nearer to Queen than any of the Black pawns, White will win.",
           },
         ],
       },
       {
-        label: "1. Kg1 (White Draws)",
+        label: "1. Kg2 (White Wins)",
         line: [
           {
-            san: "Kg1",
+            san: "Kg2",
             commentary:
-              "White misses the advantage of a passed pawn (b6). By moving the King away from the center (Kg1), White also misses the chance to reach the Black Pawn first and win (Kg2). ",
+              "White misses the advantage of a passed pawn (b6) but is now closer to center (Kg2) and can reach the Black Pawn first and win. ",
           },
           {
             san: "b6",
@@ -3888,8 +3886,7 @@ export const LESSONS: Record<string, LessonContent> = {
           },
           {
             san: "cxb6",
-            commentary:
-              "White tries to open a line, but Black formation is solid. The White King is too far away, a winning strike is no longer possible.",
+            commentary: "White tries to open a line, but Black formation is solid. ",
           },
           {
             san: "cxb6",
@@ -3902,7 +3899,11 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "axb6",
             commentary:
-              "The game properly played from here is a dead draw, as both kings will arrive in time to stop any advanced pawns from promoting.",
+              "Black stopped the last White Pawn but the White King is four squares from the Black Pawn. The Black King is five squares away.",
+          },
+          {
+            san: "Kf3",
+            commentary: "White will reach the Black Pawn and the 6th rank first and win the game.",
           },
         ],
       },
