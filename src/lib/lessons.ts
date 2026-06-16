@@ -3884,7 +3884,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "b6",
             commentary:
-              "Black instantly takes the opportunity to play the defensive stopper move, neutralizing the threat just like in Example 24b.",
+              "Black gain a tempo to play the defensive stopper move, neutralizing the chance of a passing pawn for White.",
           },
           {
             san: "cxb6",
