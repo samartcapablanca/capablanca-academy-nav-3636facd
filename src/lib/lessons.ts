@@ -3889,7 +3889,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "cxb6",
             commentary:
-              "White tries to open a line, but because the White king is too far away, a winning breakthrough is no longer mathematically possible.",
+              "White tries to open a line, but Black formation is solid. The White King is too far away, a winning strike is no longer possible.",
           },
           {
             san: "cxb6",
