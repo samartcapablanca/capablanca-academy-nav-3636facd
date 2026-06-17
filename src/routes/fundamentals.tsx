@@ -46,7 +46,7 @@ const CHAPTERS: Chapter[] = [
       { id: "2-2", title: "A Cardinal Principle" },
       { id: "2-3", title: "Obtaining a Passed Pawn" },
       { id: "2-4", title: "Which Pawns Queens First" },
-      { id: "2-5", title: "Queen against Rook — The Philidor Position & Zugzwang" },
+      { id: "2-5", title: "The Opposition" },
     ],
   },
   {
