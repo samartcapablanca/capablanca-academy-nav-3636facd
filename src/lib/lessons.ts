@@ -3976,7 +3976,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "2-5": {
     title: "The Opposition",
     intro:
-      "In this position, Capablanca introduces a vital fundamental endgame concept: The Opposition. Notice that the Kings are directly opposed to each other, and the number of intervening squares between them is odd - one in this case.",
+      "Capablanca introduces a vital endgame concept: The Opposition. Notice that the Kings are directly opposed to each other, and the number of intervening squares between them is odd - one in this case.",
     startFen: "8/8/4k3/1p5p/1P2K2P/8/8/8 w - - 0 1",
     moves: [
       {
