@@ -4088,7 +4088,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Ke7",
         commentary:
-          "Capablanca notes that this move allows White to win. For smart kids and intermediates: the absolute best drawing move for Black here is actually 1...Kd8! By stepping left to d8, Black can answer 2.Kd3 with 2...Kd7, claiming the opposition and forcing a draw. Stepping to e7 lets White take control.",
+          "The Black King does the same and marches on file-e. There are now four squares apart.",
       },
       {
         san: "Ke3",
