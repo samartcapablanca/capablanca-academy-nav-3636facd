@@ -4007,7 +4007,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kf5",
         commentary:
-          "Black counters with an identical raid! Since White is hunting the b-pawn, Black rushes down the board to eat White's h4-pawn.",
+          "Black counters with an identical raid! Since White is hunting the b-pawn, Black rushes down for White's h4-pawn.",
       },
       {
         san: "Kc5",
