@@ -3997,7 +3997,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Ke6",
         commentary:
-          "Black mirrors White's movement perfectly. By maintaining the single odd square between the kings, Black successfully uses opposition.",
+          "Black mirrors White's movement perfectly. By maintaining the single odd square between the kings, Black successfully uses the\u00A0opposition.",
       },
       {
         san: "Kd4",
