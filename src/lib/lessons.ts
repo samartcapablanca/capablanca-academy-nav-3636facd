@@ -3966,7 +3966,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "a8=Q",
         commentary:
-          "White queens first! Because White started the race one step ahead, they promote on a8 with a decisive tactical twist. Capablanca explains: 'The time is the same, but the pawn that reaches the last square first and becomes a Queen is in a position to capture the adversary's Queen when he makes one.' White now guards the h1-promotion square perfectly!",
+          "White queens first! The time is the same, but the pawn that queens first is in a position to capture the adversary's Queen when he makes one. White now guards the h1-promotion square perfectly!",
       },
     ],
   },
