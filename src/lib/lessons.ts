@@ -3987,7 +3987,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kd6",
         commentary:
-          "Here Black had the option of either opposing the passage of the White King by playing 1...Kd6 or, if he prefers, he can pass with his own King by replying 1...Kf5. By matching White's step, Black takes the direct opposition!",
+          "Here Black has the option of either opposing the passage of the White King with 1...Kd6 or, passing with his own King with 1...Kf5. By matching White's step, Black takes the direct opposition!",
       },
       {
         san: "Ke4",
