@@ -4075,6 +4075,61 @@ export const LESSONS: Record<string, LessonContent> = {
     ],
   },
 
+  "2-6": {
+    title: "The Symmetrical Opposition",
+    intro:
+      "In all simple forms of opposition, when the Kings are on the same line and the number of intervening squares between them is even, the player who has the move has the opposition. White plays 1.Ke2.",
+    startFen: "4k3/8/8/1p4p1/1P4P1/8/8/4K3 w - - 0 1",
+    moves: [
+      {
+        san: "Ke2",
+        commentary: "White starts by marching up the center file, waiting to see how Black responds to the challenge.",
+      },
+      {
+        san: "Ke7",
+        commentary:
+          "Capablanca notes that this move allows White to win. For smart kids and intermediates: the absolute best drawing move for Black here is actually 1...Kd8! By stepping left to d8, Black can answer 2.Kd3 with 2...Kd7, claiming the opposition and forcing a draw. Stepping to e7 lets White take control.",
+      },
+      {
+        san: "Ke3",
+        commentary:
+          "Now, in order to win, the White King must advance. White steps to e3, keeping an odd number of squares between the kings. White now officially holds the long-range opposition!",
+      },
+      {
+        san: "Ke6",
+        commentary: "Black steps forward to e6 to brace the center wall, hoping White will blindly rush forward.",
+      },
+      {
+        san: "Ke4",
+        commentary:
+          "White claims the close vertical opposition! There is exactly one square between them, and it is Black's turn to move. This means Black's king is forced to yield ground.",
+      },
+      {
+        san: "Kf6",
+        commentary: "Black is forced to step aside to the right, abandoning the defense of the center files.",
+      },
+      {
+        san: "Kf4",
+        commentary:
+          "White matches Black's movement to take the horizontal opposition on the f-file! White keeps the tight squeeze on Black's king.",
+      },
+      {
+        san: "Kg6",
+        commentary: "Black steps back again, completely pushed to the edge of the kingside.",
+      },
+      {
+        san: "Ke5",
+        commentary:
+          "The breakthrough! Capablanca explains: 'Now by counting it will be seen that White wins by capturing Black's b-pawn.' White's king will effortlessly cruise over to the queenside to vacuum up Black's pieces.",
+      },
+      {
+        san: "Kg7",
+        commentary:
+          "Black makes a final, desperate retreat, but the game is strategically over. White's precise handling of the king's timing secured a brilliant endgame victory!",
+      },
+    ],
+  },
+
   "3-1": {
     title: "Attacking the King from the Flank",
     intro:
