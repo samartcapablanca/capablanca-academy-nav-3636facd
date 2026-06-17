@@ -4078,7 +4078,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "2-6": {
     title: "The Opposition - Even Count",
     intro:
-      "When the Kings are on the same line and the number of squares between them is even, the player who has the move has the opposition.\u00A0",
+      "When the Kings are on the same line and the number of squares between them is even, the player who has the move has the opposition. It's White's turn, so White has the opposition.",
     startFen: "4k3/8/8/1p4p1/1P4P1/8/8/4K3 w - - 0 1",
     moves: [
       {
