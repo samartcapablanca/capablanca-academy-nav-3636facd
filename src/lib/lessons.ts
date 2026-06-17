@@ -4031,7 +4031,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kc5",
         commentary:
-          "White's king steps out of the way to clear the track for the b-pawn. For beginners, remember that your king must never block your own running pawns!",
+          "White's king steps out of the way to clear the track for the b-pawn. Remember that your king must never block your own running pawns!",
       },
       {
         san: "Kg4",
