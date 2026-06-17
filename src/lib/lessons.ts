@@ -4088,7 +4088,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Ke7",
         commentary:
-          "The Black King does the same and marches on file-e. There are now four squares apart.",
+          "The Black King does the same and marches on file-e. There are now four squares apart. White still has the opposition.",
       },
       {
         san: "Ke3",
