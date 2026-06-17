@@ -3974,7 +3974,7 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER II — Lesson 4: Queen against Rook (Philidor & Zugzwang)
   // ─────────────────────────────────────────────────────────────────
   "2-5": {
-    title: "The Opposition",
+    title: "The Opposition - Odd Count",
     intro:
       "When the Kings are directly opposed to each other, and the number of squares between them is odd - one in this case, the player who has moved last has the opposition.",
     startFen: "8/8/4k3/1p5p/1P2K2P/8/8/8 w - - 0 1",
@@ -4076,7 +4076,7 @@ export const LESSONS: Record<string, LessonContent> = {
   },
 
   "2-6": {
-    title: "The Symmetrical Opposition",
+    title: "The Opposition - Even Count",
     intro:
       "In all simple forms of opposition, when the Kings are on the same line and the number of intervening squares between them is even, the player who has the move has the opposition. White plays 1.Ke2.",
     startFen: "4k3/8/8/1p4p1/1P4P1/8/8/4K3 w - - 0 1",
