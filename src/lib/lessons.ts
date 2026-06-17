@@ -4002,7 +4002,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kd4",
         commentary:
-          "White returns to d4, realizing they can't break through the center. White decides to completely abandon defense and launch an aggressive raid on Black's b5-pawn.",
+          "White returns to d4, realizing they can't break through the center. White decides to return to his original plan and attack Black's b5-pawn.",
       },
       {
         san: "Kf5",
