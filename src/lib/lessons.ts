@@ -4070,7 +4070,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "h1=Q",
         commentary:
-          "Black promotes right after, crowning a Queen on h1! Unlike the previous lesson (Example 25), White's new queen on b8 does not command the h1-square or the long diagonal. With both players successfully holding active queens, this game balances out to a hard-fought theoretical draw.",
+          "Black promotes right after, crowning a Queen on h1! Unlike the previous lesson, White's new queen on b8 does not command the h1-square or the long diagonal. With both players holding active queens, this game balances out to a theoretical draw.",
       },
     ],
   },
