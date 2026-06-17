@@ -4026,7 +4026,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kxh4",
         commentary:
-          "Black vacuums up the h4-pawn. Black now has an identical passed pawn on the h-file. It's a pure sprint to the finish line!",
+          "Black takes the h4-pawn. Black now has an identical passed pawn on the h-file. It's a pure sprint to the finish line!",
       },
       {
         san: "Kc5",
