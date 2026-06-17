@@ -3974,68 +3974,103 @@ export const LESSONS: Record<string, LessonContent> = {
   // CHAPTER II — Lesson 4: Queen against Rook (Philidor & Zugzwang)
   // ─────────────────────────────────────────────────────────────────
   "2-5": {
-    title: "Queen against Rook — The Philidor Position & Zugzwang",
+    title: "The Opposition",
     intro:
-      "Capablanca: “In this ending, the stronger side wins by pushing the " +
-      "opponent's king to the edge or corner of the board. The winning method " +
-      "is based on 'Zugzwang'—forcing the weaker side to separate their Rook " +
-      "from their King, which immediately allows a deadly double-attack (fork) " +
-      "by the Queen to win the piece.” White: King e6, Queen e5. Black: King e8, " +
-      "Rook f7. A classic Philidor setup where the defender is already on the " +
-      "brink of collapse.",
-    startFen: "4k3/5r2/4K3/4Q3/8/8/8/8 w - - 0 1",
+      "In this position, Capablanca introduces a vital fundamental endgame concept: The Opposition. Notice that the Kings are directly opposed to each other, and the number of intervening squares between them is odd - one in this case.",
+    startFen: "8/8/4k3/1p5p/1P2K2P/8/8/8 w - - 0 1",
     moves: [
       {
-        san: "Qd5",
+        san: "Kd4",
         commentary:
-          "“Restrict, then attack.” The Queen descends to d5, cutting off the " +
-          "Rook's escape along the 7th rank and threatening to tighten the net. " +
-          "Every step in this ending is about reducing the defender's options.",
+          "White steps out from the direct face-off, trying to sneak around Black's defenses and invade the queenside.",
       },
       {
-        san: "Re7+",
+        san: "Kd6",
         commentary:
-          "Black attempts a desperado check, hoping to force the White King " +
-          "away and gain a tempo. Capablanca noted that in lost positions, " +
-          "checks are often the only resource — but they rarely save the game.",
+          "Here Black had the option of either opposing the passage of the White King by playing 1...Kd6 or, if he prefers, he can pass with his own King by replying 1...Kf5. By matching White's step, Black takes the direct opposition!",
       },
       {
-        san: "Kf6",
+        san: "Ke4",
         commentary:
-          "The King approaches. “Bring your King to the centre of the board.” " +
-          "From f6, White's monarch seals off every flight square on the 7th rank " +
-          "and prepares for the final zugzwang.",
+          "White turns around and tries the other side. Since White cannot make any forward progress on the d-file, they shift to the e-file.",
       },
       {
-        san: "Kf8",
+        san: "Ke6",
         commentary:
-          "Black's King retreats to f8, clinging to the centre. But the " +
-          "coordinated White pieces are closing in, and the defender's mobility " +
-          "shrinks with every move.",
+          "Black mirrors White's movement perfectly. By maintaining the single odd square between the kings, Black successfully locks down the boundary line.",
       },
       {
-        san: "Qd6",
+        san: "Kd4",
         commentary:
-          "The decisive zugzwang. The Queen on d6 attacks e7 and paralyses the " +
-          "entire Black position: the Rook cannot move to any safe square, and " +
-          "the King must abandon his protector. Capablanca's method in its purest " +
-          "form — force the opponent to move against his own interest.",
+          "White returns to d4, realizing they can't break through the center. White decides to completely abandon defense and launch an aggressive raid on Black's b5-pawn.",
       },
       {
-        san: "Ke8",
+        san: "Kf5",
         commentary:
-          "Forced. The Rook on e7 is immobilised — every escape square is either " +
-          "attacked by the Queen or the White King. The defender's only legal " +
-          "moves are with the King: to e8 or g8. Both are fatal.",
+          "Black counters with an identical raid! Since White is hunting the b-pawn, Black rushes down the board to eat White's h4-pawn.",
       },
       {
-        san: "Qxe7#",
+        san: "Kc5",
+        commentary: "White makes the first strike, arriving at the base of Black's queenside pawn structure.",
+      },
+      {
+        san: "Kg4",
         commentary:
-          "Mate. The King stepped away, and the Rook was instantly captured with " +
-          "check. The Black King has no escape: d8 and f8 are controlled by the " +
-          "Queen, d7 and f7 by the White King. This is the power of zugzwang — " +
-          "the defender was compelled to self-destruction. As Capablanca wrote: " +
-          "“The winning method is based on Zugzwang.”",
+          "Black hits back on the kingside, eyeing the vulnerable h4 target. The endgame has instantly transformed into an exciting double-sided race!",
+      },
+      {
+        san: "Kxb5",
+        commentary:
+          "White captures the b5-pawn. The b4-pawn is now officially a dangerous passed pawn, ready to charge down the b-file.",
+      },
+      {
+        san: "Kxh4",
+        commentary:
+          "Black vacuums up the h4-pawn. Black now has an identical passed pawn on the h-file. It's a pure sprint to the finish line!",
+      },
+      {
+        san: "Kc5",
+        commentary:
+          "White's king steps out of the way to clear the track for the b-pawn. For beginners, remember that your king must never block your own running pawns!",
+      },
+      {
+        san: "Kg4",
+        commentary: "Black's king similarly clears out of the h-pawn's path, taking a safe position on g4.",
+      },
+      {
+        san: "b5",
+        commentary: "White's b-pawn begins its charge down the board.",
+      },
+      {
+        san: "h4",
+        commentary: "Black's h-pawn matches it stride for stride.",
+      },
+      {
+        san: "b6",
+        commentary:
+          "White pushes to the 6th rank! The adrenaline is high, but smart kids can count that both sides have exactly two squares left.",
+      },
+      {
+        san: "h3",
+        commentary:
+          "Black pushes to the 3rd rank (the 6th rank from Black's perspective). Both pawns are moving at lightning speed.",
+      },
+      {
+        san: "b7",
+        commentary: "White hits the 7th rank! The threat of creating a new queen is now imminent.",
+      },
+      {
+        san: "h2",
+        commentary: "Black also hits the 7th rank! One more step for each side.",
+      },
+      {
+        san: "b8=Q",
+        commentary: "White promotes first, crowning a brand new Queen on b8!",
+      },
+      {
+        san: "h1=Q",
+        commentary:
+          "Black promotes right after, crowning a Queen on h1! Unlike the previous lesson (Example 25), White's new queen on b8 does not command the h1-square or the long diagonal. With both players successfully holding active queens, this game balances out to a hard-fought theoretical draw.",
       },
     ],
   },
