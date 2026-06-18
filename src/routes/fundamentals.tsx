@@ -48,6 +48,7 @@ const CHAPTERS: Chapter[] = [
       { id: "2-4", title: "Which Pawns Queens First" },
       { id: "2-5", title: "The Opposition - Odd Count" },
       { id: "2-6", title: "The Opposition - Even Count" },
+      { id: "2-7", title: "The Opposition as Defense" },
     ],
   },
   {
