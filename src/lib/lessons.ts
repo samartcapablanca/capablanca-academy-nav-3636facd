@@ -4110,8 +4110,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Kd5",
-        commentary:
-          "White uses the opposition to push away the Black King. ",
+        commentary: "White uses the opposition to push away the Black King. ",
       },
       {
         san: "Kg6",
@@ -4129,7 +4128,73 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-
+  //--------------------------------------
+  "2-7": {
+    title: "The Opposition as Defence",
+    intro:
+      "White is a pawn behind and apparently lost, yet he can manage to draw by utilizing the distant opposition. 1.Kf1 fails because White's own pawn at f3 will eventually obstruct the king's lateral movement. White plays 1.Kh1!",
+    startFen: "8/8/8/4p1p1/8/5P2/6K1/3k4 w - - 0 1",
+    moves: [
+      {
+        san: "Kh1",
+        commentary:
+          "White takes the distant opposition. Because the number of intervening squares between the Kings is odd (five squares), White holds the defensive barrier.",
+      },
+      {
+        san: "Kd2",
+        commentary:
+          "Black advances. Capablanca notes that if 1...g4, White responds 2.Kg2 (not 2.fxg4 because e4 wins) 2...Kd2 3.fxg4 e4, resulting in a drawn queen race.",
+      },
+      {
+        san: "Kh2",
+        commentary: "White mirrors Black's rank advancement to maintain the long-range opposition.",
+      },
+      {
+        san: "Kd3",
+        commentary: "Black presses forward on the d-file, looking for an entry point.",
+      },
+      {
+        san: "Kh3",
+        commentary:
+          "White maintains the lateral opposition. There are three horizontal squares between the kings, leaving Black unable to make headway.",
+      },
+      {
+        san: "Ke2",
+        commentary: "Black shifts back toward the center file to alter the angle of attack.",
+      },
+      {
+        san: "Kg2",
+        commentary: "White shifts to match, maintaining the diagonal/close defensive structure.",
+      },
+      {
+        san: "Ke3",
+        commentary: "Black takes the e3-square, confronting White directly.",
+      },
+      {
+        san: "Kg3",
+        commentary:
+          "White secures the close vertical opposition, completely barring the Black king from advancing further.",
+      },
+      {
+        san: "Kd4",
+        commentary: "Black attempts to break the lock by outflanking via the d-file.",
+      },
+      {
+        san: "Kg4",
+        commentary:
+          "White counter-attacks the g5-pawn, forcing Black's king to abandon its forward march to protect it.",
+      },
+      {
+        san: "Ke3",
+        commentary: "Black retreats to defend the kingside structure.",
+      },
+      {
+        san: "Kg3",
+        commentary: "White returns to g3, permanently holding the opposition. The position is a dead theoretical draw.",
+      },
+    ],
+  },
+  //-------------------------------------
   "3-1": {
     title: "Attacking the King from the Flank",
     intro:
