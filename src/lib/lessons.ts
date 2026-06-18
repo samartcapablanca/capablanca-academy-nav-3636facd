@@ -4109,7 +4109,7 @@ export const LESSONS: Record<string, LessonContent> = {
         commentary: "Black is forced to step aside to the right, abandoning the defense of the center files.",
       },
       {
-        san: "Kf4",
+        san: "Kd5",
         commentary:
           "White matches Black's movement to take the horizontal opposition on the f-file! White keeps the tight squeeze on Black's king.",
       },
