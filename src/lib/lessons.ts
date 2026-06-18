@@ -4097,7 +4097,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
       {
         san: "Ke6",
-        commentary: "Black steps forward to e6 to brace the center wall, hoping White will blindly rush forward.",
+        commentary: "Black chooses Ke6 and now White will have the opposition by moving forward.",
       },
       {
         san: "Ke4",
