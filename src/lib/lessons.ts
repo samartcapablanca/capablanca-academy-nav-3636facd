@@ -4120,7 +4120,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Ke5",
         commentary:
-          "The Black King has no choice but retreat and lose their g-pawn. White will give their g-pawn away because they win by capturing Black's b-pawn.' White's king will effortlessly cruise over to the queenside to vacuum up Black's pieces.",
+          "The Black King has no choice but retreat and lose their g-pawn. White will give their g-pawn away because they win by capturing Black's b-pawn. White's king will effortlessly cruise over to the queenside to vacuum up Black's pieces.",
       },
       {
         san: "Kg7",
