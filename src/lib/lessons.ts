@@ -4093,7 +4093,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Ke3",
         commentary:
-          "Now, in order to win, the White King must advance. White steps to e3, keeping an odd number of squares between the kings. White now officially holds the long-range opposition!",
+          "Now Black faces a crossroad. If they move to e6, they concede the opposition to White and White wins. Because it leaves two squares between them and it's White's turn. If Black moves to d7, and waits for White to move to e4, and then moves to e6, they gain the opposition and it's a draw. ",
       },
       {
         san: "Ke6",
