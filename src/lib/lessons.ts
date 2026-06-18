@@ -4093,7 +4093,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Ke3",
         commentary:
-          "Now Black faces a crossroad. If they play Ke6, they concede the opposition and White wins. If Black plays Kd7, and waits for White to move to e4, and then move to e6, they gain the opposition and it's a draw.",
+          "Now Black faces a crossroad. If they play Ke6, they concede the opposition and White wins. If Black plays Kd7, and wait for White to move to e4, and then move to e6, they gain the opposition and it's a draw.",
       },
       {
         san: "Ke6",
