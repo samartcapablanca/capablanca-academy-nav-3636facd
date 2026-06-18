@@ -4111,7 +4111,7 @@ export const LESSONS: Record<string, LessonContent> = {
       {
         san: "Kd5",
         commentary:
-          "White matches Black's movement to take the horizontal opposition on the f-file! White keeps the tight squeeze on Black's king.",
+          "White uses the opposition to push away the Black King. ",
       },
       {
         san: "Kg6",
