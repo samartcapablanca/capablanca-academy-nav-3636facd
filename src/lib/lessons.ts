@@ -4194,59 +4194,54 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-"2-8": {
-  title: "Two Knights vs Pawn",
-  intro:
-    "White with two Knights can normally only stalemate a lone King. However, as Capablanca explains, if Black has a pawn that is forced to move, stalemate is avoided, allowing White to engineer a forced checkmate.",
-  startFen: "1k6/8/1K1N4/6p1/6N1/8/8/8 w - - 0 1",
-  moves: [
-    {
-      san: "Ng6",
-      commentary:
-        "White blocks the King's escape but leaves the pawn free. Taking the pawn would result in an immediate theoretical draw.",
-    },
-    {
-      san: "h4",
-      commentary:
-        "Black has no legal King moves and is forced to push the pawn forward.",
-    },
-    {
-      san: "Ne5",
-      commentary:
-        "White maneuvers the second knight into the final mating matrix while Black remains completely restricted.",
-    },
-    {
-      san: "h3",
-      commentary:
-        "Black's pawn advances again, keeping the game alive and preventing a stalemate draw.",
-    },
-    {
-      san: "Nc6",
-      commentary:
-        "White's knight cuts off the b8 square, forcing Black's King into the corner at a8.",
-    },
-    {
-      san: "h2",
-      commentary:
-        "Black's pawn steps to the brink of promotion.",
-    },
-    {
-      san: "Nb5",
-      commentary:
-        "White prepares the final mating sequence. Black is allowed to promote because the checkmate arrives on the very next move.",
-    },
-    {
-      san: "h1=Q",
-      commentary:
-        "Black promotes to a Queen, but it is one move too late.",
-    },
-    {
-      san: "Nc7#",
-      commentary:
-        "Checkmate. White successfully uses the extra enemy pawn to force a win that would otherwise be impossible.",
-    },
-  ],
-},  
+  "2-8": {
+    title: "Two Knights vs Pawn",
+    intro:
+      "White with two Knights can normally only stalemate a lone King. However, as Capablanca explains, if Black has a pawn that is forced to move, stalemate is avoided, allowing White to engineer a forced checkmate.",
+    startFen: "k7/8/1K1N4/6p1/6N1/8/8/8 w - - 0 1",
+    moves: [
+      {
+        san: "Ng6",
+        commentary:
+          "White blocks the King's escape but leaves the pawn free. Taking the pawn would result in an immediate theoretical draw.",
+      },
+      {
+        san: "h4",
+        commentary: "Black has no legal King moves and is forced to push the pawn forward.",
+      },
+      {
+        san: "Ne5",
+        commentary:
+          "White maneuvers the second knight into the final mating matrix while Black remains completely restricted.",
+      },
+      {
+        san: "h3",
+        commentary: "Black's pawn advances again, keeping the game alive and preventing a stalemate draw.",
+      },
+      {
+        san: "Nc6",
+        commentary: "White's knight cuts off the b8 square, forcing Black's King into the corner at a8.",
+      },
+      {
+        san: "h2",
+        commentary: "Black's pawn steps to the brink of promotion.",
+      },
+      {
+        san: "Nb5",
+        commentary:
+          "White prepares the final mating sequence. Black is allowed to promote because the checkmate arrives on the very next move.",
+      },
+      {
+        san: "h1=Q",
+        commentary: "Black promotes to a Queen, but it is one move too late.",
+      },
+      {
+        san: "Nc7#",
+        commentary:
+          "Checkmate. White successfully uses the extra enemy pawn to force a win that would otherwise be impossible.",
+      },
+    ],
+  },
   //-------------------------------------
   "3-1": {
     title: "Attacking the King from the Flank",
