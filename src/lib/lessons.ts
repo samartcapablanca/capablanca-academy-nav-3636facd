@@ -4197,7 +4197,7 @@ export const LESSONS: Record<string, LessonContent> = {
   "2-8": {
     title: "Two Knights vs Pawn",
     intro:
-      "White with two Knights can normally only stalemate a lone King. However, as Capablanca explains, if Black has a pawn that is forced to move, stalemate is avoided, allowing White to engineer a forced checkmate.",
+      "White with two Knights can normally only stalemate a lone King. However, if Black has a pawn that is forced to move, stalemate is avoided, allowing White to engineer a forced checkmate.",
     startFen: "k7/8/1K1N4/7p/7N/8/8/8 w - - 0 1",
     moves: [
       {
