@@ -953,7 +953,7 @@ export const LESSONS: Record<string, LessonContent> = {
     {
       san: "Kd7",
       commentary:
-        "Black deliberately moves toward the white-squared corner (a8) to make the defense as resilient as possible against White's dark-squared bishop.",
+        "Black deliberately moves toward the light-squared corner (a8) to make the defense as resilient as possible against White's dark-squared bishop.",
     },
     { 
       san: "Kd3",
