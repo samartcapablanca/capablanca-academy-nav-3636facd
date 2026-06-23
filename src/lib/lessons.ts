@@ -939,6 +939,107 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+"1-10": {
+  title: "Mate with Knight & Bishop",
+  intro:
+    "This ending is rather laborious and requires foresight to accomplish within the fifty-move limit. Capablanca divides the strategy into two distinct stages: first, driving the lone King to the back rank, and second, ushering it into a corner of the same color as your Bishop to deliver the checkmate.",
+  startFen: "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
+  moves: [
+    {
+      san: "Ke2",
+      commentary:
+        "White begins by advancing the King toward the center of the board, standard procedure for building a mating net.",
+    },
+    {
+      san: "Kd7",
+      commentary:
+        "Black deliberately moves toward the white-squared corner (a8) to make the defense as resilient as possible against White's light-squared bishop.",
+    },
+    { san: "Kd3" },
+    { san: "Kc6" },
+    { san: "Bf4" },
+    { san: "Kd5" },
+    { san: "Ne2" },
+    { san: "Kc5" },
+    { san: "Nc3" },
+    { san: "Kb4" },
+    { san: "Kd4" },
+    { san: "Ka5" },
+    { san: "Kc5" },
+    { san: "Ka6" },
+    { san: "Kc6" },
+    { san: "Ka7" },
+    { san: "Nd5" },
+    {
+      san: "Ka8",
+      commentary:
+        "The first stage is complete: the Black King is forced to the back row in the white-squared corner. Now begins the process of herding him from a8 toward a1 or h8. White selects a1 as the quickest path.",
+    },
+    {
+      san: "Nb6+",
+      commentary:
+        "White's knight delivers a check, forcing the king to step away from the corner square.",
+    },
+    { san: "Ka7" },
+    { san: "Bc7" },
+    { san: "Ka6" },
+    {
+      san: "Bb8",
+      commentary:
+        "The bishop beautifully cuts off the escape square, keeping the black king sealed on the edge.",
+    },
+    { san: "Ka5" },
+    { san: "Nd5" },
+    { san: "Ka4" },
+    {
+      san: "Kc5!",
+      commentary:
+        "Black is trying to run across toward the safe h1 corner. Capablanca opts for this king-led restriction technique as it uses the pieces efficiently and stays true to the spirit of the ending.",
+    },
+    { san: "Kb3" },
+    { san: "Nb4" },
+    { san: "Kc3" },
+    { san: "Bf4" },
+    { san: "Kb3" },
+    { san: "Be5" },
+    { san: "Ka4" },
+    {
+      san: "Kc4",
+      commentary:
+        "Notice the close cooperation: the King follows tightly while the Knight and King systematically guard the dark squares that the light-squared Bishop cannot control.",
+    },
+    { san: "Ka5" },
+    { san: "Bc7+" },
+    { san: "Ka4" },
+    { san: "Nd3" },
+    { san: "Ka3" },
+    { san: "Bb6" },
+    { san: "Ka4" },
+    { san: "Nb2+" },
+    { san: "Ka3" },
+    { san: "Kc3" },
+    { san: "Ka2" },
+    { san: "Kc2" },
+    { san: "Ka3" },
+    { san: "Bc5+" },
+    { san: "Ka2" },
+    {
+      san: "Nd3",
+      commentary:
+        "The net tightens perfectly. The Black King is down to just two available squares.",
+    },
+    { san: "Ka1" },
+    { san: "Bb4" },
+    { san: "Ka2" },
+    { san: "Nc1+" },
+    { san: "Ka1" },
+    {
+      san: "Bc3#",
+      commentary:
+        "Checkmate! The light-squared bishop delivers the final blow on the exact color-matching corner square.",
+    },
+  ],
+},  
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
   // ═════════════════════════════════════════════════════════════════
@@ -4373,6 +4474,89 @@ export const LESSONS: Record<string, LessonContent> = {
     },
   ],
 },
+"2-10": {
+  title: "Queen against Rook",
+  intro:
+    "One of the most difficult endings without pawns. The resources of the defense are many, and Capablanca outlines that the main object is to force the Black Rook away from the defending King by executing a precise triangulation maneuver.",
+  startFen: "1k6/1r6/2K5/Q7/8/8/8/8 w - - 0 1",
+  moves: [
+    {
+      san: "Qe5+",
+      commentary:
+        "White initiates the sequence with a check. As noted in the lesson, playing 1.Qa6? fails immediately due to the beginner's trap: 1...Rc7+ 2.Kb6 Rc6+ 3.Kxc6 resulting in Stalemate.",
+    },
+    {
+      san: "Ka8",
+      commentary:
+        "Black steps the king away into the corner square.",
+    },
+    {
+      san: "Qa1+",
+      commentary:
+        "White delivers a check from the bottom rank to adjust the tempo.",
+    },
+    {
+      san: "Kb8",
+      commentary:
+        "The black king is forced back out out of the corner.",
+    },
+    {
+      san: "Qa5",
+      commentary:
+        "The first part is concluded. White has achieved the exact same geometric layout as the starting position, but with a crucial twist: it is now Black's move. The rook must leave the safety of its king.",
+    },
+    {
+      san: "Rb3",
+      commentary:
+        "Black chooses 3...Rb3. If Black had opted for 3...Rb1 instead, White would win via 4.Qe5+ Ka7 as demonstrated in Example 41.",
+    },
+    {
+      san: "Qe5+",
+      commentary:
+        "White immediately capitalizes on the separated rook, beginning the final forcing checks.",
+    },
+    {
+      san: "Ka8",
+      commentary:
+        "The king retreats to the corner square once more.",
+    },
+    {
+      san: "Qh8+",
+      commentary:
+        "White checks along the back rank, pushing the king out to make room for the tactical finish.",
+    },
+    {
+      san: "Ka7",
+      commentary:
+        "The king moves upward to step away from the back-rank threat.",
+    },
+    {
+      san: "Qh7+",
+      commentary:
+        "White drives the king back down while keeping a vigilant eye on the b-file.",
+    },
+    {
+      san: "Ka8",
+      commentary:
+        "Black enters the corner for the last time.",
+    },
+    {
+      san: "Qg8+",
+      commentary:
+        "A decisive double attack on the g-file, checking the king and skewering the poorly placed rook.",
+    },
+    {
+      san: "Rb8",
+      commentary:
+        "Black blocks with the rook to stave off immediate capture.",
+    },
+    {
+      san: "Qa2#",
+      commentary:
+        "Checkmate. The queen delivers the final blow supported perfectly by the king on c6.",
+    },
+  ],
+},  
   "3-2": {
     title: "The Value of the Two Bishops",
     intro:
