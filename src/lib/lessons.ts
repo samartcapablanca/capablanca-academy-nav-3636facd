@@ -1104,7 +1104,7 @@ export const LESSONS: Record<string, LessonContent> = {
         "The net tightens perfectly. The Black King is down to just two available squares.",
     },
     { san: "Ka1",
-    commentary: "Black King has finally reached the a1."},
+    commentary: "Black King has finally reaches the corner a1."},
     { 
       san: "Bb4",
       commentary: "A quiet, patient Bishop move that forces Black into 'Zugzwang'—Black is compelled to move their King to a2, setting up the mate."
