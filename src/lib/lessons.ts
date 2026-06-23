@@ -4305,7 +4305,74 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-
+"2-9": {
+  title: "Knight vs Two Pawns",
+  intro:
+    "In this exceptional endgame scenario, Capablanca demonstrates how a single White Knight can defeat two advanced Black pawns. He notes that White can win with or without the first move, and walks through the most difficult defensive variation.",
+  startFen: "8/8/5Np1/8/8/6p1/5K2/7k b - - 0 1",
+  moves: [
+    {
+      san: "Kh2",
+      commentary:
+        "Black starts by stepping the king forward to shield the advanced g3-pawn.",
+    },
+    {
+      san: "Ng4+",
+      commentary:
+        "White delivers a check, forcing the Black king back into the corner.",
+    },
+    {
+      san: "Kh1",
+      commentary:
+        "The black king retreats to h1, temporarily stuck.",
+    },
+    {
+      san: "Kf1",
+      commentary:
+        "White's king steps onto the f-file to lock the black king down and restrict counterplay.",
+    },
+    {
+      san: "g5",
+      commentary:
+        "With the king locked away, Black is forced to push the secondary pawn forward.",
+    },
+    {
+      san: "Kf2",
+      commentary:
+        "White mirrors the king placement, waiting out Black's available pawn tempos.",
+    },
+    {
+      san: "h2",
+      commentary:
+        "Black pushes the advanced pawn to the brink of promotion.",
+    },
+    {
+      san: "Ne3",
+      commentary:
+        "White reroutes the knight closer to the action, preparing the final clamping matrix.",
+    },
+    {
+      san: "g4",
+      commentary:
+        "Black continues to push their remaining pawn resource forward.",
+    },
+    {
+      san: "Nf1",
+      commentary:
+        "White pivots the knight back to f1, blockading the promotion square and setting up an airtight mating net.",
+    },
+    {
+      san: "g3+",
+      commentary:
+        "Black's final pawn push gives check, but it seals their own fate.",
+    },
+    {
+      san: "Nxg3#",
+      commentary:
+        "Checkmate. The knight captures the checking pawn and delivers a spectacular, compact smother mate.",
+    },
+  ],
+},
   "3-2": {
     title: "The Value of the Two Bishops",
     intro:
