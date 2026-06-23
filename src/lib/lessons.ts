@@ -1091,7 +1091,7 @@ export const LESSONS: Record<string, LessonContent> = {
       commentary: "The King steps to c2, locking down the b1 square and completing the containment."
     },
     { san: "Ka3",
-    commentary: "White King assists the White Knight to continue to shoulder down the Black King."},
+    commentary: "Black King tries to go back up into the a-file."},
     { 
       san: "Bc5+",
       commentary: "Another check. The Bishop now drives the Black King further down to the second rank."
