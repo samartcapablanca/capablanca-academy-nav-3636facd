@@ -1031,7 +1031,7 @@ export const LESSONS: Record<string, LessonContent> = {
     { san: "Nd5",
     commentary: "White Knight starts in the other direction."},
     { san: "Ka4",
-    commentary: "White Knight starts in the other direction."},
+    commentary: "Black King starts in the other direction."},
     {
       san: "Kc5!",
       commentary:
