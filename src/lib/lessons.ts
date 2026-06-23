@@ -1084,8 +1084,10 @@ export const LESSONS: Record<string, LessonContent> = {
     },
     { san: "Ka3",
     commentary: "Black King is forced to move back."},
-    { san: "Kc3" },
-    { san: "Ka2" },
+    { san: "Kc3",
+    commentary: "White King assists the White Knight in cornering the Black King."},
+    { san: "Ka2",
+    commentary: "Black King must go down."},
     { 
       san: "Kc2",
       commentary: "The King steps to c2, locking down the b1 square and completing the containment."
