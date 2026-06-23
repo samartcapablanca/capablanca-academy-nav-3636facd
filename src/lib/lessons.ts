@@ -942,7 +942,7 @@ export const LESSONS: Record<string, LessonContent> = {
 "1-10": {
   title: "Mate with Knight & Bishop",
   intro:
-    "This ending is rather laborious and requires foresight to accomplish within the fifty-move limit. Capablanca divides the strategy into two distinct stages: first, driving the lone King to the back rank, and second, ushering it into a corner of the same color as your Bishop to deliver the checkmate.",
+    "This ending is rather laborious and requires foresight to accomplish within the fifty-move limit. Capablanca divides the strategy into two stages: first, driving the lone King to the back rank, and second, ushering it into a corner of the same color as your Bishop to deliver the checkmate.",
   startFen: "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
   moves: [
     {
