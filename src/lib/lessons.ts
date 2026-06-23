@@ -983,7 +983,7 @@ export const LESSONS: Record<string, LessonContent> = {
     commentary: "Black King runs along the edge."},
     { 
       san: "Kd4",
-      commentary: "White's King continues to physically squeeze the enemy counterpart, stepping in behind the Knight's blockade."
+      commentary: "White's King continues to physically squeeze the Black King, stepping in behind the Knight's blockade."
     },
     { san: "Ka5",
     commentary: "Black King decides to move up to the a-file."},
