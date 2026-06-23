@@ -957,7 +957,7 @@ export const LESSONS: Record<string, LessonContent> = {
     },
     { 
       san: "Kd3",
-      commentary: "White's King takes opposition and limits the Black King's potential escape paths back down the board."
+      commentary: "White's King takes opposition and limits the Black King's potential escape down the board."
     },
     { san: "Kc6" },
     { 
