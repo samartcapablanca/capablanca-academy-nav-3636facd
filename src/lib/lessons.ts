@@ -1122,7 +1122,7 @@ export const LESSONS: Record<string, LessonContent> = {
     {
       san: "Bc3#",
       commentary:
-        "Checkmate! The light-squared bishop delivers the final blow on the exact color-matching corner square.",
+        "Checkmate! The dark-squared bishop delivers the final blow on the exact color-matching corner square.",
     },
   ],
 },  
