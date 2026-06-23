@@ -1060,7 +1060,7 @@ export const LESSONS: Record<string, LessonContent> = {
     {
       san: "Kc4",
       commentary:
-        "Notice the close cooperation: the Knight and King systematically guard the dark squares that the dark-squared Bishop cannot control.",
+        "Notice the close cooperation: the Knight and King systematically guard the light squares that the dark-squared Bishop cannot control.",
     },
     { san: "Ka5",
     commentary: "Black King tries to move up through the a-file."},
