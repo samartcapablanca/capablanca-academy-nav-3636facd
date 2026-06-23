@@ -35,6 +35,7 @@ const CHAPTERS: Chapter[] = [
       { id: "1-7", title: "King on the 6th Rank" },
       { id: "1-8", title: "Two Pawns - Outflank to the h-file" },
       { id: "1-9", title: "Two Pawns - Outflank to the f-file" },
+      { id: "1-10", title: "Mate with Knight and Bishop" },
     ],
   },
   {
@@ -51,6 +52,7 @@ const CHAPTERS: Chapter[] = [
       { id: "2-7", title: "The Opposition as Defense" },
       { id: "2-8", title: "Two Knights vs Pawn" },
       { id: "2-9", title: "Knight vs Two Pawns" }, 
+      { id: "2-10", title: "Queen against Rook" }, 
     ],
   },
   {
