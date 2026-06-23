@@ -959,28 +959,36 @@ export const LESSONS: Record<string, LessonContent> = {
       san: "Kd3",
       commentary: "White's King takes opposition and limits the Black King's potential escape down the board."
     },
-    { san: "Kc6" },
+    { san: "Kc6", 
+      commentary: "Black King drift away from the White King."
+    },
     { 
       san: "Bf4",
       commentary: "The Bishop takes an active diagonal post, restricting the Black King to the upper left quadrant of the board."
     },
-    { san: "Kd5" },
+    { san: "Kd5",
+     commentary: "Black King comes face to face with the White King."
+    },
     { 
       san: "Ne2",
       commentary: "The Knight starts its journey toward active duty. It must coordinate closely with the King and Bishop to cover squares of both colors."
     },
-    { san: "Kc5" },
+    { san: "Kc5",
+    commentary: "Restricted, Black King moves away from the White."},
     { 
       san: "Nc3",
       commentary: "The Knight steps up, creating an invisible wall. Black's King is forced to retreat or run along the edge."
     },
-    { san: "Kb4" },
+    { san: "Kb4",
+    commentary: "Restricted, Black King moves away from the White King."},
     { 
       san: "Kd4",
       commentary: "White's King continues to physically squeeze the enemy counterpart, stepping in behind the Knight's blockade."
     },
-    { san: "Ka5" },
-    { san: "Kc5" },
+    { san: "Ka5",
+    commentary: "Black King decides to move back to the a-file."},
+    { san: "Kc5",
+    commentary: "White King blocks the Black King forcing a retreat."},
     { 
       san: "Ka6",
       commentary: "Black is running out of space, creeping closer to the corner."
@@ -989,7 +997,8 @@ export const LESSONS: Record<string, LessonContent> = {
       san: "Kc6",
       commentary: "The White King takes direct lateral opposition, securing control of critical escape squares."
     },
-    { san: "Ka7" },
+    { san: "Ka7",
+    commentary: "Black King moves back to the 7th rank."},
     { 
       san: "Nd5",
       commentary: "The Knight maneuvers into position, preparing to assist the Bishop in driving the King from the 'wrong' corner."
@@ -997,91 +1006,111 @@ export const LESSONS: Record<string, LessonContent> = {
     {
       san: "Ka8",
       commentary:
-        "The first stage is complete: the Black King is forced to the back row in the white-squared corner. Now begins the process of herding him from a8 toward a1 or h8. White selects a1 as the quickest path.",
+        "The first stage is complete: the Black King is forced to the back row in the white-squared corner. Now begins the process of herding him to a dark-squared corner. White selects a1 as the quickest path.",
     },
     {
       san: "Nb6+",
       commentary:
         "White's knight delivers a check, forcing the king to step away from the corner square.",
     },
-    { san: "Ka7" },
+    { san: "Ka7",
+    commentary: "Forced, Black King must move one square down."},
     { 
       san: "Bc7",
       commentary: "The Bishop controls the escape routes, locking down the b8 square so the Black King is forced down the side of the board."
     },
-    { san: "Ka6" },
+    { san: "Ka6",
+    commentary: "Forced, Black King must move one square down."},
     {
       san: "Bb8",
       commentary:
         "The bishop beautifully cuts off the escape square, keeping the black king sealed on the edge.",
     },
-    { san: "Ka5" },
-    { san: "Nd5" },
-    { san: "Ka4" },
+    { san: "Ka5",
+    commentary: "Forced, Black King must move one square down."},
+    { san: "Nd5",
+    commentary: "Black King moves one square down."},
+    { san: "Ka4",
+    commentary: "White Knight starts in the other direction."},
     {
       san: "Kc5!",
       commentary:
         "Black is trying to run across toward the safe h1 corner. Capablanca opts for this king-led restriction technique as it uses the pieces efficiently and stays true to the spirit of the ending.",
     },
-    { san: "Kb3" },
+    { san: "Kb3",
+    commentary: "Black King tries to move to the other side of the board."},
     { 
       san: "Nb4",
-      commentary: "The Knight begins its famous 'W' trace, executing a tight maneuver to seize control of the critical dark squares (c2, d3, a2)."
+      commentary: "The Knight begins its famous 'W' trace, executing a tight maneuver to seize control of the critical white squares (a2, c2, d3)."
     },
-    { san: "Kc3" },
+    { san: "Kc3",
+    commentary: "Black King tries to escape the White structure."},
     { 
       san: "Bf4",
       commentary: "The Bishop keeps watch from a safe distance, denying Black any chance to expand the arena."
     },
-    { san: "Kb3" },
+    { san: "Kb3",
+    commentary: "Black King is denied escape and is forced to retreat."},
     { 
       san: "Be5",
       commentary: "An essential waiting move and geometric block. White's Bishop now commands the b2-h8 diagonal, preventing the King from slipping past."
     },
-    { san: "Ka4" },
+    { san: "Ka4",
+    commentary: "Black King tries to ascend in the a-file."},
     {
       san: "Kc4",
       commentary:
-        "Notice the close cooperation: the King follows tightly while the Knight and King systematically guard the dark squares that the light-squared Bishop cannot control.",
+        "Notice the close cooperation: the Knight and King systematically guard the dark squares that the light-squared Bishop cannot control.",
     },
-    { san: "Ka5" },
+    { san: "Ka5",
+    commentary: "Black King tries to move up through the a-file."},
     { 
       san: "Bc7+",
       commentary: "A well-timed diagonal check that forces the Black King even closer to the a1 mating corner."
     },
-    { san: "Ka4" },
-    { san: "Nd3" },
-    { san: "Ka3" },
-    { san: "Bb6" },
-    { san: "Ka4" },
+    { san: "Ka4",
+    commentary: "Black King is forced to move down through the a-file."},
+    { san: "Nd3",
+    commentary: "White King comes off the structure ready for his next move."},
+    { san: "Ka3",
+    commentary: "Black King must continue down the a-file."},
+    { san: "Bb6",
+    commentary: "White Bishop gets ready for his next move."},
+    { san: "Ka4",
+    commentary: "Black King tries to go back."},
     { 
       san: "Nb2+",
       commentary: "The Knight forces the King out of the a4 square. Step by step, Black's options are being reduced to zero."
     },
-    { san: "Ka3" },
+    { san: "Ka3",
+    commentary: "Black King is forced to move back."},
     { san: "Kc3" },
     { san: "Ka2" },
     { 
       san: "Kc2",
       commentary: "The King steps to c2, locking down the b1 square and completing the containment."
     },
-    { san: "Ka3" },
+    { san: "Ka3",
+    commentary: "White King assists the White Knight to continue to shoulder down the Black King."},
     { 
       san: "Bc5+",
       commentary: "Another check. The Bishop now drives the Black King further down to the second rank."
     },
-    { san: "Ka2" },
+    { san: "Ka2",
+    commentary: "Black King must move down."},
     {
       san: "Nd3",
       commentary:
         "The net tightens perfectly. The Black King is down to just two available squares.",
     },
-    { san: "Ka1" },
+    { san: "Ka1",
+    commentary: "Black King has finally reached the a1."},
     { 
       san: "Bb4",
       commentary: "A quiet, patient Bishop move that forces Black into 'Zugzwang'—Black is compelled to move their King to a2, setting up the mate."
     },
-    { san: "Ka2" },
+    { san: "Ka2",
+    commentary: "The only available square left for Black."},
     { 
       san: "Nc1+",
       commentary: "The penultimate check. The Knight steps in, sealing off the a2 escape square and forcing the King into the final corner."
