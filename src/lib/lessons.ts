@@ -4628,7 +4628,7 @@ export const LESSONS: Record<string, LessonContent> = {
           },
           {
             san: "Rc6+",
-            commentary: "The rook forces itself right in front of the white king again.",
+            commentary: "The rook offers itself as a sacrifice but it is in fact a stalemate trap.",
           },
           {
             san: "Kxc6",
