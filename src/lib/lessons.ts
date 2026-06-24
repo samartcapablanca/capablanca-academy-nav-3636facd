@@ -4611,7 +4611,7 @@ export const LESSONS: Record<string, LessonContent> = {
         ],
       },
       {
-        label: "1. Qa6 (White Draws - Stalemate Trap)",
+        label: "1. Qa6 (White Draws)",
         line: [
           {
             san: "Qa6",
