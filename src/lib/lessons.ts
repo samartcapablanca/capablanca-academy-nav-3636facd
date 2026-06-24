@@ -4,9 +4,17 @@
 // Quotations are drawn from José Raúl Capablanca, "Chess Fundamentals"
 // (Harcourt, Brace & Company, 1921), Chapter I — First Principles.
 
+export type LessonAlternative = {
+  san: string;
+  commentary?: string;
+  moves?: LessonMove[];
+};
+
 export type LessonMove = {
   san: string;
   commentary?: string;
+  /** Optional illustrative alternative lines (e.g., blunders to avoid). Not played in the main line. */
+  alternatives?: LessonAlternative[];
 };
 
 export type LessonVariant = {
