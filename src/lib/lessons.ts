@@ -4534,102 +4534,109 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-  "2-10": {
+  "2-9": {
     title: "Queen against Rook",
     intro:
       "This is one of the most difficult endings without pawns. Capablanca explains that the main objective is to force the Black Rook away from the defending King by bringing about a triangulation position with Black to move.",
     startFen: "1k6/1r6/2K5/Q7/8/8/8/8 w - - 0 1",
-    moves: [
+    prompt: "Choose a path to explore:",
+    variants: [
       {
-        san: "Qe5+",
-        commentary:
-          "White begins a series of checks to force the desired setup. Note that 1.Qa6? is a critical mistake that walks directly into a stalemate trap.",
-        alternatives: [
+        label: "1. Qe5+ (White Wins)",
+        line: [
           {
-            san: "Qa6",
+            san: "Qe5+",
             commentary:
-              "This looks incredibly natural as it attacks the rook and restricts the king, but it is a massive blunder that completely throws away the win.",
-            moves: [
-              {
-                san: "Rc7+",
-                commentary:
-                  "Black plays the only defense—and a beautiful one! The rook offers itself up as a sacrifice.",
-              },
-              {
-                san: "Kb6",
-                commentary: "White's king must step away, but the relentless rook follows.",
-              },
-              {
-                san: "Rc6+",
-                commentary: "The rook forces itself right in front of the white king again.",
-              },
-              {
-                san: "Kxc6",
-                commentary:
-                  "Stalemate! Since the black king has no legal moves and is not in check, the game instantly ends in a draw. The beginner invariably falls into this trap.",
-              },
-            ],
+              "White begins a series of checks to force the desired setup. Note that 1.Qa6? fails immediately due to a brilliant stalemate trap.",
+          },
+          {
+            san: "Ka8",
+            commentary: "Black retreats the king to the corner square.",
+          },
+          {
+            san: "Qa1+",
+            commentary: "White delivers a check from the first rank to continue shifting the tempo.",
+          },
+          {
+            san: "Kb8",
+            commentary: "The black king steps back out of the corner.",
+          },
+          {
+            san: "Qa5",
+            commentary:
+              "The first part of the objective is concluded. White has achieved the exact starting position, but crucially, it is now Black's turn to move. The Rook must now leave the King's vicinity.",
+          },
+          {
+            san: "Rb3",
+            commentary:
+              "Black plays 3...Rb3. (If 3...Rb1, White plays 4.Qe5+ Ka7 to reach the standard winning method outlined in Example 41).",
+          },
+          {
+            san: "Qe5+",
+            commentary: "With the Rook separated from its King, White begins the decisive checkmating sequence.",
+          },
+          {
+            san: "Ka8",
+            commentary: "Black's king is forced back into the corner.",
+          },
+          {
+            san: "Qh8+",
+            commentary: "White checks along the eighth rank, pushing Black further out into the open.",
+          },
+          {
+            san: "Ka7",
+            commentary: "Black moves the king up to escape the back-rank check.",
+          },
+          {
+            san: "Qh7+",
+            commentary: "White drives the king back, ensuring that the b8-square remains targeted.",
+          },
+          {
+            san: "Ka8",
+            commentary: "Black returns to the corner square.",
+          },
+          {
+            san: "Qg8+",
+            commentary:
+              "White delivers a devastating double attack on the g-file, checking the king and skewering the rook on b8.",
+          },
+          {
+            san: "Rb8",
+            commentary: "Black blocks with the rook as a last resort.",
+          },
+          {
+            san: "Qa2#",
+            commentary: "Checkmate. White's queen delivers the final blow supported by the king on c6.",
           },
         ],
       },
       {
-        san: "Ka8",
-        commentary: "Black retreats the king to the corner square.",
-      },
-      {
-        san: "Qa1+",
-        commentary: "White delivers a check from the first rank to continue shifting the tempo.",
-      },
-      {
-        san: "Kb8",
-        commentary: "The black king steps back out of the corner.",
-      },
-      {
-        san: "Qa5",
-        commentary:
-          "The first part of the objective is concluded. White has achieved the exact starting position, but crucially, it is now Black's turn to move. The Rook must now leave the King's vicinity.",
-      },
-      {
-        san: "Rb3",
-        commentary:
-          "Black plays 3...Rb3. (If 3...Rb1, White plays 4.Qe5+ Ka7 to reach the standard winning method outlined in Example 41).",
-      },
-      {
-        san: "Qe5+",
-        commentary: "With the Rook separated from its King, White begins the decisive checkmating sequence.",
-      },
-      {
-        san: "Ka8",
-        commentary: "Black's king is forced back into the corner.",
-      },
-      {
-        san: "Qh8+",
-        commentary: "White checks along the eighth rank, pushing Black further out into the open.",
-      },
-      {
-        san: "Ka7",
-        commentary: "Black moves the king up to escape the back-rank check.",
-      },
-      {
-        san: "Qh7+",
-        commentary: "White drives the king back, ensuring that the b8-square remains targeted.",
-      },
-      {
-        san: "Ka8",
-        commentary: "Black returns to the corner square.",
-      },
-      {
-        san: "Qg8+",
-        commentary:
-          "White delivers a devastating double attack on the g-file, checking the king and skewering the rook on b8.",
-      },
-      {
-        san: "Rb8",
-        commentary: "Black blocks with the rook as a last resort.",
-      },
-      {
-        san: "Qa2#",
-        commentary: "Checkmate. White's queen delivers the final blow supported by the king on c6.",
+        label: "1. Qa6 (White Draws - Stalemate Trap)",
+        line: [
+          {
+            san: "Qa6",
+            commentary:
+              "Blunder! This looks incredibly natural as it attacks the rook and restricts the king, but it is a massive mistake that completely throws away the win.",
+          },
+          {
+            san: "Rc7+",
+            commentary:
+              "Black plays the only defense—and a beautiful one! The rook offers itself up as an aggressive sacrifice.",
+          },
+          {
+            san: "Kb6",
+            commentary: "White's king must step away, but the relentless rook follows.",
+          },
+          {
+            san: "Rc6+",
+            commentary: "The rook forces itself right in front of the white king again.",
+          },
+          {
+            san: "Kxc6",
+            commentary:
+              "Stalemate! Since the black king has no legal moves and is not in check, the game instantly ends in a draw. The beginner invariably falls into this trap.",
+          },
+        ],
       },
     ],
   },
