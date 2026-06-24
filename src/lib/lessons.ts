@@ -1099,7 +1099,7 @@ export const LESSONS: Record<string, LessonContent> = {
       commentary: "Another check. The Bishop now drives the Black King further down to the second rank."
     },
     { san: "Ka2",
-    commentary: "Black King must move down."},
+    commentary: "Black King moves to the 2nd rank."},
     {
       san: "Nd3",
       commentary:
