@@ -974,7 +974,7 @@ export const LESSONS: Record<string, LessonContent> = {
       commentary: "The Knight starts its journey toward active duty. It must coordinate closely with the King and Bishop to cover squares of both colors."
     },
     { san: "Kc5",
-    commentary: "Restricted, Black King moves away from the White."},
+    commentary: "Restricted, Black King moves away from the White King."},
     { 
       san: "Nc3",
       commentary: "The Knight steps up, creating an invisible wall. Black's King is forced to retreat or run along the edge."
