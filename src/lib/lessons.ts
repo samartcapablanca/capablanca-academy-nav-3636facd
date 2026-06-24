@@ -939,193 +939,169 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-"1-10": {
-  title: "Mate with Knight & Bishop",
-  intro:
-    "This ending is rather laborious and requires foresight to accomplish within the fifty-move limit. Capablanca divides the strategy into two stages: first, driving the lone King to the back rank, and second, ushering it into a corner of the same color as your Bishop to deliver the checkmate.",
-  startFen: "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
-  moves: [
-    {
-      san: "Ke2",
-      commentary:
-        "White begins by advancing the King toward the center of the board, standard procedure for building a mating net.",
-    },
-    {
-      san: "Kd7",
-      commentary:
-        "Black deliberately moves toward the light-squared corner (a8) to make the defense as resilient as possible against White's dark-squared bishop.",
-    },
-    { 
-      san: "Kd3",
-      commentary: "White's King takes opposition and limits the Black King's potential escape down the board."
-    },
-    { san: "Kc6", 
-      commentary: "Black King drift away from the White King."
-    },
-    { 
-      san: "Bf4",
-      commentary: "The Bishop takes an active diagonal post, restricting the Black King to the upper left quadrant of the board."
-    },
-    { san: "Kd5",
-     commentary: "Black King comes face to face with the White King."
-    },
-    { 
-      san: "Ne2",
-      commentary: "The Knight starts its journey toward active duty. It must coordinate closely with the King and Bishop to cover squares of both colors."
-    },
-    { san: "Kc5",
-    commentary: "Restricted, Black King moves away from the White King."},
-    { 
-      san: "Nc3",
-      commentary: "The Knight steps up, creating an invisible wall. Black's King is forced to retreat or run along the edge."
-    },
-    { san: "Kb4",
-    commentary: "Black King runs along the edge."},
-    { 
-      san: "Kd4",
-      commentary: "White's King continues to physically squeeze the Black King, stepping in behind the Knight's blockade."
-    },
-    { san: "Ka5",
-    commentary: "The Black King decides to move up the a-file."},
-    { san: "Kc5",
-    commentary: "The White King blocks the Black King forcing a retreat."},
-    { 
-      san: "Ka6",
-      commentary: "Black is running out of space, creeping closer to the corner."
-    },
-    { 
-      san: "Kc6",
-      commentary: "The White King takes direct lateral opposition, securing control of critical escape squares."
-    },
-    { san: "Ka7",
-    commentary: "Black King retreats to the 7th rank."},
-    { 
-      san: "Nd5",
-      commentary: "The Knight maneuvers into position, preparing to assist the Bishop in driving the King from the 'wrong' corner."
-    },
-    {
-      san: "Ka8",
-      commentary:
-        "The first stage is complete: the Black King is forced to the back row in the white-squared corner. Now begins the process of herding him to a dark-squared corner. White selects a1 as the quickest path.",
-    },
-    {
-      san: "Nb6+",
-      commentary:
-        "White's Knight delivers a check, forcing the king to step away from the corner square.",
-    },
-    { san: "Ka7",
-    commentary: "Forced, Black King must move one square down."},
-    { 
-      san: "Bc7",
-      commentary: "The Bishop controls the escape routes, locking down the b8 square so the Black King is forced down the side of the board."
-    },
-    { san: "Ka6",
-    commentary: "Forced, Black King must move one square down."},
-    {
-      san: "Bb8",
-      commentary:
-        "The bishop beautifully cuts off the escape square, keeping the black king sealed on the edge.",
-    },
-    { san: "Ka5",
-    commentary: "Forced, Black King must move one square down."},
-    { san: "Nd5",
-    commentary: "White Knight comes out of formation preparing for the next move."},
-    { san: "Ka4",
-    commentary: "Black King continues to move down the a-file."},
-    {
-      san: "Kc5!",
-      commentary:
-        "Black is trying to run across toward the safe h1 corner. Capablanca opts for this king-led restriction technique as it uses the pieces efficiently and stays true to the spirit of the ending.",
-    },
-    { san: "Kb3",
-    commentary: "Black King tries to move to the other side of the board."},
-    { 
-      san: "Nb4",
-      commentary: "The Knight begins its famous 'W' trace, executing a tight maneuver to seize control of the critical white squares (a2, c2, d3)."
-    },
-    { san: "Kc3",
-    commentary: "Black King tries to escape the White structure."},
-    { 
-      san: "Bf4",
-      commentary: "The Bishop keeps watch from a safe distance, denying Black any chance to expand the arena."
-    },
-    { san: "Kb3",
-    commentary: "Black King is denied escape and is forced to retreat."},
-    { 
-      san: "Be5",
-      commentary: "An essential waiting move and geometric block. White's Bishop now commands the b2-h8 diagonal, preventing the King from slipping past."
-    },
-    { san: "Ka4",
-    commentary: "Black King tries to ascend in the a-file."},
-    {
-      san: "Kc4",
-      commentary:
-        "Notice the close cooperation: the Knight and King systematically guard the light squares that the dark-squared Bishop cannot control.",
-    },
-    { san: "Ka5",
-    commentary: "Black King tries to move up through the a-file."},
-    { 
-      san: "Bc7+",
-      commentary: "A well-timed diagonal check that forces the Black King even closer to the a1 mating corner."
-    },
-    { san: "Ka4",
-    commentary: "Black King is forced to move down through the a-file."},
-    { san: "Nd3",
-    commentary: "White King comes out of his formation ready for the next move."},
-    { san: "Ka3",
-    commentary: "Black King must move down the a-file."},
-    { san: "Bb6",
-    commentary: "White Bishop gets ready for his next move."},
-    { san: "Ka4",
-    commentary: "Black King tries to go back."},
-    { 
-      san: "Nb2+",
-      commentary: "The Knight forces the King out of the a4 square. Step by step, Black's options are being reduced to zero."
-    },
-    { san: "Ka3",
-    commentary: "Black King is forced to move back."},
-    { san: "Kc3",
-    commentary: "White King assists the White Knight in cornering the Black King."},
-    { san: "Ka2",
-    commentary: "Black King must go down."},
-    { 
-      san: "Kc2",
-      commentary: "The King steps to c2, locking down the b1 square and completing the containment."
-    },
-    { san: "Ka3",
-    commentary: "Black King tries to go back up into the a-file."},
-    { 
-      san: "Bc5+",
-      commentary: "Another check. The Bishop now drives the Black King further down to the second rank."
-    },
-    { san: "Ka2",
-    commentary: "Black King moves to the 2nd rank."},
-    {
-      san: "Nd3",
-      commentary:
-        "The net tightens perfectly. The Black King is down to just two available squares.",
-    },
-    { san: "Ka1",
-    commentary: "Black King finally reaches the corner a1."},
-    { 
-      san: "Bb4",
-      commentary: "A quiet, patient Bishop move that forces Black into 'Zugzwang'—Black is compelled to move their King to a2, setting up the mate."
-    },
-    { san: "Ka2",
-    commentary: "The only available square left for Black."},
-    { 
-      san: "Nc1+",
-      commentary: "The penultimate check. The Knight steps in, sealing off the a2 escape square and forcing the King into the final corner."
-    },
-    { san: "Ka1",
-    commentary: "Black King forced back into the corner."},
-    {
-      san: "Bc3#",
-      commentary:
-        "Checkmate! The dark-squared bishop delivers the final blow on the exact color-matching corner square.",
-    },
-  ],
-},  
+  "1-10": {
+    title: "Mate with Knight & Bishop",
+    intro:
+      "This ending is rather laborious and requires foresight to accomplish within the fifty-move limit. Capablanca divides the strategy into two stages: first, driving the lone King to the back rank, and second, ushering it into a corner of the same color as your Bishop to deliver the checkmate.",
+    startFen: "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
+    moves: [
+      {
+        san: "Ke2",
+        commentary:
+          "White begins by advancing the King toward the center of the board, standard procedure for building a mating net.",
+      },
+      {
+        san: "Kd7",
+        commentary:
+          "Black deliberately moves toward the light-squared corner (a8) to make the defense as resilient as possible against White's dark-squared bishop.",
+      },
+      {
+        san: "Kd3",
+        commentary: "White's King takes opposition and limits the Black King's potential escape down the board.",
+      },
+      { san: "Kc6", commentary: "Black King drift away from the White King." },
+      {
+        san: "Bf4",
+        commentary:
+          "The Bishop takes an active diagonal post, restricting the Black King to the upper left quadrant of the board.",
+      },
+      { san: "Kd5", commentary: "Black King comes face to face with the White King." },
+      {
+        san: "Ne2",
+        commentary:
+          "The Knight starts its journey toward active duty. It must coordinate closely with the King and Bishop to cover squares of both colors.",
+      },
+      { san: "Kc5", commentary: "Restricted, Black King moves away from the White King." },
+      {
+        san: "Nc3",
+        commentary:
+          "The Knight steps up, creating an invisible wall. Black's King is forced to retreat or run along the edge.",
+      },
+      { san: "Kb4", commentary: "Black King runs along the edge." },
+      {
+        san: "Kd4",
+        commentary:
+          "White's King continues to physically squeeze the Black King, stepping in behind the Knight's blockade.",
+      },
+      { san: "Ka5", commentary: "The Black King decides to move up the a-file." },
+      { san: "Kc5", commentary: "The White King blocks the Black King forcing a retreat." },
+      {
+        san: "Ka6",
+        commentary: "Black is running out of space, creeping closer to the corner.",
+      },
+      {
+        san: "Kc6",
+        commentary: "The White King takes direct lateral opposition, securing control of critical escape squares.",
+      },
+      { san: "Ka7", commentary: "Black King retreats to the 7th rank." },
+      {
+        san: "Nd5",
+        commentary:
+          "The Knight maneuvers into position, preparing to assist the Bishop in driving the King from the 'wrong' corner.",
+      },
+      {
+        san: "Ka8",
+        commentary:
+          "The first stage is complete: the Black King is forced to the back row in the white-squared corner. Now begins the process of herding him to a dark-squared corner. White selects a1 as the quickest path.",
+      },
+      {
+        san: "Nb6+",
+        commentary: "White's Knight delivers a check, forcing the king to step away from the corner square.",
+      },
+      { san: "Ka7", commentary: "Forced, Black King must move one square down." },
+      {
+        san: "Bc7",
+        commentary:
+          "The Bishop controls the escape routes, locking down the b8 square so the Black King is forced down the side of the board.",
+      },
+      { san: "Ka6", commentary: "Forced, Black King must move one square down." },
+      {
+        san: "Bb8",
+        commentary: "The bishop beautifully cuts off the escape square, keeping the black king sealed on the edge.",
+      },
+      { san: "Ka5", commentary: "Forced, Black King must move one square down." },
+      { san: "Nd5", commentary: "White Knight comes out of formation preparing for the next move." },
+      { san: "Ka4", commentary: "Black King continues to move down the a-file." },
+      {
+        san: "Kc5!",
+        commentary:
+          "Black is trying to run across toward the safe h1 corner. Capablanca opts for this king-led restriction technique as it uses the pieces efficiently and stays true to the spirit of the ending.",
+      },
+      { san: "Kb3", commentary: "Black King tries to move to the other side of the board." },
+      {
+        san: "Nb4",
+        commentary:
+          "The Knight begins its famous 'W' trace, executing a tight maneuver to seize control of the critical white squares (a2, c2, d3).",
+      },
+      { san: "Kc3", commentary: "Black King tries to escape the White structure." },
+      {
+        san: "Bf4",
+        commentary: "The Bishop keeps watch from a safe distance, denying Black any chance to expand the arena.",
+      },
+      { san: "Kb3", commentary: "Black King is denied escape and is forced to retreat." },
+      {
+        san: "Be5",
+        commentary:
+          "An essential waiting move and geometric block. White's Bishop now commands the b2-h8 diagonal, preventing the King from slipping past.",
+      },
+      { san: "Ka4", commentary: "Black King tries to ascend in the a-file." },
+      {
+        san: "Kc4",
+        commentary:
+          "Notice the close cooperation: the Knight and King systematically guard the light squares that the dark-squared Bishop cannot control.",
+      },
+      { san: "Ka5", commentary: "Black King tries to move up through the a-file." },
+      {
+        san: "Bc7+",
+        commentary: "A well-timed diagonal check that forces the Black King even closer to the a1 mating corner.",
+      },
+      { san: "Ka4", commentary: "Black King is forced to move down through the a-file." },
+      { san: "Nd3", commentary: "White King comes out of his formation ready for the next move." },
+      { san: "Ka3", commentary: "Black King must move down the a-file." },
+      { san: "Bb6", commentary: "White Bishop gets ready for his next move." },
+      { san: "Ka4", commentary: "Black King tries to go back." },
+      {
+        san: "Nb2+",
+        commentary:
+          "The Knight forces the King out of the a4 square. Step by step, Black's options are being reduced to zero.",
+      },
+      { san: "Ka3", commentary: "Black King is forced to move back." },
+      { san: "Kc3", commentary: "White King assists the White Knight in cornering the Black King." },
+      { san: "Ka2", commentary: "Black King must go down." },
+      {
+        san: "Kc2",
+        commentary: "The King steps to c2, locking down the b1 square and completing the containment.",
+      },
+      { san: "Ka3", commentary: "Black King tries to go back up into the a-file." },
+      {
+        san: "Bc5+",
+        commentary: "Another check. The Bishop now drives the Black King further down to the second rank.",
+      },
+      { san: "Ka2", commentary: "Black King must move down." },
+      {
+        san: "Nd3",
+        commentary: "The net tightens perfectly. The Black King is down to just two available squares.",
+      },
+      { san: "Ka1", commentary: "Black King finally reaches the corner a1." },
+      {
+        san: "Bb4",
+        commentary:
+          "A quiet, patient Bishop move that forces Black into 'Zugzwang'—Black is compelled to move their King to a2, setting up the mate.",
+      },
+      { san: "Ka2", commentary: "The only available square left for Black." },
+      {
+        san: "Nc1+",
+        commentary:
+          "The penultimate check. The Knight steps in, sealing off the a2 escape square and forcing the King into the final corner.",
+      },
+      { san: "Ka1", commentary: "Black King forced back into the corner." },
+      {
+        san: "Bc3#",
+        commentary:
+          "Checkmate! The dark-squared bishop delivers the final blow on the exact color-matching corner square.",
+      },
+    ],
+  },
   // ═════════════════════════════════════════════════════════════════
   // MILESTONE ARCHIVE — NODE I: THE RISE (1909 – 1911)
   // ═════════════════════════════════════════════════════════════════
@@ -4492,157 +4468,163 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-"2-9": {
-  title: "Knight vs Two Pawns",
-  intro:
-    "In this exceptional endgame scenario, Capablanca demonstrates how a single White Knight can defeat two advanced Black pawns. He notes that White can win with or without the first move, and walks through the most difficult defensive variation.",
-  startFen: "8/8/5Np1/8/8/6p1/5K2/7k b - - 0 1",
-  moves: [
-    {
-      san: "Kh2",
-      commentary:
-        "Black starts by stepping the king forward to shield the advanced g3-pawn.",
-    },
-    {
-      san: "Ng4+",
-      commentary:
-        "White delivers a check, forcing the Black king back into the corner.",
-    },
-    {
-      san: "Kh1",
-      commentary:
-        "The black king retreats to h1, temporarily stuck.",
-    },
-    {
-      san: "Kf1",
-      commentary:
-        "White's king steps onto the f-file to lock the black king down and restrict counterplay.",
-    },
-    {
-      san: "g5",
-      commentary:
-        "With the king locked away, Black is forced to push the secondary pawn forward.",
-    },
-    {
-      san: "Kf2",
-      commentary:
-        "White mirrors the king placement, waiting out Black's available pawn tempos.",
-    },
-    {
-      san: "h2",
-      commentary:
-        "Black pushes the advanced pawn to the brink of promotion.",
-    },
-    {
-      san: "Ne3",
-      commentary:
-        "White reroutes the knight closer to the action, preparing the final clamping matrix.",
-    },
-    {
-      san: "g4",
-      commentary:
-        "Black continues to push their remaining pawn resource forward.",
-    },
-    {
-      san: "Nf1",
-      commentary:
-        "White pivots the knight back to f1, blockading the promotion square and setting up an airtight mating net.",
-    },
-    {
-      san: "g3+",
-      commentary:
-        "Black's final pawn push gives check, but it seals their own fate.",
-    },
-    {
-      san: "Nxg3#",
-      commentary:
-        "Checkmate. The knight captures the checking pawn and delivers a spectacular, compact smother mate.",
-    },
-  ],
-},
-"2-10": {
-  title: "Queen against Rook",
-  intro:
-    "One of the most difficult endings without pawns. The resources of the defense are many, and Capablanca outlines that the main object is to force the Black Rook away from the defending King by executing a precise triangulation maneuver.",
-  startFen: "1k6/1r6/2K5/Q7/8/8/8/8 w - - 0 1",
-  moves: [
-    {
-      san: "Qe5+",
-      commentary:
-        "White initiates the sequence with a check. As noted in the lesson, playing 1.Qa6? fails immediately due to the beginner's trap: 1...Rc7+ 2.Kb6 Rc6+ 3.Kxc6 resulting in Stalemate.",
-    },
-    {
-      san: "Ka8",
-      commentary:
-        "Black steps the king away into the corner square.",
-    },
-    {
-      san: "Qa1+",
-      commentary:
-        "White delivers a check from the bottom rank to adjust the tempo.",
-    },
-    {
-      san: "Kb8",
-      commentary:
-        "The black king is forced back out out of the corner.",
-    },
-    {
-      san: "Qa5",
-      commentary:
-        "The first part is concluded. White has achieved the exact same geometric layout as the starting position, but with a crucial twist: it is now Black's move. The rook must leave the safety of its king.",
-    },
-    {
-      san: "Rb3",
-      commentary:
-        "Black chooses 3...Rb3. If Black had opted for 3...Rb1 instead, White would win via 4.Qe5+ Ka7 as demonstrated in Example 41.",
-    },
-    {
-      san: "Qe5+",
-      commentary:
-        "White immediately capitalizes on the separated rook, beginning the final forcing checks.",
-    },
-    {
-      san: "Ka8",
-      commentary:
-        "The king retreats to the corner square once more.",
-    },
-    {
-      san: "Qh8+",
-      commentary:
-        "White checks along the back rank, pushing the king out to make room for the tactical finish.",
-    },
-    {
-      san: "Ka7",
-      commentary:
-        "The king moves upward to step away from the back-rank threat.",
-    },
-    {
-      san: "Qh7+",
-      commentary:
-        "White drives the king back down while keeping a vigilant eye on the b-file.",
-    },
-    {
-      san: "Ka8",
-      commentary:
-        "Black enters the corner for the last time.",
-    },
-    {
-      san: "Qg8+",
-      commentary:
-        "A decisive double attack on the g-file, checking the king and skewering the poorly placed rook.",
-    },
-    {
-      san: "Rb8",
-      commentary:
-        "Black blocks with the rook to stave off immediate capture.",
-    },
-    {
-      san: "Qa2#",
-      commentary:
-        "Checkmate. The queen delivers the final blow supported perfectly by the king on c6.",
-    },
-  ],
-},  
+  "2-9": {
+    title: "Knight vs Two Pawns",
+    intro:
+      "In this exceptional endgame scenario, Capablanca demonstrates how a single White Knight can defeat two advanced Black pawns. He notes that White can win with or without the first move, and walks through the most difficult defensive variation.",
+    startFen: "8/8/5Np1/8/8/6p1/5K2/7k b - - 0 1",
+    moves: [
+      {
+        san: "Kh2",
+        commentary: "Black starts by stepping the king forward to shield the advanced g3-pawn.",
+      },
+      {
+        san: "Ng4+",
+        commentary: "White delivers a check, forcing the Black king back into the corner.",
+      },
+      {
+        san: "Kh1",
+        commentary: "The black king retreats to h1, temporarily stuck.",
+      },
+      {
+        san: "Kf1",
+        commentary: "White's king steps onto the f-file to lock the black king down and restrict counterplay.",
+      },
+      {
+        san: "g5",
+        commentary: "With the king locked away, Black is forced to push the secondary pawn forward.",
+      },
+      {
+        san: "Kf2",
+        commentary: "White mirrors the king placement, waiting out Black's available pawn tempos.",
+      },
+      {
+        san: "h2",
+        commentary: "Black pushes the advanced pawn to the brink of promotion.",
+      },
+      {
+        san: "Ne3",
+        commentary: "White reroutes the knight closer to the action, preparing the final clamping matrix.",
+      },
+      {
+        san: "g4",
+        commentary: "Black continues to push their remaining pawn resource forward.",
+      },
+      {
+        san: "Nf1",
+        commentary:
+          "White pivots the knight back to f1, blockading the promotion square and setting up an airtight mating net.",
+      },
+      {
+        san: "g3+",
+        commentary: "Black's final pawn push gives check, but it seals their own fate.",
+      },
+      {
+        san: "Nxg3#",
+        commentary:
+          "Checkmate. The knight captures the checking pawn and delivers a spectacular, compact smother mate.",
+      },
+    ],
+  },
+  "2-10": {
+    title: "Queen against Rook",
+    intro:
+      "This is one of the most difficult endings without pawns. Capablanca explains that the main objective is to force the Black Rook away from the defending King by bringing about a triangulation position with Black to move.",
+    startFen: "1k6/1r6/2K5/Q7/8/8/8/8 w - - 0 1",
+    moves: [
+      {
+        san: "Qe5+",
+        commentary:
+          "White begins a series of checks to force the desired setup. Note that 1.Qa6? is a critical mistake that walks directly into a stalemate trap.",
+        alternatives: [
+          {
+            san: "Qa6",
+            commentary:
+              "This looks incredibly natural as it attacks the rook and restricts the king, but it is a massive blunder that completely throws away the win.",
+            moves: [
+              {
+                san: "Rc7+",
+                commentary:
+                  "Black plays the only defense—and a beautiful one! The rook offers itself up as a sacrifice.",
+              },
+              {
+                san: "Kb6",
+                commentary: "White's king must step away, but the relentless rook follows.",
+              },
+              {
+                san: "Rc6+",
+                commentary: "The rook forces itself right in front of the white king again.",
+              },
+              {
+                san: "Kxc6",
+                commentary:
+                  "Stalemate! Since the black king has no legal moves and is not in check, the game instantly ends in a draw. The beginner invariably falls into this trap.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        san: "Ka8",
+        commentary: "Black retreats the king to the corner square.",
+      },
+      {
+        san: "Qa1+",
+        commentary: "White delivers a check from the first rank to continue shifting the tempo.",
+      },
+      {
+        san: "Kb8",
+        commentary: "The black king steps back out of the corner.",
+      },
+      {
+        san: "Qa5",
+        commentary:
+          "The first part of the objective is concluded. White has achieved the exact starting position, but crucially, it is now Black's turn to move. The Rook must now leave the King's vicinity.",
+      },
+      {
+        san: "Rb3",
+        commentary:
+          "Black plays 3...Rb3. (If 3...Rb1, White plays 4.Qe5+ Ka7 to reach the standard winning method outlined in Example 41).",
+      },
+      {
+        san: "Qe5+",
+        commentary: "With the Rook separated from its King, White begins the decisive checkmating sequence.",
+      },
+      {
+        san: "Ka8",
+        commentary: "Black's king is forced back into the corner.",
+      },
+      {
+        san: "Qh8+",
+        commentary: "White checks along the eighth rank, pushing Black further out into the open.",
+      },
+      {
+        san: "Ka7",
+        commentary: "Black moves the king up to escape the back-rank check.",
+      },
+      {
+        san: "Qh7+",
+        commentary: "White drives the king back, ensuring that the b8-square remains targeted.",
+      },
+      {
+        san: "Ka8",
+        commentary: "Black returns to the corner square.",
+      },
+      {
+        san: "Qg8+",
+        commentary:
+          "White delivers a devastating double attack on the g-file, checking the king and skewering the rook on b8.",
+      },
+      {
+        san: "Rb8",
+        commentary: "Black blocks with the rook as a last resort.",
+      },
+      {
+        san: "Qa2#",
+        commentary: "Checkmate. White's queen delivers the final blow supported by the king on c6.",
+      },
+    ],
+  },
   "3-2": {
     title: "The Value of the Two Bishops",
     intro:
