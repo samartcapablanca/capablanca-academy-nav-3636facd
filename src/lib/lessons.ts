@@ -4616,7 +4616,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "Qa6",
             commentary:
-              "Blunder! This looks incredibly natural as it attacks the rook and restricts the king, but it is a massive mistake that completely throws away the win.",
+              "Blunder! This looks incredibly natural as it attacks the rook and restricts the king, but it is a massive mistake that throws away the win.",
           },
           {
             san: "Rc7+",
