@@ -4534,7 +4534,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-  "2-9": {
+  "2-10": {
     title: "Queen against Rook",
     intro:
       "This is one of the most difficult endings without pawns. Capablanca explains that the main objective is to force the Black Rook away from the defending King by bringing about a triangulation position with Black to move.",
