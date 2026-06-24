@@ -4633,7 +4633,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "Kxc6",
             commentary:
-              "Stalemate! Since the black king has no legal moves and is not in check, the game instantly ends in a draw.\u00a0",
+              "Stalemate! The black king has no legal moves and is not in check.\u00a0",
           },
         ],
       },
