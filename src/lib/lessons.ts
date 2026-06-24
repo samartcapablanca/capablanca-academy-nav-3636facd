@@ -4620,8 +4620,7 @@ export const LESSONS: Record<string, LessonContent> = {
           },
           {
             san: "Rc7+",
-            commentary:
-              "Black plays the only defense—and a beautiful one! The rook offers itself up as an aggressive sacrifice.",
+            commentary: "Black plays the only defense—and a beautiful one!\u00a0",
           },
           {
             san: "Kb6",
