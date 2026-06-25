@@ -4569,7 +4569,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "Rb3",
             commentary:
-              "Black plays 3...Rb3. (If 3...Rb1, White plays 4.Qe5+ Ka7 to reach the standard winning method outlined in Example 41).",
+              "Black plays 3...Rb3. If Black moves Rb1 or Rb2 instead, it lead to Black losing the rook in one or more checks.\u00a0",
           },
           {
             san: "Qe5+",
