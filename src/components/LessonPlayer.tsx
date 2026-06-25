@@ -167,7 +167,7 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
                   onClick={goBackToVariants}
                   className="mt-5 flex w-fit items-center gap-1.5 text-gold hover:underline cursor-pointer font-normal"
                 >
-                  <ArrowLeft className="h-4 w-4" /> Go back to Variants
+                  <ArrowLeft className="h-4 w-4" /> \u00a0Back to Variants
                 </button>
               )}
             </div>
