@@ -52,7 +52,7 @@ const CHAPTERS: Chapter[] = [
       { id: "2-7", title: "The Opposition as Defense" },
       { id: "2-8", title: "Two Knights vs Pawn" },
       { id: "2-9", title: "Knight vs Two Pawns" }, 
-      { id: "2-10", title: "Queen against Rook" }, 
+      { id: "2-10", title: "Queen Against Rook" }, 
     ],
   },
   {
