@@ -60,8 +60,8 @@ const CHAPTERS: Chapter[] = [
     roman: "III",
     title: "Planning a Win in Middle-game Play",
     lessons: [
-      { id: "3-1", title: "Attacking without Knights" },
-      { id: "3-2", title: "Attack with the Aid of Knights" },
+      { id: "3-1", title: "Attacking without Knights 1" },
+      { id: "3-2", title: "Attacking without Knights 2" },
       { id: "3-3", title: "Winning by Indirect Attack" },
     ],
   },
