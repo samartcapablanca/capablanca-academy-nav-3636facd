@@ -460,10 +460,8 @@ export const LESSONS: Record<string, LessonContent> = {
   },
 
   // ─────────────────────────────────────────────────────────────────
-  // CHAPTER I — Pawn Promotion - King & Pawn
-  // ─────────────────────────────────────────────────────────────────
   "1-5": {
-    title: "King Opposition - Stalemate",
+    title: "Pawn Promotion - Stalemate",
     intro:
       "The position is drawn, and the way to proceed is for Black to keep the King always " +
       "directly in front of the opposing pawn to force a stalemate in the eight rank. ",
@@ -579,10 +577,8 @@ export const LESSONS: Record<string, LessonContent> = {
   },
 
   // ─────────────────────────────────────────────────────────────────
-  // CHAPTER I — Pawn Promotion - King & Pawn 2
-  // ─────────────────────────────────────────────────────────────────
   "1-6": {
-    title: "Pawn and King Mate",
+    title: "Pawn Promotion - Win",
     intro:
       "In this position White wins, as the King is ahead of his Pawn by one intervening square. " +
       "The method to follow is to advance the King as far as possible while protecting his Pawn. ",
@@ -4546,8 +4542,7 @@ export const LESSONS: Record<string, LessonContent> = {
         line: [
           {
             san: "Qe5+",
-            commentary:
-              "White begins a series of checks to force the desired setup.\u00a0",
+            commentary: "White begins a series of checks to force the desired setup.\u00a0",
           },
           {
             san: "Ka8",
@@ -4632,8 +4627,7 @@ export const LESSONS: Record<string, LessonContent> = {
           },
           {
             san: "Kxc6",
-            commentary:
-              "Stalemate! The black king has no legal moves and is not in check.\u00a0",
+            commentary: "Stalemate! The black king has no legal moves and is not in check.\u00a0",
           },
         ],
       },
