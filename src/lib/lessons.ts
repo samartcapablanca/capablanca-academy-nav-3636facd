@@ -4408,68 +4408,6 @@ export const LESSONS: Record<string, LessonContent> = {
     ],
   },
   //-------------------------------------
-  "3-1": {
-    title: "Attacking the King from the Flank",
-    intro:
-      "Capablanca: “When planning a flank attack against the enemy King, it is " +
-      "vital to first ensure your own centre is secure. An attack on a flank " +
-      "with an unstable centre will almost always be crushed by a counter-strike " +
-      "in the middle.” Both sides have castled — White short, Black long — and " +
-      "the pawn storm against the enemy King must be timed to a rock-solid centre.",
-    startFen: "2kr1bnr/ppp2ppp/2nqb3/3pp3/3PP3/2NQBN2/PPP2PPP/2KR1B1R w - - 0 1",
-    moves: [
-      {
-        san: "Kb1",
-        commentary:
-          "Before the storm, prophylaxis. White tucks the King into the corner, " +
-          "off the c-file where Black's Rook already eyes the queenside. " +
-          "Capablanca: “Never begin an attack until your own King is safe.”",
-      },
-      {
-        san: "Kb8",
-        commentary:
-          "Black mirrors the same wisdom. Both sides quietly secure their monarchs " +
-          "before the pawns begin to march.",
-      },
-      {
-        san: "h4",
-        commentary:
-          "The flank attack begins. The h-pawn advances to pry open lines toward " +
-          "the Black King — but only because the d4/e4 centre is firmly defended.",
-      },
-      {
-        san: "a6",
-        commentary:
-          "Black prepares his own counter-storm with …b5. The race is on, and " +
-          "the side with the more stable centre will land the decisive blow first.",
-      },
-      {
-        san: "h5",
-        commentary:
-          "White's pawn reaches h5, threatening h6 to crack the shelter around " +
-          "Black's King. Every flank move rests on the granite centre.",
-      },
-      {
-        san: "b5",
-        commentary:
-          "Black launches the counter. Capablanca warned: the side whose centre " +
-          "first cracks will see his flank attack rebound.",
-      },
-      {
-        san: "exd5",
-        commentary:
-          "A central exchange that clarifies — but does not weaken — White's pawns. " +
-          "The d4-pawn remains an anchor while the kingside assault continues.",
-      },
-      {
-        san: "Nxd5",
-        commentary:
-          "Black recaptures. The lesson stands: a flank attack only succeeds when " +
-          "the centre is secure. The player who follows Capablanca's principle " +
-          "most strictly will land the decisive blow.",
-      },
-    ],
-  },
   "2-9": {
     title: "Knight vs Two Pawns",
     intro:
@@ -4528,6 +4466,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+  //-----------------------------------------------------------
   "2-10": {
     title: "Queen Against Rook",
     intro:
@@ -4631,6 +4570,77 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+  //----------------------------------------------
+  "3-1": {
+    title: "Attacking without Knights",
+    intro:
+      "It is Black's move, and as he is a Knight and pawn behind he must win quickly, if at all. Capablanca demonstrates a devastating tactical breakthrough exploiting White's exposed king safety.",
+    startFen: "2kr2r1/ppp1qp2/4bQ2/6r1/3P4/N1P5/PP4P1/R1B2RK1 b - - 0 1",
+    moves: [
+      {
+        san: "Rdg8!",
+        commentary:
+          "A brilliant double-rook attack on the g2 square. Black brings their final heavy piece into the assault, completely overwhelming White's kingside defenses. Now choose a path to explore White's options:",
+      },
+    ],
+    prompt: "Choose White's response on move 2:",
+    variants: [
+      {
+        label: "2. Rf2 (Main Line - Black Wins)",
+        line: [
+          {
+            san: "Rf2",
+            commentary: "White tries to bolster the defense of the g2 pawn, but Black's attack is already unstoppable.",
+          },
+          {
+            san: "Rxg2+",
+            commentary: "The sacrifice breaks through! Black forces open the white king's fortress.",
+          },
+          {
+            san: "Kf1",
+            commentary: "White's king frantically steps away to escape immediate capture.",
+          },
+          {
+            san: "Bc4+",
+            commentary: "The bishop delivers a crushing check, cutting off the king's escape squares.",
+          },
+          {
+            san: "Nxc4",
+            commentary:
+              "White captures the bishop out of desperation, but it leaves the back rank entirely undefended.",
+          },
+          {
+            san: "Rg1#",
+            commentary: "Checkmate! The remaining black rook slides down to g1 to deliver the finishing blow.",
+          },
+        ],
+      },
+      {
+        label: "2. Qxe7 (Greedy Alternative - Mate Follows)",
+        line: [
+          {
+            san: "Qxe7",
+            commentary: "Blunder! Greedily snatching the black queen allows an immediate forced checkmate sequence.",
+          },
+          {
+            san: "Rxg2+",
+            commentary:
+              "Black ignores the loss of the queen and immediately strikes the vulnerable g2 square with check.",
+          },
+          {
+            san: "Kh1",
+            commentary: "Forced, as the king has no other legal squares to flee to.",
+          },
+          {
+            san: "Bd5",
+            commentary:
+              "The quiet but deadly continuation. The bishop moves into position, unleashing a decisive discovered check threat from the rook on g2 that leads to mate in a few moves.",
+          },
+        ],
+      },
+    ],
+  },
+  //----------------------------------------------
   "3-2": {
     title: "The Value of the Two Bishops",
     intro:
