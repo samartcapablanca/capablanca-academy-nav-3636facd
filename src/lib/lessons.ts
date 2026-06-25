@@ -4573,7 +4573,7 @@ export const LESSONS: Record<string, LessonContent> = {
           },
           {
             san: "Qe5+",
-            commentary: "With the Rook separated from its King, White begins the decisive checkmating sequence.",
+            commentary: "With the Rook separated from its King, White begins the decisive checking sequence.",
           },
           {
             san: "Ka8",
