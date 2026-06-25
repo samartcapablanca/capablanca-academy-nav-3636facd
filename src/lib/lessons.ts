@@ -721,10 +721,9 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-  // CHAPTER I — Two Pawns Endings 1
   //-----------------------------------
   "1-8": {
-    title: "Two Pawns - Outflank to the h-file",
+    title: "Pawn Endings - Outflank to the h-file",
     intro:
       "In this position, White wins by using the King to push the Black King into file h. White gives the Pawn to clear out the path to promotion.",
     startFen: "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
@@ -788,10 +787,9 @@ export const LESSONS: Record<string, LessonContent> = {
     ],
   },
 
-  // CHAPTER I — Two Pawns Ending 2
   //-------------------------------
   "1-9": {
-    title: "Two Pawns - Outflank to the f-file",
+    title: "Pawn Endings - Outflank to the f-file",
     intro:
       "In this position, White wins by using his King to push back the Black King and capture his pawn. Then by coming from file h and squeeze out the Black King into file f, clearing the path to promotion.",
     startFen: "8/6p1/3k4/8/3K1PP1/8/8/8 w - - 0 1",
