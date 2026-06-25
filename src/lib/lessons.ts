@@ -4642,69 +4642,49 @@ export const LESSONS: Record<string, LessonContent> = {
   },
   //----------------------------------------------
   "3-2": {
-    title: "The Value of the Two Bishops",
+    title: "Attacking without Knights",
     intro:
-      "Capablanca: “In open positions, the two Bishops are immensely powerful " +
-      "because they can control both color complexes simultaneously, slice across " +
-      "the entire board, and slowly squeeze the opponent's knights into complete " +
-      "passivity.” White holds the Bishop pair in an open middle-game — the " +
-      "perfect laboratory for the famous “minor exchange.”",
-    startFen: "r3k2r/ppp2ppp/2n1b3/3p4/3P4/2N1B3/PPP2PPP/R3KB1R w KQkq - 0 1",
-    moves: [
+      "Black's last move was ...e4-e3, played to stop what he thought was White's primary threat (1.Ra5). Black intended to answer 1.Ra5 with 1...Qf4+ to secure a draw by perpetual check. White, however, has a much more forceful tactical breakthrough.",
+    startFen: "kr2r3/pRp2pp1/QPp5/5R2/1p1q4/3pp1P1/5PK1/8 w - - 0 1",
+    prompt: "Choose White's opening move to explore the lines:",
+    variants: [
       {
-        san: "Bd3",
-        commentary:
-          "The light-squared Bishop takes up its grand diagonal. Capablanca: " +
-          "“Place your Bishops where they command the longest open lines.”",
+        label: "1. Rxa7+ (Main Line - Forced Mate in 3)",
+        line: [
+          {
+            san: "Rxa7+",
+            commentary:
+              "The winning move! A brilliant, forceful rook sacrifice that completely shatters Black's king defense.",
+          },
+          {
+            san: "Qxa7",
+            commentary:
+              "Forced, as the black king has no legal escape squares and cannot step away from the checking rook.",
+          },
+          {
+            san: "Ra5",
+            commentary:
+              "White swings the remaining rook over to the a-file. With the black queen now blocking her own king's escape on a7, White threatens an unpreventable checkmate.",
+          },
+        ],
       },
       {
-        san: "O-O",
-        commentary:
-          "Black castles into safety, but his Knight on c6 is already short of " +
-          "good squares. The two Bishops are simply more flexible.",
-      },
-      {
-        san: "O-O",
-        commentary:
-          "White castles. With both Kings secure, the long-term struggle begins: " +
-          "the side with the Bishop pair will steer the game toward open lines.",
-      },
-      {
-        san: "Nb4",
-        commentary:
-          "The Knight seeks an outpost, but Bishops thrive when the position is " +
-          "fluid. “A Bishop is always stronger than a Knight whose outposts can " +
-          "be challenged by a pawn.”",
-      },
-      {
-        san: "Bb1",
-        commentary:
-          "The Bishop steps back to preserve itself — never trade a Bishop for a " +
-          "Knight without concrete reason. The pair must be kept intact.",
-      },
-      {
-        san: "c5",
-        commentary:
-          "Black tries to gain space, but every pawn exchange tends to open the " +
-          "position — and open positions favour the long-range Bishops.",
-      },
-      {
-        san: "dxc5",
-        commentary:
-          "White obliges. The diagonals lengthen, and the two Bishops now rake " +
-          "across the whole board. The Knight has no permanent square.",
-      },
-      {
-        san: "Bxc5",
-        commentary:
-          "The position is fully open. White's Bishop pair controls both colour " +
-          "complexes. This is the “slow squeeze” Capablanca described — the " +
-          "Bishops win by accumulating tiny advantages until the opponent has no " +
-          "useful move left.",
+        label: "1. Ra5 (Alternative - Black Draws by Perpetual Check)",
+        line: [
+          {
+            san: "Ra5",
+            commentary: "Inaccurate. Rushing this rook maneuver allows Black to execute their defensive save.",
+          },
+          {
+            san: "Qf4+",
+            commentary:
+              "Black launches a counterattack! By checking the white king, Black disrupts the mating net and forces a draw by perpetual check.",
+          },
+        ],
       },
     ],
   },
-
+  //------------------------------------------------------------
   "3-3": {
     title: "Creating a Target — Weakening the Enemy Pawn Structure",
     intro:
