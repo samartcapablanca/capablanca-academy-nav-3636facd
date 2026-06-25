@@ -652,7 +652,7 @@ export const LESSONS: Record<string, LessonContent> = {
     intro:
       "In this position, White wins only if their King reaches the 6th rank first. If White advances the pawn instead, it's a draw. ",
     startFen: "2k5/8/8/2PK4/8/8/8/8 w - - 0 1",
-    prompt: "Choose a path to explore:",
+    prompt: "Variants:",
     variants: [
       {
         label: "1. Kc6 (White Wins)",
@@ -4012,7 +4012,7 @@ export const LESSONS: Record<string, LessonContent> = {
     intro:
       "When three or more pawns are opposed to each other, there is a chance for either side to obtain a passed pawn. In this position, White wins by getting a passed pawn or reaching the last Black Pawn first.",
     startFen: "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
-    prompt: "Choose a path to explore:",
+    prompt: "Variants:",
     variants: [
       {
         label: "1. b6 (White Wins)",
@@ -4539,7 +4539,7 @@ export const LESSONS: Record<string, LessonContent> = {
     intro:
       "This is one of the most difficult endings without pawns. Capablanca explains that the main objective is to force the Black Rook away from the defending King by bringing about a triangulation position with Black to move.",
     startFen: "1k6/1r6/2K5/Q7/8/8/8/8 w - - 0 1",
-    prompt: "Choose a path to explore:",
+    prompt: "Variants:",
     variants: [
       {
         label: "1. Qe5+ (White Wins)",
