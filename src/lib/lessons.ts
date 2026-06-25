@@ -4547,7 +4547,7 @@ export const LESSONS: Record<string, LessonContent> = {
           {
             san: "Qe5+",
             commentary:
-              "White begins a series of checks to force the desired setup. Note that 1.Qa6? fails immediately due to a brilliant stalemate trap.",
+              "White begins a series of checks to force the desired setup.\u00a0",
           },
           {
             san: "Ka8",
