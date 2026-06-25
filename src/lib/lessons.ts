@@ -4879,7 +4879,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
-
+  //-----------------------
   "4-3": {
     title: "Control of the Centre — Advanced Theory",
     intro:
@@ -4948,6 +4948,7 @@ export const LESSONS: Record<string, LessonContent> = {
       },
     ],
   },
+  //----------------------------------
   "5-1": {
     title: "Rook and Pawn Endgames",
     intro:
