@@ -139,7 +139,7 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
               {isChoosing && (
                 <div className="mt-5">
                   {lesson.prompt && (
-                    <p className="mb-3 text-sm text-muted-foreground">{lesson.prompt}</p>
+                    <p className="mb-3 text-base text-muted-foreground">{lesson.prompt}</p>
                   )}
                   <ul className="flex flex-col gap-2">
                     {lesson.variants!.map((v, i) => (
@@ -150,7 +150,7 @@ export function LessonPlayer({ lessonId, onClose, eyebrow, titleOverride }: Prop
                             setVariantIndex(i);
                             setMoveIndex(0);
                           }}
-                          className="text-left text-gold hover:underline cursor-pointer font-normal text-sm"
+                          className="text-left text-gold hover:underline cursor-pointer font-normal text-xs"
                         >
                           {v.label}
                         </button>
