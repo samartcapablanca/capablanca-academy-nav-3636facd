@@ -4571,7 +4571,7 @@ export const LESSONS: Record<string, LessonContent> = {
     ],
   },
   //----------------------------------------------
-  "2-14": {
+  "3-1": {
     title: "Attacking without Knights (Example 43)",
     intro:
       "It is Black's move, and as he is a Knight and pawn behind he must win quickly, if at all. Capablanca demonstrates a devastating tactical breakthrough exploiting White's exposed king safety.",
