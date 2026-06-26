@@ -4572,71 +4572,39 @@ export const LESSONS: Record<string, LessonContent> = {
   },
   //----------------------------------------------
   "3-1": {
-    title: "Attacking without Knights",
+    title: "Attacking without Knights (Example 43)",
     intro:
       "It is Black's move, and as he is a Knight and pawn behind he must win quickly, if at all. Capablanca demonstrates a devastating tactical breakthrough exploiting White's exposed king safety.",
-    startFen: "2kr4/ppp1qp2/4bQ2/6r1/3P4/N1P5/PP4P1/R1B2RK1 b - - 0 1",
+    startFen: "2kr2r1/ppp1qp2/4bQ2/6r1/3P4/N1P5/PP4P1/R1B2RK1 b - - 0 1",
     moves: [
       {
         san: "Rdg8!",
         commentary:
-          "A brilliant double-rook attack on the g2 square. Black brings their final heavy piece into the assault, completely overwhelming White's kingside defenses. Now choose a path to explore White's options:",
-      },
-    ],
-    prompt: "Choose White's response on move 2:",
-    variants: [
-      {
-        label: "2. Rf2 (Main Line - Black Wins)",
-        line: [
-          {
-            san: "Rf2",
-            commentary: "White tries to bolster the defense of the g2 pawn, but Black's attack is already unstoppable.",
-          },
-          {
-            san: "Rxg2+",
-            commentary: "The sacrifice breaks through! Black forces open the white king's fortress.",
-          },
-          {
-            san: "Kf1",
-            commentary: "White's king frantically steps away to escape immediate capture.",
-          },
-          {
-            san: "Bc4+",
-            commentary: "The bishop delivers a crushing check, cutting off the king's escape squares.",
-          },
-          {
-            san: "Nxc4",
-            commentary:
-              "White captures the bishop out of desperation, but it leaves the back rank entirely undefended.",
-          },
-          {
-            san: "Rg1#",
-            commentary: "Checkmate! The remaining black rook slides down to g1 to deliver the finishing blow.",
-          },
-        ],
+          "A brilliant double-rook attack on the g2 square. Black brings their final heavy piece into the assault, completely overwhelming White's kingside defenses.",
       },
       {
-        label: "2. Qxe7 (Greedy Alternative - Mate Follows)",
-        line: [
-          {
-            san: "Qxe7",
-            commentary: "Blunder! Greedily snatching the black queen allows an immediate forced checkmate sequence.",
-          },
-          {
-            san: "Rxg2+",
-            commentary:
-              "Black ignores the loss of the queen and immediately strikes the vulnerable g2 square with check.",
-          },
-          {
-            san: "Kh1",
-            commentary: "Forced, as the king has no other legal squares to flee to.",
-          },
-          {
-            san: "Bd5",
-            commentary:
-              "The quiet but deadly continuation. The bishop moves into position, unleashing a decisive discovered check threat from the rook on g2 that leads to mate in a few moves.",
-          },
-        ],
+        san: "Rf2",
+        commentary: "White tries to bolster the defense of the g2 pawn, but Black's attack is already unstoppable.",
+      },
+      {
+        san: "Rxg2+",
+        commentary: "The sacrifice breaks through! Black forces open the white king's fortress.",
+      },
+      {
+        san: "Kf1",
+        commentary: "White's king frantically steps away to escape immediate capture.",
+      },
+      {
+        san: "Bc4+",
+        commentary: "The bishop delivers a crushing check, cutting off the king's escape squares.",
+      },
+      {
+        san: "Nxc4",
+        commentary: "White captures the bishop out of desperation, but it leaves the back rank entirely undefended.",
+      },
+      {
+        san: "Rg1#",
+        commentary: "Checkmate! The remaining black rook slides down to g1 to deliver the finishing blow.",
       },
     ],
   },
